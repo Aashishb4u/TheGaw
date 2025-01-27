@@ -1,0 +1,156 @@
+$duration: 5s;
+$text-color: rgba(255, 255, 255, 0.3);
+$bgr-color: #333;
+
+@font-face {
+  font-family: 'Avenir';
+  font-weight: 400;
+  font-style: normal;
+  src: url('../fonts/avenir/AvenirLTStd-Book.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Avenir';
+  font-weight: 400;
+  font-style: italic;
+  src: url('../fonts/avenir/AvenirLTStd-BookOblique.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Avenir';
+  font-weight: 500;
+  font-style: normal;
+  src: url('../fonts/avenir/AvenirLTStd-Medium.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Avenir';
+  font-weight: 500;
+  font-style: italic;
+  src: url('../fonts/avenir/AvenirLTStd-MediumOblique.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Avenir';
+  font-weight: 600;
+  font-style: normal;
+  src: url('../fonts/avenir/AvenirLTStd-Heavy.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Avenir';
+  font-weight: 600;
+  font-style: italic;
+  src: url('../fonts/avenir/AvenirLTStd-HeavyOblique.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Avenir';
+  font-weight: 700;
+  font-style: normal;
+  src: url('../fonts/avenir/AvenirLTStd-Black.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Avenir';
+  font-weight: 700;
+  font-style: italic;
+  src: url('../fonts/avenir/AvenirLTStd-BlackOblique.otf') format('opentype');
+}
+
+
+/* Add reveal animation */
+.menu-reveal {
+  transition: transform 0.3s ease-out;
+  transform: translateY(-10px);
+  opacity: 0;
+}
+
+.menu-reveal.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+@media (min-width:500px) {
+  .swiper-button-prev {
+    left: -50px !important;
+  }
+
+  .swiper-button-next {
+    right: -50px !important;
+  }
+}
+
+@media (max-width:500px) {
+  .swiper-button-prev {
+    left: -10px !important;
+  }
+
+  .swiper-button-next {
+    right: -10px !important;
+  }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  z-index: 10;
+  /* Ensure they are above the slides */
+  visibility: visible;
+  /* Ensure they are visible */
+  width: auto !important;
+  height: auto !important;
+}
+
+.rotate-y-0 {
+  transform: rotateY(0deg);
+}
+
+.rotate-y-90 {
+  transform: rotateY(90deg);
+}
+
+
+.shine, .chrome {
+	font-size: 3em;
+	margin: 0 auto;
+	margin-bottom: 1em;
+	font-weight: bold;
+}
+
+.shine {
+	background: #222 -webkit-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff)) 0 0 no-repeat;
+	-webkit-background-size: 150px;
+	color: $text-color;
+	-webkit-background-clip: text;
+	-webkit-animation-name: shine;
+	-webkit-animation-duration: $duration;
+	-webkit-animation-iteration-count: infinite;
+	text-shadow: 0 0px 0px rgba(255, 255, 255, 0.5);
+}
+
+.chrome {
+	background: #222 -webkit-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff)) 0 0 no-repeat;
+	background-image: -webkit-linear-gradient(-40deg, transparent 0%, transparent 40%, #fff 50%, transparent 60%, transparent 100%);
+	-webkit-background-size: 200px;
+	color: $text-color;
+	-webkit-background-clip: text;
+	-webkit-animation-name: shine;
+	-webkit-animation-duration: $duration;
+	-webkit-animation-iteration-count: infinite;
+	text-shadow: 0 0px 0px rgba(255, 255, 255, 0.5);
+}
+
+@-webkit-keyframes shine {
+	0%, 10% {
+		background-position: -1000px;
+	}
+	20% {
+		background-position: top left;
+	}
+	90% {
+		background-position: top right;
+	}
+	100% {
+		background-position: 1000px;
+	}
+}
