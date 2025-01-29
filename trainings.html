@@ -8,22 +8,57 @@
 
     <!-- meta tags -->
     <meta name="description"
-        content="Discover TheGAW, a leading provider of innovative engineering solutions for the oil and energy industry. With a global network, operational excellence, and a commitment to sustainable practices, we design and implement custom solutions tailored to meet diverse energy needs." />
+        content="At TheGAW Industries, we provide precision-engineered solutions for the oil, energy, and heavy industries. Based in Abu Dhabi, UAE, we specialize in hydraulic tools, pressure testing equipment, and fluid transfer systems that enhance efficiency, reliability, and sustainability across the energy lifecycle." />
 
     <meta name="keywords"
-        content="TheGAW, oil and energy industry, engineering solutions, energy needs, sustainable solutions, operational excellence, global network, custom engineering, oil and gas manufacturing, energy innovation, energy tools, energy solutions provider, UAE engineering, energy industry leader, TheGAW services, engineering excellence" />
+        content="TheGAW, oil and energy industry, hydraulic tools, pressure testing equipment, fluid transfer systems, sustainability, energy lifecycle, industrial components, UAE engineering, Abu Dhabi, energy solutions, upstream exploration, downstream operations, heavy industries, industrial materials" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="TheGAW Industries" />
 
+
+    <!-- Canonical link -->
+    <link rel="canonical" href="https://thegawindustries.com/trainings.html" />
 
     <!-- open graph tags -->
     <meta property="og:description"
-        content="Discover TheGAW, a leading provider of innovative engineering solutions for the oil and energy industry. With a global network, operational excellence, and a commitment to sustainable practices, we design and implement custom solutions tailored to meet diverse energy needs." />
-    <meta property="og:title" content="TheGAW Industries" />
-    <meta property="og:url" content="http://TheGAW.com" />
+        content="At TheGAW Industries, we provide precision-engineered solutions for the oil, energy, and heavy industries. Based in Abu Dhabi, UAE, we specialize in hydraulic tools, pressure testing equipment, and fluid transfer systems that enhance efficiency, reliability, and sustainability across the energy lifecycle." />
+    <meta property="og:title" content="TheGAW Industries - Training Solutions" />
+    <meta property="og:url" content="https://thegawindustries.com/trainings.html" />
     <meta property="og:type" content="website" />
-    <meta property="og:locale" content="en" />
+    <meta property="og:locale" content="en_US" />
     <meta property="og:locale:alternate" content="en_EN" />
     <meta property="og:site_name" content="TheGAW Industries" />
-    <meta property="og:image" content="assets/images/logo.png" />
+    <meta property="og:image" content="https://thegawindustries.com/assets/images/logo.png" />
+
+    <!-- Twitter tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="TheGAW Industries - Training Solutions" />
+    <meta name="twitter:description"
+        content="At TheGAW Industries, we provide precision-engineered solutions for the oil, energy, and heavy industries. Based in Abu Dhabi, UAE, we specialize in hydraulic tools, pressure testing equipment, and fluid transfer systems that enhance efficiency, reliability, and sustainability across the energy lifecycle." />
+    <meta name="twitter:image" content="https://thegawindustries.com/assets/images/logo.png" />
+
+    <!-- Schema.org markup for Google -->
+    <script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "Organization",
+"name": "TheGAW Industries",
+"url": "https://thegawindustries.com/trainings.html",
+"logo": "https://thegawindustries.com/assets/images/logo.png",
+"sameAs": [
+"https://www.facebook.com/TheGAWIndustries",
+"https://www.linkedin.com/company/thegawindustries"
+],
+"contactPoint": {
+"@type": "ContactPoint",
+"telephone": "+971-XXXXXXXXX",
+"contactType": "Customer Service",
+"areaServed": "AE",
+"availableLanguage": "English"
+}
+}
+</script>
+
 
     <!-- favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png" />
@@ -51,13 +86,19 @@
     <!-- header -->
     <header class="relative h-screen overflow-hidden">
         <!-- Video Background -->
-        <!-- <video autoplay muted loop class="absolute inset-0 object-cover w-full h-full">
-            <source src="assets/videos/training_2.mp4" type="video/mp4">
+        <video autoplay muted loop class="absolute inset-0 object-cover w-full h-full hidden md:block">
+            <source src="assets/videos/training.mp4" type="video/mp4">
             Your browser does not support the video tag.
-        </video> -->
-        <div class="h-full w-full bg-[#000C25] absolute">
- 
-        </div>
+        </video>
+
+        <video autoplay muted loop class="absolute inset-0 object-cover w-full h-full md:hidden">
+            <source src="assets/videos/training_p1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- <div class="h-full w-full bg-[#000C25] absolute">
+
+        </div> -->
         <!-- <div class="absolute inset-0 w-full h-full bg-black/60">
 
         </div> -->
@@ -68,7 +109,7 @@
         <!-- hero section -->
         <section
             class="container mx-auto lg:p-20 p-8 min-h-[80vh] flex items-center relative z-20 text-white uppercase">
-            <div>
+            <!-- <div>
                 <h2 class="text-sm uppercase 2xl:text-xl text-white/70">
                     TheGAW
                 </h2>
@@ -78,7 +119,7 @@
                     Trainings
                 </h1>
 
-            </div>
+            </div> -->
         </section>
     </header>
 
@@ -92,8 +133,8 @@
                 unique challenges and create new opportunities within the sector. With the expertise of
                 seasoned engineers and industry professionals, we provide solutions to real-world
                 problems, ensuring professionals gain relevant, practical knowledge wherever they are.
-              </p>
-              <p class="text-justify mt-3 tracking-wide 2xl:text-lg">
+            </p>
+            <p class="text-justify mt-3 tracking-wide 2xl:text-lg">
                 With a strong presence across continents, we offer virtual and hands-on training
                 programs aligned with global standards of excellence. Whether you're looking to
                 enhance your team's capabilities, contribute your expertise as a subject matter expert,
@@ -104,8 +145,9 @@
 
     </section>
     <section class="grid gap-6 p-8 mx-auto 2xl:container lg:px-20 2xl:px-20 lg:py-20 md:grid-cols-3">
-        <div class="flex flex-col items-center justify-around p-5 text-center text-white transition-all duration-300 rounded-md bg-primary min-h-64 hover:shadow-md hover:-translate-y-2">
-           <div>
+        <div
+            class="flex flex-col items-center justify-around p-5 text-center text-white transition-all duration-300 rounded-md bg-primary min-h-64 hover:shadow-md hover:-translate-y-2">
+            <div>
                 <h2 class="text-lg font-medium md:text-2xl">
                     Request for Training
                 </h2>
@@ -114,20 +156,20 @@
                     requirements with us, and we'll design a training program that aligns with your specific
                     needs.
                 </p>
-           </div>
-           <div>
-            <button onclick="openModal('.training-request-modal')"
-                class="px-6 py-2 mt-5 text-sm text-black uppercase transition-all duration-300 bg-white rounded-md 2xl:text-base hover:bg-black hover:text-white hover:scale-105 hover:-translate-y-1">
-                Apply Now
-            </button>
-           </div>
-           
+            </div>
+            <div>
+                <button onclick="openModal('.training-request-modal')"
+                    class="px-6 py-2 mt-5 text-sm text-black uppercase transition-all duration-300 bg-white rounded-md 2xl:text-base hover:bg-black hover:text-white hover:scale-105 hover:-translate-y-1">
+                    Apply Now
+                </button>
+            </div>
+
         </div>
 
 
         <div
             class="flex flex-col items-center justify-around p-5 text-center text-white transition-all duration-300 rounded-md bg-primary min-h-56 hover:shadow-md hover:-translate-y-2">
-           <div>
+            <div>
                 <h2 class="text-lg font-medium md:text-2xl">
                     Subject Matter Expert
                     Registration
@@ -137,19 +179,19 @@
                     our network of industry professionals and contribute to knowledge advancement.
                     Connect with us to explore opportunities where your expertise can make a difference.
                 </p>
-           </div>
-           <div>
-            <button
-                class="px-6 py-2 mt-5 text-sm text-black uppercase transition-all duration-300 bg-white rounded-md 2xl:text-base hover:bg-black hover:text-white hover:scale-105 hover:-translate-y-1"
-                onclick="openModal('.sme-registration-modal')">
-                Register Now
-            </button>
-           </div>
-            
+            </div>
+            <div>
+                <button
+                    class="px-6 py-2 mt-5 text-sm text-black uppercase transition-all duration-300 bg-white rounded-md 2xl:text-base hover:bg-black hover:text-white hover:scale-105 hover:-translate-y-1"
+                    onclick="openModal('.sme-registration-modal')">
+                    Register Now
+                </button>
+            </div>
+
         </div>
         <div
             class="flex flex-col items-center justify-around p-5 text-center text-white transition-all duration-300 rounded-md bg-primary min-h-56 hover:shadow-md hover:-translate-y-2">
-           <div>
+            <div>
                 <h2 class="text-lg font-medium md:text-2xl">
 
                     Be a Knowledge Transfer Partner
@@ -159,13 +201,14 @@
                     comprehensive knowledge transfer solutions for the industry. Let's create lasting value
                     through collaborative institutional partnerships.
                 </p>
-           </div>
-          <div>
-            <button class="px-6 py-2 mt-5 text-sm text-black uppercase transition-all duration-300 bg-white rounded-md 2xl:text-base hover:bg-black hover:text-white hover:scale-105 hover:-translate-y-1"
-                onclick="openModal('.organization-registration-modal')">
-                Partner with Us
-            </button>
-          </div>
+            </div>
+            <div>
+                <button
+                    class="px-6 py-2 mt-5 text-sm text-black uppercase transition-all duration-300 bg-white rounded-md 2xl:text-base hover:bg-black hover:text-white hover:scale-105 hover:-translate-y-1"
+                    onclick="openModal('.organization-registration-modal')">
+                    Partner with Us
+                </button>
+            </div>
         </div>
     </section>
 
