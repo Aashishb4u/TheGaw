@@ -273,7 +273,7 @@
                 </div>
 
                 <!-- Order Form Tab -->
-                <div class="hidden tab-content" id="order-form">
+                <!-- <div class="hidden tab-content" id="order-form">
                     <div class="p-4 bg-primary/10">
                         <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Order Form</h3>
                     </div>
@@ -286,7 +286,29 @@
                             Submit
                         </button>
                     </div>
+                </div> -->
+                <div class="hidden tab-content" id="order-form">
+                    <div class="p-4 bg-primary/10">
+                        <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Order Form</h3>
+                    </div>
+                    <p class="mt-4">
+                        <a href="#" class="text-blue-600 underline">Download the questionnaire</a>
+                    </p>
+                    <div class="grid col-span-3 mb-4 md:grid-cols-3 gap-5">
+                        <!-- Custom label for file input -->
+                        <label for="coverLetter"
+                            class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md text-center cursor-pointer text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent hover:bg-gray-100">
+                            Upload Answered File
+                        </label>
+                        <!-- Hidden file input -->
+                        <input type="file" id="coverLetter" name="coverLetter" accept=".pdf,.doc,.docx" class="hidden">
+                        <button type="submit"
+                            class="py-3 px-9 w-fit bg-primary rounded-lg text-white block font-semibold text-sm">
+                            Submit
+                        </button>
+                    </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -470,6 +492,17 @@
         });
 
     </script>
+
+    <script>
+        const fileInput = document.getElementById('coverLetter');
+        const label = document.querySelector('label[for="coverLetter"]');
+
+        fileInput.addEventListener('change', (event) => {
+            const fileName = event.target.files[0]?.name || 'Upload Answered File';
+            label.textContent = fileName;
+        });
+    </script>
+
     <script src="./assets/js/products-details-images.js"></script>
 
 </body>
