@@ -171,13 +171,13 @@
                         <table class="min-w-full text-sm text-left border border-collapse border-gray-200">
                             <thead>
                                 <tr class="bg-gray-100 border-b border-gray-200">
-                                    <!-- <th class="px-4 py-3 font-medium">Sno</th> -->
-                                    <th class="px-4 py-3 font-medium">Model</th>
-                                    <th class="px-4 py-3 font-medium">Description</th>
-                                    <th class="px-4 py-3 font-medium">Material</th>
-                                    <th class="px-4 py-3 font-medium">Reach (m)</th>
-                                    <th class="px-4 py-3 font-medium">Pressure</th>
-                                    <th class="px-4 py-3 font-medium">Flow Rate</th>
+                                    <!-- <th class="px-4 py-3 font-semibold">Sno</th> -->
+                                    <th class="px-4 py-3 font-semibold">Model</th>
+                                    <th class="px-4 py-3 font-semibold">Description</th>
+                                    <th class="px-4 py-3 font-semibold">Material</th>
+                                    <th class="px-4 py-3 font-semibold text-center">Reach (m)</th>
+                                    <th class="px-4 py-3 font-semibold text-center">Pressure</th>
+                                    <th class="px-4 py-3 font-semibold text-center">Flow Rate</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -186,27 +186,27 @@
                                     <td class="px-4 py-3">TGBL1525</td>
                                     <td class="px-4 py-3">“A” Frame Loader Arm</td>
                                     <td class="px-4 py-3">Aluminium</td>
-                                    <td class="px-4 py-3">2.5</td>
-                                    <td class="px-4 py-3">15bar</td>
-                                    <td class="px-4 py-3">150m³/h</td>
+                                    <td class="px-4 py-3 text-center">2.5</td>
+                                    <td class="px-4 py-3 text-center">15bar</td>
+                                    <td class="px-4 py-3 text-center">150m³/h</td>
                                 </tr>
                                 <tr class="bg-gray-100 border-b hover:bg-gray-50">
                                     <!-- <td class="px-4 py-3">2</td> -->
                                     <td class="px-4 py-3">TGBL1220</td>
                                     <td class="px-4 py-3">Counterweighted Hose Loader</td>
                                     <td class="px-4 py-3">Aluminium</td>
-                                    <td class="px-4 py-3">2.0</td>
-                                    <td class="px-4 py-3">12bar</td>
-                                    <td class="px-4 py-3">130m³/h</td>
+                                    <td class="px-4 py-3 text-center">2.0</td>
+                                    <td class="px-4 py-3 text-center">12bar</td>
+                                    <td class="px-4 py-3 text-center">130m³/h</td>
                                 </tr>
                                 <tr class="bg-white border-b hover:bg-gray-50">
                                     <!-- <td class="px-4 py-3">3</td> -->
                                     <td class="px-4 py-3">TGBL1018</td>
                                     <td class="px-4 py-3">Unsupported Boom-Type Loader</td>
                                     <td class="px-4 py-3">Carbon Steel</td>
-                                    <td class="px-4 py-3">1.8</td>
-                                    <td class="px-4 py-3">10bar</td>
-                                    <td class="px-4 py-3">120m³/h</td>
+                                    <td class="px-4 py-3 text-center">1.8</td>
+                                    <td class="px-4 py-3 text-center">10bar</td>
+                                    <td class="px-4 py-3 text-center">120m³/h</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -274,9 +274,11 @@
                             Submit
                         </button>
                     </div>
+                
 
-                </div>
+
             </div>
+        </div>
         </div>
     </section>
 
@@ -512,6 +514,16 @@
             });
         });
     </script> -->
+    <script>
+        const fileInput = document.getElementById('coverLetter');
+        const label = document.querySelector('label[for="coverLetter"]');
+
+        fileInput.addEventListener('change', (event) => {
+            const fileName = event.target.files[0]?.name || 'Upload Answered File';
+            label.textContent = fileName;
+        });
+    </script>
+
     <script src="./assets/js/products-details-images.js"></script>
 
 </body>
