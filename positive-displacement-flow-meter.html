@@ -15,6 +15,13 @@
 
     <meta name="robots" content="index, follow" />
     <meta name="author" content="TheGAW Industries" />
+    <script src="./assets/js/product_fil_upload.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            handleFileUploadForm('floating-suction-unit-form', 'http://dummy-api/file-upload');
+        });  
+    </script>
+
     <!-- Canonical Link -->
     <link rel="canonical" href="https://thegawindustries.com/positive-displacement-flow-meter.html" />
 
@@ -287,19 +294,19 @@
                     <p class="mt-4">
                         <a href="#" class="text-blue-600 underline">Download the questionnaire</a>
                     </p>
-                    <div class="grid col-span-3 mb-4 md:grid-cols-3 gap-5">
+                    <form id="positive-displacement-flow-meter-form" class="grid col-span-3 mb-4 md:grid-cols-3 gap-5">
                         <!-- Custom label for file input -->
                         <label for="coverLetter"
                             class="w-full flex items-center gap-2 px-4 py-2 mt-1 border border-gray-300 rounded-md text-center cursor-pointer text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent hover:bg-gray-100">
                             <img class="h-6 w-6" src="assets/images/icons/upload_ico.png" alt="">Upload Answered File
                         </label>
-                        <!-- Hidden file input -->  
+                        <!-- Hidden file input -->
                         <input type="file" id="coverLetter" name="coverLetter" accept=".pdf,.doc,.docx" class="hidden">
                         <button type="submit"
-                            class="py-3 px-9 w-fit bg-primary rounded-lg text-white block font-semibold text-sm">
+                            class="py-3 px-9 w-fit bg-primary rounded-lg text-white block font-semibold text-sm upload-button">
                             Submit
                         </button>
-                    </div>
+                    </form>
                 </div>
 
             </div>
