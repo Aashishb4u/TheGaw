@@ -5,7 +5,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Top Loading Arms - TheGAW Industries</title>
+    <script src="./assets/js/product_fil_upload.js"></script>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            handleFileUploadForm('top-loading-arms-form', 'http://dummy-api/file-upload');
+        });  
+    </script>
     <!-- Meta Tags -->
     <meta name="description"
         content="At TheGAW Industries, we offer precision-engineered solutions to power the oil, energy, and heavy industries worldwide. Our innovative hydraulic tools, pressure testing equipment, and fluid transfer systems support sustainability and efficiency across the energy lifecycle." />
@@ -42,6 +48,7 @@
 
     <!-- Schema.org Markup for Structured Data -->
     <script type="application/ld+json">
+
 {
 "@context": "https://schema.org",
 "@type": "Organization",
@@ -154,7 +161,7 @@
                     Catalog
                     <div class="absolute left-0 hidden w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
                 </button>
-                <button
+                <button id="order-form-btn"
                     class="relative flex-1 uppercase py-3 font-medium text-center text-gray-600 tab-btn hover:bg-gray-100 bg-blue-600/10 rounded-t-md"
                     data-tab="order-form">
                     Order Form
@@ -286,7 +293,7 @@
                     <p class="mt-4">
                         <a href="#" class="text-blue-600 underline">Download the questionnaire</a>
                     </p>
-                    <div class="grid col-span-3 mb-4 md:grid-cols-3 gap-5">
+                    <form id="top-loading-arms-form" class="grid col-span-3 mb-4 md:grid-cols-3 gap-5">
                         <!-- Custom label for file input -->
                         <label for="coverLetter"
                             class="w-full flex items-center gap-2 px-4 py-2 mt-1 border border-gray-300 rounded-md text-center cursor-pointer text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent hover:bg-gray-100">
@@ -295,10 +302,10 @@
                         <!-- Hidden file input -->
                         <input type="file" id="coverLetter" name="coverLetter" accept=".pdf,.doc,.docx" class="hidden">
                         <button type="submit"
-                            class="py-3 px-9 w-fit bg-primary rounded-lg text-white block font-semibold text-sm">
+                            class="py-3 px-9 w-fit bg-primary rounded-lg text-white block font-semibold text-sm upload-button">
                             Submit
                         </button>
-                    </div>
+                    </form>
                 </div>
 
             </div>
