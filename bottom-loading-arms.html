@@ -18,7 +18,8 @@
     <script src="./assets/js/product_fil_upload.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            handleFileUploadForm('bottom-loading-arms-form', 'https://thegawindustries.com/api/v1/contact/product_order_form');
+            const productName = document.getElementById('product_name').innerText;
+            handleFileUploadForm('bottom-loading-arms-form', 'https://thegawindustries.com/api/v1/contact/product_order_form', productName);
         });
     </script>
 
@@ -112,7 +113,7 @@
                     <!-- Thumbnails and main image will be injected here dynamically -->
                 </div>
                 <div class="w-full">
-                    <h3 class="text-xl uppercase font-semibold md:text-2xl">
+                    <h3 id="product_name" class="text-xl uppercase font-semibold md:text-2xl">
                         Bottom Loading Arms
                     </h3>
                     <p class="mt-5 leading-8 tracking-wide 2xl:text-lg text-justify">

@@ -1,5 +1,5 @@
 // Function to handle form submission
-    function handleFileUploadForm(formId, endpointUrl, allowedExtensions = ['pdf', 'doc', 'docx']) {
+    function handleFileUploadForm(formId, endpointUrl, productName, allowedExtensions = ['pdf', 'doc', 'docx']) {
         const form = document.getElementById(formId);
     
         if (!form) {
@@ -28,7 +28,10 @@
     
             // Create form data to send
             const formData = new FormData();
-            formData.append('file', file);
+            const maiType = 'product_order_form';
+            formData.append('productOrderForm', file);
+            formData.append('productName', productName);
+            formData.append('mailType', maiType);
     
             try {
                 // Make the API call
