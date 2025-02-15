@@ -1,19 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
-         // Function to update GST time
-         function updateGSTTime() {
-            const gstOffset = 5; // Gulf Standard Time (UTC+5)
-            const now = new Date();
-            const gstDate = new Date(now.getTime() + (gstOffset * 60 - now.getTimezoneOffset()) * 60000);
-
-            const hours = gstDate.getHours().toString().padStart(2, '0');
-            const minutes = gstDate.getMinutes().toString().padStart(2, '0');
-            const ampm = hours >= 12 ? 'AM' : 'PM';
-
-            const formattedHours = hours % 12 || 12; // Convert to 12-hour format
-            const gstTime = `${formattedHours}:${minutes} ${ampm}`;
-
+        function updateGSTTime() {
+            const gstTime = moment().tz("Asia/Dubai").format("hh:mm A"); 
             document.getElementById('gst-time').textContent = `GST: ${gstTime}`;
         }
+    
+        // Call function on page load and update every minute
+        // updateGSTTime();
+        // setInterval(updateGSTTime, 60000);
 
         // Function to handle menu toggle and dropdowns
         function initializeMenuScripts() {
@@ -130,7 +123,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 // Initialize GST time update
                 setInterval(updateGSTTime, 60000);
                 updateGSTTime(); // Initial call to set the time
-            });
+        });
 
 
         // Fetch and inject the header
@@ -141,7 +134,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
            // Fetch and inject the header
-           fetch('header-white.html')
+        fetch('header-white.html')
            .then(response => response.text())
            .then(data => {
                document.getElementById('header-white').innerHTML = data;

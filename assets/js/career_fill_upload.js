@@ -1,5 +1,5 @@
 // Function to handle form submission with file upload
-function handleFileUploadForm(formId, endpointUrl, allowedExtensions = ['pdf', 'doc', 'docx']) {
+function handleFileUploadCareerForm(formId, endpointUrl, allowedExtensions = ['pdf', 'doc', 'docx']) {
     const form = document.getElementById(formId);
 
     if (!form) {
@@ -54,4 +54,4 @@ function handleFileUploadForm(formId, endpointUrl, allowedExtensions = ['pdf', '
     });
 }
 
-handleFileUploadForm('myForm', 'https://your-api-endpoint.com/upload');
+// handleFileUploadForm('apply-form', 'https://your-api-endpoint.com/upload');

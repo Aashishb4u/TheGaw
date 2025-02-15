@@ -2730,10 +2730,6 @@ video {
     height: 3.5rem;
   }
 
-  .md\:h-screen {
-    height: 100vh;
-  }
-
   .md\:min-h-\[500px\] {
     min-height: 500px;
   }
@@ -2883,10 +2879,6 @@ video {
 
   .lg\:mt-0 {
     margin-top: 0px;
-  }
-
-  .lg\:block {
-    display: block;
   }
 
   .lg\:flex {
