@@ -19,6 +19,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             handleFileUploadCareerForm('apply-form', 'https://thegawindustries.com/api/v1/contact/careers');
+            handleFileUploadCareerForm('news-letter-form', 'https://thegawindustries.com/api/v1/contact/news-letter');
         });
     </script>
     <!-- canonical tag -->
@@ -178,7 +179,7 @@
 
         <div class="mt-10 shadow-lg">
             <div class="grid p-10 border-b border-b-slate-300 md:grid-cols-2 gap-y-3">
-                <h3 class="text-lg font-medium md:text-xl text-primary 2xl:text-2xl w-[85%]">
+                <h3 class="jobName text-lg font-medium md:text-xl text-primary 2xl:text-2xl w-[85%]">
                     Sales and Business Development Roles
                 </h3>
 
@@ -202,14 +203,14 @@
                         Permanent
                     </p>
 
-                    <button class="mt-4" onclick="openModal()">
+                    <button class="mt-4" onclick="openModal(this)">
                         <img class="size-10" src="assets/images/icons/top.svg" alt="arrow">
                     </button>
                 </div>
 
             </div>
             <div class="grid p-10 border-b border-b-slate-300 md:grid-cols-2 gap-y-3">
-                <h3 class="text-lg font-medium md:text-xl text-primary 2xl:text-2xl w-[85%]">
+                <h3 class="jobName text-lg font-medium md:text-xl text-primary 2xl:text-2xl w-[85%]">
                     Supply Chain and Operations Roles
                 </h3>
 
@@ -232,7 +233,7 @@
                         Permanent
                     </p>
 
-                    <button class="mt-4" onclick="openModal()">
+                    <button class="mt-4" onclick="openModal(this)">
                         <img class="size-10" src="assets/images/icons/top.svg" alt="arrow">
                     </button>
                 </div>
@@ -240,7 +241,7 @@
             </div>
 
             <div class="grid p-10 border-b border-b-slate-300 md:grid-cols-2 gap-y-3">
-                <h3 class="text-lg font-medium md:text-xl text-primary 2xl:text-2xl w-[85%]">
+                <h3 class="jobName text-lg font-medium md:text-xl text-primary 2xl:text-2xl w-[85%]">
                     Product Development and Application Engineering Roles
                 </h3>
 
@@ -264,7 +265,7 @@
                         Permanent
                     </p>
 
-                    <button class="mt-4" onclick="openModal()">
+                    <button class="mt-4" onclick="openModal(this)">
                         <img class="size-10" src="assets/images/icons/top.svg" alt="arrow">
                     </button>
                 </div>
@@ -286,32 +287,33 @@
 
         <div class="container p-8 mx-auto lg:p-20 py-14 lg:py-20">
 
-            <div class="md:w-[40%] bg-white md:p-8 p-5 rounded-sm z-10 relative">
-
+            <form id="news-letter-form" class="md:w-[40%] bg-white md:p-8 p-5 rounded-sm z-10 relative" onsubmit="submitForm(event)">
                 <h2 class="text-lg font-medium 2xl:text-xl">
                     Join Our Talent Community
                 </h2>
-
+            
                 <p class="mt-3 text-sm 2xl:text-base">
                     <span class="text-primary">Stay connected by joining our network!</span> Enter your
                     e-mail and tell us a bit about yourself, and we'll keep
                     you informed about upcoming events and
                     opportunities that match your interests.
                 </p>
-
+            
                 <input
                     class="outline-none mt-4 block max-w-60 w-full text-sm py-1.5 px-2.5 border border-black rounded-md placeholder:text-black transition-all duration-300 focus:ring 2xl:text-base"
-                    type="text" placeholder="Enter Email Address">
-
+                    type="email" id="emailInput" name="email" placeholder="Enter Email Address" required>
+            
                 <button
+                    type="submit"
                     class="flex items-center justify-between mt-3 overflow-hidden text-sm font-medium text-white rounded-md bg-primary ps-3">
                     SUBMIT
-
+            
                     <div class="flex items-center justify-center px-3 py-3 bg-[#0042C8] ms-4">
                         <img class="size-4" src="assets/images/icons/right.svg" alt="arrow">
                     </div>
                 </button>
-            </div>
+            </form>
+            
         </div>
 
     </section>
@@ -330,7 +332,7 @@
 <script src="assets/js/header-footer.js"></script>
 
     <!-- Modal Container -->
-    <div
+    <div id="modal-container"
         class="fixed inset-0 z-50 flex items-center justify-center hidden py-20 overflow-y-auto bg-black bg-opacity-50 md:overflow-hidden modal backdrop-blur-sm">
         <!-- Modal -->
         <div class="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto bg-white rounded-lg shadow-lg">
@@ -378,7 +380,7 @@
                     <label class="block text-sm font-medium text-gray-700" for="phone">Phone Number:</label>
                     <input
                         class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
-                        id="phone" name="phone" type="tel" required>
+                        id="phone" name="phoneNumber" type="tel" required>
                 </div>
 
                 <!-- Nationality -->
@@ -395,7 +397,7 @@
                         Residence:</label>
                     <input
                         class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
-                        id="countryOfResidence" name="countryOfResidence" type="text" required>
+                        id="countryOfResidence" name="countryName" type="text" required>
                 </div>
 
                 <!-- Resume -->
@@ -542,10 +544,18 @@
         function closeModal() {
             const modal = document.querySelector('.modal');
             modal.classList.add('hidden');
-
         }
-        function openModal() {
+        function openModal(buttonElement) {
+              // Find the closest parent 'div' with class 'grid'
+            const jobContainer = buttonElement.closest('.grid');
+            // Find the job title inside that container
+            const jobNameElement = jobContainer.querySelector('.jobName');
+            // Get the text content of the job name
+            const jobName = jobNameElement ? jobNameElement.textContent.trim() : "Unknown Job";
             const modal = document.querySelector('.modal');
+            // Set job name in a data attribute
+            modal.setAttribute('data-job-name', jobName);
+
             modal.classList.remove('hidden');
         }
 

@@ -18,8 +18,11 @@
     <script src="./assets/js/product_fil_upload.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const productName = document.getElementById('product_name').innerText;
-            handleFileUploadForm('bottom-loading-arms-form', 'https://thegawindustries.com/api/v1/contact/product_order_form', productName);
+            document.querySelector('[data-tab="order-form"]').addEventListener('click', function () {
+                console.log('Order Form button clicked!');
+                const productName = document.getElementById('product_name').innerText;
+                handleFileUploadForm('bottom-loading-arms-form', 'https://thegawindustries.com/api/v1/contact/product_order_form', productName);
+            });
         });
     </script>
 

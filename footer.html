@@ -1,4 +1,5 @@
-  <!-- footer -->
+
+
   <footer>  
     <!-- social links -->
     <div class="p-8 mx-auto border-b lg:px-20 lg:pt-10 border-b-stone-200">
@@ -120,24 +121,25 @@
 
             </div>
 
-            <div class="md:col-span-2 bg-[#000C25] p-4 rounded-md text-white">
+            <form id="news-letter-form-footer" class="md:col-span-2 bg-[#000C25] p-4 rounded-md text-white">
                 <h3 class="text-lg font-semibold 2xl:text-xl">
                     Sign-up for our newsletter
                 </h3>
-
-                <input type="text"
-                    class="border border-white outline-none py-2 px-3 rounded-md bg-transparent md:w-[90%] block text-sm placeholder:text-white mt-3 mb-4 2xl:text-base" placeholder="Your email address">
-
-                <button
+            
+                <input type="email" id="emailInput" name="email" required
+                    class="border border-white outline-none py-2 px-3 rounded-md bg-transparent md:w-[90%] block text-sm placeholder:text-white mt-3 mb-1 2xl:text-base"
+                    placeholder="Your email address">
+            
+            
+                <button type="submit" id="news-letter-btn"
                     class="mt-4 bg-primary text-white hover:bg-white hover:text-black py-1.5 px-4 text-sm rounded font-medium transition-all duration-300 2xl:text-base">
                     Submit
                 </button>
-
+            
                 <p class="mt-4 text-xs tracking-wide 2xl:text-sm">
-                    By subscribing you accept our terms of use and
-                    privacy policy.
+                    By subscribing you accept our terms of use and privacy policy.
                 </p>
-            </div>
+            </form>
         </div>
 
         <!-- copyright -->
@@ -152,7 +154,6 @@
             </div>
         </div>
     </div>
-
 
 
 </footer>
