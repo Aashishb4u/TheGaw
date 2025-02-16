@@ -9,10 +9,11 @@ document.addEventListener("DOMContentLoaded", function () {
             firstName: form.querySelector("input[placeholder='First Name']").value.trim(),
             lastName: form.querySelector("input[placeholder='Last Name']").value.trim(),
             email: form.querySelector("input[placeholder='Email']").value.trim(),
-            phone: form.querySelector("input[placeholder='Phone Number']").value.trim(),
-            company: form.querySelector("input[placeholder='Company / Organization Name']").value.trim(),
+            phoneNumber: form.querySelector("input[placeholder='Phone Number']").value.trim(),
+            companyName: form.querySelector("input[placeholder='Company / Organization Name']").value.trim(),
             subject: form.querySelector("input[name='subject']:checked")?.nextElementSibling.textContent.trim(),
-            message: form.querySelector("textarea[placeholder='Message']").value.trim()
+            message: form.querySelector("textarea[placeholder='Message']").value.trim(),
+            mailType: "contact"
         };
 
         // Basic validation
