@@ -1,38 +1,51 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const form = document.getElementById("organizationForm"); // Get form by ID
-    const submitButton = document.getElementById("submitButton"); // Get submit button by ID
+document.getElementById("partnershipForm").addEventListener("submit", async function(event) {
+    event.preventDefault();  // Prevent default form submission
 
-    form.addEventListener("submit", async function (event) {
-        event.preventDefault();
-
-        // Disable the submit button to prevent multiple submissions
-        submitButton.disabled = true;
-        submitButton.textContent = "Submitting...";
-
-        // Prepare form data (including file upload and multiple checkbox values)
-        const formData = new FormData(form);
-
-        try {
-            const response = await fetch("https://api.example.com/submit-partnership-form", {
-                method: "POST",
-                body: formData
-            });
-
-            const result = await response.json();
-
-            if (response.ok) {
-                alert("Form submitted successfully!");
-                form.reset(); // Reset the form after success
-            } else {
-                alert("Failed to submit: " + result.message);
-                submitButton.disabled = false;
-                submitButton.textContent = "Submit";
-            }
-        } catch (error) {
-            console.error("Error submitting form:", error);
-            alert("An error occurred. Please try again later.");
-            submitButton.disabled = false;
-            submitButton.textContent = "Submit";
+    const formData = new FormData();
+    
+    // Collect form data
+    formData.append("organizationName", document.getElementById("organizationName").value);
+    formData.append("contactPersonName", document.getElementById("contactPersonName").value);
+    formData.append("email", document.getElementById("email").value);
+    formData.append("phone", document.getElementById("phone").value);
+    
+    // Append file
+    const supportDocs = document.getElementById("supportDocs").files[0];
+    if (supportDocs) {
+        const allowedTypes = ["application/pdf", "image/jpeg", "image/png"];  // Example allowed file types
+        if (!allowedTypes.includes(supportDocs.type)) {
+            alert("Please upload a valid file (PDF, JPEG, PNG).");
+            return;
         }
+        const maxSize = 5 * 1024 * 1024;  // 5MB
+        if (supportDocs.size > maxSize) {
+            alert("File size exceeds the 5MB limit.");
+            return;
+        }
+        formData.append("file-parts", supportDocs);
+    }
+
+    // Add any other data fields as needed (e.g., area of interest)
+    const interestElements = document.querySelectorAll("input[name='interest[]']:checked");
+    interestElements.forEach((checkbox) => {
+        formData.append("interest[]", checkbox.value);
     });
+
+    // Send the API call
+    try {
+        const response = await fetch("YOUR_API_ENDPOINT", {
+            method: "POST",
+            body: formData,
+        });
+
+        const result = await response.json();
+        if (response.ok) {
+            alert("Form submitted successfully!");
+        } else {
+            alert("Error: " + result.message);
+        }
+    } catch (error) {
+        console.error("Error submitting the form", error);
+        alert("Error submitting the form. Please try again.");
+    }
 });
