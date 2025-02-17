@@ -15,12 +15,13 @@
     <meta name="robots" content="index, follow" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="TheGAW Industries" />
-    <script src="./assets/js/product_fil_upload.js"></script>
+    <script src="./assets/js/product_fil_upload.js"></script>  
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             document.querySelector('[data-tab="order-form"]').addEventListener('click', function () {
                 console.log('Order Form button clicked!');
                 const productName = document.getElementById('product_name').innerText;
+                handleFileUploadUI('file_upload_block');
                 handleFileUploadForm('bottom-loading-arms-form', 'https://thegawindustries.com/api/v1/contact/product_order_form', productName);
             });
         });
@@ -116,7 +117,7 @@
                     <!-- Thumbnails and main image will be injected here dynamically -->
                 </div>
                 <div class="w-full">
-                    <h3 id="product_name" class="text-xl uppercase font-semibold md:text-2xl">
+                    <h3 id="product_name" id="product_name" class="text-xl uppercase font-semibold md:text-2xl">
                         Bottom Loading Arms
                     </h3>
                     <p class="mt-5 leading-8 tracking-wide 2xl:text-lg text-justify">
@@ -280,9 +281,14 @@
                     </p>
                     <form id="bottom-loading-arms-form" class="grid col-span-3 mb-4 md:grid-cols-3 gap-5">
                         <!-- Custom label for file input -->
-                        <label for="coverLetter"
-                            class="w-full flex items-center gap-2 px-4 py-2 mt-1 border border-gray-300 rounded-md text-center cursor-pointer text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent hover:bg-gray-100">
+                        <label for="coverLetter" id="file_upload_block"
+                        class="w-full flex items-center gap-2 px-4 py-2 mt-1 border border-gray-300 rounded-md text-center cursor-pointer text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent hover:bg-gray-100">
                             <img class="h-6 w-6" src="assets/images/icons/upload_ico.png" alt="">Upload Answered File
+                        </label>
+
+                        <label for="coverLetter" id="empty_label"
+                            class="w-full flex hidden items-center gap-2 px-4 py-2 mt-1 border border-gray-300 rounded-md text-center cursor-pointer text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent hover:bg-gray-100">
+
                         </label>
                         <!-- Hidden file input -->
                         <input type="file" id="coverLetter" name="coverLetter" accept=".pdf,.doc,.docx" class="hidden">
