@@ -115,4 +115,42 @@ function closeModal() {
     modal.classList.add('hidden');
 }
 
+function closeModal() {
+    const modal = document.querySelector('.modal');
+    modal.classList.add('hidden');
+}
+
+function openModal(buttonElement) {
+    // Find the closest parent 'div' with class 'grid'
+    const jobContainer = buttonElement.closest('.grid');
+    // Find the job title inside that container
+    const jobNameElement = jobContainer.querySelector('.jobName');
+    // Get the text content of the job name
+    const jobName = jobNameElement ? jobNameElement.textContent.trim() : "Unknown Job";
+    const modal = document.querySelector('.modal');
+    // Set job name in a data attribute
+    modal.setAttribute('data-job-name', jobName);
+
+    modal.classList.remove('hidden');
+}
+
+function scrollActions() {
+  // navigation scroll effect
+    document.addEventListener('scroll', () => {
+        const navbar = document.getElementById('navbar');
+        if (window.scrollY > 50) {
+            navbar.classList.add('-translate-y-10', 'shadow-lg', 'border', 'border-gray-200', 'backdrop-filter', 'bg-white/60', 'backdrop-blur-xl', 'bg-opacity-30');
+        } else {
+            navbar.classList.remove('-translate-y-10', 'shadow-lg', 'border', 'border-gray-200', 'backdrop-filter', 'bg-white/60', 'backdrop-blur-xl', 'bg-opacity-30');
+        }
+    });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    handleFileUploadCareerForm('apply-form', 'https://thegawindustries.com/api/v1/contact/careers');
+    handleFileUploadCareerForm('news-letter-form', 'https://thegawindustries.com/api/v1/contact/news-letter');
+    scrollActions();
+});
+
+
 // handleFileUploadForm('apply-form', 'https://your-api-endpoint.com/upload');
