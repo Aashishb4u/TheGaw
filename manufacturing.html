@@ -8,7 +8,7 @@
 
     <!-- Canonical Tag -->
     <link rel="canonical" href="https://thegawindustries.com/manufacturing.html" />
-
+    <script src="./assets/js/manufacturing.js"></script>
     <!-- Meta Tags -->
     <meta name="description"
         content="TheGAW Industries provides precision-engineered hydraulic tools, pressure testing equipment, and fluid transfer systems for the global oil, energy, and heavy industries. Headquartered in Abu Dhabi, UAE, we drive innovation, efficiency, and sustainability in energy and industrial manufacturing." />
@@ -18,7 +18,7 @@
 
     <meta name="author" content="TheGAW Industries" />
     <meta name="robots" content="index, follow" />
-    
+
     <!-- Open Graph (OG) Tags (For Facebook, LinkedIn, WhatsApp) -->
     <meta property="og:title" content="TheGAW Industries - Engineering Innovation in Energy & Heavy Industries" />
     <meta property="og:description"
@@ -421,40 +421,41 @@
 
         </div>
 
-        <form
+        <form id="manufacturingForm"
             class="bg-[#EBF1FF] mt-16  rounded-lg md:p-10 p-5 max-w-4xl mx-auto md:grid md:grid-cols-3 gap-5 grid-cols-1 flex flex-col">
             <div class="w-full md:col-span-1">
                 <!-- First Name Field -->
                 <label class="text-sm text-black xl:text-base">First Name*</label>
-                <input type="text"
+                <input type="text" id="firstName"
                     class="w-full h-10 px-3 py-2 mt-2 border border-black border-solid rounded-md bg-white/40">
             </div>
 
             <div class="w-full md:col-span-1">
                 <!-- Last Name Field -->
                 <label class="text-sm text-black xl:text-base">Last Name*</label>
-                <input type="text"
-                    class="w-full h-10 px-3 py-2 mt-2 border border-black border-solid rounded-md bg-white/40">
+                <input type="text" id="lastName"
+                    class="w-full h-10 px-3 py-2 mt-2 border border-black border-solid rounded-md bg-white/40 required">
             </div>
 
             <div class="w-full md:col-span-1">
                 <!-- Job Title Field -->
                 <label class="text-sm text-black xl:text-base">Job Title*</label>
-                <input type="text"
-                    class="w-full h-10 px-3 py-2 mt-2 border border-black border-solid rounded-md bg-white/40">
+                <input type="text" id="jobRole"
+                    class="w-full h-10 px-3 py-2 mt-2 border border-black border-solid rounded-md bg-white/40 required">
             </div>
 
             <div class="w-full md:col-span-1">
                 <!-- Email Field -->
                 <label class="text-sm text-black xl:text-base">Email*</label>
-                <input type="email"
-                    class="w-full h-10 px-3 py-2 mt-2 border border-black border-solid rounded-md bg-white/40">
+                <input type="email" id="email"
+                    class="w-full h-10 px-3 py-2 mt-2 border border-black border-solid rounded-md bg-white/40 required">
             </div>
 
             <div class="w-full col-span-2">
                 <!-- Interested In Field (Select) -->
                 <label class="text-sm text-black xl:text-base">Interested In*</label>
-                <select class="w-full h-10 px-3 py-2 mt-2 border border-black border-solid rounded-md bg-white/40">
+                <select id="interestedIn"
+                    class="w-full h-10 px-3 py-2 mt-2 border border-black border-solid rounded-md bg-white/40">
                     <option value="" disabled selected>Please Select</option>
                     <option value="option1">Option 1</option>
                     <option value="option2">Option 2</option>
@@ -465,26 +466,27 @@
             <div class="w-full md:col-span-1">
                 <!-- Company Name Field -->
                 <label class="text-sm text-black xl:text-base">Company Name*</label>
-                <input type="text"
-                    class="w-full h-10 px-3 py-2 mt-2 border border-black border-solid rounded-md bg-white/40">
+                <input type="text" id="companyName"
+                    class="w-full h-10 px-3 py-2 mt-2 border border-black border-solid rounded-md bg-white/40 required">
             </div>
 
             <div class="w-full md:col-span-1">
                 <!-- Phone Number Field -->
                 <label class="text-sm text-black xl:text-base">Phone Number*</label>
-                <input type="tel" class="w-full px-3 py-2 mt-2 border border-black border-solid rounded-md bg-white/40">
+                <input type="tel" id="phoneNumber"
+                    class="w-full px-3 py-2 mt-2 border border-black border-solid rounded-md bg-white/40 required">
             </div>
 
             <div class="w-full md:col-span-1">
                 <!-- Country/Region Field -->
                 <label class="text-sm text-black xl:text-base">Country/Region*</label>
-                <input type="text"
-                    class="w-full h-10 px-3 py-2 mt-2 border border-black border-solid rounded-md bg-white/40">
+                <input type="text" id="countryName"
+                    class="w-full h-10 px-3 py-2 mt-2 border border-black border-solid rounded-md bg-white/40 required">
             </div>
             <div class="w-full md:col-span-3">
                 <!-- Country/Region Field -->
                 <label class="text-sm text-black xl:text-base">Message</label>
-                <textarea class="w-full px-3 py-2 mt-2 border border-black border-solid rounded-md bg-white/40"
+                <textarea id="message" class="w-full px-3 py-2 mt-2 border border-black border-solid rounded-md bg-white/40"
                     rows="3"></textarea>
             </div>
 
@@ -502,7 +504,7 @@
                     tick below to say how you would like us to contact you :
                 </p>
                 <label class="flex items-center mt-2">
-                    <input type="checkbox" class="h-16 accent-white/70 me-3">
+                    <input type="checkbox" id="acceptTerms" class="h-16 accent-white/70 me-3 required">
                     <p class="text-justify text-xs text-[#5A5A5A] xl:text-base">I agree to receive all communications
                         from TheGAW.</p>
                 </label>
@@ -520,22 +522,27 @@
                     the content requested.
                 </p>
 
-                <button
+                <button type="submit"
                     class="group rounded-md bg-primary text-white flex items-center uppercase mt-5 justify-between transition-all duration-300 hover:bg-[#666]">
+
                     <span
                         class="flex items-center justify-center px-5 py-2 overflow-hidden text-sm font-medium xl:text-lg">
                         SUBMIT
                     </span>
 
+                    <!-- Loading Icon (Hidden by Default) -->
+                    <img id="loadingIcon" src="./assets/images/icons/loading.png" class="hidden size-5 mx-2 animate-spin left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 animate-spin" alt="Loading...">
+
                     <div class="bg-primary_dark group-hover:bg-[#000] h-full py-2 px-2 w-fit rounded-e-md">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="size-5 ">
+                            stroke="currentColor" class="size-5">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
                         </svg>
                     </div>
 
                 </button>
+
             </div>
 
         </form>
@@ -543,8 +550,9 @@
 
     <div id="footer"></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.40/moment-timezone-with-data.min.js"></script>
-<script src="assets/js/header-footer.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.40/moment-timezone-with-data.min.js"></script>
+    <script src="assets/js/header-footer.js"></script>
 
     <script>
         // Function to update GST time

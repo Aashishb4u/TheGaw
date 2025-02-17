@@ -1,8 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("contact-form");
+    const submitButton = form.querySelector("button[type='submit']");
 
     form.addEventListener("submit", async function (event) {
         event.preventDefault(); // Prevent default form submission
+        
+        // Disable the button to prevent multiple submissions
+        if (submitButton.disabled) return;
+        submitButton.disabled = true;
 
         // Collect form data
         const formData = {
@@ -19,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Basic validation
         if (!formData.firstName || !formData.lastName || !formData.email || !formData.message) {
             alert("Please fill in all required fields.");
+            submitButton.disabled = false;
             return;
         }
 
@@ -43,6 +49,9 @@ document.addEventListener("DOMContentLoaded", function () {
         } catch (error) {
             console.error("Error submitting form:", error);
             alert("An error occurred. Please try again later.");
+        } finally {
+            // Re-enable the button after request completion
+            submitButton.disabled = false;
         }
     });
 });
