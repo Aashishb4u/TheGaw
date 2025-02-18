@@ -16,8 +16,9 @@ document.addEventListener("DOMContentLoaded", function () {
         // Disable button & show loading state
         submitButton.disabled = true;
         submitButton.style.opacity = "0.6";
+        // submitButton.textContent = "Submitting..."; // Show loading text
         // submitText.classList.add("hidden"); // Hide text
-        loadingIcon.classList.remove("hidden"); // Show spinner
+        // loadingIcon.classList.remove("hidden"); // Show spinner
 
         let errors = [];
 
@@ -97,8 +98,8 @@ document.addEventListener("DOMContentLoaded", function () {
             isSubmitting = false;
             submitButton.disabled = false;
             submitButton.style.opacity = "1";
-            submitText.classList.remove("hidden"); // Show text
-            loadingIcon.classList.add("hidden"); // Hide spinner
+            // submitText.classList.remove("hidden"); // Show text
+            // loadingIcon.classList.add("hidden"); // Hide spinner
         }
     });
 });

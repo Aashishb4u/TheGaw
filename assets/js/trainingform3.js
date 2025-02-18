@@ -1,51 +1,47 @@
-document.getElementById("partnershipForm").addEventListener("submit", async function(event) {
-    event.preventDefault();  // Prevent default form submission
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("partnershipForm");
+    const submitButton = form.querySelector("button[type='submit']");
+    let isSubmitting = false; // Prevent multiple submissions
 
-    const formData = new FormData();
-    
-    // Collect form data
-    formData.append("organizationName", document.getElementById("organizationName").value);
-    formData.append("contactPersonName", document.getElementById("contactPersonName").value);
-    formData.append("email", document.getElementById("email").value);
-    formData.append("phone", document.getElementById("phone").value);
-    
-    // Append file
-    const supportDocs = document.getElementById("supportDocs").files[0];
-    if (supportDocs) {
-        const allowedTypes = ["application/pdf", "image/jpeg", "image/png"];  // Example allowed file types
-        if (!allowedTypes.includes(supportDocs.type)) {
-            alert("Please upload a valid file (PDF, JPEG, PNG).");
-            return;
-        }
-        const maxSize = 5 * 1024 * 1024;  // 5MB
-        if (supportDocs.size > maxSize) {
-            alert("File size exceeds the 5MB limit.");
-            return;
-        }
-        formData.append("file-parts", supportDocs);
-    }
+    form.addEventListener("submit", async function (event) {
+        event.preventDefault(); // Stop default form submission
 
-    // Add any other data fields as needed (e.g., area of interest)
-    const interestElements = document.querySelectorAll("input[name='interest[]']:checked");
-    interestElements.forEach((checkbox) => {
-        formData.append("interest[]", checkbox.value);
-    });
+        if (isSubmitting) return; // Prevent multiple submissions
+        isSubmitting = true;
+        submitButton.disabled = true; // Disable button during submission
+        submitButton.textContent = "Submitting..."; // Show loading text
 
-    // Send the API call
-    try {
-        const response = await fetch("YOUR_API_ENDPOINT", {
-            method: "POST",
-            body: formData,
+        const formData = new FormData(form); // Automatically collects all form fields
+
+        // Handle checkboxes (interest[] array)
+        const checkboxes = document.querySelectorAll('input[name="interest"]:checked');
+        formData.delete("interest"); // Ensure no duplicates
+        checkboxes.forEach((checkbox) => {
+            formData.append("interest", checkbox.value);
         });
 
-        const result = await response.json();
-        if (response.ok) {
-            alert("Form submitted successfully!");
-        } else {
-            alert("Error: " + result.message);
+        // Debugging: Log all form values before submission
+        for (let [key, value] of formData.entries()) {
+            console.log(key, value);
         }
-    } catch (error) {
-        console.error("Error submitting the form", error);
-        alert("Error submitting the form. Please try again.");
-    }
+
+        try {
+            const response = await fetch("https://your-api.com/submit", {
+                method: "POST",
+                body: formData, // Send as multipart/form-data
+            });
+
+            if (!response.ok) throw new Error("Form submission failed");
+
+            alert("Form submitted successfully!");
+            form.reset(); // Reset form after successful submission
+        } catch (error) {
+            console.error("Form Submission Error:", error);
+            alert("Form submission failed.");
+        } finally {
+            isSubmitting = false;
+            submitButton.disabled = false; // Re-enable button after submission
+        }
+    });
 });
+

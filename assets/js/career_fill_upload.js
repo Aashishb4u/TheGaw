@@ -13,6 +13,7 @@ function handleFileUploadCareerForm(formId, endpointUrl, allowedExtensions = ['p
         const submitBtn = form.querySelector('button[type="submit"]');
         if (submitBtn) {
             submitBtn.disabled = true; // Disable button to prevent multiple clicks
+            submitButton.textContent = "Submitting..."; // Show loading text
             submitBtn.classList.add("opacity-50", "cursor-not-allowed"); // Optional: Add styles
         }
 
