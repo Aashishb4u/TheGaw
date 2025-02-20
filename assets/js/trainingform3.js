@@ -3,8 +3,35 @@ document.addEventListener("DOMContentLoaded", function () {
     const submitButton = form.querySelector("button[type='submit']");
     let isSubmitting = false; // Prevent multiple submissions
 
+    function closeModal(className) {
+        const modal = document.querySelector(className);
+        modal.classList.add('hidden');
+
+    }
+
+    const getCheckedInterests = () => {
+        const checkboxes = document.querySelectorAll('input[name="interestedIn"]');
+        const selected = {};
+    
+        checkboxes.forEach(checkbox => {
+            selected[checkbox.id] = checkbox.checked;
+        });
+    
+        // Filter and return only the IDs where the value is `true`
+        const checkedIds = Object.keys(selected).filter(id => selected[id]);
+        
+        console.log(checkedIds); // Logs only the checked IDs
+        return checkedIds;
+    };
+
     form.addEventListener("submit", async function (event) {
         event.preventDefault(); // Stop default form submission
+
+        const checkedIds = getCheckedInterests();
+        if(!checkedIds || checkedIds.length === 0) {
+            alert("Area of Interest in Partnership Required.");            
+            return;
+        }
 
         if (isSubmitting) return; // Prevent multiple submissions
         isSubmitting = true;
@@ -13,12 +40,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const formData = new FormData(form); // Automatically collects all form fields
 
-        // Handle checkboxes (interest[] array)
-        const checkboxes = document.querySelectorAll('input[name="interest"]:checked');
-        formData.delete("interest"); // Ensure no duplicates
-        checkboxes.forEach((checkbox) => {
-            formData.append("interest", checkbox.value);
-        });
+        formData.append("interestedIn", checkedIds.join(", "));
+        formData.set("mailType", "transfer_partner_form");
 
         // Debugging: Log all form values before submission
         for (let [key, value] of formData.entries()) {
@@ -26,7 +49,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         try {
-            const response = await fetch("https://your-api.com/submit", {
+            // const response = await fetch("http://localhost:3000/api/v1/contact/transfer_partner", {
+            const response = await fetch("https://thegawindustries.com/api/v1/contact/transfer_partner", {
                 method: "POST",
                 body: formData, // Send as multipart/form-data
             });
@@ -41,6 +65,8 @@ document.addEventListener("DOMContentLoaded", function () {
         } finally {
             isSubmitting = false;
             submitButton.disabled = false; // Re-enable button after submission
+            submitButton.textContent = "Submit"; // Show loading text
+            closeModal(".organization-registration-modal");
         }
     });
 });

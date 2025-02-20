@@ -1,21 +1,43 @@
 document.addEventListener('DOMContentLoaded', () => {
+    let isSubmitting = false; // Flag to prevent multiple submissions
+
+    function closeModal(className) {
+        const modal = document.querySelector(className);
+        modal.classList.add('hidden');
+
+    }
+
+
+    const getTrainingFormat = () => {
+        const checkedRadio = document.querySelector('input[name="trainingFormat"]:checked');
+        
+        if (checkedRadio) {
+            console.log(checkedRadio.id); // Logs the selected radio button ID
+            return checkedRadio.value; // Returns the selected radio button ID
+        }
+        
+        return null; // No selection made
+    };
 
     document.getElementById("trainingForm1").addEventListener("submit", async function (event) {
         event.preventDefault();
 
+        const trainingFormat = getTrainingFormat();
+        if(!trainingFormat) {
+            alert("Availability Required.");            
+            return;
+        }
+
         const submitButton = event.target.querySelector("button[type='submit']");
+        if (isSubmitting) return; // Prevent multiple submissions
+        isSubmitting = true;
         submitButton.disabled = true; // Disable button to prevent multiple clicks
         submitButton.textContent = "Submitting..."; // Show loading text
 
-        // Function to get the selected radio button value
-        function getSelectedTrainingFormat() {
-
-        }
-
-        const trainingFormat = document.querySelector('input[name="trainingFormat"]:checked').value;
 
         const formData = {
-            companyName: document.getElementById("fullName").value,
+            fullName: document.getElementById("fullName").value,
+            companyName: document.getElementById("orgName").value,
             email: document.getElementById("email").value,
             phoneNumber: document.getElementById("phone").value,
             regionName: document.getElementById("region").value,
@@ -25,11 +47,12 @@ document.addEventListener('DOMContentLoaded', () => {
             comments: document.getElementById("comments").value,
             trainingFormat: trainingFormat,
             jobRole: document.getElementById("designation").value,
-            mailType: "demo_form"
+            mailType: "request_for_training"
         };
 
         try {
-            const response = await fetch("https://api.example.com/training-request", {
+            const response = await fetch("https://thegawindustries.com/api/v1/contact/request_for_training", {
+            // const response = await fetch("http://localhost:3000/api/v1/contact/request_for_training", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -52,6 +75,11 @@ document.addEventListener('DOMContentLoaded', () => {
             alert("An error occurred. Please try again later.");
             submitButton.disabled = false; // Re-enable button on error
             submitButton.textContent = "Apply Now";
+        } finally {
+            isSubmitting = false;
+            submitButton.disabled = false; // Disable button to prevent multiple clicks
+            submitButton.textContent = "Submit"; // Show loading text
+            closeModal(".training-request-modal");
         }
     });
 });

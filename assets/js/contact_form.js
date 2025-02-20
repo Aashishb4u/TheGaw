@@ -1,13 +1,34 @@
+
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("contact-form");
     const submitButton = form.querySelector("button[type='submit']");
+    let isSubmitting = false; // Flag to prevent multiple submissions
+
+    const getSubject = () => {
+        const checkedRadio = document.querySelector('input[name="subject"]:checked');
+        
+        if (checkedRadio) {
+            console.log(checkedRadio.id); // Logs the selected radio button ID
+            return checkedRadio.value; // Returns the selected radio button ID
+        }
+        
+        return null; // No selection made
+    };
 
     form.addEventListener("submit", async function (event) {
         event.preventDefault(); // Prevent default form submission
-        
-        // Disable the button to prevent multiple submissions
-        if (submitButton.disabled) return;
-        submitButton.disabled = true;
+
+        const selectedSubject = getSubject();
+        if(!selectedSubject) {
+            alert("Subject Required.");      
+            return;
+        }
+
+        if (isSubmitting) return; // Prevent multiple submissions
+        isSubmitting = true;
+        submitButton.disabled = true; // Disable button to prevent multiple clicks
+        submitButton.textContent = "Submitting..."; // Show loading text
+
 
         // Collect form data
         const formData = {
@@ -20,14 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
             message: form.querySelector("textarea[placeholder='Message']").value.trim(),
             mailType: "contact"
         };
-
-        // Basic validation
-        if (!formData.firstName || !formData.lastName || !formData.email || !formData.message) {
-            alert("Please fill in all required fields.");
-            submitButton.disabled = false;
-            return;
-        }
-
+ 
         try {
             // Send API request
             const response = await fetch("https://thegawindustries.com/api/v1/contact/contact_us", {
@@ -51,7 +65,9 @@ document.addEventListener("DOMContentLoaded", function () {
             alert("An error occurred. Please try again later.");
         } finally {
             // Re-enable the button after request completion
-            submitButton.disabled = false;
+            isSubmitting = false;
+            submitButton.disabled = false; // Disable button to prevent multiple clicks
+            submitButton.textContent = "Send Message"; // Show loading text
         }
     });
 });

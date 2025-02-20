@@ -1,6 +1,7 @@
 // Function to handle form submission with file upload
 function handleFileUploadCareerForm(formId, endpointUrl, allowedExtensions = ['pdf', 'doc', 'docx']) {
     const form = document.getElementById(formId);
+    let isSubmitting = false; // Flag to prevent multiple submissions
 
     if (!form) {
         console.error(`Form with ID "${formId}" not found!`);
@@ -10,10 +11,12 @@ function handleFileUploadCareerForm(formId, endpointUrl, allowedExtensions = ['p
     form.addEventListener('submit', async function (event) {
         event.preventDefault(); // Prevent default form submission
 
-        const submitBtn = form.querySelector('button[type="submit"]');
+        const submitBtn = form.querySelector('button[type="submit"]:not([id="join_us_submit"])');
+        if (isSubmitting) return; // Prevent multiple submissions
+        isSubmitting = true;
         if (submitBtn) {
             submitBtn.disabled = true; // Disable button to prevent multiple clicks
-            submitButton.textContent = "Submitting..."; // Show loading text
+            submitBtn.textContent = "Submitting..."; // Show loading text
             submitBtn.classList.add("opacity-50", "cursor-not-allowed"); // Optional: Add styles
         }
 
@@ -92,9 +95,12 @@ function handleFileUploadCareerForm(formId, endpointUrl, allowedExtensions = ['p
                         alert('Form submitted successfully!');
                         form.reset();
                         closeModal();
+                        isSubmitting = false;
+
                     } else {
                         const error = await response.text();
                         alert(`Failed to submit form: ${error}`);
+                        isSubmitting = false;
                     }
                 } catch (error) {
                     console.error('Error submitting form:', error);
@@ -106,6 +112,8 @@ function handleFileUploadCareerForm(formId, endpointUrl, allowedExtensions = ['p
         // Re-enable the button after request completes (success or failure)
         if (submitBtn) {
             submitBtn.disabled = false;
+            submitBtn.textContent = "Submit"; // Show loading text
+            isSubmitting = false;
             submitBtn.classList.remove("opacity-50", "cursor-not-allowed");
         }
     });
@@ -150,6 +158,8 @@ function scrollActions() {
 document.addEventListener('DOMContentLoaded', () => {
     handleFileUploadCareerForm('apply-form', 'https://thegawindustries.com/api/v1/contact/careers');
     handleFileUploadCareerForm('news-letter-form', 'https://thegawindustries.com/api/v1/contact/news-letter');
+    // handleFileUploadCareerForm('apply-form', 'http://localhost:3000/api/v1/contact/careers');
+    // handleFileUploadCareerForm('news-letter-form', 'http://localhost:3000/api/v1/contact/news-letter');
     scrollActions();
 });
 
