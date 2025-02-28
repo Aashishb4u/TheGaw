@@ -77,6 +77,8 @@
     <!-- tailwind css -->
     <link rel="stylesheet" href="assets/css/tailwind.css" />
     <link rel="stylesheet" href="assets/css/style.scss" />
+    <script src="assets/js/search.js"></script>
+
 
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
@@ -100,28 +102,7 @@
 
     <!-- opportunities -->
     <section class="container p-8 mx-auto lg:px-20 lg:py-10">
-        <div class="grid gap-5 mt-10 md:grid-cols-4">
-            <a href="product-details.html">
-                <img class="w-full h-auto transition-all duration-300 hover:-translate-y-1 hover:scale-105"
-                    src="assets/images/products/1.png" alt="product">
-            </a>
-            <a href="product-details.html">
-                <img class="w-full h-auto transition-all duration-300 hover:-translate-y-1 hover:scale-105"
-                    src="assets/images/products/2.png" alt="product">
-            </a>
-            <a href="product-details.html">
-                <img class="w-full h-auto transition-all duration-300 hover:-translate-y-1 hover:scale-105"
-                    src="assets/images/products/3.png" alt="product">
-            </a>
-
-            <a href="product-details.html">
-                <img class="w-full h-auto transition-all duration-300 hover:-translate-y-1 hover:scale-105"
-                    src="assets/images/products/4.png" alt="product">
-            </a>
-
-        </div>
-
-
+        <div id="product-grid" class="grid gap-10 mt-10 md:grid-cols-3"></div>
     </section>
 
 
