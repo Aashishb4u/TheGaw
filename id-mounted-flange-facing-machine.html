@@ -181,45 +181,73 @@
                         <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Specifications</h3>
                     </div>
                     <div class="mt-4 overflow-x-auto">
-                        <table class="min-w-full text-sm text-left border border-collapse border-gray-200">
-                            <thead>
-                                <tr class="bg-gray-100 border-b border-gray-200">
-                                    <th class="px-4 py-3 font-semibold">Model</th>
-                                    <th class="px-4 py-3 text-center  font-semibold">Facing Diameter Range (inch)</th>
-                                    <th class="px-4 py-3 text-center  font-semibold">ID/OD Clamp Range (inch)</th>
-                                    <th class="px-4 py-3 text-center  font-semibold">Tool Post Stroke (inch)</th>
-                                    <th class="px-4 py-3 text-center  font-semibold">Facing Feed Rate (mm)</th>
-                                    <th class="px-4 py-3 text-center  font-semibold">RPM</th>
-                                    <th class="px-4 py-3 text-center  font-semibold">Drive Power Unit Pneumatic (Hp)</th>
-                                    <th class="px-4 py-3 text-center  font-semibold">Air Consumption/Supply Required (m³/Min)</th>
-                                    <th class="px-4 py-3 text-center  font-semibold">Weight (kg)</th>
+                        <table class="min-w-full text-sm text-left border border-gray-200">
+                            <thead class="border border-gray-300">
+                                <tr class="bg-gray-100">
+                                    <th class="px-4 py-3 font-semibold border border-gray-300">Model</th>
+                                    <th class="px-4 py-3 text-center font-semibold border border-gray-300">Facing Range (O.D) Imperial</th>
+                                    <th class="px-4 py-3 text-center font-semibold border border-gray-300">Facing Range (O.D) Metric</th>
+                                    <th class="px-4 py-3 text-center font-semibold border border-gray-300">Mounting Range (I.D) Imperial</th>
+                                    <th class="px-4 py-3 text-center font-semibold border border-gray-300">Mounting Range (I.D) Metric</th>
+                                    <th class="px-4 py-3 text-center font-semibold border border-gray-300">Tool Stroke</th>
+                                    <th class="px-4 py-3 text-center font-semibold border border-gray-300">Swivel Angle (Degrees)</th>
+                                    <th class="px-4 py-3 text-center font-semibold border border-gray-300">Rotation Speed (RPM)</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="bg-white border-b hover:bg-gray-50">
-                                    <td class="px-4 py-3">AOT FF 60</td>
-                                    <td class="px-4 py-3 text-center ">20-60</td>
-                                    <td class="px-4 py-3 text-center ">102 (4")</td>
-                                    <td class="px-4 py-3 text-center ">102 (4")</td>
-                                    <td class="px-4 py-3 text-center ">0.13 / 0.60</td>
-                                    <td class="px-4 py-3 text-center ">0-20</td>
-                                    <td class="px-4 py-3 text-center ">4</td>
-                                    <td class="px-4 py-3 text-center ">2.89</td>
-                                    <td class="px-4 py-3 text-center ">800</td>
+                                <tr class="bg-white border border-gray-300 hover:bg-gray-50">
+                                    <td class="px-4 py-3 border border-gray-300">AFF20</td>
+                                    <td class="px-4 py-3 text-center border border-gray-300">2"-24"</td>
+                                    <td class="px-4 py-3 text-center border border-gray-300">50MM-610MM</td>
+                                    <td class="px-4 py-3 text-center border border-gray-300">2"-20"</td>
+                                    <td class="px-4 py-3 text-center border border-gray-300">50MM-508MM</td>
+                                    <td class="px-4 py-3 text-center border border-gray-300">50MM</td>
+                                    <td class="px-4 py-3 text-center border border-gray-300">±30</td>
+                                    <td class="px-4 py-3 text-center border border-gray-300">44RPM</td>
                                 </tr>
-                                <tr class="bg-white border-b hover:bg-gray-50">
-                                    <td class="px-4 py-3">AOT FF 76</td>
-                                    <td class="px-4 py-3 text-center ">26-76</td>
-                                    <td class="px-4 py-3 text-center ">102 (4")</td>
-                                    <td class="px-4 py-3 text-center ">102 (4")</td>
-                                    <td class="px-4 py-3 text-center ">0.13 / 0.60</td>
-                                    <td class="px-4 py-3 text-center ">0-12</td>
-                                    <td class="px-4 py-3 text-center ">4</td>
-                                    <td class="px-4 py-3 text-center ">2.69</td>
-                                    <td class="px-4 py-3 text-center ">1375</td>
+                                <tr class="bg-white border border-gray-300 hover:bg-gray-50">
+                                    <td class="px-4 py-3 border border-gray-300">AFF40</td>
+                                    <td class="px-4 py-3 text-center border border-gray-300">6"-40"</td>
+                                    <td class="px-4 py-3 text-center border border-gray-300">160MM-1000MM</td>
+                                    <td class="px-4 py-3 text-center border border-gray-300">6"-32"</td>
+                                    <td class="px-4 py-3 text-center border border-gray-300">158MM-820MM</td>
+                                    <td class="px-4 py-3 text-center border border-gray-300">102MM</td>
+                                    <td class="px-4 py-3 text-center border border-gray-300">±30</td>
+                                    <td class="px-4 py-3 text-center border border-gray-300">35RPM</td>
+                                </tr>
+                                <tr class="bg-white border border-gray-300 hover:bg-gray-50">
+                                    <td class="px-4 py-3 border border-gray-300">AFF60</td>
+                                    <td class="px-4 py-3 text-center border border-gray-300">20"-66"</td>
+                                    <td class="px-4 py-3 text-center border border-gray-300">500MM-1650MM</td>
+                                    <td class="px-4 py-3 text-center border border-gray-300">20"-60"</td>
+                                    <td class="px-4 py-3 text-center border border-gray-300">500MM-1500MM</td>
+                                    <td class="px-4 py-3 text-center border border-gray-300">102MM</td>
+                                    <td class="px-4 py-3 text-center border border-gray-300">±30</td>
+                                    <td class="px-4 py-3 text-center border border-gray-300">23RPM</td>
+                                </tr>
+                                <tr class="bg-white border border-gray-300 hover:bg-gray-50">
+                                    <td class="px-4 py-3 border border-gray-300">AFF80</td>
+                                    <td class="px-4 py-3 text-center border border-gray-300">27"-88"</td>
+                                    <td class="px-4 py-3 text-center border border-gray-300">690MM-2200MM</td>
+                                    <td class="px-4 py-3 text-center border border-gray-300">27"-80"</td>
+                                    <td class="px-4 py-3 text-center border border-gray-300">690MM-2000MM</td>
+                                    <td class="px-4 py-3 text-center border border-gray-300">102MM</td>
+                                    <td class="px-4 py-3 text-center border border-gray-300">±360</td>
+                                    <td class="px-4 py-3 text-center border border-gray-300">22RPM</td>
+                                </tr>
+                                <tr class="bg-white border border-gray-300 hover:bg-gray-50">
+                                    <td class="px-4 py-3 border border-gray-300">AFF120</td>
+                                    <td class="px-4 py-3 text-center border border-gray-300">46"-120"</td>
+                                    <td class="px-4 py-3 text-center border border-gray-300">1150MM-3000MM</td>
+                                    <td class="px-4 py-3 text-center border border-gray-300">44"-112"</td>
+                                    <td class="px-4 py-3 text-center border border-gray-300">1120MM-2800MM</td>
+                                    <td class="px-4 py-3 text-center border border-gray-300">102MM</td>
+                                    <td class="px-4 py-3 text-center border border-gray-300">±360</td>
+                                    <td class="px-4 py-3 text-center border border-gray-300">15RPM</td>
                                 </tr>
                             </tbody>
                         </table>
+                        
                     </div>
                     <p class="mt-4">Tailor-made sizes available upon customer request up to 180".</p>
 
