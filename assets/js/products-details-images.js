@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
         { name: "ID Mounted Flange Facing Machine", imageIds: [44, 45], link: "id-mounted-flange-facing-machine.html" },
       ],
       "manuel-flange-facing-machine": [
-        { name: "Manuel Flange Facing Machine", imageIds: [46, 47], link: "manuel-flange-facing-machine.html" },
+        { name: "Manual Flange Facing Machine", imageIds: [46, 47], link: "manuel-flange-facing-machine.html" },
       ],
     };
     
