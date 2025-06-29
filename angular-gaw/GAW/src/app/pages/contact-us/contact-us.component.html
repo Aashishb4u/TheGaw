@@ -1,0 +1,270 @@
+<app-header>
+
+</app-header>
+<header class="relative h-screen overflow-hidden">
+        <!-- Video Background -->
+        <!-- <video autoplay muted loop class="absolute inset-0 object-cover w-full h-full">
+            <source src="assets/videos/contact.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video> -->
+        <div class="h-full w-full bg-[#000C25] absolute">
+
+        </div>
+        <!-- <div class="absolute inset-0 w-full h-full bg-black/60">
+
+        </div> -->
+        <!-- navigation -->
+        <div id="header">
+        </div>
+        <!-- hero section -->
+        <section class="container mx-auto lg:p-20 p-8 min-h-[80vh] flex items-center relative z-20 text-white ">
+
+            <div>
+                <h2 class="text-sm  2xl:text-xl text-white/70">
+                    <span class="">TheGAW </span>
+                    <span class="uppercase">Industries helps you to</span>
+
+                </h2>
+
+                <h1
+                    class="mt-5 text-2xl font-medium tracking-wide uppercase md:text-4xl 2xl:text-5xl 2xl:font-semibold">
+                    Unlock Complete
+                    <br class="hidden md:block">
+                    Industrial Solutions.
+                </h1>
+
+            </div>
+        </section>
+    </header>
+
+<section class="p-8 lg:px-20">
+        <div class="container mx-auto ">
+            <h2 class="text-xl font-semibold leading-8 tracking-wide text-center md:text-2xl text-primary">
+                Connect With Us Today
+            </h2>
+
+            <!-- map -->
+            <div class="mt-10 overflow-hidden rounded-lg shadow-md">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3630.7179770363527!2d54.370374899999995!3d24.4952267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e6707253b9431%3A0xa412f5cc5a31e5d!2sTheGAW%20Industries!5e0!3m2!1sen!2sin!4v1737972859122!5m2!1sen!2sin"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+
+            <!-- contact form -->
+            <div class="gap-5 mt-10 shadow-md md:grid md:grid-cols-2">
+                <div class="flex flex-col justify-around bg-[#000C25] p-5 md:p-10 text-wrap rounded-md text-white">
+                    <div>
+                        <h3 class="text-lg font-medium md:text-x 2xl:text-3xl">
+                            Contact Information
+                        </h3>
+
+                        <ul class="mt-10 mb-4 space-y-5 font-medium 2xl:text-lg">
+                            <li class="flex gap-3">
+                                <img class="size-5 2xl:size-7" src="assets/images/icons/bxs_phone-call.svg" alt="phone">
+                                <a href="tel:+97122459533">+971 22459533</a>
+
+                            </li>
+                            <li class="flex gap-3">
+                                <img class="size-5 2xl:size-7" src="assets/images/icons/ic_sharp-email.svg" alt="email">
+                                <a href="mailto:info&#64;TheGAWgroup.com">info&#64;thegawgroup.com</a>
+                            </li>
+                            <li class="flex gap-3">
+                                <img class="size-5 2xl:size-7" src="assets/images/icons/carbon_location-filled.svg"
+                                    alt="email">
+
+                                Abudullah Bin Darwish, Emirates Tower - <br>
+                                Suite No 1504 - Hamdan Bin Mohammed <br>
+                                St - Al Danah - Zone 1 - Abu Dhabi - <br>
+                                United Arab Emirates.
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="flex items-center gap-3 mt-12">
+
+
+                        <a target="_blank" href="https://www.linkedin.com/company/thegawindustries">
+                            <img class="size-9 2xl:size-12" src="assets/images/icons/in.svg" alt="icon">
+                        </a>
+
+                        <a target="_blank" href="#">
+                            <img class="size-9 2xl:size-12" src="assets/images/icons/x.svg" alt="icon">
+                        </a>
+
+                        <a target="_blank" href="https://api.whatsapp.com/send?phone=+919791084939&text=Hello,%20I%20want%20to%20send%20you%20a%20message.">
+                            <img class="size-9 2xl:size-12" src="assets/images/icons/wt.svg" alt="icon">
+                        </a>
+
+                        <a target="_blank" href="https://www.youtube.com/@TheGAWIndustries">
+                            <img class="size-9 2xl:size-12" src="assets/images/icons/yt.svg" alt="icon">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="w-full p-5">
+                    <form id="contact-form" class="spacfe-y-6">
+                        <!-- First and Last Name -->
+                        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 mb-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 2xl:text-base">First Name</label>
+                                <!-- <input type="email"
+                                    class="block w-full py-3 text-sm bg-transparent border-b-2 outline-none peer border-t-transparent border-x-transparent border-b-gray-200 focus:border-t-transparent focus:border-x-transparent focus:border-b-blue-500 focus:ring-0 disabled:opacity-50 disabled:pointer-events-none"
+                                    placeholder="John">  -->
+                                <input type="text"
+                                    class="block w-full px-2 py-3 mt-2 text-sm bg-transparent border border-black border-solid rounded-md peer focus:border-b-blue-500 focus:ring-0 disabled:opacity-50 disabled:pointer-events-none 2xl:text-base"
+                                    placeholder="First Name" required>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 2xl:text-base">Last Name</label>
+                                <!-- <input type="email"
+                                    class="block w-full py-3 text-sm bg-transparent border-b-2 outline-none peer border-t-transparent border-x-transparent border-b-gray-200 focus:border-t-transparent focus:border-x-transparent focus:border-b-blue-500 focus:ring-0 disabled:opacity-50 disabled:pointer-events-none"
+                                    placeholder="Doe"> -->
+                                <input type="text"
+                                    class="block w-full px-2 py-3 mt-2 text-sm bg-transparent border border-black border-solid rounded-md peer focus:border-b-blue-500 focus:ring-0 disabled:opacity-50 disabled:pointer-events-none 2xl:text-base"
+                                    placeholder="Last Name" required>
+                            </div>
+                        </div>
+
+                        <!-- Email and Phone Number -->
+                        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 mb-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 2xl:text-base">Email</label>
+                                <!-- <input type="email"
+                                    class="block w-full py-3 text-sm bg-transparent border-b-2 outline-none peer border-t-transparent border-x-transparent border-b-gray-200 focus:border-t-transparent focus:border-x-transparent focus:border-b-blue-500 focus:ring-0 disabled:opacity-50 disabled:pointer-events-none"
+                                    placeholder="example@example.com"> -->
+                                <input type="email"
+                                    class="block w-full px-2 py-3 mt-2 text-sm bg-transparent border border-black border-solid rounded-md peer focus:border-b-blue-500 focus:ring-0 disabled:opacity-50 disabled:pointer-events-none 2xl:text-base"
+                                    placeholder="Email" required>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 2xl:text-base">Phone
+                                    Number</label>
+
+                                <!-- <input type="text"
+                                    class="block w-full py-3 text-sm bg-transparent border-b-2 outline-none peer border-t-transparent border-x-transparent border-b-gray-200 focus:border-t-transparent focus:border-x-transparent focus:border-b-blue-500 focus:ring-0 disabled:opacity-50 disabled:pointer-events-none"
+                                    placeholder="+1 012 3456 789"> -->
+                                <input type="number"
+                                    class="block w-full px-2 py-3 mt-2 text-sm bg-transparent border border-black border-solid rounded-md peer focus:border-b-blue-500 focus:ring-0 disabled:opacity-50 disabled:pointer-events-none 2xl:text-base"
+                                    placeholder="Phone Number" required>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="block text-sm font-medium text-gray-700 2xl:text-base"> Company / Organization
+                                Name</label>
+
+                            <input type="text"
+                                class="block w-full px-2 py-3 mt-2 text-sm bg-transparent border border-black border-solid rounded-md peer focus:border-b-blue-500 focus:ring-0 disabled:opacity-50 disabled:pointer-events-none 2xl:text-base"
+                                placeholder="Company / Organization Name" required>
+                        </div>
+
+                        <!-- Select Subject -->
+                        <div class="mb-4">
+                            <label class="block text-sm font-medium text-gray-700 2xl:text-base">Select Subject</label>
+                            <div class="flex flex-wrap gap-4 mt-2 text-xs 2xl:text-base md:flex-nowrap">
+                                <label class="inline-flex items-center">
+                                    <input type="radio" value="General Inquiry" name="subject" class="text-blue-600 focus:ring-blue-500" checked>
+                                    <span class="ml-2 text-gray-700">General Inquiry</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="radio" value="Sales Inquiry" name="subject" class="text-blue-600 focus:ring-blue-500">
+                                    <span class="ml-2 text-gray-700">Sales Inquiry</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="radio" value="Technical Support" name="subject" class="text-blue-600 focus:ring-blue-500">
+                                    <span class="ml-2 text-gray-700">Technical Support</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="radio" value="Service Inquiry" name="subject" class="text-blue-600 focus:ring-blue-500">
+                                    <span class="ml-2 text-gray-700">Service Inquiry</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Message -->
+                        <div class="mb-4">
+                            <label class="block text-sm font-medium text-gray-700 2xl:text-base">Message</label>
+                            <!-- <textarea placeholder="Write your message.." rows="1"
+                                class="block w-full py-3 text-sm bg-transparent border-b-2 outline-none peer border-t-transparent border-x-transparent border-b-gray-200 focus:border-t-transparent focus:border-x-transparent focus:border-b-blue-500 focus:ring-0 disabled:opacity-50 disabled:pointer-events-none"></textarea> -->
+                            <textarea placeholder="Message"
+                                class="w-full px-3 py-2 mt-2 border border-black border-solid rounded-md bg-white/40"
+                                rows="4" required></textarea>
+
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="flex md:justify-end ">
+                            <button type="submit"
+                                class="w-full py-3 text-sm font-medium text-white bg-blue-600 rounded-md shadow-sm md:max-w-40 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 2xl:text-lg">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+
+            <div class="grid gap-8 mt-10 md:grid-cols-2">
+
+                <div
+                    class="p-5 transition-all duration-500 ease-in-out transform bg-white rounded-md shadow-md hover:scale-105 hover:shadow-lg hover:bg-primary/10 group">
+                    <h3 class="text-lg font-semibold 2xl:text-xl">
+                        TheGAW Industries GIPL - India
+
+                    </h3>
+                    <p class="mt-2 text-sm 2xl:text-base">
+                        TheGAW Industries GIPL - INDIA <br>
+                        No: 5 Munniampillai Street, Pudupet, <br>
+                        Egmore, Chennai-600002, Tamilnadu, <br>
+                        INDIA.
+
+                    </p>
+                    <!-- <div class="w-full my-2 border-t border-black 2xl:text-base"></div>
+                    <a href="tel:+97122459533"
+                        class="flex gap-2 mt-2 group-hover:font-medium group-hover:text-primary/80">
+                        <img class="size-6 group-hover:hidden" src="assets/images/icons/phone.svg" alt="phone">
+                        <img class="hidden size-6 group-hover:block" src="assets/images/icons/phone.png" alt="phone">
+                        +97122459533</a> -->
+                </div>
+
+                <div
+                    class="p-5 transition-all duration-500 ease-in-out transform bg-white rounded-md shadow-md hover:scale-105 hover:shadow-lg hover:bg-primary/10 group">
+                    <h3 class="text-lg font-semibold 2xl:text-xl">
+                        TheGAW Industries Singapore
+
+                    </h3>
+                    <p class="mt-2 text-sm 2xl:text-base">
+                        Frasers Tower, Level 17, 182 Cecil Street, <br>
+                        069547, Singapore.
+                    </p>
+                    <!-- <div class="w-full my-2 border-t border-black 2xl:text-base"></div>
+                <a href="tel:+97122459533"
+                    class="flex gap-2 mt-2 group-hover:font-medium group-hover:text-primary/80">
+                    <img class="size-6 group-hover:hidden" src="assets/images/icons/phone.svg" alt="phone">
+                    <img class="hidden size-6 group-hover:block" src="assets/images/icons/phone.png" alt="phone">
+                    +97122459533</a> -->
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <section class="container p-8 mx-auto lg:p-20">
+        <h2 class="text-2xl font-semibold text-center text-primary md:text-3xl">
+            Institutional Contacts
+        </h2>
+
+        <!-- Dynamic Contact Loading -->
+        <div id="contact-grid" class="grid gap-8 mt-10 md:grid-cols-2"></div>
+
+
+    </section>
+
+
+<app-footer>
+    
+</app-footer>

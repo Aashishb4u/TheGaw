@@ -106,6 +106,7 @@
             ],
             "styles": [
               "src/styles.scss"
+              
             ],
             "scripts": [
               "src/assets/js/header-footer.js"
