@@ -14,6 +14,10 @@ import { ManufacturingComponent } from './pages/manufacturing/manufacturing.comp
 import { FluidTransferSolutionComponent } from './pages/fluid-transfer-solution/fluid-transfer-solution.component';
 import { ProcurementProjectManagementComponent } from './pages/procurement-project-management/procurement-project-management.component';
 import { LvInstallationComponent } from './pages/lv-installation/lv-installation.component';
+import { TrainingsComponent } from './pages/trainings/trainings.component';
+import { ControlledBoltingHydraulicEquipmentsComponent } from './pages/controlled-bolting-hydraulic-equipments/controlled-bolting-hydraulic-equipments.component';
+import { HydrotestingChemicalInjectionSkidsComponent } from './pages/hydrotesting-chemical-injection-skids/hydrotesting-chemical-injection-skids.component';
+import { OnSiteAtexMachiningComponent } from './pages/on-site-atex-machining/on-site-atex-machining.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +32,11 @@ import { LvInstallationComponent } from './pages/lv-installation/lv-installation
     ManufacturingComponent,
     FluidTransferSolutionComponent,
     ProcurementProjectManagementComponent,
-    LvInstallationComponent
+    LvInstallationComponent,
+    TrainingsComponent,
+    ControlledBoltingHydraulicEquipmentsComponent,
+    HydrotestingChemicalInjectionSkidsComponent,
+    OnSiteAtexMachiningComponent
   ],
   imports: [
     BrowserModule,

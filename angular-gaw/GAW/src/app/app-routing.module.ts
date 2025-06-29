@@ -9,6 +9,10 @@ import { ManufacturingComponent } from './pages/manufacturing/manufacturing.comp
 import { FluidTransferSolutionComponent } from './pages/fluid-transfer-solution/fluid-transfer-solution.component';
 import { ProcurementProjectManagementComponent } from './pages/procurement-project-management/procurement-project-management.component';
 import { LvInstallationComponent } from './pages/lv-installation/lv-installation.component';
+import { TrainingsComponent } from './pages/trainings/trainings.component';
+import { ControlledBoltingHydraulicEquipmentsComponent } from './pages/controlled-bolting-hydraulic-equipments/controlled-bolting-hydraulic-equipments.component';
+import { HydrotestingChemicalInjectionSkidsComponent } from './pages/hydrotesting-chemical-injection-skids/hydrotesting-chemical-injection-skids.component';
+import { OnSiteAtexMachiningComponent } from './pages/on-site-atex-machining/on-site-atex-machining.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -20,8 +24,12 @@ const routes: Routes = [
   { path:  'manufacturing', component: ManufacturingComponent},
   { path:  'fluid-transfer', component: FluidTransferSolutionComponent},
   { path:  'procurement-project-management', component: ProcurementProjectManagementComponent},
-  { path:  'lv-installation', component: LvInstallationComponent}
- 
+  { path:  'lv-installation', component: LvInstallationComponent},
+  { path:  'trainings', component: TrainingsComponent},
+  { path:  'controlled-bolting-hydraulic-equipments', component: ControlledBoltingHydraulicEquipmentsComponent},
+  { path:  'hydrotesting-chemical-injection-skids', component: HydrotestingChemicalInjectionSkidsComponent},
+  { path:  'on-site-atex-machining', component: OnSiteAtexMachiningComponent},
+
 ]
 
 @NgModule({
