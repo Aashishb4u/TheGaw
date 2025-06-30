@@ -26,6 +26,7 @@ export class ManufacturingComponent implements OnInit {
   ngOnInit(): void {
     this.cvForm = this.fb.group({
       firstName: ['', Validators.required],
+      companyName: ['', Validators.required],
       lastName: ['', Validators.required],
       jobTitle: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
