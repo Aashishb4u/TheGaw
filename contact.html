@@ -179,7 +179,8 @@
                             <img class="size-9 2xl:size-12" src="assets/images/icons/x.svg" alt="icon">
                         </a>
 
-                        <a target="_blank" href="https://api.whatsapp.com/send?phone=+919791084939&text=Hello,%20I%20want%20to%20send%20you%20a%20message.">
+                        <a target="_blank"
+                            href="https://api.whatsapp.com/send?phone=+919791084939&text=Hello,%20I%20want%20to%20send%20you%20a%20message.">
                             <img class="size-9 2xl:size-12" src="assets/images/icons/wt.svg" alt="icon">
                         </a>
 
@@ -231,9 +232,9 @@
                                 <!-- <input type="text"
                                     class="block w-full py-3 text-sm bg-transparent border-b-2 outline-none peer border-t-transparent border-x-transparent border-b-gray-200 focus:border-t-transparent focus:border-x-transparent focus:border-b-blue-500 focus:ring-0 disabled:opacity-50 disabled:pointer-events-none"
                                     placeholder="+1 012 3456 789"> -->
-                                <input type="number"
+                                <input type="tel"
                                     class="block w-full px-2 py-3 mt-2 text-sm bg-transparent border border-black border-solid rounded-md peer focus:border-b-blue-500 focus:ring-0 disabled:opacity-50 disabled:pointer-events-none 2xl:text-base"
-                                    placeholder="Phone Number" required>
+                                    placeholder="Phone Number"  required>
                             </div>
                         </div>
 
@@ -251,19 +252,23 @@
                             <label class="block text-sm font-medium text-gray-700 2xl:text-base">Select Subject</label>
                             <div class="flex flex-wrap gap-4 mt-2 text-xs 2xl:text-base md:flex-nowrap">
                                 <label class="inline-flex items-center">
-                                    <input type="radio" value="General Inquiry" name="subject" class="text-blue-600 focus:ring-blue-500" checked>
+                                    <input type="radio" value="General Inquiry" name="subject"
+                                        class="text-blue-600 focus:ring-blue-500" checked>
                                     <span class="ml-2 text-gray-700">General Inquiry</span>
                                 </label>
                                 <label class="inline-flex items-center">
-                                    <input type="radio" value="Sales Inquiry" name="subject" class="text-blue-600 focus:ring-blue-500">
+                                    <input type="radio" value="Sales Inquiry" name="subject"
+                                        class="text-blue-600 focus:ring-blue-500">
                                     <span class="ml-2 text-gray-700">Sales Inquiry</span>
                                 </label>
                                 <label class="inline-flex items-center">
-                                    <input type="radio" value="Technical Support" name="subject" class="text-blue-600 focus:ring-blue-500">
+                                    <input type="radio" value="Technical Support" name="subject"
+                                        class="text-blue-600 focus:ring-blue-500">
                                     <span class="ml-2 text-gray-700">Technical Support</span>
                                 </label>
                                 <label class="inline-flex items-center">
-                                    <input type="radio" value="Service Inquiry" name="subject" class="text-blue-600 focus:ring-blue-500">
+                                    <input type="radio" value="Service Inquiry" name="subject"
+                                        class="text-blue-600 focus:ring-blue-500">
                                     <span class="ml-2 text-gray-700">Service Inquiry</span>
                                 </label>
                             </div>
@@ -284,6 +289,8 @@
                         <div class="flex md:justify-end ">
                             <button type="submit"
                                 class="w-full py-3 text-sm font-medium text-white bg-blue-600 rounded-md shadow-sm md:max-w-40 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 2xl:text-lg">
+                                {{ isSubmitting ? 'Sending…' : 'Send Message' }}
+
                                 Send Message
                             </button>
                         </div>
@@ -353,8 +360,9 @@
 
     <div id="footer"></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.40/moment-timezone-with-data.min.js"></script>
-<script src="assets/js/header-footer.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.40/moment-timezone-with-data.min.js"></script>
+    <script src="assets/js/header-footer.js"></script>
 
 
     <script>

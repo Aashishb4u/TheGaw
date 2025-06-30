@@ -18,6 +18,9 @@ import { TrainingsComponent } from './pages/trainings/trainings.component';
 import { ControlledBoltingHydraulicEquipmentsComponent } from './pages/controlled-bolting-hydraulic-equipments/controlled-bolting-hydraulic-equipments.component';
 import { HydrotestingChemicalInjectionSkidsComponent } from './pages/hydrotesting-chemical-injection-skids/hydrotesting-chemical-injection-skids.component';
 import { OnSiteAtexMachiningComponent } from './pages/on-site-atex-machining/on-site-atex-machining.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ProductDetailsComponent } from './pages/product-details/product-details.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -36,11 +39,14 @@ import { OnSiteAtexMachiningComponent } from './pages/on-site-atex-machining/on-
     TrainingsComponent,
     ControlledBoltingHydraulicEquipmentsComponent,
     HydrotestingChemicalInjectionSkidsComponent,
-    OnSiteAtexMachiningComponent
+    OnSiteAtexMachiningComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [
     provideClientHydration(withEventReplay())

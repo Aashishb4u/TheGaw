@@ -1,4 +1,4 @@
-<footer>  
+<footer>
     <!-- social links -->
     <div class="p-8 mx-auto border-b lg:px-20 lg:pt-10 border-b-stone-200">
         <!-- <div class="grid grid-cols-2 gap-4 md:grid-cols-4">
@@ -58,33 +58,33 @@
 
                 <!-- LinkedIN, X, WHatsapp, YT -->
                 <div class="flex gap-4 footer-social-icon">
-                    <a href="https://www.linkedin.com/company/thegawindustries" aria-label="" target="_blank"> 
+                    <a href="https://www.linkedin.com/company/thegawindustries" aria-label="" target="_blank">
                         <div class="image-container">
-                            <img src="assets/images/icons/linkedin_ico.png"
-                                alt="Emerson logo" loading="lazy" class="invert h-8 hover:invert-[.25] cm-media deferredImage"
+                            <img src="assets/images/icons/linkedin_ico.png" alt="Emerson logo" loading="lazy"
+                                class="invert h-8 hover:invert-[.25] cm-media deferredImage"
                                 data-src="assets/images/icons/linkedin_ico.png" title="">
                         </div>
                     </a>
                     <a href="#" aria-label="" target="_blank">
                         <div class="image-container">
-                            <img src="assets/images/icons/x_ico.png" alt="Emerson logo"
-                                loading="lazy" class="invert h-8 hover:invert-[.25] cm-media deferredImage"
+                            <img src="assets/images/icons/x_ico.png" alt="Emerson logo" loading="lazy"
+                                class="invert h-8 hover:invert-[.25] cm-media deferredImage"
                                 data-src="assets/images/icons/x_ico.png" title="">
                         </div>
                     </a>
                     <a href="https://api.whatsapp.com/send?phone=+919791084939&text=Hello,%20I%20want%20to%20send%20you%20a%20message."
                         aria-label="" target="_blank">
                         <div class="image-container">
-                            <img src="assets/images/icons/whatsapp-90.png"
-                                alt="Emerson logo" loading="lazy" class="h-8 invert hover:invert-[.25] cm-media deferredImage"
+                            <img src="assets/images/icons/whatsapp-90.png" alt="Emerson logo" loading="lazy"
+                                class="h-8 invert hover:invert-[.25] cm-media deferredImage"
                                 data-src="assets/images/icons/whatsapp-ico.svg" title="">
                         </div>
                     </a>
-                   
+
                     <a href="https://www.youtube.com/@TheGAWIndustries" aria-label="" target="_blank">
                         <div class="image-container">
-                            <img src="assets/images/icons/yt_ico.png"
-                                alt="Emerson logo" loading="lazy" class="invert h-8 hover:invert-[.25] cm-media deferredImage"
+                            <img src="assets/images/icons/yt_ico.png" alt="Emerson logo" loading="lazy"
+                                class="invert h-8 hover:invert-[.25] cm-media deferredImage"
                                 data-src="assets/images/icons/yt_ico.png" title="">
                         </div>
                     </a>
@@ -119,21 +119,22 @@
 
             </div>
 
-            <form id="news-letter-form-footer" class="md:col-span-2 bg-[#000C25] p-4 rounded-md text-white">
+            <form [formGroup]="cvForm" (ngSubmit)="onSubmit()" id="news-letter-form-footer"
+                class="md:col-span-2 bg-[#000C25] p-4 rounded-md text-white">
                 <h3 class="text-lg font-semibold 2xl:text-xl">
                     Sign-up for our newsletter
                 </h3>
-            
-                <input type="email" id="emailInput" name="email" required
-                    class="border border-white outline-none py-2 px-3 rounded-md bg-transparent md:w-[90%] block text-sm placeholder:text-white mt-3 mb-1 2xl:text-base"
+
+                <input formControlName="email" type="email" id="emailInput" name="email" required
+                    class="{{cvForm.get('email')?.invalid && cvForm.get('email')?.touched ? 'border-red-500 border-2' : ''}} border border-white outline-none py-2 px-3 rounded-md bg-transparent md:w-[90%] block text-sm placeholder:text-white mt-3 mb-1 2xl:text-base"
                     placeholder="Your email address">
-            
-            
-                <button type="submit" id="news-letter-btn"
+
+
+                <button type="submit" [disabled]="cvForm.invalid || isSubmitting"
                     class="mt-4 bg-primary text-white hover:bg-white hover:text-black py-1.5 px-4 text-sm rounded font-medium transition-all duration-300 2xl:text-base">
-                    Submit
+                    {{ isSubmitting ? 'Submitting…' : 'Submit' }}
                 </button>
-            
+
                 <p class="mt-4 text-xs tracking-wide 2xl:text-sm">
                     By subscribing you accept our terms of use and privacy policy.
                 </p>
