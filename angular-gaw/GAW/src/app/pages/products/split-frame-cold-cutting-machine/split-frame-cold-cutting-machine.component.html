@@ -1,0 +1,473 @@
+<!-- header -->
+<header class="bg-white">
+
+
+    <!-- navigation -->
+    <div id="header-white"></div>
+    <app-header-white></app-header-white>
+    <!-- hero section -->
+    <section class="container relative z-20 flex items-center p-8 mx-auto lg:p-20">
+        <div class="grid gap-10 md:gap-5 md:grid-cols-2">
+            <!-- <div class="flex w-full">
+                    <div class="flex flex-col gap-5 shrink-0">
+                        <img class="transition-all duration-200 cursor-pointer size-16 nav-image hover:scale-105"
+                            src="assets/images/split-frame.png" alt="product">
+                        <img class="transition-all duration-200 cursor-pointer size-16 nav-image hover:scale-105"
+                            src="assets/images/split-frame.png" alt="product">
+                        <img class="transition-all duration-200 cursor-pointer size-16 nav-image hover:scale-105"
+                            src="assets/images/split-frame.png" alt="product">
+                        <img class="transition-all duration-200 cursor-pointer size-16 nav-image hover:scale-105"
+                            src="assets/images/split-frame.png" alt="product">
+                    </div>
+
+                    <img class="w-[75%] ms-5 h-auto transition-all duration-300 main-image"
+                        src="assets/images/split-frame.png" alt="product">
+                </div> -->
+            <div id="product-gallery" class="flex w-full">
+                <!-- Thumbnails and main image will be injected here dynamically -->
+            </div>
+            <div class="w-full">
+                <h3 class="text-xl uppcase font-semibold md:text-2xl">
+                    Split Frame Cold Cutting Machine
+                </h3>
+                <p class="mt-5 leading-8 tracking-wide 2xl:text-lg text-justify">
+                    TheGAW Cold Cutting Solution: Precision, Safety, and Efficiency without the Heat. Achieve
+                    flawless cuts on a variety of materials with no sparks, fumes, or thermal distortion. Perfect
+                    for sensitive environments and projects that demand the highest level of accuracy. Revolutionize
+                    your cutting process with our RFID-enabled cold cutting technology—where precision meets
+                    performance.
+                </p>
+            </div>
+        </div>
+    </section>
+</header>
+
+<section>
+    <div class="container p-8 mx-auto rounded-lg shadow-md lg:p-20">
+        <!-- Tabs Header -->
+        <div class="flex flex-wrap gap-2 md:flex-nowrap">
+            <button
+                class="relative flex-1 uppercase py-3 px-2 font-semibold text-center text-blue-600 rounded-t-md tab-btn shadow-[0px_-6px_10px_-3px_rgba(0,_0,_0,_0.1)]"
+                data-tab="Specifications">
+                Specifications
+                <div class="absolute left-0 w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+            </button>
+            <button
+                class="relative flex-1 uppercase px-3 py-3 font-medium text-center text-gray-600 tab-btn hover:bg-gray-100 bg-blue-600/10 rounded-t-md"
+                data-tab="powerpacks">
+                Powerpacks
+                <div class="absolute left-0 hidden w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+            </button>
+            <button
+                class="relative flex-1 uppercase px-3 py-3 font-medium text-center text-gray-600 tab-btn hover:bg-gray-100 bg-blue-600/10 rounded-t-md"
+                data-tab="consumables">
+                Consumables
+                <div class="absolute left-0 hidden w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+            </button>
+            <button
+                class="relative flex-1 uppercase px-3 py-3 font-medium text-center text-gray-600 tab-btn hover:bg-gray-100 bg-blue-600/10 rounded-t-md"
+                data-tab="manuals">
+                Manuals
+                <div class="absolute left-0 hidden w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+            </button>
+            <button
+                class="relative flex-1 uppercase px-3 py-3 font-medium text-center text-gray-600 tab-btn hover:bg-gray-100 bg-blue-600/10 rounded-t-md"
+                data-tab="notification">
+                Notification
+                <div class="absolute left-0 hidden w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+            </button>
+            <button
+                class="relative flex-1 uppercase px-3 py-3 font-medium text-center text-gray-600 tab-btn hover:bg-gray-100 bg-blue-600/10 rounded-t-md"
+                data-tab="warning">
+                Warning
+                <div class="absolute left-0 hidden w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+            </button>
+        </div>
+
+        <!-- Tabs Content -->
+        <div class="p-6 rounded-b-lg bg-gray-50">
+            <!-- Specifications Tab -->
+            <div class="tab-content" id="Specifications">
+                <div class="p-4 bg-primary/10">
+                    <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Specifications</h3>
+                </div>
+                <div class="mt-4 overflow-x-auto">
+                    <table class="min-w-full text-sm text-left border border-collapse border-gray-300">
+                        <thead>
+                            <tr class="bg-gray-200 border border-gray-300">
+                                <th class="px-4 py-3 font-semibold border border-gray-300">MODEL</th>
+                                <th class="px-4 py-3 font-semibold text-center border border-gray-300" colspan="2">
+                                    WORKING RANGE O.D</th>
+                                <th class="px-4 py-3 font-semibold text-center border border-gray-300" colspan="2">WALL
+                                    THICKNESS</th>
+                                <th class="px-4 py-3 font-semibold text-center border border-gray-300">ROTATION SPEED
+                                </th>
+                                <th class="px-4 py-3 font-semibold text-center border border-gray-300">WEIGHT (Kgs)</th>
+                            </tr>
+                            <tr class="bg-gray-200 border border-gray-300">
+                                <th class="px-4 py-3 font-semibold border border-gray-300"></th>
+                                <th class="px-4 py-3 text-center font-semibold border border-gray-300">IMPERIAL</th>
+                                <th class="px-4 py-3 text-center font-semibold border border-gray-300">METRIC</th>
+                                <th class="px-4 py-3 text-center font-semibold border border-gray-300">STANDARD</th>
+                                <th class="px-4 py-3 text-center font-semibold border border-gray-300">HEAVY DUTY</th>
+                                <th class="px-4 py-3 text-center font-semibold border border-gray-300"></th>
+                                <th class="px-4 py-3 text-center font-semibold border border-gray-300"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-white border border-gray-300 hover:bg-gray-50">
+                                <td class="px-4 py-3 border border-gray-300">ACCM-6</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">2"-6"</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">50-168</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">≤30MM</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">≤50</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">22RPM</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">41.5</td>
+                            </tr>
+                            <tr class="bg-white border border-gray-300 hover:bg-gray-50">
+                                <td class="px-4 py-3 border border-gray-300">ACCM-8</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">3"-8"</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">80-230</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">≤30MM</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">≤50</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">16RPM</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">44.5</td>
+                            </tr>
+                            <tr class="bg-white border border-gray-300 hover:bg-gray-50">
+                                <td class="px-4 py-3 border border-gray-300">ACCM-12</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">6"-12"</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">168-325</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">≤30MM</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">≤110</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">15RPM</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">53</td>
+                            </tr>
+                            <tr class="bg-white border border-gray-300 hover:bg-gray-50">
+                                <td class="px-4 py-3 border border-gray-300">ACCM-14</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">8"-14"</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">219-377</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">≤30MM</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">≤110</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">14RPM</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">56</td>
+                            </tr>
+                            <tr class="bg-white border border-gray-300 hover:bg-gray-50">
+                                <td class="px-4 py-3 border border-gray-300">ACCM-18</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">12"-18"</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">300-457</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">≤30MM</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">≤110</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">13RPM</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">60</td>
+                            </tr>
+                            <tr class="bg-white border border-gray-300 hover:bg-gray-50">
+                                <td class="px-4 py-3 border border-gray-300">ACCM-24</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">18"-24"</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">457-610</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">≤30MM</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">≤110</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">12RPM</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">85</td>
+                            </tr>
+                            <tr class="bg-white border border-gray-300 hover:bg-gray-50">
+                                <td class="px-4 py-3 border border-gray-300">ACCM-26</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">20"-26"</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">508-660</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">≤30MM</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">≤110</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">12RPM</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">96</td>
+                            </tr>
+                            <tr class="bg-white border border-gray-300 hover:bg-gray-50">
+                                <td class="px-4 py-3 border border-gray-300">ACCM-32</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">26"-32"</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">660-830</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">≤30MM</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">≤110</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">11RPM</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">120.5</td>
+                            </tr>
+                            <tr class="bg-white border border-gray-300 hover:bg-gray-50">
+                                <td class="px-4 py-3 border border-gray-300">ACCM-36</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">30"-36"</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">762-914</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">≤30MM</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">≤110</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">11RPM</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">144.5</td>
+                            </tr>
+                            <tr class="bg-white border border-gray-300 hover:bg-gray-50">
+                                <td class="px-4 py-3 border border-gray-300">ACCM-42</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">36"-42"</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">914-1066</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">≤30MM</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">≤110</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">10RPM</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">197.5</td>
+                            </tr>
+                            <tr class="bg-white border border-gray-300 hover:bg-gray-50">
+                                <td class="px-4 py-3 border border-gray-300">ACCM-48</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">42"-48"</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">1066-1230</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">≤30MM</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">≤110</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">10RPM</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">236</td>
+                            </tr>
+                            <tr class="bg-white border border-gray-300 hover:bg-gray-50">
+                                <td class="px-4 py-3 border border-gray-300">ACCM-56</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">48"-56"</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">1219-1430</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">≤30MM</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">≤110</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">9RPM</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">290</td>
+                            </tr>
+                            <tr class="bg-white border border-gray-300 hover:bg-gray-50">
+                                <td class="px-4 py-3 border border-gray-300">ACCM-64</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">56"-64"</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">1422-1630</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">≤30MM</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">≤110</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">8RPM</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">310</td>
+                            </tr>
+                            <tr class="bg-white border border-gray-300 hover:bg-gray-50">
+                                <td class="px-4 py-3 border border-gray-300">ACCM-72</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">64"-72"</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">1630-1830</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">≤30MM</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">≤110</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">7RPM</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">329</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </div>
+
+            <div class="hidden tab-content" id="powerpacks">
+                <div class="p-4 bg-primary/10">
+                    <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Powerpacks</h3>
+                </div>
+                <div class="mt-4 overflow-x-auto">
+                    <table class="min-w-full text-sm text-left border border-collapse border-gray-200">
+                        <thead>
+                            <tr class="bg-gray-100 border-b border-gray-200">
+                                <th class="px-4 py-3 font-semibold">Feature</th>
+                                <th class="px-4 py-3 font-semibold">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-white border-b hover:bg-gray-50">
+                                <td class="px-4 py-3">Application</td>
+                                <td class="px-4 py-3">Specially designed for larger wall thicknesses which are more
+                                    than 1.</td>
+                            </tr>
+                            <tr class="bg-white border-b hover:bg-gray-50">
+                                <td class="px-4 py-3">Power Supply</td>
+                                <td class="px-4 py-3">5.5kw</td>
+                            </tr>
+                            <tr class="bg-white border-b hover:bg-gray-50">
+                                <td class="px-4 py-3">Working Frequency</td>
+                                <td class="px-4 py-3">50hz</td>
+                            </tr>
+                            <tr class="bg-white border-b hover:bg-gray-50">
+                                <td class="px-4 py-3">Flow Rate</td>
+                                <td class="px-4 py-3">550 L/Min</td>
+                            </tr>
+                            <tr class="bg-white border-b hover:bg-gray-50">
+                                <td class="px-4 py-3">Open Way</td>
+                                <td class="px-4 py-3">Manual / Remote Control</td>
+                            </tr>
+                            <tr class="bg-white border-b hover:bg-gray-50">
+                                <td class="px-4 py-3">Net Weight</td>
+                                <td class="px-4 py-3">230 kgs</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="hidden tab-content" id="consumables">
+                <div class="p-4 bg-primary/10">
+                    <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Consumables</h3>
+                </div>
+                <div class="mt-4 overflow-x-auto">
+                    <table class="min-w-full text-sm text-left border border-collapse border-gray-200">
+                        <thead>
+                            <tr class="bg-gray-100 border-b border-gray-200">
+                                <th class="px-4 py-3 font-semibold">Model</th>
+                                <th class="px-4 py-3 font-semibold">Description</th>
+                                <th class="px-4 py-3 text-center  font-semibold">Angle</th>
+                                <th class="px-4 py-3 text-center  font-semibold">Length</th>
+                                <th class="px-4 py-3 text-center  font-semibold">Width</th>
+                                <th class="px-4 py-3 font-semibold">Drawing</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-white border-b hover:bg-gray-50">
+                                <td class="px-4 py-3">GHDCT-1</td>
+                                <td class="px-4 py-3">TheGAW Heavy Duty Cutting Tool (One Side)</td>
+                                <td class="px-4 py-3 text-center ">90</td>
+                                <td class="px-4 py-3 text-center ">6"</td>
+                                <td class="px-4 py-3 text-center ">1"</td>
+                                <td class="px-4 py-3">
+                                    <img class="h-8" src="assets/images/drawing/1.png" alt="image">
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b hover:bg-gray-50">
+                                <td class="px-4 py-3">GHDCT-2</td>
+                                <td class="px-4 py-3">TheGAW Heavy Duty Cutting Tool (Two Side)</td>
+                                <td class="px-4 py-3 text-center ">90</td>
+                                <td class="px-4 py-3 text-center ">6"</td>
+                                <td class="px-4 py-3 text-center ">1"</td>
+                                <td class="px-4 py-3">
+                                    <img class="h-8" src="assets/images/drawing/2.png" alt="image">
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b hover:bg-gray-50">
+                                <td class="px-4 py-3">GHDCBT-01</td>
+                                <td class="px-4 py-3">TheGAW Heavy Duty Cutting & Beveling Tool</td>
+                                <td class="px-4 py-3 text-center ">37.5</td>
+                                <td class="px-4 py-3 text-center ">6"</td>
+                                <td class="px-4 py-3 text-center ">1"</td>
+                                <td class="px-4 py-3">
+                                    <img class="h-8" src="assets/images/drawing/3.png" alt="image">
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b hover:bg-gray-50">
+                                <td class="px-4 py-3">GHDCBT-2</td>
+                                <td class="px-4 py-3">TheGAW Heavy Duty Cutting & Beveling Tool- Two Side</td>
+                                <td class="px-4 py-3 text-center ">37.5</td>
+                                <td class="px-4 py-3 text-center ">6"</td>
+                                <td class="px-4 py-3 text-center ">1"</td>
+                                <td class="px-4 py-3">
+                                    <img class="h-8" src="assets/images/drawing/4.png" alt="image">
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b hover:bg-gray-50">
+                                <td class="px-4 py-3">GHDCBT-11</td>
+                                <td class="px-4 py-3">TheGAW Heavy Duty Cutting & Beveling Tool</td>
+                                <td class="px-4 py-3 text-center ">30</td>
+                                <td class="px-4 py-3 text-center ">6"</td>
+                                <td class="px-4 py-3 text-center ">1"</td>
+                                <td class="px-4 py-3">
+                                    <img class="h-8" src="assets/images/drawing/5.png" alt="image">
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b hover:bg-gray-50">
+                                <td class="px-4 py-3">GHDCBT-12</td>
+                                <td class="px-4 py-3">TheGAW Heavy Duty Cutting & Beveling Tool- Two Side</td>
+                                <td class="px-4 py-3 text-center ">30</td>
+                                <td class="px-4 py-3 text-center ">6"</td>
+                                <td class="px-4 py-3 text-center ">1"</td>
+                                <td class="px-4 py-3">
+                                    <img class="h-8" src="assets/images/drawing/6.png" alt="image">
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b hover:bg-gray-50">
+                                <td class="px-4 py-3">GHDCBT-105</td>
+                                <td class="px-4 py-3">TheGAW Heavy Duty Compound Bevel Tool</td>
+                                <td class="px-4 py-3 text-center ">10X37.5</td>
+                                <td class="px-4 py-3 text-center ">6"</td>
+                                <td class="px-4 py-3 text-center ">1"</td>
+                                <td class="px-4 py-3">
+                                    <img class="h-8" src="assets/images/drawing/7.png" alt="image">
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b hover:bg-gray-50">
+                                <td class="px-4 py-3">GHDCBT-1010</td>
+                                <td class="px-4 py-3">TheGAW Heavy Duty Compound Bevel Tool</td>
+                                <td class="px-4 py-3 text-center ">10X30.5</td>
+                                <td class="px-4 py-3 text-center ">6"</td>
+                                <td class="px-4 py-3 text-center ">1"</td>
+                                <td class="px-4 py-3">
+                                    <img class="h-8" src="assets/images/drawing/8.png" alt="image">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+
+
+            <!-- Manuals Tab -->
+            <div class="hidden tab-content" id="manuals">
+                <!-- <div class="p-4 bg-primary/10">
+                        <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Manuals</h3>
+                    </div>
+                    <div class="p-5 mt-4 bg-gray-200 border rounded-sm shadow w-fit">
+                        <h2 class="text-lg font-medium">PRODUCT BROCHURE</h2>
+                        <p class="mt-2 text-lg font-semibold text-orange-500">
+                            PETOL™ POP-IT™ Flange Spreader & Prying Tool
+                        </p>
+                    </div>
+                    <ul class="pl-6 mt-4 space-y-2 list-disc">
+                        <li>
+                            Technical Data Sheet
+                            <a href="" class="text-primary">Split Frame Cold Cutting Machine</a>
+                        </li>
+                        <li>
+                            Operational Manual
+                            <a href="" class="text-primary">Split Frame Cold Cutting Machine</a>
+                        </li>
+                    </ul> -->
+                <div class="p-5 mt-4">
+
+                    <p class="mt-4"><a href="./assets/catalog/ACCM Technical Check List.pdf"
+                            class="text-blue-600 underline">Technical Data Sheet </a></p>
+
+                    <p class="mt-4"><a href="./assets/catalog/TheGAW Onsite Machining Split Frame.pdf"
+                            class="text-blue-600 underline">Operational Manual </a></p>
+
+                </div>
+            </div>
+
+            <!-- Notification Tab -->
+            <div class="hidden tab-content" id="notification">
+                <div class="p-4 bg-primary/10">
+                    <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Notification</h3>
+                </div>
+                <ul class="list-disc list-image-[url(assets/css/new_arrow.png)] pl-6 mt-4 space-y-2 list-disc">
+                    <li>Each unit comes in a package with a split frame, motor, tool boxes, striker, locking
+                        jaws, machine box, service tools, coolant holder, and one set of cutting blades.</li>
+                    <li>All sizes are supplied with a custom-built wooden box.</li>
+                    <li>Standard Cert Package including Drawings, Work Manual, and Warranty Certificate
+                        supplied along with the machine.</li>
+                    <li>Air-driven machines should be used with a filter lubricator and oil. Use without
+                        will void the warranty.
+                    </li>
+                </ul>
+
+            </div>
+
+            <!-- Warning Tab -->
+            <div class="hidden tab-content" id="warning">
+                <div class="p-4 bg-primary/10">
+                    <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Warning</h3>
+                </div>
+                <div class="max-w-sm p-5 mx-auto mt-10 text-center text-white bg-primary rounded-lg">
+                    <div class="xl:text-xl flex items-center justify-center gap-2">
+                        <!-- <img class="size-6" src="assets/images/danger.svg" alt="danger"> -->
+                        <h2 class="font-medium text-center ">SAFETY NOTICE</h2>
+                        <img class="size-6" src="assets/images/danger.svg" alt="danger">
+
+                    </div>
+                    <p class="mt-2 text-sm xl:text-base text-[#d3d3d3]">
+                        Using TheGAW™ Torquing tools without proper precautions can
+                        lead to severe injuries. Follow the provided operational guidelines and industry safety
+                        standards. Regular maintenance and inspection of the machines are essential to ensure safe
+                        and efficient performance.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<app-footer></app-footer>

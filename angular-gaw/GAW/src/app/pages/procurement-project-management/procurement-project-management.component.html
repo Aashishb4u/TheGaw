@@ -1,31 +1,27 @@
-<app-header>
-
-</app-header>
-
 <!-- header -->
-    <header class="relative w-full h-[85vh] lg:h-screen overflow-hidden">
-        <!-- Video Background -->
-        <video autoplay muted loop class="absolute inset-0 object-cover w-full h-full hidden md:block">
-            <source src="assets/videos/Procurement_Project_Management.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+<header class="relative w-full h-[85vh] lg:h-screen overflow-hidden">
+    <!-- Video Background -->
+    <video autoplay muted loop class="absolute inset-0 object-cover w-full h-full hidden md:block">
+        <source src="assets/videos/Procurement_Project_Management.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
 
-        <video autoplay muted loop class="absolute inset-0 object-cover w-full h-full md:hidden">
-            <source src="assets/videos/Procurement_mob.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <!-- <div class="h-full w-full bg-[#000C25] absolute">
+    <video autoplay muted loop class="absolute inset-0 object-cover w-full h-full md:hidden">
+        <source src="assets/videos/Procurement_mob.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <!-- <div class="h-full w-full bg-[#000C25] absolute">
  
         </div> -->
-        <!-- <div class="absolute inset-0 w-full h-full bg-black/60">
+    <!-- <div class="absolute inset-0 w-full h-full bg-black/60">
 
         </div> -->
-        <!-- navigation -->
-        <div id="header">
-        </div>
+    <!-- navigation -->
+    <div id="header">
+    </div>
 
-        <!-- hero section -->
-        <!-- <section
+    <!-- hero section -->
+    <!-- <section
             class="container mx-auto lg:p-20 p-8 min-h-[80vh] flex items-center relative z-20 text-white uppercase">
 
             <div>
@@ -40,174 +36,179 @@
 
             </div>
         </section> -->
-    </header>
+    <app-header>
 
-    <section class="bg-[#F6F6F7] lg:px-20 lg:py-10 p-8">
+    </app-header>
 
-        <div class="container mx-auto text-sm">
-            <!-- <h2 class="text-lg font-medium text-primary 2xl:text-2xl">
+
+</header>
+
+<section class="bg-[#F6F6F7] lg:px-20 lg:py-10 p-8">
+
+    <div class="container mx-auto text-sm">
+        <!-- <h2 class="text-lg font-medium text-primary 2xl:text-2xl">
                 Introduction
             </h2> -->
-            <p class="mt-3 tracking-wide 2xl:text-lg">
-                TheGAW Procurement and Project Management unit aims to achieve optimum operational efficiency for
-                our customers around the world. We partner with operating, service, and contracting companies in the Oil
-                and Energy industry to support their international expansion, large-scale procurement, manpower,
-                operations, shutdown, and turnaround management. With our subject matter expertise and diverse
-                experience in managing critical projects, manufacturing, and service capabilities, we ensure your
-                assets,
-                projects, and economics are managed to extract the optimum results.
+        <p class="mt-3 tracking-wide 2xl:text-lg">
+            TheGAW Procurement and Project Management unit aims to achieve optimum operational efficiency for
+            our customers around the world. We partner with operating, service, and contracting companies in the Oil
+            and Energy industry to support their international expansion, large-scale procurement, manpower,
+            operations, shutdown, and turnaround management. With our subject matter expertise and diverse
+            experience in managing critical projects, manufacturing, and service capabilities, we ensure your
+            assets,
+            projects, and economics are managed to extract the optimum results.
+        </p>
+    </div>
+
+</section>
+
+<section class="container grid gap-6 p-8 mx-auto lg:p-20 md:grid-cols-3">
+
+    <div class="relative w-full max-w-sm h-full min-h-[240px] group [perspective:1000px]">
+
+        <div
+            class="absolute inset-0 flex flex-col items-center justify-center w-full h-full p-5 rounded-xl bg-primary/10 transition-all duration-500 ease-out [transform-style:preserve-3d] [backface-visibility:hidden] group-hover:[transform:rotateY(180deg)]">
+            <h3 class="text-lg font-semibold md:text-xl text-primary 2xl:text-2xl">
+                Shutdown/Turnaround
+            </h3>
+        </div>
+        <div
+            class="absolute inset-0 flex flex-col justify-center w-full h-full p-5 rounded-xl bg-gradient-to-b from-[#0456FB]/70 to-[#023395]/70 text-white transition-all duration-500 ease-out [transform-style:preserve-3d] [backface-visibility:hidden] [transform:rotateY(-180deg)] group-hover:[transform:rotateY(0deg)]">
+            <p class="text-sm 2xl:text-base">
+                We ensure all essential materials for shutdown and site
+                establishment have been brought in place to your site anywhere in the world.
             </p>
-        </div>
 
-    </section>
-
-    <section class="container grid gap-6 p-8 mx-auto lg:p-20 md:grid-cols-3">
-
-        <div class="relative w-full max-w-sm h-full min-h-[240px] group [perspective:1000px]">
-
-            <div
-                class="absolute inset-0 flex flex-col items-center justify-center w-full h-full p-5 rounded-xl bg-primary/10 transition-all duration-500 ease-out [transform-style:preserve-3d] [backface-visibility:hidden] group-hover:[transform:rotateY(180deg)]">
-                <h3 class="text-lg font-semibold md:text-xl text-primary 2xl:text-2xl">
-                    Shutdown/Turnaround
-                </h3>
-            </div>
-            <div
-                class="absolute inset-0 flex flex-col justify-center w-full h-full p-5 rounded-xl bg-gradient-to-b from-[#0456FB]/70 to-[#023395]/70 text-white transition-all duration-500 ease-out [transform-style:preserve-3d] [backface-visibility:hidden] [transform:rotateY(-180deg)] group-hover:[transform:rotateY(0deg)]">
-                <p class="text-sm 2xl:text-base">
-                    We ensure all essential materials for shutdown and site
-                    establishment have been brought in place to your site anywhere in the world.
-                </p>
-
-                <div class="flex justify-end mt-3">
-                    <button data-target="shutdown-turnaround" class="open-modal-btn">
-                        <img class="size-8" src="assets/images/icons/arrow.png" alt="arrow">
-                    </button>
-                </div>
+            <div class="flex justify-end mt-3">
+                <button data-target="shutdown-turnaround" class="open-modal-btn">
+                    <img class="size-8" src="assets/images/icons/arrow.png" alt="arrow">
+                </button>
             </div>
         </div>
+    </div>
 
 
-        <div class="relative w-full max-w-sm h-full min-h-[240px] group [perspective:1000px]">
+    <div class="relative w-full max-w-sm h-full min-h-[240px] group [perspective:1000px]">
 
-            <div
-                class="absolute inset-0 flex flex-col items-center justify-center w-full h-full p-5 rounded-xl bg-primary/10 transition-all duration-500 ease-out [transform-style:preserve-3d] [backface-visibility:hidden] group-hover:[transform:rotateY(180deg)]">
-                <h3 class="text-lg font-semibold md:text-xl text-primary 2xl:text-2xl">
-                    International Expansion
-                </h3>
-            </div>
-            <div
-                class="absolute inset-0 flex flex-col justify-center w-full h-full p-5 rounded-xl bg-gradient-to-b from-[#0456FB]/70 to-[#023395]/70 text-white transition-all duration-500 ease-out [transform-style:preserve-3d] [backface-visibility:hidden] [transform:rotateY(-180deg)] group-hover:[transform:rotateY(0deg)]">
-                <p class="text-sm 2xl:text-base">
-                    We ensure your international expansion or your new international
-                    project will kick off and run without compromising the timeline, quality, and cost.
-                </p>
+        <div
+            class="absolute inset-0 flex flex-col items-center justify-center w-full h-full p-5 rounded-xl bg-primary/10 transition-all duration-500 ease-out [transform-style:preserve-3d] [backface-visibility:hidden] group-hover:[transform:rotateY(180deg)]">
+            <h3 class="text-lg font-semibold md:text-xl text-primary 2xl:text-2xl">
+                International Expansion
+            </h3>
+        </div>
+        <div
+            class="absolute inset-0 flex flex-col justify-center w-full h-full p-5 rounded-xl bg-gradient-to-b from-[#0456FB]/70 to-[#023395]/70 text-white transition-all duration-500 ease-out [transform-style:preserve-3d] [backface-visibility:hidden] [transform:rotateY(-180deg)] group-hover:[transform:rotateY(0deg)]">
+            <p class="text-sm 2xl:text-base">
+                We ensure your international expansion or your new international
+                project will kick off and run without compromising the timeline, quality, and cost.
+            </p>
 
-                <div class="flex justify-end mt-3">
-                    <button data-target="site-establishment" class="open-modal-btn">
-                        <img class="size-8" src="assets/images/icons/arrow.png" alt="arrow">
-                    </button>
-                </div>
+            <div class="flex justify-end mt-3">
+                <button data-target="site-establishment" class="open-modal-btn">
+                    <img class="size-8" src="assets/images/icons/arrow.png" alt="arrow">
+                </button>
             </div>
         </div>
+    </div>
 
-        <div class="relative w-full max-w-sm h-full min-h-[240px] group [perspective:1000px]">
+    <div class="relative w-full max-w-sm h-full min-h-[240px] group [perspective:1000px]">
 
-            <div
-                class="absolute inset-0 flex flex-col items-center justify-center w-full h-full p-5 rounded-xl bg-primary/10 transition-all duration-500 ease-out [transform-style:preserve-3d] [backface-visibility:hidden] group-hover:[transform:rotateY(180deg)]">
-                <h3 class="text-lg font-semibold md:text-xl text-primary 2xl:text-2xl">
-                    Terminal Solutions
-                </h3>
-            </div>
-            <div
-                class="absolute inset-0 flex flex-col justify-center w-full h-full p-5 rounded-xl bg-gradient-to-b from-[#0456FB]/70 to-[#023395]/70 text-white transition-all duration-500 ease-out [transform-style:preserve-3d] [backface-visibility:hidden] [transform:rotateY(-180deg)] group-hover:[transform:rotateY(0deg)]">
-                <p class="text-sm 2xl:text-base">
-                    Consult with us to increase your terminal efficiency and reduce cost;
-                    we support from the cradle to grave journey of a terminal.
-                </p>
+        <div
+            class="absolute inset-0 flex flex-col items-center justify-center w-full h-full p-5 rounded-xl bg-primary/10 transition-all duration-500 ease-out [transform-style:preserve-3d] [backface-visibility:hidden] group-hover:[transform:rotateY(180deg)]">
+            <h3 class="text-lg font-semibold md:text-xl text-primary 2xl:text-2xl">
+                Terminal Solutions
+            </h3>
+        </div>
+        <div
+            class="absolute inset-0 flex flex-col justify-center w-full h-full p-5 rounded-xl bg-gradient-to-b from-[#0456FB]/70 to-[#023395]/70 text-white transition-all duration-500 ease-out [transform-style:preserve-3d] [backface-visibility:hidden] [transform:rotateY(-180deg)] group-hover:[transform:rotateY(0deg)]">
+            <p class="text-sm 2xl:text-base">
+                Consult with us to increase your terminal efficiency and reduce cost;
+                we support from the cradle to grave journey of a terminal.
+            </p>
 
-                <div class="flex justify-end mt-3">
-                    <button data-target="fluid-transfer" class="open-modal-btn">
-                        <img class="size-8" src="assets/images/icons/arrow.png" alt="arrow">
-                    </button>
-                </div>
+            <div class="flex justify-end mt-3">
+                <button data-target="fluid-transfer" class="open-modal-btn">
+                    <img class="size-8" src="assets/images/icons/arrow.png" alt="arrow">
+                </button>
             </div>
         </div>
+    </div>
 
 
-        <div class="relative w-full max-w-sm h-full min-h-[240px] group [perspective:1000px]">
+    <div class="relative w-full max-w-sm h-full min-h-[240px] group [perspective:1000px]">
 
-            <div
-                class="absolute inset-0 flex flex-col items-center justify-center w-full h-full p-5 rounded-xl bg-primary/10 transition-all duration-500 ease-out [transform-style:preserve-3d] [backface-visibility:hidden] group-hover:[transform:rotateY(180deg)]">
-                <h3 class="text-lg font-semibold md:text-xl text-primary 2xl:text-2xl">
-                    Manpower Solutions
-                </h3>
-            </div>
-            <div
-                class="absolute inset-0 flex flex-col justify-center w-full h-full p-5 rounded-xl bg-gradient-to-b from-[#0456FB]/70 to-[#023395]/70 text-white transition-all duration-500 ease-out [transform-style:preserve-3d] [backface-visibility:hidden] [transform:rotateY(-180deg)] group-hover:[transform:rotateY(0deg)]">
-                <p class="text-sm 2xl:text-base">
-                    We bridge the right people for the right project at the right time.
-                </p>
+        <div
+            class="absolute inset-0 flex flex-col items-center justify-center w-full h-full p-5 rounded-xl bg-primary/10 transition-all duration-500 ease-out [transform-style:preserve-3d] [backface-visibility:hidden] group-hover:[transform:rotateY(180deg)]">
+            <h3 class="text-lg font-semibold md:text-xl text-primary 2xl:text-2xl">
+                Manpower Solutions
+            </h3>
+        </div>
+        <div
+            class="absolute inset-0 flex flex-col justify-center w-full h-full p-5 rounded-xl bg-gradient-to-b from-[#0456FB]/70 to-[#023395]/70 text-white transition-all duration-500 ease-out [transform-style:preserve-3d] [backface-visibility:hidden] [transform:rotateY(-180deg)] group-hover:[transform:rotateY(0deg)]">
+            <p class="text-sm 2xl:text-base">
+                We bridge the right people for the right project at the right time.
+            </p>
 
-                <div class="flex justify-end mt-3">
-                    <button data-target="workforce-solutions" class="open-modal-btn">
-                        <img class="size-8" src="assets/images/icons/arrow.png" alt="arrow">
-                    </button>
-                </div>
+            <div class="flex justify-end mt-3">
+                <button data-target="workforce-solutions" class="open-modal-btn">
+                    <img class="size-8" src="assets/images/icons/arrow.png" alt="arrow">
+                </button>
             </div>
         </div>
+    </div>
 
 
-        <div class="relative w-full max-w-sm h-full min-h-[240px] group [perspective:1000px]">
+    <div class="relative w-full max-w-sm h-full min-h-[240px] group [perspective:1000px]">
 
-            <div
-                class="absolute inset-0 flex flex-col items-center justify-center w-full h-full p-5 rounded-xl bg-primary/10 transition-all duration-500 ease-out [transform-style:preserve-3d] [backface-visibility:hidden] group-hover:[transform:rotateY(180deg)]">
-                <h3 class="text-lg font-semibold md:text-xl text-primary 2xl:text-2xl">
-                    Procurement
-                </h3>
-            </div>
-            <div
-                class="absolute inset-0 flex flex-col justify-center w-full h-full p-5 rounded-xl bg-gradient-to-b from-[#0456FB]/70 to-[#023395]/70 text-white transition-all duration-500 ease-out [transform-style:preserve-3d] [backface-visibility:hidden] [transform:rotateY(-180deg)] group-hover:[transform:rotateY(0deg)]">
-                <p class="text-sm 2xl:text-base">
-                    Our supply chain experts can assist you with sourcing the products and services to ensure
-                    operational
-                    excellence against industry actuation and market risk.
-                </p>
+        <div
+            class="absolute inset-0 flex flex-col items-center justify-center w-full h-full p-5 rounded-xl bg-primary/10 transition-all duration-500 ease-out [transform-style:preserve-3d] [backface-visibility:hidden] group-hover:[transform:rotateY(180deg)]">
+            <h3 class="text-lg font-semibold md:text-xl text-primary 2xl:text-2xl">
+                Procurement
+            </h3>
+        </div>
+        <div
+            class="absolute inset-0 flex flex-col justify-center w-full h-full p-5 rounded-xl bg-gradient-to-b from-[#0456FB]/70 to-[#023395]/70 text-white transition-all duration-500 ease-out [transform-style:preserve-3d] [backface-visibility:hidden] [transform:rotateY(-180deg)] group-hover:[transform:rotateY(0deg)]">
+            <p class="text-sm 2xl:text-base">
+                Our supply chain experts can assist you with sourcing the products and services to ensure
+                operational
+                excellence against industry actuation and market risk.
+            </p>
 
-                <div class="flex justify-end mt-3">
-                    <button data-target="procurement" class="open-modal-btn">
-                        <img class="size-8" src="assets/images/icons/arrow.png" alt="arrow">
-                    </button>
-                </div>
+            <div class="flex justify-end mt-3">
+                <button data-target="procurement" class="open-modal-btn">
+                    <img class="size-8" src="assets/images/icons/arrow.png" alt="arrow">
+                </button>
             </div>
         </div>
+    </div>
 
 
-        <div class="relative w-full max-w-sm h-full min-h-[240px] group [perspective:1000px]">
+    <div class="relative w-full max-w-sm h-full min-h-[240px] group [perspective:1000px]">
 
-            <div
-                class="absolute inset-0 flex flex-col items-center justify-center w-full h-full p-5 rounded-xl bg-primary/10 transition-all duration-500 ease-out [transform-style:preserve-3d] [backface-visibility:hidden] group-hover:[transform:rotateY(180deg)]">
-                <h3 class="text-lg font-semibold md:text-xl text-primary 2xl:text-2xl">
-                    Renewables
-                </h3>
-            </div>
-            <div
-                class="absolute inset-0 flex flex-col justify-center w-full h-full p-5 rounded-xl bg-gradient-to-b from-[#0456FB]/70 to-[#023395]/70 text-white transition-all duration-500 ease-out [transform-style:preserve-3d] [backface-visibility:hidden] [transform:rotateY(-180deg)] group-hover:[transform:rotateY(0deg)]">
-                <p class="text-sm 2xl:text-base">
-                    At TheGAW Industries, we specialize in delivering end-to-end renewable energy solutions for
-                    residential,
-                    commercial, and industrial sectors.
-                </p>
+        <div
+            class="absolute inset-0 flex flex-col items-center justify-center w-full h-full p-5 rounded-xl bg-primary/10 transition-all duration-500 ease-out [transform-style:preserve-3d] [backface-visibility:hidden] group-hover:[transform:rotateY(180deg)]">
+            <h3 class="text-lg font-semibold md:text-xl text-primary 2xl:text-2xl">
+                Renewables
+            </h3>
+        </div>
+        <div
+            class="absolute inset-0 flex flex-col justify-center w-full h-full p-5 rounded-xl bg-gradient-to-b from-[#0456FB]/70 to-[#023395]/70 text-white transition-all duration-500 ease-out [transform-style:preserve-3d] [backface-visibility:hidden] [transform:rotateY(-180deg)] group-hover:[transform:rotateY(0deg)]">
+            <p class="text-sm 2xl:text-base">
+                At TheGAW Industries, we specialize in delivering end-to-end renewable energy solutions for
+                residential,
+                commercial, and industrial sectors.
+            </p>
 
-                <div class="flex justify-end mt-3">
-                    <button data-target="renewables" class="open-modal-btn">
-                        <img class="size-8" src="assets/images/icons/arrow.png" alt="arrow">
-                    </button>
-                </div>
+            <div class="flex justify-end mt-3">
+                <button data-target="renewables" class="open-modal-btn">
+                    <img class="size-8" src="assets/images/icons/arrow.png" alt="arrow">
+                </button>
             </div>
         </div>
+    </div>
 
 
 
-    </section>
+</section>
 
-    <app-footer></app-footer>
+<app-footer></app-footer>

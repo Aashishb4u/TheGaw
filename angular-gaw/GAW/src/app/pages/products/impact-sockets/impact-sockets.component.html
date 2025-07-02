@@ -1,0 +1,261 @@
+<!-- header -->
+    <header class="bg-white">
+
+
+        <!-- navigation -->
+        <div id="header-white"></div>
+<app-header-white></app-header-white>
+        <!-- hero section -->
+        <section class="container relative z-20 flex items-center p-8 mx-auto lg:p-20">
+            <div class="grid gap-10 md:gap-5 md:grid-cols-2">
+                <!-- <div class="flex w-full">
+                    <div class="flex flex-col gap-5 shrink-0">
+                        <img class="transition-all duration-200 cursor-pointer size-16 nav-image hover:scale-105"
+                            src="assets/images/products-icon/1.png" alt="product">
+                        <img class="transition-all duration-200 cursor-pointer size-16 nav-image hover:scale-105"
+                            src="assets/images/products-icon/2.png" alt="product">
+                        <img class="transition-all duration-200 cursor-pointer size-16 nav-image hover:scale-105"
+                            src="assets/images/products-icon/3.png" alt="product">
+                    </div>
+
+                    <img class="w-[75%] ms-5 h-auto transition-all duration-300 main-image"
+                        src="assets/images/products-icon/product.png" alt="product">
+                </div> -->
+                <div id="product-gallery" class="flex w-full">
+                    <!-- Thumbnails and main image will be injected here dynamically -->
+                </div>
+                <div class="w-full">
+                    <h3 id="product_name" class="text-xl uppercase font-semibold md:text-2xl">
+                        Impact Sockets
+                    </h3>
+                    <p class="mt-5 leading-8 tracking-wide 2xl:text-lg text-justify">
+                        TheGAW Impact Sockets are manufactured from high-strength chrome molybdenum steel, ensuring
+                        durability and performance under heavy impact loads. Designed for optimal strength and access in
+                        confined spaces, these sockets accommodate a wide range of fasteners, including standard, deep,
+                        and thin-wall variations. A comprehensive selection of sizes and accessories, including long
+                        length, bi-hexagonal, and specialized sockets, is available to meet diverse application needs.
+
+
+                    </p>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <section>
+        <div class="container p-8 mx-auto rounded-lg shadow-md lg:p-20">
+            <!-- Tabs Header -->
+            <div class="flex flex-wrap gap-2 md:flex-nowrap">
+                <button
+                    class="relative flex-1 uppercase py-3 px-2 font-semibold text-center text-blue-600 rounded-t-md tab-btn shadow-[0px_-6px_10px_-3px_rgba(0,_0,_0,_0.1)]"
+                    data-tab="Specifications">
+                    Specifications
+                    <div class="absolute left-0 w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+                </button>
+                <button
+                    class="relative flex-1 uppercase px-3 py-3 font-medium text-center text-gray-600 tab-btn hover:bg-gray-100 bg-blue-600/10 rounded-t-md"
+                    data-tab="features">
+                    Features
+                    <div class="absolute left-0 hidden w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+                </button>
+                <button
+                    class="relative flex-1 uppercase px-3 py-3 font-medium text-center text-gray-600 tab-btn hover:bg-gray-100 bg-blue-600/10 rounded-t-md"
+                    data-tab="manuals">
+                    Manuals
+                    <div class="absolute left-0 hidden w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+                </button>
+                <button
+                    class="relative flex-1 uppercase px-3 py-3 font-medium text-center text-gray-600 tab-btn hover:bg-gray-100 bg-blue-600/10 rounded-t-md"
+                    data-tab="notification">
+                    Notification
+                    <div class="absolute left-0 hidden w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+                </button>
+                <button
+                    class="relative flex-1 px-3 py-3 font-medium text-center text-gray-600 tab-btn hover:bg-gray-100 bg-blue-600/10 rounded-t-md uppercase"
+                    data-tab="warning">
+                    Warning
+                    <div class="absolute left-0 hidden w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+                </button>
+            </div>
+
+            <!-- Tabs Content -->
+            <div class="p-6 rounded-b-lg bg-gray-50">
+                <!-- Specifications Tab -->
+                <div class="tab-content" id="Specifications">
+                    <div class="p-4 bg-primary/10">
+                        <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Specifications</h3>
+                    </div>
+
+                    <div mt-4 overflow-x-auto>
+                        <table class="min-w-full text-sm text-left border border-collapse border-gray-200">
+                            <thead>
+                                <tr class="bg-gray-100 border-b border-gray-200">
+                                    <th class="px-4 py-3 border border-gray-200 font-semibold">SQUARE DRIVE</th>
+                                    <th class="px-4 py-3 border border-gray-200 font-semibold">MODEL</th>
+                                    <th class="px-4 py-3 border border-gray-200 font-semibold">STANDARD TYPE-ACROSS
+                                        FLATS(MM)</th>
+                                    <th class="px-4 py-3 border border-gray-200 font-semibold">DEEP TYPE-ACROSS FLATS(MM)
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="bg-white border-b border-gray-200">
+                                    <td class="px-4 py-3 text-center border border-gray-200" rowspan="2">3/4"</td>
+                                    <td class="px-4 py-3 border border-gray-200">AST07</td>
+                                    <td class="px-4 py-3 border border-gray-200" rowspan="2">24mm, 27mm, 30mm, 32mm,
+                                        36mm, 41mm, 46mm, 50mm, 55mm, 60mm
+                                    </td>
+                                    <td class="px-4 py-3 border border-gray-200" rowspan="2">27mm, 30mm, 32mm, 36mm,
+                                        41mm, 46mm, 50mm, 55mm, 60mm</td>
+                                </tr>
+                                <tr class="bg-white border-b border-gray-200">
+                                    <!-- <td class="px-4 py-3">3/4"</td> -->
+                                    <td class="px-4 py-3">AST07X</td>
+                                    <!-- <td class="px-4 py-3"></td>
+                                    <td class="px-4 py-3"></td> -->
+                                </tr>
+                                <tr class="bg-white border-b border-gray-200">
+                                    <td class="px-4 py-3 text-center border border-gray-200" rowspan="1">1"</td>
+                                    <td class="px-4 py-3 border border-gray-200">AST01</td>
+                                    <td class="px-4 py-3border border-gray-200" rowspan="2">24mm, 27mm, 30mm, 32mm,
+                                        36mm, 41mm, 46mm, 50mm, 55mm, 60mm,
+                                        65mm, 70mm, 75mm, 80mm, 85mm, 90mm, 95mm, 100mm</td>
+                                    <td class="px-4 py-3 border border-gray-200" rowspan="2">41mm, 46mm, 50mm, 55mm</td>
+                                </tr>
+                                <tr class="bg-white border-b border-gray-200">
+                                    <td class="px-4 py-3 text-center  border border-gray-200" rowspan="1">1-1/2"</td>
+                                    <td class="px-4 py-3 border border-gray-200">AST15</td>
+                                    <!-- <td class="px-4 py-3"></td>
+                                    <td class="px-4 py-3"></td> -->
+                                </tr>
+                                <tr class="bg-white border-b border-gray-200">
+                                    <td class="px-4 py-3 text-center  border border-gray-200" rowspan="2">1-1/2"</td>
+                                    <td class="px-4 py-3 border border-gray-200">AST15X</td>
+                                    <td class="px-4 py-3 border border-gray-200" rowspan="2">36mm, 41mm, 46mm, 50mm,
+                                        55mm, 60mm, 65mm, 70mm, 75mm, 80mm,
+                                        85mm, 90mm, 95mm, 100mm, 105mm, 110mm, 115mm, 130mm</td>
+                                    <td class="px-4 py-3 border border-gray-200" rowspan="2">41mm, 46mm, 50mm, 55mm,
+                                        60mm, 65mm, 70mm, 75mm, 80mm</td>
+                                </tr>
+                                <tr class="bg-white border-b border-gray-200">
+                                    <!-- <td class="px-4 py-3 border border-gray-200">1-1/2"</td> -->
+                                    <td class="px-4 py-3 border border-gray-200">AST15Z</td>
+                                    <!-- <td class="px-4 py-3"></td>
+                                    <td class="px-4 py-3"></td> -->
+                                </tr>
+                                <tr class="bg-white border-b border-gray-200">
+                                    <td class="px-4 py-3 text-center  border border-gray-200" rowspan="4">2-1/2"</td>
+                                    <td class="px-4 py-3 border border-gray-200">AST25</td>
+                                    <td class="px-4 py-3 border border-gray-200" rowspan="4">80mm, 85mm, 90mm, 95mm,
+                                        100mm, 105mm, 110mm, 115mm, 120mm,
+                                        130mm, 135mm, 140mm</td>
+                                    <td class="px-4 py-3 border border-gray-200" rowspan="4"></td>
+                                </tr>
+                                <tr class="bg-white border-b border-gray-200">
+                                    <!-- <td class="px-4 py-3">2-1/2"</td> -->
+                                    <td class="px-4 py-3">AST25X</td>
+                                    <!-- <td class="px-4 py-3"></td>
+                                    <td class="px-4 py-3"></td> -->
+                                </tr>
+                                <tr class="bg-white border-b border-gray-200">
+                                    <!-- <td class="px-4 py-3">2-1/2"</td> -->
+                                    <td class="px-4 py-3">AST25Y</td>
+                                    <!-- <td class="px-4 py-3"></td>
+                                    <td class="px-4 py-3"></td> -->
+                                </tr>
+                                <tr class="bg-white border-b border-gray-200">
+                                    <!-- <td class="px-4 py-3">2-1/2"</td> -->
+                                    <td class="px-4 py-3">AST25Z</td>
+                                    <!-- <td class="px-4 py-3"></td>
+                                    <td class="px-4 py-3"></td> -->
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+
+                <!-- Features Tab -->
+                <div class="hidden tab-content" id="features">
+                    <div class="p-4 bg-primary/10">
+                        <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Features</h3>
+                    </div>
+                    <ul class="list-disc list-image-[url(assets/css/new_arrow.png)] pl-6 mt-4 space-y-2 list-disc">
+                        <li>Standard, deep, and thin wall sockets.</li>
+                        <li>The depth of the hex openings is designed to accommodate the full standard fastener head.
+                        </li>
+                        <li>Up to 2 1/2" square drive Impact Sockets through to 195mm (7.1/4") across the flats.</li>
+                        <li>Long length, bi-hexagonal and special sockets are available on request.</li>
+                        <li>TheGAW Special Sockets include Magnetic socket & Smart Sockets with Bluetooth embedded.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Benefits Tab -->
+                <div class="hidden tab-content" id="manuals">
+                    <!-- <div class="p-4 bg-primary/10">
+                        <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Manuals</h3>
+                    </div>
+                    <div class="p-5 mt-4 bg-gray-200 border rounded-sm shadow w-fit">
+
+                        <h2 class="text-lg font-medium">PRODUCT BROCHURE</h2>
+                        <p class="mt-2 text-lg font-semibold text-orange-500">
+                            PETOL™ POP-IT™ Flange Spreader & Prying Tool
+                        </p>
+
+                    </div>
+                    <ul class="pl-6 mt-4 space-y-2 list-disc">
+                        <li>
+                            Technical Data Sheet
+                            <a href="" class="text-primary">Impact Sockets</a>
+                        </li>
+                        <li>
+                            Operational Manual
+                            <a href="" class="text-primary">Impact Sockets</a>
+                        </li>
+
+                    </ul> -->
+                    <div class="p-5 mt-4">
+
+                        <p class="mt-4"><a href="#" class="text-blue-600 underline">Technical Data Sheet </a></p>
+
+                        <p class="mt-4"><a href="#" class="text-blue-600 underline">Operational Manual </a></p>
+
+                    </div>
+                </div>
+
+                <!-- Catalog Tab -->
+                <div class="hidden tab-content" id="notification">
+                    <div class="p-4 bg-primary/10">
+                        <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Notification</h3>
+                    </div>
+                    <ul class="list-disc list-image-[url(assets/css/new_arrow.png)] pl-6 mt-4 space-y-2 list-disc">
+                        <li>Additional Accessories: Adapter M-M, Adapter F-F, Adapter F-M, Extension Bar, Universal
+                            Joint,
+                            Retaining Pins & Rings.</li>
+                        <li>Standard Cert Package including Technical Datasheet, Operational Manual, Maintenance Manual,
+                            and
+                            Manufacturing Test Report are supplied along with the machine.</li>
+                    </ul>
+
+                </div>
+                <div class="hidden tab-content" id="warning">
+                    <div class="p-4 bg-primary/10">
+                        <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Warning</h3>
+                    </div>
+                    <div class="max-w-sm p-5 mx-auto mt-10 text-center text-white bg-primary rounded-lg">
+                        <div class="xl:text-xl flex items-center justify-center gap-2">
+                            <!-- <img class="size-6" src="assets/images/danger.svg" alt="danger"> -->
+                            <h2 class="font-medium text-center ">SAFETY NOTICE</h2>
+                            <img class="size-6" src="assets/images/danger.svg" alt="danger">
+
+                        </div>
+                        <p class="mt-2 text-sm xl:text-base text-[#d3d3d3]">
+                            Using TheGAW™ Impact sockets without proper precautions can lead to severe injuries. Follow the provided operational guidelines and industry safety standards. Regular maintenance and inspection of the machines are essential to ensure safe and efficient performance.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<app-footer></app-footer>

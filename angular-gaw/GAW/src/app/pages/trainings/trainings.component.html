@@ -1,31 +1,28 @@
-<app-header>
-
-</app-header>
 <!-- header -->
-    <header class="relative w-full h-[85vh] lg:h-screen overflow-hidden">
-        <!-- Video Background -->
-        <video autoplay muted loop class="absolute inset-0 object-cover w-full h-full hidden md:block">
-            <source src="assets/videos/training.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+<header class="relative w-full h-[85vh] lg:h-screen overflow-hidden">
+    <!-- Video Background -->
+    <video autoplay muted loop class="absolute inset-0 object-cover w-full h-full hidden md:block">
+        <source src="assets/videos/training.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
 
-        <video autoplay muted loop class="absolute inset-0 object-cover w-full h-full md:hidden">
-            <source src="assets/videos/training_mob.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+    <video autoplay muted loop class="absolute inset-0 object-cover w-full h-full md:hidden">
+        <source src="assets/videos/training_mob.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
 
-        <!-- <div class="h-full w-full bg-[#000C25] absolute">
-
-        </div> -->
-        <!-- <div class="absolute inset-0 w-full h-full bg-black/60">
+    <!-- <div class="h-full w-full bg-[#000C25] absolute">
 
         </div> -->
-        <!-- navigation -->
-        <div id="header">
-        </div>
+    <!-- <div class="absolute inset-0 w-full h-full bg-black/60">
 
-        <!-- hero section -->
-        <!-- <section
+        </div> -->
+    <!-- navigation -->
+    <div id="header">
+    </div>
+
+    <!-- hero section -->
+    <!-- <section
             class="container mx-auto lg:p-20 p-8 min-h-[80vh] flex items-center relative z-20 text-white uppercase">
             <div>
                 <h2 class="text-sm uppercase 2xl:text-xl text-white/70">
@@ -39,97 +36,101 @@
 
             </div>
         </section> -->
-    </header>
+    <app-header>
 
-    <section class="bg-[#F6F6F7] lg:px-20 lg:py-10 p-8">
+    </app-header>
 
-        <div class="container mx-auto text-sm">
+</header>
 
-            <p class="text-justify mt-3 tracking-wide 2xl:text-lg">
-                We believe knowledge sharing is a transformative force shaping the Oil & Energy
-                industry. Our commitment drives us to deliver tailored training programs that address
-                unique challenges and create new opportunities within the sector. With the expertise of
-                seasoned engineers and industry professionals, we provide solutions to real-world
-                problems, ensuring professionals gain relevant, practical knowledge wherever they are.
+<section class="bg-[#F6F6F7] lg:px-20 lg:py-10 p-8">
+
+    <div class="container mx-auto text-sm">
+
+        <p class="text-justify mt-3 tracking-wide 2xl:text-lg">
+            We believe knowledge sharing is a transformative force shaping the Oil & Energy
+            industry. Our commitment drives us to deliver tailored training programs that address
+            unique challenges and create new opportunities within the sector. With the expertise of
+            seasoned engineers and industry professionals, we provide solutions to real-world
+            problems, ensuring professionals gain relevant, practical knowledge wherever they are.
+        </p>
+        <p class="text-justify mt-3 tracking-wide 2xl:text-lg">
+            With a strong presence across continents, we offer virtual and hands-on training
+            programs aligned with global standards of excellence. Whether you're looking to
+            enhance your team's capabilities, contribute your expertise as a subject matter expert,
+            or explore long-term partnership opportunities, we invite you to join us in shaping the
+            future of professional development in the industry.
+        </p>
+    </div>
+
+</section>
+<section class="grid gap-6 p-8 mx-auto 2xl:container lg:px-20 2xl:px-20 lg:py-20 md:grid-cols-3">
+    <div
+        class="flex flex-col items-center justify-around p-5 text-center text-white transition-all duration-300 rounded-md bg-primary min-h-64 hover:shadow-md hover:-translate-y-2">
+        <div>
+            <h2 class="text-lg font-medium md:text-2xl">
+                Request for Training
+            </h2>
+            <p class="text-justify mt-2 text-sm 2xl:text-base text-white/90">
+                Ready to advance your expertise in the Oil & Energy industry? Share your
+                requirements with us, and we'll design a training program that aligns with your specific
+                needs.
             </p>
-            <p class="text-justify mt-3 tracking-wide 2xl:text-lg">
-                With a strong presence across continents, we offer virtual and hands-on training
-                programs aligned with global standards of excellence. Whether you're looking to
-                enhance your team's capabilities, contribute your expertise as a subject matter expert,
-                or explore long-term partnership opportunities, we invite you to join us in shaping the
-                future of professional development in the industry.
+        </div>
+        <div>
+            <button onclick="openModal('.training-request-modal')"
+                class="px-6 py-2 mt-5 text-sm text-black uppercase transition-all duration-300 bg-white rounded-md 2xl:text-base hover:bg-black hover:text-white hover:scale-105 hover:-translate-y-1">
+                Apply Now
+            </button>
+        </div>
+
+    </div>
+
+
+    <div
+        class="flex flex-col items-center justify-around p-5 text-center text-white transition-all duration-300 rounded-md bg-primary min-h-56 hover:shadow-md hover:-translate-y-2">
+        <div>
+            <h2 class="text-lg font-medium md:text-2xl">
+                Subject Matter Expert
+                Registration
+            </h2>
+            <p class="text-justify mt-2 text-sm 2xl:text-base text-white/90">
+                Have you built significant experience in the Oil & Energy industry? Join
+                our network of industry professionals and contribute to knowledge advancement.
+                Connect with us to explore opportunities where your expertise can make a difference.
             </p>
         </div>
-
-    </section>
-    <section class="grid gap-6 p-8 mx-auto 2xl:container lg:px-20 2xl:px-20 lg:py-20 md:grid-cols-3">
-        <div
-            class="flex flex-col items-center justify-around p-5 text-center text-white transition-all duration-300 rounded-md bg-primary min-h-64 hover:shadow-md hover:-translate-y-2">
-            <div>
-                <h2 class="text-lg font-medium md:text-2xl">
-                    Request for Training
-                </h2>
-                <p class="text-justify mt-2 text-sm 2xl:text-base text-white/90">
-                    Ready to advance your expertise in the Oil & Energy industry? Share your
-                    requirements with us, and we'll design a training program that aligns with your specific
-                    needs.
-                </p>
-            </div>
-            <div>
-                <button onclick="openModal('.training-request-modal')"
-                    class="px-6 py-2 mt-5 text-sm text-black uppercase transition-all duration-300 bg-white rounded-md 2xl:text-base hover:bg-black hover:text-white hover:scale-105 hover:-translate-y-1">
-                    Apply Now
-                </button>
-            </div>
-
+        <div>
+            <button
+                class="px-6 py-2 mt-5 text-sm text-black uppercase transition-all duration-300 bg-white rounded-md 2xl:text-base hover:bg-black hover:text-white hover:scale-105 hover:-translate-y-1"
+                onclick="openModal('.sme-registration-modal')">
+                Register Now
+            </button>
         </div>
 
+    </div>
+    <div
+        class="flex flex-col items-center justify-around p-5 text-center text-white transition-all duration-300 rounded-md bg-primary min-h-56 hover:shadow-md hover:-translate-y-2">
+        <div>
+            <h2 class="text-lg font-medium md:text-2xl">
 
-        <div
-            class="flex flex-col items-center justify-around p-5 text-center text-white transition-all duration-300 rounded-md bg-primary min-h-56 hover:shadow-md hover:-translate-y-2">
-            <div>
-                <h2 class="text-lg font-medium md:text-2xl">
-                    Subject Matter Expert
-                    Registration
-                </h2>
-                <p class="text-justify mt-2 text-sm 2xl:text-base text-white/90">
-                    Have you built significant experience in the Oil & Energy industry? Join
-                    our network of industry professionals and contribute to knowledge advancement.
-                    Connect with us to explore opportunities where your expertise can make a difference.
-                </p>
-            </div>
-            <div>
-                <button
-                    class="px-6 py-2 mt-5 text-sm text-black uppercase transition-all duration-300 bg-white rounded-md 2xl:text-base hover:bg-black hover:text-white hover:scale-105 hover:-translate-y-1"
-                    onclick="openModal('.sme-registration-modal')">
-                    Register Now
-                </button>
-            </div>
-
+                Be a Knowledge Transfer Partner
+            </h2>
+            <p class="text-justify mt-2 text-sm 2xl:text-base text-white/90">
+                Ready to forge strategic training alliances? Partner with us to develop
+                comprehensive knowledge transfer solutions for the industry. Let's create lasting value
+                through collaborative institutional partnerships.
+            </p>
         </div>
-        <div
-            class="flex flex-col items-center justify-around p-5 text-center text-white transition-all duration-300 rounded-md bg-primary min-h-56 hover:shadow-md hover:-translate-y-2">
-            <div>
-                <h2 class="text-lg font-medium md:text-2xl">
-
-                    Be a Knowledge Transfer Partner
-                </h2>
-                <p class="text-justify mt-2 text-sm 2xl:text-base text-white/90">
-                    Ready to forge strategic training alliances? Partner with us to develop
-                    comprehensive knowledge transfer solutions for the industry. Let's create lasting value
-                    through collaborative institutional partnerships.
-                </p>
-            </div>
-            <div>
-                <button
-                    class="px-6 py-2 mt-5 text-sm text-black uppercase transition-all duration-300 bg-white rounded-md 2xl:text-base hover:bg-black hover:text-white hover:scale-105 hover:-translate-y-1"
-                    onclick="openModal('.organization-registration-modal')">
-                    Partner with Us
-                </button>
-            </div>
+        <div>
+            <button
+                class="px-6 py-2 mt-5 text-sm text-black uppercase transition-all duration-300 bg-white rounded-md 2xl:text-base hover:bg-black hover:text-white hover:scale-105 hover:-translate-y-1"
+                onclick="openModal('.organization-registration-modal')">
+                Partner with Us
+            </button>
         </div>
-    </section>
-    
+    </div>
+</section>
+
 <app-footer>
 
 </app-footer>

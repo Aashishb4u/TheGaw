@@ -25,5 +25,12 @@ export class ApiService {
     return this.http.post(`${this.baseURL}/news-letter`, data, { headers });
   }
 
+  onSubmitManufacturing(data: any): Observable<any> {
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json'
+    });
+
+  return this.http.post(`${this.baseURL}/demo_form`, data);
+  }
 
 }

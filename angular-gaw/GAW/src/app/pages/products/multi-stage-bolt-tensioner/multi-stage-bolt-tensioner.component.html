@@ -1,0 +1,300 @@
+<!-- header -->
+<header class="bg-white">
+
+
+    <!-- navigation -->
+    <div id="header-white"></div>
+    <app-header-white></app-header-white>
+    <!-- hero section -->
+    <section class="container relative z-20 flex items-center p-8 mx-auto lg:p-20">
+        <div class="grid gap-10 md:gap-5 md:grid-cols-2">
+            <!-- <div class="flex w-full">
+                    <div class="flex flex-col gap-5 shrink-0">
+                        <img class="transition-all duration-200 cursor-pointer size-16 nav-image hover:scale-105"
+                            src="assets/images/products-icon/1.png" alt="product">
+                        <img class="transition-all duration-200 cursor-pointer size-16 nav-image hover:scale-105"
+                            src="assets/images/products-icon/2.png" alt="product">
+                        <img class="transition-all duration-200 cursor-pointer size-16 nav-image hover:scale-105"
+                            src="assets/images/products-icon/3.png" alt="product">
+                    </div>
+
+                    <img class="w-[75%] ms-5 h-auto transition-all duration-300 main-image"
+                        src="assets/images/products-icon/product.png" alt="product">
+                </div> -->
+            <div id="product-gallery" class="flex w-full">
+                <!-- Thumbnails and main image will be injected here dynamically -->
+            </div>
+            <div class="w-full">
+                <h3 id="product_name" class="text-xl uppercase font-semibold md:text-2xl">
+                    Multi Stage Bolt Tensioner
+                </h3>
+                <p class="mt-5 leading-8 tracking-wide 2xl:text-lg text-justify">
+                    TheGAW Multi-Stage Bolt Tensioners are designed for high-load applications in confined spaces,
+                    delivering exceptional precision and reliability. Ideal for critical bolting tasks, wind turbine
+                    installations, and slewing rings, they offer fast, accurate, and efficient tightening. These
+                    tools are engineered for long-life performance with minimal maintenance, featuring advanced seal
+                    technology and over-stroke protection. Built to withstand demanding environments, they ensure
+                    uninterrupted operations and are readily available for quick delivery.
+
+
+                </p>
+            </div>
+        </div>
+    </section>
+</header>
+
+<section>
+    <div class="container p-8 mx-auto rounded-lg shadow-md lg:p-20">
+        <!-- Tabs Header -->
+        <div class="flex flex-wrap gap-2 md:flex-nowrap">
+            <button
+                class="relative flex-1 uppercase py-3 px-2 font-semibold text-center text-blue-600 rounded-t-md tab-btn shadow-[0px_-6px_10px_-3px_rgba(0,_0,_0,_0.1)]"
+                data-tab="Specifications">
+                Specifications
+                <div class="absolute left-0 w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+            </button>
+            <button
+                class="relative flex-1 uppercase px-3 py-3 font-medium text-center text-gray-600 tab-btn hover:bg-gray-100 bg-blue-600/10 rounded-t-md"
+                data-tab="features">
+                Features
+                <div class="absolute left-0 hidden w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+            </button>
+            <button
+                class="relative flex-1 uppercase px-3 py-3 font-medium text-center text-gray-600 tab-btn hover:bg-gray-100 bg-blue-600/10 rounded-t-md"
+                data-tab="manuals">
+                Manuals
+                <div class="absolute left-0 hidden w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+            </button>
+            <button
+                class="relative flex-1 uppercase px-3 py-3 font-medium text-center text-gray-600 tab-btn hover:bg-gray-100 bg-blue-600/10 rounded-t-md"
+                data-tab="notification">
+                Notification
+                <div class="absolute left-0 hidden w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+            </button>
+            <button
+                class="relative flex-1 uppercase px-3 py-3 font-medium text-center text-gray-600 tab-btn hover:bg-gray-100 bg-blue-600/10 rounded-t-md"
+                data-tab="warning">
+                Warning
+                <div class="absolute left-0 hidden w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+            </button>
+        </div>
+
+        <!-- Tabs Content -->
+        <div class="p-6 rounded-b-lg bg-gray-50">
+            <!-- Specifications Tab -->
+            <div class="tab-content" id="Specifications">
+                <div class="p-4 bg-primary/10">
+                    <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Specifications</h3>
+                </div>
+                <div class="mt-4 overflow-x-auto">
+                    <table class="min-w-full text-sm text-left border border-collapse border-gray-200">
+                        <thead>
+                            <tr class="bg-gray-100 border-b border-gray-200">
+                                <th class="px-4 py-3 font-semibold">MODEL</th>
+                                <th class="px-4 py-3 text-center font-semibold">STUD SIZE</th>
+                                <th class="px-4 py-3 text-center font-semibold">HEX SIZE</th>
+                                <th class="px-4 py-3 text-center font-semibold">TOOL LOAD(KN)</th>
+                                <th class="px-4 py-3 text-center font-semibold">HYDRAULIC AREA(mm2)</th>
+                                <th class="px-4 py-3 text-center font-semibold">MAX.STROKE(mm)</th>
+                                <th class="px-4 py-3 text-center font-semibold">MAX.WORKING PRESSURE(bar)</th>
+                                <th class="px-4 py-3 text-center font-semibold">WEIGHT(Kgs)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-white border-b border-gray-200 hover:bg-gray-50">
+                                <td class="px-4 py-3">AMST24</td>
+                                <td class="px-4 py-3 text-center">M24</td>
+                                <td class="px-4 py-3 text-center">36</td>
+                                <td class="px-4 py-3 text-center">307</td>
+                                <td class="px-4 py-3 text-center">2274</td>
+                                <td class="px-4 py-3 text-center">7</td>
+                                <td class="px-4 py-3 text-center">1350</td>
+                                <td class="px-4 py-3 text-center">6</td>
+                            </tr>
+                            <tr class="bg-white border-b border-gray-200 hover:bg-gray-50">
+                                <td class="px-4 py-3">AMST30</td>
+                                <td class="px-4 py-3 text-center">M30</td>
+                                <td class="px-4 py-3 text-center">46</td>
+                                <td class="px-4 py-3 text-center">461</td>
+                                <td class="px-4 py-3 text-center">3417</td>
+                                <td class="px-4 py-3 text-center">7</td>
+                                <td class="px-4 py-3 text-center">1350</td>
+                                <td class="px-4 py-3 text-center">7.2</td>
+                            </tr>
+                            <tr class="bg-white border-b border-gray-200 hover:bg-gray-50">
+                                <td class="px-4 py-3">AMST33</td>
+                                <td class="px-4 py-3 text-center">M33</td>
+                                <td class="px-4 py-3 text-center">50</td>
+                                <td class="px-4 py-3 text-center">595</td>
+                                <td class="px-4 py-3 text-center">4407</td>
+                                <td class="px-4 py-3 text-center">7</td>
+                                <td class="px-4 py-3 text-center">1350</td>
+                                <td class="px-4 py-3 text-center">9.4</td>
+                            </tr>
+                            <tr class="bg-white border-b border-gray-200 hover:bg-gray-50">
+                                <td class="px-4 py-3">AMST36</td>
+                                <td class="px-4 py-3 text-center">M36</td>
+                                <td class="px-4 py-3 text-center">55</td>
+                                <td class="px-4 py-3 text-center">680</td>
+                                <td class="px-4 py-3 text-center">5037</td>
+                                <td class="px-4 py-3 text-center">10</td>
+                                <td class="px-4 py-3 text-center">1350</td>
+                                <td class="px-4 py-3 text-center">11.6</td>
+                            </tr>
+                            <tr class="bg-white border-b border-gray-200 hover:bg-gray-50">
+                                <td class="px-4 py-3">AMST39</td>
+                                <td class="px-4 py-3 text-center">M39</td>
+                                <td class="px-4 py-3 text-center">60</td>
+                                <td class="px-4 py-3 text-center">800</td>
+                                <td class="px-4 py-3 text-center">5926</td>
+                                <td class="px-4 py-3 text-center">10</td>
+                                <td class="px-4 py-3 text-center">1350</td>
+                                <td class="px-4 py-3 text-center">13.2</td>
+                            </tr>
+                            <tr class="bg-white border-b border-gray-200 hover:bg-gray-50">
+                                <td class="px-4 py-3">AMST42</td>
+                                <td class="px-4 py-3 text-center">M42</td>
+                                <td class="px-4 py-3 text-center">65</td>
+                                <td class="px-4 py-3 text-center">922</td>
+                                <td class="px-4 py-3 text-center">6830</td>
+                                <td class="px-4 py-3 text-center">10</td>
+                                <td class="px-4 py-3 text-center">1350</td>
+                                <td class="px-4 py-3 text-center">17.2</td>
+                            </tr>
+                            <tr class="bg-white border-b border-gray-200 hover:bg-gray-50">
+                                <td class="px-4 py-3">AMST45</td>
+                                <td class="px-4 py-3 text-center">M45</td>
+                                <td class="px-4 py-3 text-center">70</td>
+                                <td class="px-4 py-3 text-center">1086</td>
+                                <td class="px-4 py-3 text-center">8047</td>
+                                <td class="px-4 py-3 text-center">10</td>
+                                <td class="px-4 py-3 text-center">1350</td>
+                                <td class="px-4 py-3 text-center">21.5</td>
+                            </tr>
+                            <tr class="bg-white border-b border-gray-200 hover:bg-gray-50">
+                                <td class="px-4 py-3">AMST48</td>
+                                <td class="px-4 py-3 text-center">M48</td>
+                                <td class="px-4 py-3 text-center">75</td>
+                                <td class="px-4 py-3 text-center">1296</td>
+                                <td class="px-4 py-3 text-center">9604</td>
+                                <td class="px-4 py-3 text-center">10</td>
+                                <td class="px-4 py-3 text-center">1350</td>
+                                <td class="px-4 py-3 text-center">22.9</td>
+                            </tr>
+                            <tr class="bg-white border-b border-gray-200 hover:bg-gray-50">
+                                <td class="px-4 py-3">AMST56</td>
+                                <td class="px-4 py-3 text-center">M56</td>
+                                <td class="px-4 py-3 text-center">85</td>
+                                <td class="px-4 py-3 text-center">1660</td>
+                                <td class="px-4 py-3 text-center">12296</td>
+                                <td class="px-4 py-3 text-center">10</td>
+                                <td class="px-4 py-3 text-center">1350</td>
+                                <td class="px-4 py-3 text-center">25.3</td>
+                            </tr>
+                            <tr class="bg-white border-b border-gray-200 hover:bg-gray-50">
+                                <td class="px-4 py-3">AMST64</td>
+                                <td class="px-4 py-3 text-center">M64</td>
+                                <td class="px-4 py-3 text-center">95</td>
+                                <td class="px-4 py-3 text-center">2350</td>
+                                <td class="px-4 py-3 text-center">18800</td>
+                                <td class="px-4 py-3 text-center">10</td>
+                                <td class="px-4 py-3 text-center">1250</td>
+                                <td class="px-4 py-3 text-center">47.6</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Features Tab -->
+            <div class="hidden tab-content" id="features">
+                <div class="p-4 bg-primary/10">
+                    <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Features</h3>
+                </div>
+                <ul class="list-disc list-image-[url(assets/css/new_arrow.png)] pl-6 mt-4 space-y-2 list-disc">
+                    <li>The RFID chip enables precise tool tracking, ensuring efficient asset maintenance.</li>
+                    <li>Multi-stage tensioners are versatile and reliable hydraulic bolt tensioners suitable for
+                        high-load and tight-space applications.</li>
+                    <li>Optimized for use on wind turbines, designed for long-life, low-maintenance use, and
+                        suitable for use on single bolts or grouped together for multiple tightening of bolted
+                        joints.</li>
+                    <li>High cycle life, over-stroke protection, and the latest seal technology ensure
+                        low-maintenance operation to keep projects on schedule.</li>
+                    <li>Tools are available from stock for quick delivery.</li>
+                    <li>Spring return design, Over stroke prevention, frequent use.</li>
+                    <li>Working pressure range: 700 - 1350 bar.</li>
+                </ul>
+            </div>
+
+            <!-- Manuals Tab -->
+            <div class="hidden tab-content" id="manuals">
+                <!-- <div class="p-4 bg-primary/10">
+                        <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Manuals</h3>
+                    </div>
+                    <div class="p-5 mt-4 bg-gray-200 border rounded-sm shadow w-fit">
+                        <h2 class="text-lg font-medium">PRODUCT BROCHURE</h2>
+                        <p class="mt-2 text-lg font-semibold text-orange-500">
+                            PETOL™ POP-IT™ Flange Spreader & Prying Tool
+                        </p>
+                    </div>
+                    <ul class="pl-6 mt-4 space-y-2 list-disc">
+                        <li>
+                            Technical Data Sheet
+                            <a href="" class="text-primary">Multi Stage Bolt Tensioner</a>
+                        </li>
+                        <li>
+                            Operational Manual
+                            <a href="" class="text-primary">Multi Stage Bolt Tensioner</a>
+                        </li>
+                    </ul> -->
+                <div class="p-5 mt-4">
+
+                    <p class="mt-4"><a href="#" class="text-blue-600 underline">Technical Data Sheet </a></p>
+
+                    <p class="mt-4"><a href="./assets/catalog/TheGAW-CBHE [Edition 2025] Multi Stage.pdf"
+                            class="text-blue-600 underline">Operational Manual </a></p>
+
+                </div>
+            </div>
+
+            <!-- Notification Tab -->
+            <div class="hidden tab-content" id="notification">
+                <div class="p-4 bg-primary/10">
+                    <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Notification</h3>
+                </div>
+                <ul class="list-disc list-image-[url(assets/css/new_arrow.png)] pl-6 mt-4 space-y-2 list-disc">
+                    <li>Additional Acessories: Quick Couplers, Hydraulic Hoses.</li>
+                    <li>Standard Cert Package including Technical Datasheet, Operational Manual, Maintenance Manual,
+                        and
+                        Manufacturing Test Report are supplied along with machine.</li>
+                    <li>Usage of TheGAW Hydraulic Tensioning Pumps will provide greater efficiency on the torque
+                        tools.</li>
+                </ul>
+
+
+            </div>
+
+            <!-- Warning Tab -->
+            <div class="hidden tab-content" id="warning">
+                <div class="p-4 bg-primary/10">
+                    <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Warning</h3>
+                </div>
+                <div class="max-w-sm p-5 mx-auto mt-10 text-center text-white bg-primary rounded-lg">
+                    <div class="xl:text-xl flex items-center justify-center gap-2">
+                        <!-- <img class="size-6" src="assets/images/danger.svg" alt="danger"> -->
+                        <h2 class="font-medium text-center ">SAFETY NOTICE</h2>
+                        <img class="size-6" src="assets/images/danger.svg" alt="danger">
+
+                    </div>
+                    <p class="mt-2 text-sm xl:text-base text-[#d3d3d3]">
+                        Using TheGAW™ Tensioning tools without proper precautions can lead to severe injuries. Follow
+                        the provided operational guidelines and industry safety standards. Regular maintenance and
+                        inspection of the machines are essential to ensure safe and efficient performance.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<app-footer></app-footer>

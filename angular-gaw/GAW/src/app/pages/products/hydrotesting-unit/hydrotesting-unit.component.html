@@ -1,0 +1,146 @@
+<!-- header -->
+<header class="bg-white">
+
+
+    <!-- navigation -->
+    <div id="header-white"></div>
+    <app-header-white></app-header-white>
+    <!-- hero section -->
+    <section class="container relative z-20 flex items-center p-8 mx-auto lg:p-20">
+        <div class="grid gap-10 md:gap-5 md:grid-cols-2">
+            <!-- <div class="flex w-full">
+                    <div class="flex flex-col gap-5 shrink-0">
+                        <img class="transition-all duration-200 cursor-pointer size-16 nav-image hover:scale-105"
+                            src="assets/images/products-icon/1.png" alt="product">
+                        <img class="transition-all duration-200 cursor-pointer size-16 nav-image hover:scale-105"
+                            src="assets/images/products-icon/2.png" alt="product">
+                        <img class="transition-all duration-200 cursor-pointer size-16 nav-image hover:scale-105"
+                            src="assets/images/products-icon/3.png" alt="product">
+                    </div>
+
+                    <img class="w-[75%] ms-5 h-auto transition-all duration-300 main-image"
+                        src="assets/images/products-icon/product.png" alt="product">
+                </div> -->
+            <div id="product-gallery" class="flex w-full">
+                <!-- Thumbnails and main image will be injected here dynamically -->
+            </div>
+            <div class="w-full">
+                <h3 id="product_name" class="text-xl uppercase font-semibold md:text-2xl">
+                    Hydrotesting Unit
+                </h3>
+                <p class="mt-5 leading-8 tracking-wide 2xl:text-lg text-justify">
+                    At TheGAW, we excel in designing and manufacturing hydrotesting units meticulously crafted to
+                    meet the rigorous demands of the oil and energy sector.
+                    Our product range covers low-pressure to high-pressure units, capable of achieving pressures up
+                    to
+                    70,000 PSI (4800 bar). Our air-driven hydrotest unit is engineered to ensure asset integrity
+                    with
+                    unmatched precision and reliability.
+                </p>
+            </div>
+        </div>
+    </section>
+</header>
+
+<section>
+    <div class="container p-8 mx-auto rounded-lg shadow-md lg:p-20">
+        <!-- Tabs Header -->
+        <div class="flex flex-wrap gap-2 md:flex-nowrap">
+            <button
+                class="relative flex-1 uppercase py-3 px-2 font-semibold text-center text-blue-600 rounded-t-md tab-btn shadow-[0px_-6px_10px_-3px_rgba(0,_0,_0,_0.1)]"
+                data-tab="features">
+                Features
+                <div class="absolute left-0 w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+            </button>
+            <button
+                class="relative flex-1 uppercase px-3 py-3 font-medium text-center text-gray-600 tab-btn hover:bg-gray-100 bg-blue-600/10 rounded-t-md"
+                data-tab="benefits">
+                Benefits
+                <div class="absolute left-0 hidden w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+            </button>
+            <button
+                class="relative flex-1 uppercase px-3 py-3 font-medium text-center text-gray-600 tab-btn hover:bg-gray-100 bg-blue-600/10 rounded-t-md"
+                data-tab="applications">
+                Applications
+                <div class="absolute left-0 hidden w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+            </button>
+            <button
+                class="relative flex-1 uppercase px-3 py-3 font-medium text-center text-gray-600 tab-btn hover:bg-gray-100 bg-blue-600/10 rounded-t-md"
+                data-tab="catalog">
+                Catalog
+                <div class="absolute left-0 hidden w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+            </button>
+        </div>
+
+        <!-- Tabs Content -->
+        <div class="p-6 rounded-b-lg bg-gray-50">
+            <!-- Features Tab -->
+            <div class="tab-content" id="features">
+                <div class="p-4 bg-primary/10">
+                    <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Features</h3>
+                </div>
+                <ul class="list-disc list-image-[url(assets/css/new_arrow.png)] pl-6 mt-4 space-y-2 list-disc">
+                    <li>Compact and customizable to meet specific operational requirements and space constraints.
+                    </li>
+                    <li>Supports a wide pressure range, handling up to 70,000 PSI (4800 bar).</li>
+                    <li>Utilizes air-driven technology for precise and reliable testing in various environments.
+                    </li>
+                    <li>Pumps are ATEX certified, ensuring compliance with international safety and environmental
+                        standards.</li>
+                    <li>Designed for versatile applications across sectors such as oil & gas, petrochemicals, power
+                        generation, manufacturing, and mining.</li>
+                    <li>Built with a durable design for long-lasting performance.</li>
+                </ul>
+            </div>
+
+            <!-- Benefits Tab -->
+            <div class="hidden tab-content" id="benefits">
+                <div class="p-4 bg-primary/10">
+                    <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Benefits</h3>
+                </div>
+                <ul class="list-disc list-image-[url(assets/css/new_arrow.png)] pl-6 mt-4 space-y-2 list-disc">
+                    <li>After-sale technical support is provided, along with an expandable warranty to ensure
+                        continuous performance and customer satisfaction.</li>
+                    <li>The system complies with safety standards, protecting both operators and the environment
+                        from potential hazards.</li>
+                    <li>It guarantees a high return on investment by reducing maintenance costs and minimizing
+                        downtime.</li>
+                    <li>The product meets global regulatory standards, ensuring smooth operation across
+                        international markets.</li>
+                    <li>It serves multiple industries, offering a versatile solution for a wide range of pressure
+                        testing needs.</li>
+                    <li>The system delivers consistent and dependable performance, even under extreme conditions.
+                    </li>
+                    <li>Designed with sustainability in mind, it reduces waste and minimizes environmental impact
+                        during operation.</li>
+                </ul>
+            </div>
+
+            <!-- Applications Tab -->
+            <div class="hidden tab-content" id="applications">
+                <div class="p-4 bg-primary/10">
+                    <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Applications</h3>
+                </div>
+                <ul class="list-disc list-image-[url(assets/css/new_arrow.png)] pl-6 mt-4 space-y-2 list-disc">
+                    <li>Oil & Gas and Petrochemicals: Critical for pipeline, wellhead, and process equipment.</li>
+                    <li>Power Generation: Ensure the integrity of steam line, turbine, and condenser performance.
+                    </li>
+                    <li>Manufacturing: Tests valves, pressure vessels, and industrial components.</li>
+                    <li>Mining: Confirms the reliability of hydraulic systems in heavy machinery.</li>
+                    <li>Aerospace: Ensures that fuel tanks and related components can withstand high-pressure
+                        scenarios.</li>
+                </ul>
+            </div>
+
+            <!-- Catalog Tab -->
+            <div class="hidden tab-content" id="catalog">
+                <div class="p-4 bg-primary/10">
+                    <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Catalog</h3>
+                </div>
+                <p class="mt-4"><a href="./assets/catalog/TheGAW Hydrotesting & CIS.pdf"
+                        class="text-blue-600 underline">Download</a> </p>
+            </div>
+        </div>
+    </div>
+</section>
+<app-footer></app-footer>

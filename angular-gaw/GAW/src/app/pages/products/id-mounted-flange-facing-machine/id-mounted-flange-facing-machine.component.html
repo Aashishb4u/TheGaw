@@ -1,0 +1,260 @@
+<!-- header -->
+<header class="bg-white">
+
+
+    <!-- navigation -->
+    <div id="header-white"></div>
+    <app-header-white></app-header-white>
+    <!-- hero section -->
+    <section class="container relative z-20 flex items-center p-8 mx-auto lg:p-20">
+        <div class="grid gap-10 md:gap-5 md:grid-cols-2">
+            <!-- <div class="flex w-full">
+                    <div class="flex flex-col gap-5 shrink-0">
+                        <img class="transition-all duration-200 cursor-pointer size-16 nav-image hover:scale-105"
+                            src="assets/images/products-icon/1.png" alt="product">
+                        <img class="transition-all duration-200 cursor-pointer size-16 nav-image hover:scale-105"
+                            src="assets/images/products-icon/1.png" alt="product">
+                        <img class="transition-all duration-200 cursor-pointer size-16 nav-image hover:scale-105"
+                            src="assets/images/products-icon/1.png" alt="product">
+                        <img class="transition-all duration-200 cursor-pointer size-16 nav-image hover:scale-105"
+                            src="assets/images/products-icon/1.png" alt="product">
+                    </div>
+
+                    <img class="w-[75%] ms-5 h-auto transition-all duration-300 main-image"
+                        src="assets/images/product.png" alt="product">
+                </div> -->
+            <div id="product-gallery" class="flex w-full">
+                <!-- Thumbnails and main image will be injected here dynamically -->
+            </div>
+            <div class="w-full">
+                <h3 id="product_name" class="text-xl uppercase font-semibold md:text-2xl">
+                    ID Mounted Flange Facing Machine
+                </h3>
+                <p class="mt-5 leading-8 tracking-wide 2xl:text-lg text-justify">
+                    TheGAW ID Mounted Flange Facing Machine features a three-piece mounting system, making setup and
+                    alignment quick, simple, and hassle-free. This portable, lightweight, and powerful machine is
+                    ideal for facing, bevelling, and turning pipe, valve, and pump flanges with precision and ease.
+                    Designed with operator comfort and environmental concerns in mind, the machine operates quietly,
+                    significantly reducing noise pollution in the workplace.
+
+
+                </p>
+            </div>
+        </div>
+    </section>
+</header>
+
+<section>
+    <div class="container p-8 mx-auto rounded-lg shadow-md lg:p-20">
+        <!-- Tabs Header -->
+        <div class="flex flex-wrap gap-2 md:flex-nowrap">
+            <button
+                class="relative flex-1 uppercase py-3 px-2 font-semibold text-center text-blue-600 rounded-t-md tab-btn shadow-[0px_-6px_10px_-3px_rgba(0,_0,_0,_0.1)]"
+                data-tab="Specifications">
+                Specifications
+                <div class="absolute left-0 w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+            </button>
+            <button
+                class="relative flex-1 uppercase px-3 py-3 font-medium text-center text-gray-600 tab-btn hover:bg-gray-100 bg-blue-600/10 rounded-t-md"
+                data-tab="features">
+                Features
+                <div class="absolute left-0 hidden w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+            </button>
+            <button
+                class="relative flex-1 uppercase px-3 py-3 font-medium text-center text-gray-600 tab-btn hover:bg-gray-100 bg-blue-600/10 rounded-t-md"
+                data-tab="manuals">
+                Manuals
+                <div class="absolute left-0 hidden w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+            </button>
+            <button
+                class="relative flex-1 uppercase px-3 py-3 font-medium text-center text-gray-600 tab-btn hover:bg-gray-100 bg-blue-600/10 rounded-t-md"
+                data-tab="notification">
+                Notification
+                <div class="absolute left-0 hidden w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+            </button>
+            <button
+                class="relative flex-1 uppercase px-3 py-3 font-medium text-center text-gray-600 tab-btn hover:bg-gray-100 bg-blue-600/10 rounded-t-md"
+                data-tab="warning">
+                Warning
+                <div class="absolute left-0 hidden w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+            </button>
+        </div>
+
+        <!-- Tabs Content -->
+        <div class="p-6 rounded-b-lg bg-gray-50">
+            <!-- Specifications Tab -->
+            <div class="tab-content" id="Specifications">
+                <div class="p-4 bg-primary/10">
+                    <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Specifications</h3>
+                </div>
+                <div class="mt-4 overflow-x-auto">
+                    <table class="min-w-full text-sm text-left border border-gray-200">
+                        <thead class="border border-gray-300">
+                            <tr class="bg-gray-100">
+                                <th class="px-4 py-3 font-semibold border border-gray-300">Model</th>
+                                <th class="px-4 py-3 text-center font-semibold border border-gray-300">Facing Range
+                                    (O.D) Imperial</th>
+                                <th class="px-4 py-3 text-center font-semibold border border-gray-300">Facing Range
+                                    (O.D) Metric</th>
+                                <th class="px-4 py-3 text-center font-semibold border border-gray-300">Mounting Range
+                                    (I.D) Imperial</th>
+                                <th class="px-4 py-3 text-center font-semibold border border-gray-300">Mounting Range
+                                    (I.D) Metric</th>
+                                <th class="px-4 py-3 text-center font-semibold border border-gray-300">Tool Stroke</th>
+                                <th class="px-4 py-3 text-center font-semibold border border-gray-300">Swivel Angle
+                                    (Degrees)</th>
+                                <th class="px-4 py-3 text-center font-semibold border border-gray-300">Rotation Speed
+                                    (RPM)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-white border border-gray-300 hover:bg-gray-50">
+                                <td class="px-4 py-3 border border-gray-300">AFF20</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">2"-24"</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">50MM-610MM</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">2"-20"</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">50MM-508MM</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">50MM</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">±30</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">44RPM</td>
+                            </tr>
+                            <tr class="bg-white border border-gray-300 hover:bg-gray-50">
+                                <td class="px-4 py-3 border border-gray-300">AFF40</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">6"-40"</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">160MM-1000MM</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">6"-32"</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">158MM-820MM</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">102MM</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">±30</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">35RPM</td>
+                            </tr>
+                            <tr class="bg-white border border-gray-300 hover:bg-gray-50">
+                                <td class="px-4 py-3 border border-gray-300">AFF60</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">20"-66"</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">500MM-1650MM</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">20"-60"</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">500MM-1500MM</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">102MM</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">±30</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">23RPM</td>
+                            </tr>
+                            <tr class="bg-white border border-gray-300 hover:bg-gray-50">
+                                <td class="px-4 py-3 border border-gray-300">AFF80</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">27"-88"</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">690MM-2200MM</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">27"-80"</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">690MM-2000MM</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">102MM</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">±360</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">22RPM</td>
+                            </tr>
+                            <tr class="bg-white border border-gray-300 hover:bg-gray-50">
+                                <td class="px-4 py-3 border border-gray-300">AFF120</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">46"-120"</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">1150MM-3000MM</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">44"-112"</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">1120MM-2800MM</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">102MM</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">±360</td>
+                                <td class="px-4 py-3 text-center border border-gray-300">15RPM</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+                <p class="mt-4">Tailor-made sizes available upon customer request up to 180".</p>
+
+
+            </div>
+
+            <div class="hidden tab-content" id="features">
+                <div class="p-4 bg-primary/10">
+                    <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Features</h3>
+                </div>
+                <ul class="list-disc list-image-[url(assets/css/new_arrow.png)] pl-6 mt-4 space-y-2 list-disc">
+                    <li>Equipped with an RFID chip for easy and real-time tracking, and maintenance history. </li>
+                    <li>Easy installation and self-centering id mounted mechanical swelling. </li>
+                    <li>Three axis servo feed system to process the complex end bevel. </li>
+                    <li>Designed for bevelling and facing of heavy-duty pipes and flanges. </li>
+                    <li>Powered with a swivel tool post for grooves, RTJ Flanges and bevels. </li>
+                    <li>Safe, reliable and continuous groove-facing feeds. </li>
+                </ul>
+            </div>
+
+
+
+            <!-- Manuals Tab -->
+            <div class="hidden tab-content" id="manuals">
+                <!-- <div class="p-4 bg-primary/10">
+                        <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Manuals</h3>
+                    </div>
+                    <div class="p-5 mt-4 bg-gray-200 border rounded-sm shadow w-fit">
+                        <h2 class="text-lg font-medium">PRODUCT BROCHURE</h2>
+                        <p class="mt-2 text-lg font-semibold text-orange-500">
+                            PETOL™ POP-IT™ Flange Spreader & Prying Tool
+                        </p>
+                    </div>
+                    <ul class="pl-6 mt-4 space-y-2 list-disc">
+                        <li>
+                            Technical Data Sheet
+                            <a href="" class="text-primary">ID Mounted Flange Facing Machine</a>
+                        </li>
+                        <li>
+                            Operational Manual
+                            <a href="" class="text-primary">ID Mounted Flange Facing Machine</a>
+                        </li>
+                    </ul> -->
+                <div class="p-5 mt-4">
+
+                    <p class="mt-4"><a href="#" class="text-blue-600 underline">Technical Data Sheet </a></p>
+
+                    <p class="mt-4"><a href="./assets/catalog/TheGAW Onsite Machining Flange.pdf"
+                            class="text-blue-600 underline">Operational Manual </a></p>
+
+                </div>
+            </div>
+
+            <!-- Notification Tab -->
+            <div class="hidden tab-content" id="notification">
+                <div class="p-4 bg-primary/10">
+                    <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Notification</h3>
+                </div>
+                <ul class="list-disc list-image-[url(assets/css/new_arrow.png)] pl-6 mt-4 space-y-2 list-disc">
+                    <li>All sizes are supplied with a custom-built wooden box.</li>
+                    <li>Available in Pneumatic and Hydraulic drives.</li>
+                    <li>Each unit comes in a package with Machine, One set of blades, motor, tool boxes.</li>
+                    <li>Standard Cert package including drawings, work manual and warranty certificate
+                        supplied along with
+                        machine.</li>
+                </ul>
+
+
+
+
+            </div>
+
+            <!-- Warning Tab -->
+            <div class="hidden tab-content" id="warning">
+                <div class="p-4 bg-primary/10">
+                    <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Warning</h3>
+                </div>
+                <div class="max-w-sm p-5 mx-auto mt-10 text-center text-white bg-primary rounded-lg">
+                    <div class="xl:text-xl flex items-center justify-center gap-2">
+                        <!-- <img class="size-6" src="assets/images/danger.svg" alt="danger"> -->
+                        <h2 class="font-medium text-center ">SAFETY NOTICE</h2>
+                        <img class="size-6" src="assets/images/danger.svg" alt="danger">
+
+                    </div>
+                    <p class="mt-2 text-sm xl:text-base text-[#d3d3d3]">
+                        Using TheGAW™ Torquing tools without proper precautions can
+                        lead to severe injuries. Follow the provided operational guidelines and industry safety
+                        standards. Regular maintenance and inspection of the machines are essential to ensure safe
+                        and efficient performance.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<app-footer></app-footer>

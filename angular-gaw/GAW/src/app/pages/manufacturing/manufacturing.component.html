@@ -325,12 +325,14 @@
     </div>
 
     <form id="manufacturingForm"
-        class="bg-[#EBF1FF] mt-16  rounded-lg md:p-10 p-5 max-w-4xl mx-auto md:grid md:grid-cols-3 gap-5 grid-cols-1 flex flex-col" [formGroup]="cvForm" (ngSubmit)="onSubmit()">
+        class="bg-[#EBF1FF] mt-16  rounded-lg md:p-10 p-5 max-w-4xl mx-auto md:grid md:grid-cols-3 gap-5 grid-cols-1 flex flex-col"
+        [formGroup]="cvForm" (ngSubmit)="onSubmit()">
         <div class="w-full md:col-span-1">
             <!-- First Name Field -->
             <label class="text-sm text-black xl:text-base">First Name <span class="text-red-500">*</span></label>
             <input formControlName="firstName" type="text" id="firstName" placeholder="First Name"
-                class="{{cvForm.get('firstName')?.invalid && cvForm.get('firstName')?.touched ? 'border-red-500 border-2' : ''}} w-full h-10 px-3 py-2 mt-2 border border-black border-solid rounded-md bg-white/40" required>
+                class="{{cvForm.get('firstName')?.invalid && cvForm.get('firstName')?.touched ? 'border-red-500 border-2' : ''}} w-full h-10 px-3 py-2 mt-2 border border-black border-solid rounded-md bg-white/40"
+                required>
         </div>
 
         <div class="w-full md:col-span-1">
@@ -344,8 +346,8 @@
         <div class="w-full md:col-span-1">
             <!-- Job Title Field -->
             <label class="text-sm text-black xl:text-base">Job Title <span class="text-red-500">*</span></label>
-            <input formControlName="jobTitle" type="text" id="jobRole" placeholder="Job Title"
-                class="{{cvForm.get('jobTitle')?.invalid && cvForm.get('jobTitle')?.touched ? 'border-red-500 border-2' : ''}} w-full h-10 px-3 py-2 mt-2 border border-black border-solid rounded-md bg-white/40 required"
+            <input formControlName="jobRole" type="text" id="jobRole" placeholder="Job Title"
+                class="{{cvForm.get('jobRole')?.invalid && cvForm.get('jobRole')?.touched ? 'border-red-500 border-2' : ''}} w-full h-10 px-3 py-2 mt-2 border border-black border-solid rounded-md bg-white/40 required"
                 required>
         </div>
 
@@ -361,7 +363,8 @@
             <!-- Interested In Field (Select) -->
             <label class="text-sm text-black xl:text-base">Interested In <span class="text-red-500">*</span></label>
             <select formControlName="interestedIn" placeholder="Interested In" id="interestedIn"
-                class="{{cvForm.get('interestedIn')?.invalid && cvForm.get('interestedIn')?.touched ? 'border-red-500 border-2' : ''}} w-full h-10 px-3 py-2 mt-2 border border-black border-solid rounded-md bg-white/40" required>
+                class="{{cvForm.get('interestedIn')?.invalid && cvForm.get('interestedIn')?.touched ? 'border-red-500 border-2' : ''}} w-full h-10 px-3 py-2 mt-2 border border-black border-solid rounded-md bg-white/40"
+                required>
                 <option value="" disabled selected>Please Select</option>
                 <option value="option1">Semi Finished Products</option>
                 <option value="option2">Finished Components</option>
@@ -381,7 +384,8 @@
             <!-- Phone Number Field -->
             <label class="text-sm text-black xl:text-base">Phone Number <span class="text-red-500">*</span></label>
             <input formControlName="phoneNumber" type="tel" id="phoneNumber" placeholder="Phone Number" maxlength="10"
-                class="{{cvForm.get('phoneNumber')?.invalid && cvForm.get('phoneNumber')?.touched ? 'border-red-500 border-2' : ''}} w-full px-3 py-2 mt-2 border border-black border-solid rounded-md bg-white/40 required" required>
+                class="{{cvForm.get('phoneNumber')?.invalid && cvForm.get('phoneNumber')?.touched ? 'border-red-500 border-2' : ''}} w-full px-3 py-2 mt-2 border border-black border-solid rounded-md bg-white/40 required"
+                required>
         </div>
 
         <div class="w-full md:col-span-1">
@@ -394,9 +398,9 @@
         <div class="w-full md:col-span-3">
             <!-- Country/Region Field -->
             <label class="text-sm text-black xl:text-base">Message</label>
-            <textarea    placeholder="Message" id="message"
-                class="{{cvForm.get('message')?.invalid && cvForm.get('message')?.touched ? 'border-red-500 border-2' : ''}} w-full px-3 py-2 mt-2 border border-black border-solid rounded-md bg-white/40" rows="3"
-                required></textarea>
+            <textarea formControlName="message" placeholder="Message" id="message"
+                class="{{cvForm.get('message')?.invalid && cvForm.get('message')?.touched ? 'border-red-500 border-2' : ''}} w-full px-3 py-2 mt-2 border border-black border-solid rounded-md bg-white/40"
+                rows="3" required></textarea>
         </div>
 
         <div class="col-span-3">
@@ -413,7 +417,8 @@
                 tick below to say how you would like us to contact you :
             </p>
             <label class="flex items-center mt-2">
-                <input formControlName="acceptTerms" type="checkbox" id="acceptTerms" class="h-16 accent-white/70 me-3 required">
+                <input formControlName="acceptTerms" type="checkbox" id="acceptTerms"
+                    class="h-16 accent-white/70 me-3 required">
                 <p class="text-justify text-xs text-[#5A5A5A] xl:text-base">I agree to receive all communications
                     from TheGAW.</p>
             </label>
@@ -431,7 +436,7 @@
                 the content requested.
             </p>
 
-            <button type="submit"
+            <button type="submit" [disabled]="cvForm.invalid || isSubmitting"
                 class="group rounded-md bg-primary text-white flex items-center uppercase mt-5 justify-between transition-all duration-300 hover:bg-[#666]">
 
                 <span class="flex items-center justify-center px-5 py-2 overflow-hidden text-sm font-medium xl:text-lg">

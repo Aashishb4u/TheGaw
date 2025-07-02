@@ -1,5 +1,7 @@
 import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
+import { ApiService } from '../../services/api.service';
 
 
 @Component({
@@ -11,30 +13,46 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class ManufacturingComponent implements OnInit {
   cvForm: FormGroup | any;
 
-  constructor(private fb: FormBuilder) { }
 
-  onSubmit() {
-    if (this.cvForm?.invalid) {
+  constructor(private fb: FormBuilder, private http: HttpClient, private apiService: ApiService) { }
+  isSubmitting = false;               // <-- NEW
+
+  onSubmit(): void {
+    if (this.cvForm.invalid) {
       this.cvForm.markAllAsTouched();
       return;
     }
 
-    console.log(this.cvForm.value);
+    this.isSubmitting = true;
+    const { acceptTerms, ...payload } = this.cvForm.value as any;
+
+    this.apiService.onSubmitManufacturing(payload).subscribe({
+      next: () => {
+        alert('Your message has been sent successfully!');
+        this.cvForm.reset({ mailType: 'demo_form', acceptTerms: false });
+      },
+      error: err => {
+        alert(err?.error?.message || 'An error occurred. Please try again later.');
+      },
+      complete: () => (this.isSubmitting = false)
+    });
+
   }
 
 
   ngOnInit(): void {
     this.cvForm = this.fb.group({
       firstName: ['', Validators.required],
-      companyName: ['', Validators.required],
       lastName: ['', Validators.required],
-      jobTitle: ['', Validators.required],
+      jobRole: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       interestedIn: ['', Validators.required],
-      phoneNumber: ['', Validators.required, Validators.pattern(/^\d{10}$/)],
+      companyName: ['', Validators.required],
+      phoneNumber: ['', [Validators.required, Validators.pattern(/^\d{10}$/)]],
       countryName: ['', Validators.required],
       message: [''],
-      acceptTerms : [false, Validators.requiredTrue]
+      acceptTerms: [false, Validators.requiredTrue],
+      mailType: ['demo_form']
     });
   }
 

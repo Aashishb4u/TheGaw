@@ -1,0 +1,136 @@
+<!-- header -->
+<header class="bg-white">
+
+
+    <!-- navigation -->
+    <div id="header-white"></div>
+    <app-header-white></app-header-white>
+    <!-- hero section -->
+    <section class="container relative z-20 flex items-center p-8 mx-auto lg:p-20">
+        <div class="grid gap-10 md:gap-5 md:grid-cols-2">
+            <div id="product-gallery" class="flex w-full">
+                <!-- Thumbnails and main image will be injected here dynamically -->
+            </div>
+            <div class="w-full">
+                <h3 id="product_name" class="text-xl uppercase font-semibold md:text-2xl">
+                    Chemical injection skid
+                </h3>
+                <p class="mt-5 leading-8 tracking-wide 2xl:text-lg text-justify">
+                    TheGAW Chemical Injection Skid and Dosing System is an advanced, high-performance
+                    solution designed for precise and consistent chemical dosing across a wide range of
+                    industrial applications. Engineered for superior reliability and efficiency, it ensures optimal
+                    performance in demanding environments. Ideal for industries such as oil and gas, water
+                    treatment, and manufacturing, this system guarantees seamless operation and enhanced
+                    chemical management, meeting the highest standards of quality and safety.
+                </p>
+            </div>
+        </div>
+    </section>
+</header>
+
+<section>
+    <div class="container p-8 mx-auto rounded-lg shadow-md lg:p-20">
+        <!-- Tabs Header -->
+        <div class="flex flex-wrap gap-2 md:flex-nowrap">
+            <button
+                class="relative flex-1 uppercase py-3 px-2 font-semibold text-center text-blue-600 rounded-t-md tab-btn shadow-[0px_-6px_10px_-3px_rgba(0,_0,_0,_0.1)]"
+                data-tab="features">
+                Features
+                <div class="absolute left-0 w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+            </button>
+            <button
+                class="relative flex-1 uppercase px-3 py-3 font-medium text-center text-gray-600 tab-btn hover:bg-gray-100 bg-blue-600/10 rounded-t-md"
+                data-tab="benefits">
+                Benefits
+                <div class="absolute left-0 hidden w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+            </button>
+            <button
+                class="relative flex-1 uppercase px-3 py-3 font-medium text-center text-gray-600 tab-btn hover:bg-gray-100 bg-blue-600/10 rounded-t-md"
+                data-tab="applications">
+                Applications
+                <div class="absolute left-0 hidden w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+            </button>
+            <button
+                class="relative flex-1 uppercase px-3 py-3 font-medium text-center text-gray-600 tab-btn hover:bg-gray-100 bg-blue-600/10 rounded-t-md"
+                data-tab="catalog">
+                Catalog
+                <div class="absolute left-0 hidden w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+            </button>
+        </div>
+
+        <!-- Tabs Content -->
+        <div class="p-6 rounded-b-lg bg-gray-50">
+            <!-- Features Tab -->
+            <div class="tab-content" id="features">
+                <div class="p-4 bg-primary/10">
+                    <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Features</h3>
+                </div>
+                <ul class="list-disc list-image-[url(assets/css/new_arrow.png)] pl-6 mt-4 space-y-2 list-disc">
+                    <li>Customizable design offers tailored solutions to meet specific project needs.</li>
+                    <li>Made from corrosion-resistant, high-quality materials.</li>
+                    <li>The compact design allows for easy integration into existing systems without compromising
+                        functionality.</li>
+                    <li>Precision engineering guarantees accurate chemical dosing.</li>
+                    <li>User-friendly controls and easy maintenance access.</li>
+                    <li>Advanced monitoring systems enable real-time performance tracking and adjustments for
+                        optimal dosing accuracy.</li>
+                    <li>Built to meet international safety and environmental standards, ensuring safe and compliant
+                        operation.</li>
+                </ul>
+            </div>
+
+            <!-- Benefits Tab -->
+            <div class="hidden tab-content" id="benefits">
+                <div class="p-4 bg-primary/10">
+                    <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Benefits</h3>
+                </div>
+                <ul class="list-disc list-image-[url(assets/css/new_arrow.png)] pl-6 mt-4 space-y-2 list-disc">
+                    <li>After-sale technical support.</li>
+                    <li>Durable materials reduce repairs and replacements, lowering long-term costs.</li>
+                    <li>Compact design maximizes space efficiency, ideal for crowded or offshore environments.</li>
+                    <li>Reliable performance and low maintenance reduce downtime and operational costs.</li>
+                    <li>Precise chemical injections improve process control, reducing waste and enhancing outcomes.
+                    </li>
+                    <li>Dependable operation minimizes failures, boosting productivity.</li>
+                </ul>
+            </div>
+
+            <!-- Applications Tab -->
+            <div class="hidden tab-content" id="applications">
+                <div class="p-4 bg-primary/10">
+                    <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Applications</h3>
+                </div>
+                <ul class="pl-6 mt-4 space-y-2 list-disc">
+                    <li class="list-disc list-image-[url(assets/css/new_arrow.png)]">Oil and Gas</li>
+                    <ul class="pl-6 list-disc">
+                        <li>Corrosion Inhibition: Prevents corrosion in pipelines, wellheads, and equipment.</li>
+                        <li>Scale Prevention: Injects scale inhibitors to maintain pipeline efficiency.</li>
+                        <li>Hydrate Management: Delivers chemicals to prevent hydrate formation in gas pipelines.
+                        </li>
+                        <li>Demulsification: Separates water and oil in production streams.</li>
+                    </ul>
+                    <li class="list-disc list-image-[url(assets/css/new_arrow.png)]">Petrochemical and Refining</li>
+                    <ul class="pl-6 list-disc">
+                        <li>Process Optimization: Adds catalysts or inhibitors to optimize chemical reactions.</li>
+                        <li>Corrosion Protection: Protects storage tanks, pipelines, and processing equipment.</li>
+                    </ul>
+                    <li class="list-disc list-image-[url(assets/css/new_arrow.png)]">Marine and Offshore</li>
+                    <ul class="pl-6 list-disc">
+                        <li>Marine Growth Prevention: Prevents biofouling in offshore platforms and pipelines.</li>
+                        <li>Flow Assurance: Maintains the integrity of flow lines through chemical injection.</li>
+                    </ul>
+                </ul>
+            </div>
+
+            <!-- Catalog Tab -->
+            <div class="hidden tab-content" id="catalog">
+                <div class="p-4 bg-primary/10">
+                    <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Catalog</h3>
+                </div>
+                <p class="mt-4"><a href="./assets/catalog/TheGAW CIS.pdf" class="text-blue-600 underline">Download</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<app-footer></app-footer>

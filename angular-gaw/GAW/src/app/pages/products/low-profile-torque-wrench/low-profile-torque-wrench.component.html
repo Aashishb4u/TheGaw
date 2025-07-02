@@ -1,0 +1,710 @@
+<!-- header -->
+<header class="bg-white">
+
+
+    <!-- navigation -->
+    <div id="header-white"></div>
+    <app-header-white></app-header-white>
+    <!-- hero section -->
+    <section class="container relative z-20 flex items-center p-8 mx-auto lg:p-20">
+        <div class="grid gap-10 md:gap-5 md:grid-cols-2">
+            <!-- <div class="flex w-full">
+                    <div class="flex flex-col gap-5 shrink-0">
+                        <img class="transition-all duration-200 cursor-pointer size-16 nav-image hover:scale-105"
+                            src="assets/images/products-icon/1.png" alt="product">
+                        <img class="transition-all duration-200 cursor-pointer size-16 nav-image hover:scale-105"
+                            src="assets/images/products-icon/2.png" alt="product">
+                        <img class="transition-all duration-200 cursor-pointer size-16 nav-image hover:scale-105"
+                            src="assets/images/products-icon/3.png" alt="product">
+                    </div>
+
+                    <img class="w-[75%] ms-5 h-auto transition-all duration-300 main-image"
+                        src="assets/images/products-icon/product.png" alt="product">
+                </div> -->
+            <div class="flex w-full" id="product-gallery">
+                <!-- Thumbnails and main image will be injected here dynamically -->
+            </div>
+            <div class="w-full">
+                <h3 id="product_name" class="text-xl uppercase font-semibold md:text-2xl">
+                    Low Profile Torque Wrench
+                </h3>
+                <p class="mt-5 leading-8 tracking-wide 2xl:text-lg text-justify">
+                    TheGAW Low-Profile Torque Wrenches combine exceptional durability with a lightweight and
+                    ergonomic design, minimizing operator effort and enhancing safety. Engineered to excel in
+                    confined spaces, these tools offer versatility and reliable performance, ensuring effortless
+                    access to challenging applications without compromising endurance or precision.
+                </p>
+            </div>
+        </div>
+    </section>
+</header>
+
+<section>
+    <div class="container p-8 mx-auto rounded-lg shadow-md lg:p-20">
+        <!-- Tabs Header -->
+        <div class="flex flex-wrap gap-2 md:flex-nowrap">
+            <button
+                class="relative flex-1 uppercase py-3 px-2 font-semibold text-center text-blue-600 rounded-t-md tab-btn shadow-[0px_-6px_10px_-3px_rgba(0,_0,_0,_0.1)]"
+                data-tab="Specifications">
+                Specifications
+                <div class="absolute left-0 w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+            </button>
+            <button
+                class="relative flex-1 uppercase px-3 py-3 font-medium text-center text-gray-600 tab-btn hover:bg-gray-100 bg-blue-600/10 rounded-t-md"
+                data-tab="hex-links">
+                HEX-Links
+                <div class="absolute left-0 hidden w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+            </button>
+            <button
+                class="relative flex-1 uppercase px-3 py-3 font-medium text-center text-gray-600 tab-btn hover:bg-gray-100 bg-blue-600/10 rounded-t-md"
+                data-tab="features">
+                Features
+                <div class="absolute left-0 hidden w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+            </button>
+            <button
+                class="relative flex-1 uppercase px-3 py-3 font-medium text-center text-gray-600 tab-btn hover:bg-gray-100 bg-blue-600/10 rounded-t-md"
+                data-tab="manuals">
+                Manuals
+                <div class="absolute left-0 hidden w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+            </button>
+            <button
+                class="relative flex-1 uppercase px-3 py-3 font-medium text-center text-gray-600 tab-btn hover:bg-gray-100 bg-blue-600/10 rounded-t-md"
+                data-tab="notification">
+                Notification
+                <div class="absolute left-0 hidden w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+            </button>
+            <button
+                class="relative flex-1 uppercase px-3 py-3 font-medium text-center text-gray-600 tab-btn hover:bg-gray-100 bg-blue-600/10 rounded-t-md"
+                data-tab="warning">
+                Warning
+                <div class="absolute left-0 hidden w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+            </button>
+        </div>
+
+        <!-- Tabs Content -->
+        <div class="p-6 rounded-b-lg bg-gray-50">
+            <!-- Specifications Tab -->
+            <div class="tab-content" id="Specifications">
+                <div class="p-4 bg-primary/10">
+                    <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Specifications</h3>
+                </div>
+                <div class="mt-4 overflow-x-auto">
+                    <table class="min-w-full text-sm text-left border border-collapse border-gray-200">
+                        <thead>
+                            <tr class="bg-gray-100 border-b border-gray-200 divide-x divide-gray-200">
+                                <th class="px-4 py-3 font-semibold ">MODEL</th>
+                                <th class="px-4 py-3 font-semibold text-center" colspan="2">ALT02</th>
+                                <th class="px-4 py-3 font-semibold text-center" colspan="2">ALT06</th>
+                                <th class="px-4 py-3 font-semibold text-center" colspan="2">ALT10</th>
+                                <th class="px-4 py-3 font-semibold text-center" colspan="1">ALT18</th>
+                                <th class="px-4 py-3 font-semibold text-center" colspan="2">ALT40</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-white border-b border-gray-200 hover:bg-gray-50 divide-x divide-gray-200">
+                                <td class="px-4 py-3 font-medium">MIN.TORQUE(Nm)</td>
+                                <td class="px-4 py-3 text-center whitespace-nowrap">232</td>
+                                <td class="px-4 py-3 text-center whitespace-nowrap">240</td>
+                                <td class="px-4 py-3 text-center whitespace-nowrap">585</td>
+                                <td class="px-4 py-3 text-center whitespace-nowrap">647</td>
+                                <td class="px-4 py-3 text-center whitespace-nowrap">1094</td>
+                                <td class="px-4 py-3 text-center whitespace-nowrap">1180</td>
+                                <td class="px-4 py-3 text-center whitespace-nowrap">1850</td>
+                                <td class="px-4 py-3 text-center whitespace-nowrap">4185</td>
+                                <td class="px-4 py-3 text-center whitespace-nowrap">4460</td>
+                            </tr>
+                            <tr class="bg-white border-b border-gray-200 hover:bg-gray-50 divide-x divide-gray-200">
+                                <td class="px-4 py-3 font-medium">MAX.TORQUE(Nm)</td>
+                                <td class="px-4 py-3 text-center whitespace-nowrap">2328</td>
+                                <td class="px-4 py-3 text-center whitespace-nowrap">2415</td>
+                                <td class="px-4 py-3 text-center whitespace-nowrap">5858</td>
+                                <td class="px-4 py-3 text-center whitespace-nowrap">6474</td>
+                                <td class="px-4 py-3 text-center whitespace-nowrap">10940</td>
+                                <td class="px-4 py-3 text-center whitespace-nowrap">11775</td>
+                                <td class="px-4 py-3 text-center whitespace-nowrap">18520</td>
+                                <td class="px-4 py-3 text-center whitespace-nowrap">41882</td>
+                                <td class="px-4 py-3 text-center whitespace-nowrap">44595</td>
+                            </tr>
+                            <tr class="bg-white border-b border-gray-200 hover:bg-gray-50 divide-x divide-gray-200">
+                                <td class="px-4 py-3 font-medium">MIN.TORQUE(Ft.Lbs)</td>
+                                <td class="px-4 py-3 text-center whitespace-nowrap">171</td>
+                                <td class="px-4 py-3 text-center whitespace-nowrap">177</td>
+                                <td class="px-4 py-3 text-center whitespace-nowrap">431</td>
+                                <td class="px-4 py-3 text-center whitespace-nowrap">475</td>
+                                <td class="px-4 py-3 text-center whitespace-nowrap">807</td>
+                                <td class="px-4 py-3 text-center whitespace-nowrap">870</td>
+                                <td class="px-4 py-3 text-center whitespace-nowrap">1364</td>
+                                <td class="px-4 py-3 text-center whitespace-nowrap">3086</td>
+                                <td class="px-4 py-3 text-center whitespace-nowrap">3289</td>
+                            </tr>
+                            <tr class="bg-white border-b border-gray-200 hover:bg-gray-50 divide-x divide-gray-200">
+                                <td class="px-4 py-3 font-medium">MAX.TORQUE(Ft.Lbs)</td>
+                                <td class="px-4 py-3 text-center whitespace-nowrap">1717</td>
+                                <td class="px-4 py-3 text-center whitespace-nowrap">1781</td>
+                                <td class="px-4 py-3 text-center whitespace-nowrap">4321</td>
+                                <td class="px-4 py-3 text-center whitespace-nowrap">4775</td>
+                                <td class="px-4 py-3 text-center whitespace-nowrap">8069</td>
+                                <td class="px-4 py-3 text-center whitespace-nowrap">8684</td>
+                                <td class="px-4 py-3 text-center whitespace-nowrap">13659</td>
+                                <td class="px-4 py-3 text-center whitespace-nowrap">30891</td>
+                                <td class="px-4 py-3 text-center whitespace-nowrap">32891</td>
+                            </tr>
+                            <tr class="bg-white border-b border-gray-200 hover:bg-gray-50 divide-x divide-gray-200">
+                                <td class="px-4 py-3 font-medium">HEX SIZES(mm)</td>
+                                <td class="px-4 py-3 text-center whitespace-nowrap">19 - 55</td>
+                                <td class="px-4 py-3 text-center whitespace-nowrap">60</td>
+                                <td class="px-4 py-3 text-center whitespace-nowrap">46 - 65</td>
+                                <td class="px-4 py-3 text-center whitespace-nowrap">70 - 85</td>
+                                <td class="px-4 py-3 text-center whitespace-nowrap">41 - 95</td>
+                                <td class="px-4 py-3 text-center whitespace-nowrap">100 - 105</td>
+                                <td class="px-4 py-3 text-center whitespace-nowrap">50 - 117</td>
+                                <td class="px-4 py-3 text-center whitespace-nowrap">85 - 155</td>
+                                <td class="px-4 py-3 text-center whitespace-nowrap">160 - 175</td>
+                            </tr>
+                            <tr class="bg-white border-b border-gray-200 hover:bg-gray-50 divide-x divide-gray-200">
+                                <td class="px-4 py-3 font-medium">POWER HEAD WEIGHT(Kgs)</td>
+                                <td class="px-4 py-3 text-center whitespace-nowrap">1.5</td>
+                                <td class="px-4 py-3 text-center whitespace-nowrap">1.5</td>
+                                <td class="px-4 py-3 text-center whitespace-nowrap">2.5</td>
+                                <td class="px-4 py-3 text-center whitespace-nowrap">2.5</td>
+                                <td class="px-4 py-3 text-center whitespace-nowrap">3.5</td>
+                                <td class="px-4 py-3 text-center whitespace-nowrap">3.5</td>
+                                <td class="px-4 py-3 text-center whitespace-nowrap">6</td>
+                                <td class="px-4 py-3 text-center whitespace-nowrap">11.5</td>
+                                <td class="px-4 py-3 text-center whitespace-nowrap">11.5</td>
+                            </tr>
+                            <tr class="bg-white border-b border-gray-200 hover:bg-gray-50 divide-x divide-gray-200">
+                                <td class="px-4 py-3 font-medium">RATCHET WEIGHT(Kgs)</td>
+                                <td class="px-4 py-3 text-center whitespace-nowrap">1.8</td>
+                                <td class="px-4 py-3 text-center whitespace-nowrap">1.9</td>
+                                <td class="px-4 py-3 text-center whitespace-nowrap">4.6</td>
+                                <td class="px-4 py-3 text-center whitespace-nowrap">4.8</td>
+                                <td class="px-4 py-3 text-center whitespace-nowrap">8.2</td>
+                                <td class="px-4 py-3 text-center whitespace-nowrap">8.6</td>
+                                <td class="px-4 py-3 text-center whitespace-nowrap">11.8</td>
+                                <td class="px-4 py-3 text-center whitespace-nowrap">29.2</td>
+                                <td class="px-4 py-3 text-center whitespace-nowrap">30.2</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+                </div>
+            </div>
+
+            <div class="hidden tab-content" id="hex-links">
+                <div class="p-4 bg-primary/10">
+                    <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">LOW PROFILE
+                        LINK/CASSETTE SELECTION CHART</h3>
+                </div>
+                <div class="mt-4 overflow-x-auto">
+                    <table class="min-w-full text-sm text-left border border-collapse border-gray-200 ">
+                        <thead>
+                            <tr class="bg-gray-100 border-b border-gray-200 divide-x divide-gray-200">
+                                <th class="px-4 py-3 font-semibold text-center" colspan="3">ALT02</th>
+                                <th class="px-4 py-3 font-semibold text-center" colspan="3">ALT06</th>
+                                <th class="px-4 py-3 font-semibold text-center" colspan="3">ALT10</th>
+                                <th class="px-4 py-3 font-semibold text-center" colspan="3">ALT18</th>
+                                <th class="px-4 py-3 font-semibold text-center" colspan="3">ALT40</th>
+                            </tr>
+                            <tr class="bg-gray-100 border-b border-gray-200 divide-x divide-gray-200">
+                                <th class="px-4 py-3 font-semibold whitespace-nowrap text-center">MODEL</th>
+                                <th class="px-4 py-3 font-semibold whitespace-nowrap text-center">ACROSS FLAT</th>
+                                <th class="px-4 py-3 font-semibold whitespace-nowrap text-center">MAX TORQUE</th>
+                                <th class="px-4 py-3 font-semibold whitespace-nowrap text-center">MODEL</th>
+                                <th class="px-4 py-3 font-semibold whitespace-nowrap text-center">ACROSS FLAT</th>
+                                <th class="px-4 py-3 font-semibold whitespace-nowrap text-center">MAX TORQUE</th>
+                                <th class="px-4 py-3 font-semibold whitespace-nowrap text-center">MODEL</th>
+                                <th class="px-4 py-3 font-semibold whitespace-nowrap text-center">ACROSS FLAT</th>
+                                <th class="px-4 py-3 font-semibold whitespace-nowrap text-center">MAX TORQUE</th>
+                                <th class="px-4 py-3 font-semibold whitespace-nowrap text-center">MODEL</th>
+                                <th class="px-4 py-3 font-semibold whitespace-nowrap text-center">ACROSS FLAT</th>
+                                <th class="px-4 py-3 font-semibold whitespace-nowrap text-center">MAX TORQUE</th>
+                                <th class="px-4 py-3 font-semibold whitespace-nowrap text-center">MODEL</th>
+                                <th class="px-4 py-3 font-semibold whitespace-nowrap text-center">ACROSS FLAT</th>
+                                <th class="px-4 py-3 font-semibold whitespace-nowrap text-center">MAX TORQUE</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-white border-b hover:bg-gray-50 divide-x divide-gray-200">
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-02-19</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">19mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">2330</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-06-34</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">34mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">2510</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-10-41</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">41mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">10940</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-18-50</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">50mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">18520</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-40-85</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">85mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">41885</td>
+                            </tr>
+                            <tr class="bg-white border-b hover:bg-gray-50 divide-x divide-gray-200">
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-02-21</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">21mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">2330</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-06-36</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">36mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">2510</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-10-46</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">46mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">10940</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-18-55</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">55mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">18520</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-40-90</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">90mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">41885</td>
+                            </tr>
+                            <tr class="bg-white border-b hover:bg-gray-50 divide-x divide-gray-200">
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-02-22</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">22mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">2330</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-06-38</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">38mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">5020</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-10-49</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">49mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">10940</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-18-60</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">60mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">18520</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-40-95</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">95mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">41885</td>
+                            </tr>
+                            <tr class="bg-white border-b hover:bg-gray-50 divide-x divide-gray-200">
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-02-24</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">24mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">2330</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-06-41</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">41mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">5860</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-10-50</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">50mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">10940</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-18-65</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">65mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">18520</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-40-100</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">100mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">41885</td>
+                            </tr>
+                            <tr class="bg-white border-b hover:bg-gray-50 divide-x divide-gray-200">
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-02-27</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">27mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">2330</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-06-46</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">46mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">5860</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-10-55</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">55mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">10940</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-18-70</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">70mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">18520</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-40-105</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">105mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">41885</td>
+                            </tr>
+                            <tr class="bg-white border-b hover:bg-gray-50 divide-x divide-gray-200">
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-02-30</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">30mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">2330</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-06-49</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">49mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">5860</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-10-60</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">60mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">10940</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-18-75</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">75mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">18520</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-40-110</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">110mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">41885</td>
+                            </tr>
+                            <tr class="bg-white border-b hover:bg-gray-50 divide-x divide-gray-200">
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-02-32</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">32mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">2330</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-06-50</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">50mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">5860</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-10-65</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">65mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">10940</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-18-80</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">80mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">18520</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-40-115</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">115mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">41885</td>
+                            </tr>
+                            <tr class="bg-white border-b hover:bg-gray-50 divide-x divide-gray-200">
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-02-34</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">34mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">2330</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-06-55</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">55mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">5860</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-10-70</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">70mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">10940</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-18-85</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">85mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">18520</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-40-117</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">117mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">41885</td>
+                            </tr>
+                            <tr class="bg-white border-b hover:bg-gray-50 divide-x divide-gray-200">
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-02-35</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">35mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">2330</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-06-60</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">60mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">5860</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-10-75</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">75mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">10940</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-18-90</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">90mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">18520</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-40-120</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">120mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">41885</td>
+                            </tr>
+                            <tr class="bg-white border-b hover:bg-gray-50 divide-x divide-gray-200">
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-02-36</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">36mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">2330</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-06-65</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">65mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">5860</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-10-80</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">80mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">10940</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-18-95</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">95mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">18520</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-40-125</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">125mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">41885</td>
+                            </tr>
+                            <tr class="bg-white border-b hover:bg-gray-50 divide-x divide-gray-200">
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-02-38</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">38mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">2330</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-06-70</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">70mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">6475</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-10-85</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">85mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">10940</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-18-100</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">100mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">18520</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-40-130</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">130mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">41885</td>
+                            </tr>
+                            <tr class="bg-white border-b hover:bg-gray-50 divide-x divide-gray-200">
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-02-41</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">41mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">2330</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-06-75</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">75mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">6475</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-10-90</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">90mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">10940</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-18-105</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">105mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">18520</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-40-135</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">135mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">41885</td>
+                            </tr>
+
+                            <tr class="bg-white border-b hover:bg-gray-50 divide-x divide-gray-200">
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-02-46</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">46mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">2330</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-06-80</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">80mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">6475</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-10-95</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">95mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">10940</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-18-110</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">110mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">18520</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-40-140</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">140mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">41885</td>
+                            </tr>
+                            <tr class="bg-white border-b hover:bg-gray-50 divide-x divide-gray-200">
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-02-49</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">49mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">2330</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-06-85</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">85mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">6475</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-10-100</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">100mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">11775</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-18-115</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">115mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">18520</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-40-145</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">145mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">41885</td>
+                            </tr>
+
+                            <tr class="bg-white border-b hover:bg-gray-50 divide-x divide-gray-200">
+
+                                <td class="px-4 py-3 whitespace-nowrap text-center"> ALT-02-50</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">50mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">2330</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">-</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">-</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">-</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-10-105</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">105mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">11775</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-18-117</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">117mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">18520</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-40-150</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">150mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">41885</td>
+                            </tr>
+
+                            <tr class="bg-white border-b hover:bg-gray-50 divide-x divide-gray-200">
+
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-02-55</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">55mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">2330</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">-</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">-</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">-</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-10-110</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">110mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">11775</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-18-120</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">120mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">18520</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-40-155</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">155mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">41885</td>
+                            </tr>
+
+                            <tr class="bg-white border-b hover:bg-gray-50 divide-x divide-gray-200">
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-02-60</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">60mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">2415</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">-</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">-</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">-</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">-</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">-</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">-</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">-</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">-</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">-</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-40-160</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">160mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">44595</td>
+                            </tr>
+
+
+
+
+                            <tr class="bg-white border-b hover:bg-gray-50 divide-x divide-gray-200">
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-02-65</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">65mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">2415</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">-</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">-</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">-</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">-</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">-</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">-</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">-</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">-</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">-</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-40-165</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">165mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">44595</td>
+                            </tr>
+
+                            <tr class="bg-white border-b hover:bg-gray-50 divide-x divide-gray-200">
+                                <td class="px-4 py-3 whitespace-nowrap text-center">-</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">-</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">-</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">-</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">-</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">-</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">-</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">-</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">-</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">-</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">-</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">-</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-40-170</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">170mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">44595</td>
+
+
+
+                            </tr>
+
+                            <tr class="bg-white border-b hover:bg-gray-50 divide-x divide-gray-200">
+                                <td class="px-4 py-3 whitespace-nowrap text-center">-</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">-</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">-</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">-</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">-</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">-</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">-</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">-</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">-</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">-</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">-</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">-</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-40-175</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">175mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">44595</td>
+
+
+
+                            </tr>
+
+                            <tr class="bg-white border-b hover:bg-gray-50 divide-x divide-gray-200">
+                                <td class="px-4 py-3 whitespace-nowrap text-center">-</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">-</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">-</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">-</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">-</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">-</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">-</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">-</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">-</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">-</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">-</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">-</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">ALT-40-180 </td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">180mm</td>
+                                <td class="px-4 py-3 whitespace-nowrap text-center">44595</td>
+
+
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+
+
+                </div>
+            </div>
+
+            <!-- Features Tab -->
+            <div class="hidden tab-content" id="features">
+                <div class="p-4 bg-primary/10">
+                    <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Features</h3>
+                </div>
+                <ul class="list-disc list-image-[url(assets/css/new_arrow.png)] pl-6 mt-4 space-y-2 list-disc">
+                    <li>Features an integrated RFID chip for efficient asset tracking and real-time data collection.
+                    </li>
+                    <li>360° x 185° swivel or 360° x 360° swivel allows the wrench to operate with no space
+                        limitation.</li>
+                    <li>The piston rod of the torque wrench boasts hard chrome plating, enhancing wear resistance
+                        and ensuring long-lasting performance.</li>
+                    <li>The reaction pawl officially overcomes the possibility of ratchet reversing opposite;
+                        enhancing the efficiency and precision of torque.</li>
+                    <li>A compact design with a longer arm fully advances reliability.</li>
+                    <li>Operator Safety, Low Clearance, Interchangeable & Cross Compatible Design.</li>
+                </ul>
+            </div>
+
+            <!-- Manuals Tab -->
+            <div class="hidden tab-content" id="manuals">
+                <div class="p-4 bg-primary/10">
+                    <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Manuals</h3>
+                </div>
+                <!-- <div class="p-5 mt-4 bg-gray-200 border rounded-sm shadow w-fit">
+
+                        <h2 class="text-lg font-medium">PRODUCT BROCHURE</h2>
+                        <p class="mt-2 text-lg font-semibold text-orange-500">
+                            PETOL™ POP-IT™ Flange Spreader & Prying Tool
+                        </p>
+
+                    </div> -->
+
+                <!-- <ul class="pl-6 mt-4 space-y-2 list-disc">
+                        <li><a href="#" class="text-blue-600 underline">Technical Data Sheet - Low Profile Hydraulic
+                                Torque Wrench</a></li>
+                        <li><a href="#" class="text-blue-600 underline">Operational Manual - Low Profile Hydraulic
+                                Torque Wrench</a></li>
+                    </ul> -->
+
+
+                <div class="p-5 mt-4">
+
+                    <p class="mt-4"><a class="text-blue-600 underline" href="#">Technical Data Sheet </a></p>
+
+                    <p class="mt-4"><a class="text-blue-600 underline"
+                            href="./assets/catalog/TheGAW-CBHE [Edition 2025] Low Profile Torque Wrench.pdf">Operational
+                            Manual </a></p>
+
+                </div>
+
+            </div>
+
+            <!-- Notification Tab -->
+            <div class="hidden tab-content" id="notification">
+                <div class="p-4 bg-primary/10">
+                    <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Notification</h3>
+                </div>
+                <ul class="list-disc list-image-[url(assets/css/new_arrow.png)] pl-6 mt-4 space-y-2 list-disc">
+                    <li>Each unit comes in a carry case with identification tags on the case.</li>
+                    <li>Additional Accessories: Hex Reducers, Reaction Paddle, Extended Reaction Arm, Quick
+                        Couplers, Hydraulic Hoses.</li>
+                    <li>Standard Cert package including Technical Datasheet, Operational Manual, Maintenance Manual,
+                        and Manufacturing Test Report are supplied along with the machine.</li>
+                    <li>Usage of TheGAW Hydraulic Torquing Pumps will provide greater efficiency on the torque
+                        tools.</li>
+                </ul>
+            </div>
+
+            <!-- Warning Tab -->
+            <div class="hidden tab-content" id="warning">
+                <div class="p-4 bg-primary/10">
+                    <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Warning</h3>
+                </div>
+                <div class="max-w-sm p-5 mx-auto mt-10 text-center text-white bg-primary rounded-lg">
+                    <div class="xl:text-xl flex items-center justify-center gap-2">
+                        <!-- <img class="size-6" src="assets/images/danger.svg" alt="danger"> -->
+                        <h2 class="font-medium text-center ">SAFETY NOTICE</h2>
+                        <img class="size-6" src="assets/images/danger.svg" alt="danger">
+
+                    </div>
+                    <p class="mt-2 text-sm xl:text-base text-[#d3d3d3]">
+                        Using TheGAW™ Torquing tools without proper precautions can lead to severe injuries. Follow the
+                        provided operational guidelines and industry safety standards. Regular maintenance and
+                        inspection of the machines are essential to ensure safe and efficient performance.
+                    </p>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+<app-footer></app-footer>

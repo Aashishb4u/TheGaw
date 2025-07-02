@@ -1,0 +1,232 @@
+<!-- header -->
+    <header class="bg-white">
+
+
+        <!-- navigation -->
+        <div id="header-white"></div>
+        <app-header-white></app-header-white>
+        <!-- hero section -->
+        <section class="container relative z-20 flex items-center p-8 mx-auto lg:p-20">
+            <div class="grid gap-10 md:gap-5 md:grid-cols-2">
+                <!-- <div class="flex w-full">
+                    <div class="flex flex-col gap-5 shrink-0">
+                        <img class="transition-all duration-200 cursor-pointer size-16 nav-image hover:scale-105"
+                            src="assets/images/products-icon/1.png" alt="product">
+                        <img class="transition-all duration-200 cursor-pointer size-16 nav-image hover:scale-105"
+                            src="assets/images/products-icon/2.png" alt="product">
+                        <img class="transition-all duration-200 cursor-pointer size-16 nav-image hover:scale-105"
+                            src="assets/images/products-icon/3.png" alt="product">
+                    </div>
+
+                    <img class="w-[75%] ms-5 h-auto transition-all duration-300 main-image"
+                        src="assets/images/products-icon/product.png" alt="product">
+                </div> -->
+                <div id="product-gallery" class="flex w-full">
+                    <!-- Thumbnails and main image will be injected here dynamically -->
+                </div>
+                <div class="w-full">
+                    <h3 id="product_name" class="text-xl uppercase font-semibold md:text-2xl">
+                        Marine Loading Arms
+                    </h3>
+                    <p class="mt-5 leading-8 tracking-wide 2xl:text-lg text-justify">
+                        TheGAW's marine loading arms are expertly engineered for the efficient transfer of liquids and
+                        gases
+                        to and from ships, barges, and LNG vessels. Manufactured to meet the OCIMF (Oil Companies
+                        International Marine Forum) Design & Construction Specificationss, our loading arms incorporate
+                        advanced manual and hydraulic controls, delivering unmatched safety and reliability in even the
+                        most challenging marine environments.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <section>
+        <div class="container p-8 mx-auto rounded-lg shadow-md lg:p-20">
+            <!-- Tabs Header -->
+            <div class="flex flex-wrap gap-2 md:flex-nowrap">
+                <button
+                    class="relative flex-1 uppercase py-3 px-2 font-semibold text-center text-blue-600 rounded-t-md tab-btn shadow-[0px_-6px_10px_-3px_rgba(0,_0,_0,_0.1)]"
+                    data-tab="Specifications">
+                    Specifications
+                    <div class="absolute left-0 w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+                </button>
+                <button
+                    class="relative flex-1 uppercase px-3 py-3 font-medium text-center text-gray-600 tab-btn hover:bg-gray-100 bg-blue-600/10 rounded-t-md"
+                    data-tab="features">
+                    Features
+                    <div class="absolute left-0 hidden w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+                </button>
+                <button
+                    class="relative flex-1 uppercase px-3 py-3 font-medium text-center text-gray-600 tab-btn hover:bg-gray-100 bg-blue-600/10 rounded-t-md"
+                    data-tab="benefits">
+                    Benefits
+                    <div class="absolute left-0 hidden w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+                </button>
+                <button
+                    class="relative flex-1 uppercase px-3 py-3 font-medium text-center text-gray-600 tab-btn hover:bg-gray-100 bg-blue-600/10 rounded-t-md"
+                    data-tab="catalog">
+                    Catalog
+                    <div class="absolute left-0 hidden w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+                </button>
+                <button
+                    class="relative flex-1 uppercase py-3 font-medium text-center text-gray-600 tab-btn hover:bg-gray-100 bg-blue-600/10 rounded-t-md"
+                    data-tab="order-form">
+                    Order Form
+                    <div class="absolute left-0 hidden w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+                </button>
+            </div>
+
+            <!-- Tabs Content -->
+            <div class="p-6 rounded-b-lg bg-gray-50">
+                <!-- Specifications Tab -->
+                <div class="tab-content" id="Specifications">
+                    <div class="p-4 bg-primary/10">
+                        <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Specifications</h3>
+                    </div>
+                    <div class="mt-4 overflow-x-auto">
+                        <table class="min-w-full text-sm text-left border border-collapse border-gray-200">
+                            <thead>
+                                <tr class="bg-gray-100 border-b border-gray-200">
+                                    <!-- <th class="px-4 py-3 font-semibold">Sno</th> -->
+                                    <th class="px-4 py-3 font-semibold">Type</th>
+                                    <th class="px-4 py-3 font-semibold">Material</th>
+                                    <th class="px-4 py-3 font-semibold text-center">Size</th>
+                                    <th class="px-4 py-3 font-semibold text-center">Temperature</th>
+                                    <th class="px-4 py-3 font-semibold text-center">Flow Rate m³/h</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="bg-white border-b border-gray-200 hover:bg-gray-50">
+                                    <!-- <td class="px-4 py-3">1</td> -->
+                                    <td class="px-4 py-3">Manual Operated</td>
+                                    <td class="px-4 py-3">SS, CS, LTCS</td>
+                                    <td class="px-4 py-3 text-center">4” to 10”</td>
+                                    <td class="px-4 py-3 text-center">-50°C to +200°C</td>
+                                    <td class="px-4 py-3 text-center">300 - 1700</td>
+                                </tr>
+                                <tr class="bg-white border-b border-gray-200 hover:bg-gray-50">
+                                    <!-- <td class="px-4 py-3">2</td> -->
+                                    <td class="px-4 py-3">Hydraulic Operated</td>
+                                    <td class="px-4 py-3">SS, CS, LTCS</td>
+                                    <td class="px-4 py-3 text-center">6” to 20”</td>
+                                    <td class="px-4 py-3 text-center">-170°C to +250°C</td>
+                                    <td class="px-4 py-3 text-center">600 - 4000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="mt-4">
+                        <h4 class="font-semibold">Swivel Joint</h4>
+                        <p>“The Backbone of Every Loading Arm’s Efficiency”</p>
+                        <p>Swivel joints manage loads and extreme temperatures (-196°C to +230°C) while meeting OCIMF
+                            standards, offering high load capacity and durability.</p>
+                    </div>
+                    <div class="mt-4">
+                        <h4 class="font-semibold">Emergency Release System</h4>
+                        <p>An integrated release mechanism, designed for areas requiring enhanced safety, ensures quick
+                            disconnection in emergency situations, improving operational safety.</p>
+                    </div>
+                    <div class="mt-4">
+                        <h4 class="font-semibold">Additional Equipment</h4>
+                        <ul class="pl-3 list-disc">
+                            <li>Vacuum breaker</li>
+                            <li>Drain connections</li>
+                            <li>Nitrogen purge line</li>
+                            <li>Ladders and Platform</li>
+                            <li>Vapour Return Line</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Features Tab -->
+                <div class="hidden tab-content" id="features">
+                    <div class="p-4 bg-primary/10">
+                        <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Features</h3>
+                    </div>
+                    <ul class="list-disc list-image-[url(assets/css/new_arrow.png)] pl-6 mt-4 space-y-2 list-disc">
+                        <li>Customizable designs tailored to specific port requirements, vessel sizes, and material
+                            types.</li>
+                        <li>Durable construction, built with corrosion-resistant materials.</li>
+                        <li>Operational efficiency with wide range of motion.</li>
+                        <li>Features a wide temperature range of -196°C to +200°C for LNG and cryogenic applications.
+                        </li>
+                        <li>Safety features include emergency release systems (ERS).</li>
+                        <li>Automation options provide remote control and monitoring capabilities.</li>
+                        <li>Compatible material handles various products, including crude oil, LNG, chemicals, and
+                            refined fuels.</li>
+                        <li>Regulatory compliance meets international standards.</li>
+                    </ul>
+                </div>
+
+                <!-- Benefits Tab -->
+                <div class="hidden tab-content" id="benefits">
+                    <div class="p-4 bg-primary/10">
+                        <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Benefits</h3>
+                    </div>
+                    <ul class="list-disc list-image-[url(assets/css/new_arrow.png)] pl-6 mt-4 space-y-2 list-disc">
+                        <li>After-sales technical support team.</li>
+                        <li>Operates reliably under extreme conditions, making it suitable for high-pressure or
+                            cryogenic applications.</li>
+                        <li>Enables precise alignment with vessel manifolds.</li>
+                        <li>Enhancing safety prevents spills during sudden vessel movement.</li>
+                        <li>Advance operational efficiency reduces manual effort.</li>
+                        <li>Ensures safe marine transfer operations by adhering to international standards.</li>
+                        <li>Improves port throughput by reducing loading and unloading times.</li>
+                    </ul>
+                </div>
+
+                <!-- Catalog Tab -->
+                <div class="hidden tab-content" id="catalog">
+                    <div class="p-4 bg-primary/10">
+                        <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Catalog</h3>
+                    </div>
+                    <p class="mt-4"><a href="./assets/catalog/TheGAW Industries Loading Arms 2025.pdf" class="text-blue-600 underline">Download</a> </p>
+                </div>
+
+                <!-- Order Form Tab -->
+                <!-- <div class="hidden tab-content" id="order-form">
+                    <div class="p-4 bg-primary/10">
+                        <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Order Form</h3>
+                    </div>
+                    <p class="mt-4"><a href="#" class="text-blue-600 underline">Download the questionnaire </a></p>
+                    <div class="grid col-span-3 mb-4 md:grid-cols-3 gap-5">
+                        <input type="file" id="coverLetter" name="coverLetter" accept=".pdf,.doc,.docx"
+                            class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                        <button type="submit"
+                            class="py-3 px-9 w-fit bg-primary rounded-lg text-white  block font-semibold text-sm">
+                            Submit
+                        </button>
+                    </div>
+                </div> -->
+                <div class="hidden tab-content" id="order-form">
+                    <div class="p-4 bg-primary/10">
+                        <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Order Form</h3>
+                    </div>
+                    <p class="mt-4">
+                        <a href="#" class="text-blue-600 underline">Download the questionnaire</a>
+                    </p>
+                    <form id="marine-loading-arms-form" class="grid col-span-3 mb-4 md:grid-cols-3 gap-5">
+                        <!-- Custom label for file input -->
+                        <label for="coverLetter" id="file_upload_block"
+                            class="w-full flex items-center gap-2 px-4 py-2 mt-1 border border-gray-300 rounded-md text-center cursor-pointer text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent hover:bg-gray-100">
+                            <img class="h-6 w-6" src="assets/images/icons/upload_ico.png" alt="">Upload Answered File
+                        </label>
+
+                        <label for="coverLetter" id="empty_label"
+                            class="w-full flex hidden items-center gap-2 px-4 py-2 mt-1 border border-gray-300 rounded-md text-center cursor-pointer text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent hover:bg-gray-100">
+
+                        </label>
+                        <!-- Hidden file input -->
+                        <input type="file" id="coverLetter" name="coverLetter" accept=".pdf,.doc,.docx" class="hidden">
+                        <button type="submit"
+                            class="py-3 px-9 w-fit bg-primary rounded-lg text-white block font-semibold text-sm upload-button">
+                            Submit
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <app-footer></app-footer>

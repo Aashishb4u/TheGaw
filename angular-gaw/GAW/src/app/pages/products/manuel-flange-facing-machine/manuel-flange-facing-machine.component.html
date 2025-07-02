@@ -1,0 +1,216 @@
+<!-- header -->
+<header class="bg-white">
+
+
+    <!-- navigation -->
+    <div id="header-white"></div>
+    <app-header-white></app-header-white>
+    <!-- hero section -->
+    <section class="container relative z-20 flex items-center p-8 mx-auto lg:p-20">
+        <div class="grid gap-10 md:gap-5 md:grid-cols-2">
+            <!-- <div class="flex w-full">
+                    <div class="flex flex-col gap-5 shrink-0">
+                        <img class="transition-all duration-200 cursor-pointer size-16 nav-image hover:scale-105"
+                            src="assets/images/products-icon/1.png" alt="product">
+                        <img class="transition-all duration-200 cursor-pointer size-16 nav-image hover:scale-105"
+                            src="assets/images/products-icon/1.png" alt="product">
+                        <img class="transition-all duration-200 cursor-pointer size-16 nav-image hover:scale-105"
+                            src="assets/images/products-icon/1.png" alt="product">
+                        <img class="transition-all duration-200 cursor-pointer size-16 nav-image hover:scale-105"
+                            src="assets/images/products-icon/1.png" alt="product">
+                    </div>
+
+                    <img class="w-[75%] ms-5 h-auto transition-all duration-300 main-image"
+                        src="assets/images/product.png" alt="product">
+                </div> -->
+            <div id="product-gallery" class="flex w-full">
+                <!-- Thumbnails and main image will be injected here dynamically -->
+            </div>
+            <div class="w-full">
+                <h3 id="product_name" class="text-xl uppercase font-semibold md:text-2xl">
+                    Manual Flange Facing Machine
+                </h3>
+                <p class="mt-5 leading-8 tracking-wide 2xl:text-lg text-justify">
+                    TheGAW Manual Flange Machine is designed for efficient manual flange surface repairs by
+                    installing the tool on the inner wall of the flange using an internal clamping mechanism. It
+                    operates seamlessly in locations without power or gas supply, and its lightweight design
+                    simplifies operation, on-site installation, and disassembly, significantly lowering maintenance
+                    costs.
+
+
+                </p>
+            </div>
+        </div>
+    </section>
+</header>
+
+<section>
+    <div class="container p-8 mx-auto rounded-lg shadow-md lg:p-20">
+        <!-- Tabs Header -->
+        <div class="flex flex-wrap gap-2 md:flex-nowrap">
+            <button
+                class="relative flex-1 uppercase py-3 px-2 font-semibold text-center text-blue-600 rounded-t-md tab-btn shadow-[0px_-6px_10px_-3px_rgba(0,_0,_0,_0.1)]"
+                data-tab="Specifications">
+                Specifications
+                <div class="absolute left-0 w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+            </button>
+            <button
+                class="relative flex-1 uppercase px-3 py-3 font-medium text-center text-gray-600 tab-btn hover:bg-gray-100 bg-blue-600/10 rounded-t-md"
+                data-tab="features">
+                Features
+                <div class="absolute left-0 hidden w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+            </button>
+            <button
+                class="relative flex-1 uppercase px-3 py-3 font-medium text-center text-gray-600 tab-btn hover:bg-gray-100 bg-blue-600/10 rounded-t-md"
+                data-tab="manuals">
+                Manuals
+                <div class="absolute left-0 hidden w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+            </button>
+            <button
+                class="relative flex-1 uppercase px-3 py-3 font-medium text-center text-gray-600 tab-btn hover:bg-gray-100 bg-blue-600/10 rounded-t-md"
+                data-tab="warning">
+                Warning
+                <div class="absolute left-0 hidden w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+            </button>
+        </div>
+
+        <!-- Tabs Content -->
+        <div class="p-6 rounded-b-lg bg-gray-50">
+            <!-- Specifications Tab -->
+            <div class="tab-content" id="Specifications">
+                <div class="p-4 bg-primary/10">
+                    <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Specifications</h3>
+                </div>
+                <div class="mt-4 overflow-x-auto">
+                    <div class="mt-4 overflow-x-auto">
+                        <table class="min-w-full text-sm text-left border border-collapse border-gray-200">
+                            <thead>
+                                <tr class="bg-gray-100 border-b border-gray-200 border-r border-l">
+                                    <th class="px-4 py-3 font-semibold border border-gray-200">Model</th>
+                                    <th class="px-4 py-3 font-semibold border border-gray-200">TGMFF-350</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="bg-white border-b border-r border-l hover:bg-gray-50">
+                                    <td class="px-4 py-3 font-medium border border-gray-200">Inner Diameter (Machine
+                                        Installation Range)</td>
+                                    <td class="px-4 py-3 border border-gray-200">25-350 mm</td>
+                                </tr>
+                                <tr class="bg-white border-b border-r border-l hover:bg-gray-50">
+                                    <td class="px-4 py-3 font-medium border border-gray-200">Outer Diameter (Processing
+                                        Range)</td>
+                                    <td class="px-4 py-3 border border-gray-200">25-254 mm</td>
+                                </tr>
+                                <tr class="bg-white border-b border-r border-l hover:bg-gray-50">
+                                    <td class="px-4 py-3 font-medium border border-gray-200">Power</td>
+                                    <td class="px-4 py-3 border border-gray-200">Manual</td>
+                                </tr>
+                                <tr class="bg-white border-b border-r border-l hover:bg-gray-50">
+                                    <td class="px-4 py-3 font-medium border border-gray-200">Radial Feed (Horizonal)
+                                    </td>
+                                    <td class="px-4 py-3 border border-gray-200">0.1 mm/r, 0.4 mm/r automatic</td>
+                                </tr>
+                                <tr class="bg-white border-b border-r border-l hover:bg-gray-50">
+                                    <td class="px-4 py-3 font-medium border border-gray-200">Axial Feed (Vertical)</td>
+                                    <td class="px-4 py-3 border border-gray-200">Manual</td>
+                                </tr>
+                                <tr class="bg-white border-b border-r border-l hover:bg-gray-50">
+                                    <td class="px-4 py-3 font-medium border border-gray-200">Planeness (mm)</td>
+                                    <td class="px-4 py-3 border border-gray-200">&lt;/ 0.1mm</td>
+                                </tr>
+                                <tr class="bg-white border-b border-r border-l hover:bg-gray-50">
+                                    <td class="px-4 py-3 font-medium border border-gray-200">Roughness (Ra)</td>
+                                    <td class="px-4 py-3 border border-gray-200">Ra 3.2-6.3</td>
+                                </tr>
+                                <tr class="bg-white border-b border-r border-l hover:bg-gray-50">
+                                    <td class="px-4 py-3 font-medium border border-gray-200">Radial Feed Stroke</td>
+                                    <td class="px-4 py-3 border border-gray-200">55 mm</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <div class="hidden tab-content" id="features">
+                <div class="p-4 bg-primary/10">
+                    <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Features</h3>
+                </div>
+                <ul class="list-disc list-image-[url(assets/css/new_arrow.png)] pl-6 mt-4 space-y-2 list-disc">
+                    <li>Equipped with an RFID chip for streamlined asset management, real-time tracking, and
+                        maintenance history.</li>
+                    <li>Operates without requiring electricity or gas.</li>
+                    <li>Lightweight design crafted from high-strength materials ensures ease of handling and
+                        durability.</li>
+                    <li>Adjustable tool holder with internal clamping mechanism accommodates flange diameters from
+                        25 mm to 350 mm.</li>
+                    <li>Precision centering supported by the inner flange wall guarantees flawless alignment.</li>
+                    <li>Replaceable lead screw enables optimal feed rate, suitable for mirror-finish and water-grain
+                        line processing.</li>
+
+                </ul>
+            </div>
+
+
+
+            <!-- Manuals Tab -->
+            <div class="hidden tab-content" id="manuals">
+                <!-- <div class="p-4 bg-primary/10">
+                        <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Manuals</h3>
+                    </div>
+                    <div class="p-5 mt-4 bg-gray-200 border rounded-sm shadow w-fit">
+                        <h2 class="text-lg font-medium">PRODUCT BROCHURE</h2>
+                        <p class="mt-2 text-lg font-semibold text-orange-500">
+                            PETOL™ POP-IT™ Flange Spreader & Prying Tool
+                        </p>
+                    </div>
+                    <ul class="pl-6 mt-4 space-y-2 list-disc">
+                        <li>
+                            Technical Data Sheet
+                            <a href="" class="text-primary">Manual Flange Facing Machine</a>
+                        </li>
+                        <li>
+                            Operational Manual
+                            <a href="" class="text-primary">Manual Flange Facing Machine</a>
+                        </li>
+                    </ul> -->
+                <div class="p-5 mt-4">
+
+                    <p class="mt-4"><a href="#" class="text-blue-600 underline">Technical Data Sheet </a></p>
+
+                    <p class="mt-4"><a href="#" class="text-blue-600 underline">Operational Manual </a></p>
+
+                </div>
+            </div>
+
+
+
+            <!-- Warning Tab -->
+            <div class="hidden tab-content" id="warning">
+                <div class="p-4 bg-primary/10">
+                    <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Warning</h3>
+                </div>
+                <div class="max-w-sm p-5 mx-auto mt-10 text-center text-white bg-primary rounded-lg">
+                    <div class="xl:text-xl flex items-center justify-center gap-2">
+                        <!-- <img class="size-6" src="assets/images/danger.svg" alt="danger"> -->
+                        <h2 class="font-medium text-center ">SAFETY NOTICE</h2>
+                        <img class="size-6" src="assets/images/danger.svg" alt="danger">
+
+                    </div>
+                    <p class="mt-2 text-sm xl:text-base text-[#d3d3d3]">
+                        Using TheGAW™ Torquing tools without proper precautions can
+                        lead to severe injuries. Follow the provided operational guidelines and industry safety
+                        standards. Regular maintenance and inspection of the machines are essential to ensure safe
+                        and efficient performance.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<app-footer></app-footer>

@@ -1,0 +1,258 @@
+<!-- header -->
+<header class="bg-white">
+
+
+    <!-- navigation -->
+    <div id="header-white"></div>
+    <app-header-white></app-header-white>
+    <!-- hero section -->
+    <section class="container relative z-20 flex items-center p-8 mx-auto lg:p-20">
+        <div class="grid gap-10 md:gap-5 md:grid-cols-2">
+            <!-- <div class="flex w-full">
+                    <div class="flex flex-col gap-5 shrink-0">
+                        <img class="transition-all duration-200 cursor-pointer size-16 nav-image hover:scale-105"
+                            src="assets/images/products-icon/1.png" alt="product">
+                        <img class="transition-all duration-200 cursor-pointer size-16 nav-image hover:scale-105"
+                            src="assets/images/products-icon/2.png" alt="product">
+                        <img class="transition-all duration-200 cursor-pointer size-16 nav-image hover:scale-105"
+                            src="assets/images/products-icon/3.png" alt="product">
+                    </div>
+
+                    <img class="w-[75%] ms-5 h-auto transition-all duration-300 main-image"
+                        src="assets/images/products-icon/product.png" alt="product">
+                </div> -->
+            <div id="product-gallery" class="flex w-full">
+                <!-- Thumbnails and main image will be injected here dynamically -->
+            </div>
+            <div class="w-full">
+                <h3 id="product_name" class="text-xl uppercase font-semibold md:text-2xl">
+                    Pneumatic Torque Wrench
+                </h3>
+                <p class="mt-5 leading-8 tracking-wide 2xl:text-lg text-justify">
+                    TheGAW Pneumatic Torque Wrenches offer unmatched flexibility and efficiency for a variety of
+                    bolting applications. Built for heavy-duty use, they feature a quiet, durable gearing system
+                    that ensures top-notch performance and reliability. These tools make your work easier by
+                    providing fast, accurate bolting with consistent results, even in high-volume applications.
+
+
+                </p>
+            </div>
+        </div>
+    </section>
+</header>
+
+
+<section>
+    <div class="container p-8 mx-auto rounded-lg shadow-md lg:p-20">
+        <!-- Tabs Header -->
+        <div class="flex flex-wrap gap-2 md:flex-nowrap">
+            <button
+                class="relative flex-1 uppercase py-3 px-2 font-semibold text-center text-blue-600 rounded-t-md tab-btn shadow-[0px_-6px_10px_-3px_rgba(0,_0,_0,_0.1)]"
+                data-tab="Specifications">
+                Specifications
+                <div class="absolute left-0 w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+            </button>
+            <button
+                class="relative flex-1 uppercase px-3 py-3 font-medium text-center text-gray-600 tab-btn hover:bg-gray-100 bg-blue-600/10 rounded-t-md"
+                data-tab="features">
+                Features
+                <div class="absolute left-0 hidden w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+            </button>
+            <button
+                class="relative flex-1 uppercase px-3 py-3 font-medium text-center text-gray-600 tab-btn hover:bg-gray-100 bg-blue-600/10 rounded-t-md"
+                data-tab="manuals">
+                Manuals
+                <div class="absolute left-0 hidden w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+            </button>
+            <button
+                class="relative flex-1 uppercase px-3 py-3 font-medium text-center text-gray-600 tab-btn hover:bg-gray-100 bg-blue-600/10 rounded-t-md"
+                data-tab="notification">
+                Notification
+                <div class="absolute left-0 hidden w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+            </button>
+            <button
+                class="relative flex-1 uppercase px-3 py-3 font-medium text-center text-gray-600 tab-btn hover:bg-gray-100 bg-blue-600/10 rounded-t-md"
+                data-tab="warning">
+                Warning
+                <div class="absolute left-0 hidden w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+            </button>
+        </div>
+
+        <!-- Tabs Content -->
+        <div class="p-6 rounded-b-lg bg-gray-50">
+            <!-- Specifications Tab -->
+            <div class="tab-content" id="Specifications">
+                <div class="p-4 bg-primary/10">
+                    <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Specifications</h3>
+                </div>
+                <div class="mt-4 overflow-x-auto">
+                    <table class="min-w-full text-sm text-left border border-collapse border-gray-200">
+                        <thead>
+                            <tr class="bg-gray-100 border-b border-gray-200">
+                                <th class="px-4 py-3 font-semibold">MODEL</th>
+                                <th class="px-4 py-3 font-semibold text-center">APT07</th>
+                                <th class="px-4 py-3 font-semibold text-center">APT10</th>
+                                <th class="px-4 py-3 font-semibold text-center">APT102</th>
+                                <th class="px-4 py-3 font-semibold text-center">APT103</th>
+                                <th class="px-4 py-3 font-semibold text-center">APT15</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-white border-b border-gray-200 hover:bg-gray-50">
+                                <td class="px-4 py-3 font-medium">SQUARE DRIVE</td>
+                                <td class="px-4 py-3 text-center">3/4"</td>
+                                <td class="px-4 py-3 text-center">1"</td>
+                                <td class="px-4 py-3 text-center">1"</td>
+                                <td class="px-4 py-3 text-center">1"</td>
+                                <td class="px-4 py-3 text-center">1-1/2"</td>
+                            </tr>
+                            <tr class="bg-white border-b border-gray-200 hover:bg-gray-50">
+                                <td class="px-4 py-3 font-medium">MIN. TORQUE (Nm)</td>
+                                <td class="px-4 py-3 text-center">275</td>
+                                <td class="px-4 py-3 text-center">400</td>
+                                <td class="px-4 py-3 text-center">700</td>
+                                <td class="px-4 py-3 text-center">1200</td>
+                                <td class="px-4 py-3 text-center">2700</td>
+                            </tr>
+                            <tr class="bg-white border-b border-gray-200 hover:bg-gray-50">
+                                <td class="px-4 py-3 font-medium">MAX. TORQUE (Nm)</td>
+                                <td class="px-4 py-3 text-center">1395</td>
+                                <td class="px-4 py-3 text-center">2010</td>
+                                <td class="px-4 py-3 text-center">3410</td>
+                                <td class="px-4 py-3 text-center">4010</td>
+                                <td class="px-4 py-3 text-center">8010</td>
+                            </tr>
+                            <tr class="bg-white border-b border-gray-200 hover:bg-gray-50">
+                                <td class="px-4 py-3 font-medium">MIN. TORQUE (Ft.Lbs)</td>
+                                <td class="px-4 py-3 text-center">202</td>
+                                <td class="px-4 py-3 text-center">295</td>
+                                <td class="px-4 py-3 text-center">516</td>
+                                <td class="px-4 py-3 text-center">885</td>
+                                <td class="px-4 py-3 text-center">1991</td>
+                            </tr>
+                            <tr class="bg-white border-b border-gray-200 hover:bg-gray-50">
+                                <td class="px-4 py-3 font-medium">MAX. TORQUE (Ft.Lbs)</td>
+                                <td class="px-4 py-3 text-center">1028</td>
+                                <td class="px-4 py-3 text-center">1482</td>
+                                <td class="px-4 py-3 text-center">2515</td>
+                                <td class="px-4 py-3 text-center">2957</td>
+                                <td class="px-4 py-3 text-center">5907</td>
+                            </tr>
+                            <tr class="bg-white border-b border-gray-200 hover:bg-gray-50">
+                                <td class="px-4 py-3 font-medium">SPEED (RPM)</td>
+                                <td class="px-4 py-3 text-center">10</td>
+                                <td class="px-4 py-3 text-center">8.5</td>
+                                <td class="px-4 py-3 text-center">6.5</td>
+                                <td class="px-4 py-3 text-center">5</td>
+                                <td class="px-4 py-3 text-center">4.5</td>
+                            </tr>
+                            <tr class="bg-white border-b border-gray-200 hover:bg-gray-50">
+                                <td class="px-4 py-3 font-medium">NOISE (dB)</td>
+                                <td class="px-4 py-3 text-center">75</td>
+                                <td class="px-4 py-3 text-center">75</td>
+                                <td class="px-4 py-3 text-center">80</td>
+                                <td class="px-4 py-3 text-center">80</td>
+                                <td class="px-4 py-3 text-center">80</td>
+                            </tr>
+                            <tr class="bg-white border-b border-gray-200 hover:bg-gray-50">
+                                <td class="px-4 py-3 font-medium">WEIGHT (Kg)</td>
+                                <td class="px-4 py-3 text-center">5</td>
+                                <td class="px-4 py-3 text-center">6</td>
+                                <td class="px-4 py-3 text-center">7</td>
+                                <td class="px-4 py-3 text-center">7.5</td>
+                                <td class="px-4 py-3 text-center">12.5</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Features Tab -->
+            <div class="hidden tab-content" id="features">
+                <div class="p-4 bg-primary/10">
+                    <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Features</h3>
+                </div>
+                <ul class="list-disc list-image-[url(assets/css/new_arrow.png)] pl-6 mt-4 space-y-2 list-disc">
+                    <li>Equipped with an RFID chip to simplify tool identification and improve maintenance tracking.
+                    </li>
+                    <li>The precise high-speed gearbox design can obtain stable and strong continuous output torque,
+                        suitable for high-efficiency applications.</li>
+                    <li>The powerful extension system delivers desired torque without compromising power or
+                        durability, minimizing noise.</li>
+                    <li>Smooth continuous torque – no hammering or ratcheting.</li>
+                    <li>Lightweight ergonomic grip reduces operator strain.</li>
+                    <li>Advanced gearbox design for unmatched reliability. Torque accuracy ±4%, repeatability ±2%.
+                    </li>
+                    <li>Maximized power-to-weight ratio and wide torque range for various applications and stations.
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Manuals Tab -->
+            <div class="hidden tab-content" id="manuals">
+                <!-- <div class="p-4 bg-primary/10">
+                        <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Manuals</h3>
+                    </div>
+                    <div class="p-5 mt-4 bg-gray-200 border rounded-sm shadow w-fit">
+
+                        <h2 class="text-lg font-medium">PRODUCT BROCHURE</h2>
+                        <p class="mt-2 text-lg font-semibold text-orange-500">
+                            PETOL™ POP-IT™ Flange Spreader & Prying Tool
+                        </p>
+
+                    </div>
+
+                    <ul class="pl-6 mt-4 space-y-2 list-disc">
+                        <li><a href="#" class="text-blue-600 underline">Technical Data Sheet - Pneumatic Torque
+                                Wrench</a></li>
+                        <li><a href="#" class="text-blue-600 underline">Operational Manual - Pneumatic Torque Wrench</a>
+                        </li>
+                    </ul> -->
+                <div class="p-5 mt-4">
+
+                    <p class="mt-4"><a href="#" class="text-blue-600 underline">Technical Data Sheet </a></p>
+
+                    <p class="mt-4"><a href="./assets/catalog/TheGAW-CBHE [Edition 2025] Pneumatic Torque Wrench.pdf"
+                            class="text-blue-600 underline">Operational Manual </a></p>
+
+                </div>
+            </div>
+
+            <!-- Notification Tab -->
+            <div class="hidden tab-content" id="notification">
+                <div class="p-4 bg-primary/10">
+                    <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Notification</h3>
+                </div>
+                <ul class="list-disc list-image-[url(assets/css/new_arrow.png)] pl-6 mt-4 space-y-2 list-disc">
+                    <li>Each unit comes in a carry case with identification tags on the case.</li>
+                    <li>Additional Accessories: Hex Links, Hex Reducers, Cir Clip, G1/2 Air Hose, Air Gauge, FRL,
+                        Air Regulator, Carry Basket, Air-Torque Chart.</li>
+                    <li>Standard Cert package including Technical Datasheet, Operational Manual, Maintenance Manual,
+                        and Manufacturing Test Report are supplied along with the machine.</li>
+                </ul>
+            </div>
+
+            <!-- Warning Tab -->
+            <div class="hidden tab-content" id="warning">
+                <div class="p-4 bg-primary/10">
+                    <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Warning</h3>
+                </div>
+                <div class="max-w-sm p-5 mx-auto mt-10 text-center text-white bg-primary rounded-lg">
+                    <div class="xl:text-xl flex items-center justify-center gap-2">
+                        <!-- <img class="size-6" src="assets/images/danger.svg" alt="danger"> -->
+                        <h2 class="font-medium text-center ">SAFETY NOTICE</h2>
+                        <img class="size-6" src="assets/images/danger.svg" alt="danger">
+
+                    </div>
+                    <p class="mt-2 text-sm xl:text-base text-[#d3d3d3]">
+                        Using TheGAW™ Torquing tools without proper precautions can lead to severe injuries. Follow the
+                        provided operational guidelines and industry safety standards. Regular maintenance and
+                        inspection of the machines are essential to ensure safe and efficient performance.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<app-footer></app-footer>

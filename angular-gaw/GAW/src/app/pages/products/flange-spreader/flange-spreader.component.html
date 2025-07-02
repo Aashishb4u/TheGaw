@@ -1,0 +1,225 @@
+<!-- header -->
+<header class="bg-white">
+
+
+    <!-- navigation -->
+    <div id="header-white"></div>
+    <app-header-white></app-header-white>
+    <!-- hero section -->
+    <section class="container relative z-20 flex items-center p-8 mx-auto lg:p-20">
+        <div class="grid gap-10 md:gap-5 md:grid-cols-2">
+            <!-- <div class="flex w-full">
+                    <div class="flex flex-col gap-5 shrink-0">
+                        <img class="transition-all duration-200 cursor-pointer size-16 nav-image hover:scale-105"
+                            src="assets/images/products-icon/1.png" alt="product">
+                        <img class="transition-all duration-200 cursor-pointer size-16 nav-image hover:scale-105"
+                            src="assets/images/products-icon/2.png" alt="product">
+                        <img class="transition-all duration-200 cursor-pointer size-16 nav-image hover:scale-105"
+                            src="assets/images/products-icon/3.png" alt="product">
+                    </div>
+
+                    <img class="w-[75%] ms-5 h-auto transition-all duration-300 main-image"
+                        src="assets/images/products-icon/product.png" alt="product">
+                </div> -->
+            <div id="product-gallery" class="flex w-full">
+                <!-- Thumbnails and main image will be injected here dynamically -->
+            </div>
+            <div class="w-full">
+                <h3 id="product_name" class="text-xl uppercase font-semibold md:text-2xl">
+                    Flange Spreader
+                </h3>
+                <p class="mt-5 leading-8 tracking-wide 2xl:text-lg text-justify">
+                    TheGAW Flange Spreaders provide controlled separation of stubborn joints through precise
+                    hydraulic force application. The innovative stepped-wedge design enables access through minimal
+                    gaps while delivering powerful spreading capability. Featuring integrated safety blocks and
+                    controlled spreading action, these tools ensure damage-free flange separation for critical
+                    maintenance and inspection operations.
+
+
+                </p>
+            </div>
+        </div>
+    </section>
+</header>
+
+<section>
+    <div class="container p-8 mx-auto rounded-lg shadow-md lg:p-20">
+        <!-- Tabs Header -->
+        <div class="flex flex-wrap gap-2 md:flex-nowrap">
+            <button
+                class="relative flex-1 uppercase py-3 px-2 font-semibold text-center text-blue-600 rounded-t-md tab-btn shadow-[0px_-6px_10px_-3px_rgba(0,_0,_0,_0.1)]"
+                data-tab="Specifications">
+                Specifications
+                <div class="absolute left-0 w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+            </button>
+            <button
+                class="relative flex-1 uppercase px-3 py-3 font-medium text-center text-gray-600 tab-btn hover:bg-gray-100 bg-blue-600/10 rounded-t-md"
+                data-tab="features">
+                Features
+                <div class="absolute left-0 hidden w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+            </button>
+            <button
+                class="relative flex-1 uppercase px-3 py-3 font-medium text-center text-gray-600 tab-btn hover:bg-gray-100 bg-blue-600/10 rounded-t-md"
+                data-tab="manuals">
+                Manuals
+                <div class="absolute left-0 hidden w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+            </button>
+            <button
+                class="relative flex-1 uppercase px-3 py-3 font-medium text-center text-gray-600 tab-btn hover:bg-gray-100 bg-blue-600/10 rounded-t-md"
+                data-tab="notification">
+                Notification
+                <div class="absolute left-0 hidden w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+            </button>
+            <button
+                class="relative flex-1 uppercase px-3 py-3 font-medium text-center text-gray-600 tab-btn hover:bg-gray-100 bg-blue-600/10 rounded-t-md"
+                data-tab="warning">
+                Warning
+                <div class="absolute left-0 hidden w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+            </button>
+        </div>
+
+        <!-- Tabs Content -->
+        <div class="p-6 rounded-b-lg bg-gray-50">
+            <!-- Specifications Tab -->
+            <div class="tab-content" id="Specifications">
+                <div class="p-4 bg-primary/10">
+                    <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Specifications</h3>
+                </div>
+                <div class="mt-4 overflow-x-auto">
+                    <table class="min-w-full text-sm text-left border border-collapse border-gray-200">
+                        <thead>
+                            <tr class="bg-gray-100 border-b border-gray-200">
+                                <th class="px-4 py-3 font-semibold">MODEL</th>
+                                <th class="px-4 py-3 text-center font-semibold">CAPACITY</th>
+                                <th class="px-4 py-3 text-center font-semibold">WEIGHT(Kgs)</th>
+                                <th class="px-4 py-3 font-semibold">REMARK</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-white border-b border-gray-200 hover:bg-gray-50">
+                                <td class="px-4 py-3">AMFS-8T</td>
+                                <td class="px-4 py-3 text-center">8T</td>
+                                <td class="px-4 py-3 text-center">6</td>
+                                <td class="px-4 py-3">1 x Mechanical Flange Spreader, 2 x Stepped Blocks, 1 x Safety
+                                    Block, 1 x Ratchets Spanner, 1 x Portable Toolbox</td>
+                            </tr>
+                            <tr class="bg-white border-b border-gray-200 hover:bg-gray-50">
+                                <td class="px-4 py-3">AMFS-16T</td>
+                                <td class="px-4 py-3 text-center">16T</td>
+                                <td class="px-4 py-3 text-center">12</td>
+                                <td class="px-4 py-3">2 x Mechanical Flange Spreaders, 4 x Stepped Blocks, 2 x
+                                    Safety Blocks, 2 x Ratchet Spanners, 1 x Portable Toolbox</td>
+                            </tr>
+                            <tr class="bg-white border-b border-gray-200 hover:bg-gray-50">
+                                <td class="px-4 py-3">AHFS-14T</td>
+                                <td class="px-4 py-3 text-center">14T</td>
+                                <td class="px-4 py-3 text-center">9</td>
+                                <td class="px-4 py-3">1 x Split Type Hydraulic Flange Spreader, 1 x Stepped Block, 1
+                                    x Safety Block, 1 x Hose, 1 x Hydraulic Hand Pump, 1 x Portable Toolbox</td>
+                            </tr>
+                            <tr class="bg-white border-b border-gray-200 hover:bg-gray-50">
+                                <td class="px-4 py-3">AHFS-28T</td>
+                                <td class="px-4 py-3 text-center">28T</td>
+                                <td class="px-4 py-3 text-center">18</td>
+                                <td class="px-4 py-3">2 x Split Type Hydraulic Flange Spreaders, 2 x Stepped Blocks,
+                                    2 x Safety Blocks, 3 x Hoses, 1 x Hydraulic Hand Pump, 1 x One-to-two
+                                    Distribution Valve, 1 x Portable Toolbox</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Features Tab -->
+            <div class="hidden tab-content" id="features">
+                <div class="p-4 bg-primary/10">
+                    <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Features</h3>
+                </div>
+                <ul class="list-disc list-image-[url(assets/css/new_arrow.png)] pl-6 mt-4 space-y-2 list-disc">
+                    <li>The RFID chip ensures improved asset traceability, simplifying maintenance and operational
+                        monitoring.</li>
+                    <li>Forged alloy steel separation steps for longer life.</li>
+                    <li>Lightweight, reinforced plastic steel handle design, easy to carry.</li>
+                    <li>The unique internal locking mechanism ensures that the separation piece is close to the
+                        flange when it is opened and will not expand too much, and the oil cylinder automatically
+                        returns when it is closed.</li>
+                    <li>Arc steps with a radius of 150mm can effectively get close to the flange so that each step
+                        can bear a larger load.</li>
+                    <li>Mechanical automatic retraction design, saving time and efficiency.</li>
+                    <li>The large step distance is 15mm, providing the first-order large-area separation force.</li>
+                    <li>The separator is close to the flange surface during operation, and the unique design ensures
+                        that there is no excessive expansion.</li>
+                </ul>
+            </div>
+
+            <!-- Benefits Tab -->
+            <div class="hidden tab-content" id="manuals">
+                <!-- <div class="p-4 bg-primary/10">
+                        <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Manuals</h3>
+                    </div>
+                    <div class="p-5 mt-4 bg-gray-200 border rounded-sm shadow w-fit">
+
+                        <h2 class="text-lg font-medium">PRODUCT BROCHURE</h2>
+                        <p class="mt-2 text-lg font-semibold text-orange-500">
+                            PETOL™ POP-IT™ Flange Spreader & Prying Tool
+                        </p>
+
+                    </div>
+                    <ul class="pl-6 mt-4 space-y-2 list-disc">
+                        <li>
+                            Technical Data Sheet
+                            <a href="" class="text-primary">Flange Spreaders</a>
+                        </li>
+                        <li>
+                            Operational Manual
+                            <a href="" class="text-primary">Flange Spreaders</a>
+                        </li>
+
+                    </ul> -->
+                <div class="p-5 mt-4">
+
+                    <p class="mt-4"><a href="#" class="text-blue-600 underline">Technical Data Sheet </a></p>
+
+                    <p class="mt-4"><a href="./assets/catalog/TheGAW-CBHE [Edition 2025] Flange Spreaders.pdf"
+                            class="text-blue-600 underline">Operational Manual </a></p>
+
+                </div>
+            </div>
+
+            <!-- Catalog Tab -->
+            <div class="hidden tab-content" id="notification">
+                <div class="p-4 bg-primary/10">
+                    <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Notification</h3>
+                </div>
+                <ul class="list-disc list-image-[url(assets/css/new_arrow.png)] pl-6 mt-4 space-y-2 list-disc">
+                    <li>Each unit comes in a carry case.</li>
+                    <li>Additional Accessories: Hand Pump, Pressure Gauge, Quick Couplers, Hydraulic Hoses.</li>
+                    <li>Standard Cert Package including Technical Datasheet, Operational Manual, Maintenance Manual,
+                        and
+                        Manufacturing Test Report are supplied along with machine.</li>
+                </ul>
+
+            </div>
+            <div class="hidden tab-content" id="warning">
+                <div class="p-4 bg-primary/10">
+                    <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Warning</h3>
+                </div>
+                <div class="max-w-sm p-5 mx-auto mt-10 text-center text-white bg-primary rounded-lg">
+                    <div class="xl:text-xl flex items-center justify-center gap-2">
+                        <!-- <img class="size-6" src="assets/images/danger.svg" alt="danger"> -->
+                        <h2 class="font-medium text-center ">SAFETY NOTICE</h2>
+                        <img class="size-6" src="assets/images/danger.svg" alt="danger">
+
+                    </div>
+                    <p class="mt-2 text-sm xl:text-base text-[#d3d3d3]">
+                        Using TheGAW™ Flange Spreaders without proper precautions can lead to severe injuries. Follow
+                        the provided operational guidelines and industry safety standards. Regular maintenance and
+                        inspection of the machines are essential to ensure safe and efficient performance.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<app-footer></app-footer>

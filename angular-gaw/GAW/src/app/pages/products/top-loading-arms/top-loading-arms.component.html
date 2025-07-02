@@ -1,0 +1,230 @@
+<!-- header -->
+<header class="bg-white">
+
+    <!-- navigation -->
+    <div id="header-white"></div>
+    <app-header-white></app-header-white>
+
+    <!-- hero section -->
+    <section class="container relative z-20 flex items-center p-8 mx-auto lg:p-20">
+        <div class="grid gap-10 md:gap-5 md:grid-cols-2">
+            <!-- <div class="flex w-full">
+                    <div class="flex flex-col gap-5 shrink-0">
+                        <img class="transition-all duration-200 cursor-pointer size-16 nav-image hover:scale-105"
+                            src="assets/images/products-icon/1.png" alt="product">
+                        <img class="transition-all duration-200 cursor-pointer size-16 nav-image hover:scale-105"
+                            src="assets/images/products-icon/2.png" alt="product">
+                        <img class="transition-all duration-200 cursor-pointer size-16 nav-image hover:scale-105"
+                            src="assets/images/products-icon/3.png" alt="product">
+                    </div>
+
+                    <img class="w-[75%] ms-5 h-auto transition-all duration-300 main-image"
+                        src="assets/images/products-icon/product.png" alt="product">
+                </div> -->
+            <div id="product-gallery" class="flex w-full">
+                <!-- Thumbnails and main image will be injected here dynamically -->
+            </div>
+            <div class="w-full">
+                <h3 id="product_name" class="text-xl uppercase font-semibold md:text-2xl">
+                    Top Loading Arms
+                </h3>
+                <p class="mt-5 leading-8 tracking-wide 2xl:text-lg text-justify">
+                    TheGAW’s top loading arms facilitate safe fluid transfer to trucks, trains, and vessels,
+                    ensuring a
+                    seamless, secure process ideal for Oil & Gas, Petrochemicals, FMCG, and other industries. The
+                    arms
+                    can be customized with vapor recovery systems, telescopic end pipes, and anti-drip valves to
+                    prevent spillage and environmental contamination.
+                </p>
+            </div>
+        </div>
+    </section>
+</header>
+
+<!-- product details -->
+<section>
+    <div class="container p-8 mx-auto rounded-lg shadow-md lg:p-20">
+        <!-- Tabs Header -->
+        <div class="flex flex-wrap gap-2 md:flex-nowrap">
+            <button
+                class="relative flex-1 uppercase py-3 px-2 font-semibold text-center text-blue-600 rounded-t-md tab-btn shadow-[0px_-6px_10px_-3px_rgba(0,_0,_0,_0.1)]"
+                data-tab="Specifications">
+                Specifications
+                <div class="absolute left-0 w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+            </button>
+            <button
+                class="relative flex-1 uppercase px-3 py-3 font-medium text-center text-gray-600 tab-btn hover:bg-gray-100 bg-blue-600/10 rounded-t-md"
+                data-tab="features">
+                Features
+                <div class="absolute left-0 hidden w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+            </button>
+            <button
+                class="relative flex-1 uppercase px-3 py-3 font-medium text-center text-gray-600 tab-btn hover:bg-gray-100 bg-blue-600/10 rounded-t-md"
+                data-tab="benefits">
+                Benefits
+                <div class="absolute left-0 hidden w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+            </button>
+            <button
+                class="relative flex-1 uppercase px-3 py-3 font-medium text-center text-gray-600 tab-btn hover:bg-gray-100 bg-blue-600/10 rounded-t-md"
+                data-tab="catalog">
+                Catalog
+                <div class="absolute left-0 hidden w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+            </button>
+            <button id="order-form-btn"
+                class="relative flex-1 uppercase py-3 font-medium text-center text-gray-600 tab-btn hover:bg-gray-100 bg-blue-600/10 rounded-t-md"
+                data-tab="order-form">
+                Order Form
+                <div class="absolute left-0 hidden w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+            </button>
+        </div>
+
+        <!-- Tabs Content -->
+        <div class="p-6 rounded-b-lg bg-gray-50">
+            <!-- Specifications Tab -->
+            <div class="tab-content" id="Specifications">
+                <div class="p-4 bg-primary/10">
+                    <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Specifications</h3>
+                </div>
+                <div class="mt-4 overflow-x-auto">
+                    <table class="min-w-full text-sm text-left border border-collapse border-gray-200">
+                        <thead>
+                            <tr class="bg-gray-100 border-b border-gray-200">
+                                <!-- <th class="px-4 py-3 font-medium">Sno</th> -->
+                                <th class="px-4 py-3 font-semibold">Model </th>
+                                <th class="px-4 py-3 font-semibold">Description </th>
+                                <th class="px-4 py-3 font-semibold">Material</th>
+                                <th class="px-4 py-3 font-semibold text-center">Reach (m)</th>
+                                <th class="px-4 py-3 font-semibold text-center">Pressure</th>
+                                <th class="px-4 py-3 font-semibold text-center">Flow Rate</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-white border-b border-gray-200 hover:bg-gray-50">
+                                <!-- <td class="px-4 py-3">1</td> -->
+                                <td class="px-4 py-3">TGTL2030</td>
+                                <td class="px-4 py-3">Long Range Top Loading Arms</td>
+                                <td class="px-4 py-3">Aluminium</td>
+                                <td class="px-4 py-3 text-center">3.0</td>
+                                <td class="px-4 py-3 text-center">20bar</td>
+                                <td class="px-4 py-3 text-center">200m³/h</td>
+                            </tr>
+                            <tr class="bg-white border-b border-gray-200 hover:bg-gray-50">
+                                <!-- <td class="px-4 py-3">2</td> -->
+                                <td class="px-4 py-3">TGTL1015 </td>
+                                <td class="px-4 py-3">Short Range Top Loading Arms</td>
+                                <td class="px-4 py-3">Stainless Steel</td>
+                                <td class="px-4 py-3 text-center">1.5</td>
+                                <td class="px-4 py-3 text-center">10bar</td>
+                                <td class="px-4 py-3 text-center">100m³/h</td>
+                            </tr>
+                            <tr class="bg-white border-b border-gray-200 hover:bg-gray-50">
+                                <!-- <td class="px-4 py-3">3</td> -->
+                                <td class="px-4 py-3">TGTL1520</td>
+                                <td class="px-4 py-3">Variable Radius Top Loading Arms</td>
+                                <td class="px-4 py-3">Carbon Steel</td>
+                                <td class="px-4 py-3 text-center">2.0</td>
+                                <td class="px-4 py-3 text-center">15bar</td>
+                                <td class="px-4 py-3 text-center">150m³/h</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Features Tab -->
+            <div class="hidden tab-content" id="features">
+                <div class="p-4 bg-primary/10">
+                    <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Features</h3>
+                </div>
+                <ul class="list-disc list-image-[url(assets/css/new_arrow.png)] pl-6 mt-4 space-y-2 list-disc">
+                    <li>Customized and Compact Design with Enhanced Safety Features.</li>
+                    <li>Choice of Compressed or Torsion Spring for versatile applications.</li>
+                    <li>Integrated Automation and Monitoring for Real-Time Precision Control.</li>
+                    <li>Flexible Reach and Rotation for adaptable performance.</li>
+                    <li>Material Compatibility for diverse substance handling.</li>
+                    <li>Corrosion-Resistant Materials designed for durability across various substances.</li>
+                    <li>Ease of Installation, Maintenance, and Modular Components for improved accessibility.</li>
+                    <li>Operational Efficiency that reduces loading time and boosts throughput.</li>
+                    <li>Vapor Recovery System for effective capture and recycling of vapors.</li>
+                </ul>
+            </div>
+
+            <!-- Benefits Tab -->
+            <div class="hidden tab-content" id="benefits">
+                <div class="p-4 bg-primary/10">
+                    <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Benefits</h3>
+                </div>
+                <ul class="pl-6 list-disc list-image-[url(assets/css/new_arrow.png)] mt-4 space-y-2 list-disc">
+                    <li>Tailored Solutions to meet specific operational needs, ensuring compatibility with various
+                        tankers, materials, and workflows.</li>
+                    <li>After-Sales Technical Support Team and an extendable warranty for continued assistance.</li>
+                    <li>Fast Turnaround Time to minimize delays and maintain operational efficiency.</li>
+                    <li>Modular Designs and Replaceable Parts to reduce downtime and lower maintenance costs.</li>
+                    <li>Vapor Recovery System and Ground-Level Operations to minimize risks of spills, vapor
+                        exposure, and worker injuries.</li>
+                    <li>Corrosion-Resistant Materials for long-lasting durability and reliable performance in
+                        challenging environments.</li>
+                    <li>Improved Safety and Efficiency through real-time monitoring and precise control.</li>
+                    <li>Space-Saving Design for efficient operation, particularly in confined loading areas,
+                        enhancing productivity.</li>
+                </ul>
+            </div>
+
+            <!-- Catalog Tab -->
+            <div class="hidden tab-content" id="catalog">
+                <div class="p-4 bg-primary/10">
+                    <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Catalog</h3>
+                </div>
+                <p class="mt-4"><a href="#" class="text-blue-600 underline"><a
+                            href="./assets/catalog/TheGAW Industries Loading Arms 2025.pdf"
+                            class="text-blue-600 underline">Download</a> </a></p>
+            </div>
+
+            <!-- Order Form Tab -->
+            <!-- <div class="hidden tab-content" id="order-form">
+                    <div class="p-4 bg-primary/10">
+                        <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Order Form</h3>
+                    </div>
+                    <p class="mt-4"><a href="#" class="text-blue-600 underline">Download the questionnaire </a></p>
+
+                    <div class="grid col-span-3 mb-4 md:grid-cols-3 gap-5">
+                        <input type="file" id="coverLetter" name="coverLetter" accept=".pdf,.doc,.docx"
+                            class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                        <button type="submit"
+                            class="py-3 px-9 w-fit bg-primary rounded-lg text-white  block font-semibold text-sm">
+                            Submit
+                        </button>
+                    </div>
+                </div> -->
+            <div class="hidden tab-content" id="order-form">
+                <div class="p-4 bg-primary/10">
+                    <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Order Form</h3>
+                </div>
+                <p class="mt-4">
+                    <a href="./assets/catalog/AmallGam Top LA Design questionnaire.pdf"
+                        class="text-blue-600 underline">Download the questionnaire</a>
+                </p>
+                <form id="top-loading-arms-form" class="grid col-span-3 mb-4 md:grid-cols-3 gap-5">
+                    <label for="coverLetter" id="file_upload_block"
+                        class="w-full flex items-center gap-2 px-4 py-2 mt-1 border border-gray-300 rounded-md text-center cursor-pointer text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent hover:bg-gray-100">
+                        <img class="h-6 w-6" src="assets/images/icons/upload_ico.png" alt="">Upload Answered File
+                    </label>
+
+                    <label for="coverLetter" id="empty_label"
+                        class="w-full flex hidden items-center gap-2 px-4 py-2 mt-1 border border-gray-300 rounded-md text-center cursor-pointer text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent hover:bg-gray-100">
+
+                    </label>
+                    <!-- Hidden file input -->
+                    <input type="file" id="coverLetter" name="coverLetter" accept=".pdf,.doc,.docx" class="hidden">
+                    <button type="submit"
+                        class="py-3 px-9 w-fit bg-primary rounded-lg text-white block font-semibold text-sm upload-button">
+                        Submit
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<app-footer></app-footer>

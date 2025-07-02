@@ -1,0 +1,266 @@
+<!-- header -->
+<header class="bg-white">
+
+
+    <!-- navigation -->
+    <div id="header-white"></div>
+    <app-header-white></app-header-white>
+    <!-- hero section -->
+    <section class="container relative z-20 flex items-center p-8 mx-auto lg:p-20">
+        <div class="grid gap-10 md:gap-5 md:grid-cols-2">
+            <!-- <div class="flex w-full">
+                    <div class="flex flex-col gap-5 shrink-0">
+                        <img class="transition-all duration-200 cursor-pointer size-16 nav-image hover:scale-105"
+                            src="assets/images/products-icon/1.png" alt="product">
+                        <img class="transition-all duration-200 cursor-pointer size-16 nav-image hover:scale-105"
+                            src="assets/images/products-icon/2.png" alt="product">
+                        <img class="transition-all duration-200 cursor-pointer size-16 nav-image hover:scale-105"
+                            src="assets/images/products-icon/3.png" alt="product">
+                    </div>
+
+                    <img class="w-[75%] ms-5 h-auto transition-all duration-300 main-image"
+                        src="assets/images/products-icon/product.png" alt="product">
+                </div> -->
+            <div id="product-gallery" class="flex w-full">
+                <!-- Thumbnails and main image will be injected here dynamically -->
+            </div>
+            <div class="w-full">
+                <h3 id="product_name" class="text-xl uppercase font-semibold md:text-2xl">
+                    Torque Pump
+                </h3>
+                <p class="mt-5 leading-8 tracking-wide 2xl:text-lg text-justify">
+                    TheGAW Torque Pumps are high-performance devices designed to generate pressures up to 10,000 PSI
+                    (700 bar), meeting the demands of rigorous bolting applications. Available in electrical and
+                    pneumatic drive systems, these pumps feature a two-stage design for faster cycle times and
+                    efficient tool operation. They ensure durability and ease of use in harsh industrial
+                    environments.
+
+
+                </p>
+            </div>
+        </div>
+    </section>
+</header>
+
+<section>
+    <div class="container p-8 mx-auto rounded-lg shadow-md lg:p-20">
+        <!-- Tabs Header -->
+        <div class="flex flex-wrap gap-2 md:flex-nowrap">
+            <button
+                class="relative flex-1 uppercase py-3 px-2 font-semibold text-center text-blue-600 rounded-t-md tab-btn shadow-[0px_-6px_10px_-3px_rgba(0,_0,_0,_0.1)]"
+                data-tab="Specifications">
+                Specifications
+                <div class="absolute left-0 w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+            </button>
+            <button
+                class="relative flex-1 uppercase px-3 py-3 font-medium text-center text-gray-600 tab-btn hover:bg-gray-100 bg-blue-600/10 rounded-t-md"
+                data-tab="features">
+                Features
+                <div class="absolute left-0 hidden w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+            </button>
+            <button
+                class="relative flex-1 uppercase px-3 py-3 font-medium text-center text-gray-600 tab-btn hover:bg-gray-100 bg-blue-600/10 rounded-t-md"
+                data-tab="manuals">
+                Manuals
+                <div class="absolute left-0 hidden w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+            </button>
+            <button
+                class="relative flex-1 uppercase px-3 py-3 font-medium text-center text-gray-600 tab-btn hover:bg-gray-100 bg-blue-600/10 rounded-t-md"
+                data-tab="notification">
+                Notification
+                <div class="absolute left-0 hidden w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+            </button>
+            <button
+                class="relative flex-1 uppercase px-3 py-3 font-medium text-center text-gray-600 tab-btn hover:bg-gray-100 bg-blue-600/10 rounded-t-md"
+                data-tab="warning">
+                Warning
+                <div class="absolute left-0 hidden w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+            </button>
+        </div>
+
+        <!-- Tabs Content -->
+        <div class="p-6 rounded-b-lg bg-gray-50">
+            <!-- Specifications Tab -->
+            <div class="tab-content" id="Specifications">
+                <div class="p-4 bg-primary/10">
+                    <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Specifications</h3>
+                </div>
+                <div class="mt-4 overflow-x-auto">
+                    <table class="min-w-full text-sm text-left border border-collapse border-gray-200">
+                        <thead>
+                            <tr class="bg-gray-100 border-b border-gray-200">
+                                <th class="px-4 py-3 font-semibold">MODEL</th>
+                                <th class="px-4 py-3 text-center font-semibold">ATPP4</th>
+                                <th class="px-4 py-3 text-center font-semibold">ATPP8</th>
+                                <th class="px-4 py-3 text-center font-semibold">ATPE4</th>
+                                <th class="px-4 py-3 text-center font-semibold">ATPE8</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-white border-b border-gray-200 hover:bg-gray-50">
+                                <td class="px-4 py-3 font-medium">DRIVE MECHANISM</td>
+                                <td class="px-4 py-3 text-center">Pneumatic</td>
+                                <td class="px-4 py-3 text-center">Pneumatic</td>
+                                <td class="px-4 py-3 text-center">Electric</td>
+                                <td class="px-4 py-3 text-center">Electric</td>
+                            </tr>
+                            <tr class="bg-white border-b border-gray-200 hover:bg-gray-50">
+                                <td class="px-4 py-3 font-medium">WORKING PRESSURE</td>
+                                <td class="px-4 py-3 text-center">10,000psi/700Bar</td>
+                                <td class="px-4 py-3 text-center">10,000psi/700Bar</td>
+                                <td class="px-4 py-3 text-center">10,000psi/700Bar</td>
+                                <td class="px-4 py-3 text-center">10,000psi/700Bar</td>
+                            </tr>
+                            <tr class="bg-white border-b border-gray-200 hover:bg-gray-50">
+                                <td class="px-4 py-3 font-medium">OPERATING WRENCH</td>
+                                <td class="px-4 py-3 text-center">2</td>
+                                <td class="px-4 py-3 text-center">4</td>
+                                <td class="px-4 py-3 text-center">2</td>
+                                <td class="px-4 py-3 text-center">4</td>
+                            </tr>
+                            <tr class="bg-white border-b border-gray-200 hover:bg-gray-50">
+                                <td class="px-4 py-3 font-medium">TANK CAPACITY</td>
+                                <td class="px-4 py-3 text-center">5L/8L</td>
+                                <td class="px-4 py-3 text-center">5L/8L</td>
+                                <td class="px-4 py-3 text-center">5L/8L</td>
+                                <td class="px-4 py-3 text-center">5L/8L</td>
+                            </tr>
+                            <tr class="bg-white border-b border-gray-200 hover:bg-gray-50">
+                                <td class="px-4 py-3 font-medium">FLOW(LOW-MID-HIGH)</td>
+                                <td class="px-4 py-3 text-center">8.6-2.2-1.1L/min</td>
+                                <td class="px-4 py-3 text-center">8.6-2.2-1.1L/min</td>
+                                <td class="px-4 py-3 text-center">7-1.6-0.8L/min</td>
+                                <td class="px-4 py-3 text-center">7-1.6-0.8L/min</td>
+                            </tr>
+                            <tr class="bg-white border-b border-gray-200 hover:bg-gray-50">
+                                <td class="px-4 py-3 font-medium">POWER</td>
+                                <td class="px-4 py-3 text-center">3KW</td>
+                                <td class="px-4 py-3 text-center">3KW</td>
+                                <td class="px-4 py-3 text-center">1.1KW</td>
+                                <td class="px-4 py-3 text-center">1.1KW</td>
+                            </tr>
+                            <tr class="bg-white border-b border-gray-200 hover:bg-gray-50">
+                                <td class="px-4 py-3 font-medium">AIR IN</td>
+                                <td class="px-4 py-3 text-center">4-8Bar</td>
+                                <td class="px-4 py-3 text-center">4-8Bar</td>
+                                <td class="px-4 py-3 text-center">-</td>
+                                <td class="px-4 py-3 text-center">-</td>
+                            </tr>
+                            <tr class="bg-white border-b border-gray-200 hover:bg-gray-50">
+                                <td class="px-4 py-3 font-medium">POWER SOURCE</td>
+                                <td class="px-4 py-3 text-center">-</td>
+                                <td class="px-4 py-3 text-center">-</td>
+                                <td class="px-4 py-3 text-center">220V/50Hz</td>
+                                <td class="px-4 py-3 text-center">220V/50Hz</td>
+                            </tr>
+                            <tr class="bg-white border-b border-gray-200 hover:bg-gray-50">
+                                <td class="px-4 py-3 font-medium">DIMENSIONS(mm)</td>
+                                <td class="px-4 py-3 text-center">290x408x452</td>
+                                <td class="px-4 py-3 text-center">290x408x472</td>
+                                <td class="px-4 py-3 text-center">310x410x455</td>
+                                <td class="px-4 py-3 text-center">310x410x475</td>
+                            </tr>
+                            <tr class="bg-white border-b border-gray-200 hover:bg-gray-50">
+                                <td class="px-4 py-3 font-medium">WEIGHT(Kgs)</td>
+                                <td class="px-4 py-3 text-center">22</td>
+                                <td class="px-4 py-3 text-center">24</td>
+                                <td class="px-4 py-3 text-center">28</td>
+                                <td class="px-4 py-3 text-center">30</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Features Tab -->
+            <div class="hidden tab-content" id="features">
+                <div class="p-4 bg-primary/10">
+                    <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Features</h3>
+                </div>
+                <ul class="list-disc list-image-[url(assets/css/new_arrow.png)] pl-6 mt-4 space-y-2 list-disc">
+                    <li>Includes an RFID chip for enhanced traceability and streamlined maintenance management.</li>
+                    <li>Our pumps deliver high performance and high durability to handle the rigorous demands and
+                        harsh conditions of bolting applications.</li>
+                    <li>Featuring a comprehensive set of components, including a filter-lubricator assembly, air
+                        muffler, adjustable relief, and a 12-foot remote-controlled pendant on all models.</li>
+                    <li>Pressure up to 10,000Psi / 700 bar, based on industrial applications.</li>
+                    <li>Applicable on one to four wrenches simultaneously.</li>
+                    <li>Compact automatic three-stage flow, can start under high pressure.</li>
+                    <li>The high-efficiency cooling system makes the pump suitable in extreme environments.</li>
+                </ul>
+            </div>
+
+            <!-- Benefits Tab -->
+            <div class="hidden tab-content" id="manuals">
+                <!-- <div class="p-4 bg-primary/10">
+                        <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Manuals</h3>
+                    </div>
+                    <div class="p-5 mt-4 bg-gray-200 border rounded-sm shadow w-fit">
+
+                        <h2 class="text-lg font-medium">PRODUCT BROCHURE</h2>
+                        <p class="mt-2 text-lg font-semibold text-orange-500">
+                            PETOL™ POP-IT™ Flange Spreader & Prying Tool
+                        </p>
+
+                    </div>
+                    <ul class="pl-6 mt-4 space-y-2 list-disc">
+                        <li>
+                            Technical Data Sheet
+                            <a href="" class="text-primary">Torque Pump</a>
+                        </li>
+                        <li>
+                            Operational Manual
+                            <a href="" class="text-primary">Torque Pump</a>
+                        </li>
+
+                    </ul> -->
+                <div class="p-5 mt-4">
+
+                    <p class="mt-4"><a href="#" class="text-blue-600 underline">Technical Data Sheet </a></p>
+
+                    <p class="mt-4"><a href="./assets/catalog/TheGAW-CBHE [Edition 2025] Torque Pump.pdf"
+                            class="text-blue-600 underline">Operational Manual </a></p>
+
+                </div>
+            </div>
+
+            <!-- Catalog Tab -->
+            <div class="hidden tab-content" id="notification">
+                <div class="p-4 bg-primary/10">
+                    <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Notification</h3>
+                </div>
+                <ul class="list-disc list-image-[url(assets/css/new_arrow.png)] pl-6 mt-4 space-y-2 list-disc">
+                    <li>Each unit comes with an FRL and a remote to operate the pump.</li>
+                    <li>Additional Acessories: Pressure Gauge, Quick Couplers, High Pressure Hydraulic Hoses, FRL.
+                    </li>
+                    <li>Standard Cert package including Technical Datasheet, Operational Manual, Maintenance Manual,
+                        and
+                        Manufacturing Test Report are supplied along with the machine.</li>
+                    <li>Usage of TheGAW Hydraulic Torquing Pumps will provide greater efficiency on the torque
+                        tools.</li>
+                </ul>
+            </div>
+            <div class="hidden tab-content" id="warning">
+                <div class="p-4 bg-primary/10">
+                    <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Warning</h3>
+                </div>
+                <div class="max-w-sm p-5 mx-auto mt-10 text-center text-white bg-primary rounded-lg">
+                    <div class="xl:text-xl flex items-center justify-center gap-2">
+                        <!-- <img class="size-6" src="assets/images/danger.svg" alt="danger"> -->
+                        <h2 class="font-medium text-center ">SAFETY NOTICE</h2>
+                        <img class="size-6" src="assets/images/danger.svg" alt="danger">
+
+                    </div>
+                    <p class="mt-2 text-sm xl:text-base text-[#d3d3d3]">
+                        Using TheGAW™ Torquing tools without proper precautions can lead to severe injuries. Follow the
+                        provided operational guidelines and industry safety standards. Regular maintenance and
+                        inspection of the machines are essential to ensure safe and efficient performance.
+                    </p>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+<app-footer></app-footer>
