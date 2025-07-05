@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { UtilityService } from '../../../services/utility.service';
+import { BaseProductComponent } from '../base-product.component';
 
 @Component({
   selector: 'app-flange-spreader',
@@ -6,6 +8,8 @@ import { Component } from '@angular/core';
   templateUrl: './flange-spreader.component.html',
   styleUrl: './flange-spreader.component.scss'
 })
-export class FlangeSpreaderComponent {
-
+export class FlangeSpreaderComponent extends BaseProductComponent {
+  constructor(utilityService: UtilityService) {
+    super(utilityService);
+  }
 }

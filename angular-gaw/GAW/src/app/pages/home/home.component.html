@@ -208,22 +208,19 @@
                 <!-- Slider -->
                 <div class="relative">
                     <div class="2xl:max-w-[90%] max-w-5xl mx-auto swiper testimonials">
-                        <div class="swiper-wrapper">
-                            <div
-                                class="flex flex-col items-center p-3 text-center bg-white border border-gray-200 rounded-lg shadow-md swiper-slide">
-                                <div class="h-64 text-base flex items-center justify-center">
-                                    <div class="w-4/5 text-justify text-sm xl:text-base">
-                                        TheGAW's product quality and their
-                                        commitment to customer service have been
-                                        stupendous. It's simply incomparable.
+                        <div>
+                            <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
+                                <div ngxSlickItem *ngFor="let review of reviews" class="flex flex-col items-center p-3 text-center bg-white border border-gray-200 rounded-lg shadow-md mx-3">
+                                    <div class="h-64 text-base flex items-center justify-center">
+                                        <div class="w-4/5 text-justify text-sm text-[#5A5A5A] xl:text-base">
+                                            {{review.review}}
+                                        </div>
                                     </div>
-
+                                    <p class="mt-2 text-lg font-bold">{{review.name}}</p>
+                                    <p class="text-sm text-gray-500">{{review.company}}</p>
                                 </div>
-                                <p class="mt-2 text-lg font-bold">Operations Manager</p>
-                                <p class="text-sm text-gray-500">Saudi Aramco, KSA.</p>
-                            </div>
-
-                            <div
+                            </ngx-slick-carousel>
+                            <!-- <div
                                 class="flex flex-col items-center p-3 text-center bg-white border border-gray-200 rounded-lg shadow-md swiper-slide">
                                 <div class="h-64 text-base flex items-center justify-center">
                                     <div class="w-4/5 text-justify text-sm xl:text-base">
@@ -270,6 +267,20 @@
                                 <h3 class="mt-2 text-lg font-bold">Project Manager</h3>
                                 <p class="text-sm text-gray-500">Total Energies, Europe.</p>
                             </div>
+
+                            <div
+                            class="flex flex-col items-center p-3 text-center bg-white border border-gray-200 rounded-lg shadow-md swiper-slide">
+                            <div class="h-64 text-base flex items-center justify-center">
+                                <div class="w-4/5 text-justify text-sm xl:text-base">
+                                    TheGAW's product quality and their
+                                    commitment to customer service have been
+                                    stupendous. It's simply incomparable.
+                                </div>
+
+                            </div>
+                            <p class="mt-2 text-lg font-bold">Operations Manager</p>
+                            <p class="text-sm text-gray-500">Saudi Aramco, KSA.</p>
+                            </div> -->
                         </div>
                     </div>
                 </div>

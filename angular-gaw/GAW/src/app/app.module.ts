@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration, withEventReplay } from '@angular/platform-browser';
-
+import {SlickCarouselModule} from "ngx-slick-carousel";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -96,7 +96,8 @@ import { ManuelFlangeFacingMachineComponent } from './pages/products/manuel-flan
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    SlickCarouselModule
   ],
   providers: [
     provideClientHydration(withEventReplay())
