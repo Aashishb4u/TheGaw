@@ -3,144 +3,144 @@
         "name": "Square Drive Torque Wrench",
         "imageIds": [1, 2, 3, 4],
         "category": "Controlled Bolting & Hydraulic Equipment",
-        "link": "square-drive-torque-wrench.html"
+        "link": "square-drive-torque-wrench"
     },
     {
         "name": "Low Profile Torque Wrench",
         "imageIds": [5, 6, 7],
         "category": "Controlled Bolting & Hydraulic Equipment",
-        "link": "low-profile-torque-wrench.html"
+        "link": "low-profile-torque-wrench"
     },
     {
         "name": "Pneumatic Torque Wrench",
         "imageIds": [8, 9, 10],
         "category": "Controlled Bolting & Hydraulic Equipment",
-        "link": "pneumatic-torque-wrench.html"
+        "link": "pneumatic-torque-wrench"
     },
     {
         "name": "Torque Pump",
         "imageIds": [11, 12],
         "category": "Controlled Bolting & Hydraulic Equipment",
-        "link": "torque-pump.html"
+        "link": "torque-pump"
     },
     {
         "name": "Spring Return Bolt Tensioner",
         "imageIds": [15, 16, 17],
         "category": "Controlled Bolting & Hydraulic Equipment",
-        "link": "spring-return-bolt-tensioner.html"
+        "link": "spring-return-bolt-tensioner"
     },
     {
         "name": "Multi Stage Bolt Tensioner",
         "imageIds": [18, 19],
         "category": "Controlled Bolting & Hydraulic Equipment",
-        "link": "multi-stage-bolt-tensioner.html"
+        "link": "multi-stage-bolt-tensioner"
     },
     {
         "name": "Subsea Bolt Tensioner",
         "imageIds": [20, 21],
         "category": "Controlled Bolting & Hydraulic Equipment",
-        "link": "subsea-bolt-tensioner.html"
+        "link": "subsea-bolt-tensioner"
     },
     {
         "name": "Tensioning Pump",
         "imageIds": [13, 14],
         "category": "Controlled Bolting & Hydraulic Equipment",
-        "link": "tensioning-pump.html"
+        "link": "tensioning-pump"
     },
     {
         "name": "Nut Splitter",
         "imageIds": [22, 23],
         "category": "Controlled Bolting & Hydraulic Equipment",
-        "link": "nut-splitter.html"
+        "link": "nut-splitter"
     },
     {
         "name": "Flange Spreader",
         "imageIds": [26, 27, 28, 29],
         "category": "Controlled Bolting & Hydraulic Equipment",
-        "link": "flange-spreader.html"
+        "link": "flange-spreader"
     },
     {
         "name": "Hydraulic Pullers",
         "imageIds": [24, 25],
         "category": "Controlled Bolting & Hydraulic Equipment",
-        "link": "hydraulic-pullers.html"
+        "link": "hydraulic-pullers"
     },
     {
         "name": "Impact Sockets",
         "imageIds": [30, 31],
         "category": "Controlled Bolting & Hydraulic Equipment",
-        "link": "impact-sockets.html"
+        "link": "impact-sockets"
     },
     {
         "name": "Top Loading Arms",
         "imageIds": [48, 49],
         "category": "Fluid Transfer Solutions",
-        "link": "top-loading-arms.html"
+        "link": "top-loading-arms"
     },
     {
         "name": "Bottom Loading Arms",
         "imageIds": [50, 51],
         "category": "Fluid Transfer Solutions",
-        "link": "bottom-loading-arms.html"
+        "link": "bottom-loading-arms"
     },
     {
         "name": "Marine Loading Arms",
         "imageIds": [52, 53],
         "category": "Fluid Transfer Solutions",
-        "link": "marine-loading-arms.html"
+        "link": "marine-loading-arms"
     },
     {
         "name": "Floating Suction Unit",
         "imageIds": [54, 55],
         "category": "Fluid Transfer Solutions",
-        "link": "floating-suction-unit.html"
+        "link": "floating-suction-unit"
     },
     {
         "name": "Positive Displacement Flow Meter",
         "imageIds": [56, 57],
         "category": "Fluid Transfer Solutions",
-        "link": "positive-displacement-flow-meter.html"
+        "link": "positive-displacement-flow-meter"
     },
     {
         "name": "Gravity Unloading Flow Meter",
         "imageIds": [58, 59],
         "category": "Fluid Transfer Solutions",
-        "link": "gravity-unloading-flow-meter.html"
+        "link": "gravity-unloading-flow-meter"
     },
     {
         "name": "Hydrotesting Unit",
         "imageIds": [32, 33, 34], 
         "category": "Hydrotesting & Chemical Injection Skids",
-        "link": "hydrotesting-unit.html"
+        "link": "hydrotesting-unit"
     },
     {
         "name": "Chemical Injection Skids",
         "imageIds": [35, 36], 
         "category": "Hydrotesting & Chemical Injection Skids",
-        "link": "chemical-injection-skids.html"
+        "link": "chemical-injection-skids"
     },
     {
         "name": "Test Manifolds",
         "imageIds": [37, 38, 39], 
         "category": "Hydrotesting & Chemical Injection Skids",
-        "link": "test-manifolds.html"
+        "link": "test-manifolds"
     },
     {
         "name": "Split-Frame Cold Cutting Machine",
         "imageIds": [40, 41, 42, 43], 
         "category": "On Site Atex Machining",
-        "link": "split-frame-cold-cutting-machine.html"
+        "link": "split-frame-cold-cutting-machine"
     },
     {
         "name": "ID Mounted Flange Facing Machine",
         "imageIds": [44, 45], 
         "category": "On Site Atex Machining",
-        "link": "id-mounted-flange-facing-machine.html"
+        "link": "id-mounted-flange-facing-machine"
     },
     {
         "name": "Manual Flange Facing Machine",
         "imageIds": [46, 47], 
         "category": "On Site Atex Machining",
-        "link": "manuel-flange-facing-machine.html"
+        "link": "manuel-flange-facing-machine"
     }
 ]

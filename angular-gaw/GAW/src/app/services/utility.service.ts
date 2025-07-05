@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { isPlatformBrowser } from '@angular/common';
+import { PLATFORM_ID, Inject } from '@angular/core';
 
 interface Product {
   name: string;
@@ -91,7 +93,10 @@ export class UtilityService {
     ],
   };
 
-  constructor(private router: Router) { }
+  constructor(
+    private router: Router,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) { }
 
   /**
    * Sets up a product gallery based on the current route
@@ -184,5 +189,61 @@ export class UtilityService {
    */
   getAllProducts(): ProductsData {
     return this.products;
+  }
+
+  /**
+   * Applies scroll effects to the navbar
+   * This should be called in the ngOnInit of components with a navbar
+   */
+  setupScrollActions(): void {
+    if (isPlatformBrowser(this.platformId)) {
+      // Remove any existing scroll event listeners to prevent duplicates
+      this.removeScrollListeners();
+      
+      // Add the new scroll event listener
+      document.addEventListener('scroll', this.handleScroll);
+    }
+  }
+
+  /**
+   * Removes scroll event listeners
+   * This should be called in the ngOnDestroy of components with a navbar
+   */
+  removeScrollListeners(): void {
+    if (isPlatformBrowser(this.platformId)) {
+      document.removeEventListener('scroll', this.handleScroll);
+    }
+  }
+
+  /**
+   * Handles the scroll event for the navbar
+   */
+  private handleScroll = (): void => {
+    const navbar = document.getElementById('navbar');
+    if (!navbar) return;
+    
+    if (window.scrollY > 50) {
+      navbar.classList.add(
+        '-translate-y-10', 
+        'shadow-lg', 
+        'border', 
+        'border-gray-200', 
+        'backdrop-filter', 
+        'bg-white/60', 
+        'backdrop-blur-xl', 
+        'bg-opacity-30'
+      );
+    } else {
+      navbar.classList.remove(
+        '-translate-y-10', 
+        'shadow-lg', 
+        'border', 
+        'border-gray-200', 
+        'backdrop-filter', 
+        'bg-white/60', 
+        'backdrop-blur-xl', 
+        'bg-opacity-30'
+      );
+    }
   }
 }

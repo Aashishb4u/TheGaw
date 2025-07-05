@@ -37,6 +37,7 @@ import { TestManifoldsComponent } from './pages/products/test-manifolds/test-man
 import { SplitFrameColdCuttingMachineComponent } from './pages/products/split-frame-cold-cutting-machine/split-frame-cold-cutting-machine.component';
 import { IdMountedFlangeFacingMachineComponent } from './pages/products/id-mounted-flange-facing-machine/id-mounted-flange-facing-machine.component';
 import { ManuelFlangeFacingMachineComponent } from './pages/products/manuel-flange-facing-machine/manuel-flange-facing-machine.component';
+import { SearchPageComponent } from './pages/search-page/search-page.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -77,7 +78,7 @@ const routes: Routes = [
   { path: 'split-frame-cold-cutting-machine', component: SplitFrameColdCuttingMachineComponent },
   { path: 'id-mounted-flange-facing-machine', component: IdMountedFlangeFacingMachineComponent },
   { path: 'manuel-flange-facing-machine', component: ManuelFlangeFacingMachineComponent },
-
+  { path: 'search', component: SearchPageComponent },
 
 ]
 

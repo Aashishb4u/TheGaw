@@ -1,12 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { UtilityService } from '../../services/utility.service';
 
 @Component({
   selector: 'app-home',
   standalone: false,
   templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+  styleUrls: ['./home.component.scss']
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit, OnDestroy {
   slideConfig = {"slidesToShow": 3,
     "slidesToScroll": 1,
     "autoplay": true,
@@ -43,5 +44,17 @@ export class HomeComponent {
       name: "Operations Manager",
       company: "Saudi Aramco, KSA."
     }
-  ]
+  ];
+
+  constructor(private utilityService: UtilityService) {}
+
+  ngOnInit(): void {
+    // Set up scroll actions for the navbar
+    this.utilityService.setupScrollActions();
+  }
+
+  ngOnDestroy(): void {
+    // Clean up scroll event listeners
+    this.utilityService.removeScrollListeners();
+  }
 }

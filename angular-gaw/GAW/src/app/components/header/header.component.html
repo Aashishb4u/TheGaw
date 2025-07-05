@@ -3,14 +3,17 @@
     <!-- top bar -->
     <div class="flex items-center justify-end gap-3 py-4 text-sm font-medium text-white 2xl:text-lg">
         <div class="relative flex items-center gap-2 group">
-            <form action="search" method="GET" class="w-full">
-                <button
-                type="button"
-                    class="flex items-center justify-center w-10 h-10 transition-all duration-300 bg-white rounded-full group-hover:w-64 group-hover:justify-start">
+            <form [formGroup]="searchForm" (ngSubmit)="onSearch()" class="w-full">
+                <div class="flex items-center justify-center w-10 h-10 transition-all duration-300 bg-white rounded-full group-hover:w-64 group-hover:justify-start">
                     <img class="size-7" src="assets/images/icons/search.svg" alt="search">
-                    <input type="text" name="query" placeholder="Search..."
+                    <input 
+                        formControlName="query" 
+                        type="text" 
+                        placeholder="Search..."
+                        (keydown.enter)="onSearch()"
                         class="w-0 h-10 text-black transition-all duration-300 bg-white rounded-md outline-none opacity-0 right-2 group-hover:w-48 group-hover:opacity-100 group-hover:pl-2" />
-                </button>
+                    <button type="submit" class="hidden">Search</button>
+                </div>
             </form>
         </div>
         
