@@ -77,8 +77,9 @@
             </p>
         </div>
         <div>
-            <button onclick="openModal('.training-request-modal')"
-                class="px-6 py-2 mt-5 text-sm text-black uppercase transition-all duration-300 bg-white rounded-md 2xl:text-base hover:bg-black hover:text-white hover:scale-105 hover:-translate-y-1">
+            <button 
+                class="open-modal-btn px-6 py-2 mt-5 text-sm text-black uppercase transition-all duration-300 bg-white rounded-md 2xl:text-base hover:bg-black hover:text-white hover:scale-105 hover:-translate-y-1"
+                data-target="training-request-modal">
                 Apply Now
             </button>
         </div>
@@ -101,8 +102,8 @@
         </div>
         <div>
             <button
-                class="px-6 py-2 mt-5 text-sm text-black uppercase transition-all duration-300 bg-white rounded-md 2xl:text-base hover:bg-black hover:text-white hover:scale-105 hover:-translate-y-1"
-                onclick="openModal('.sme-registration-modal')">
+                class="open-modal-btn px-6 py-2 mt-5 text-sm text-black uppercase transition-all duration-300 bg-white rounded-md 2xl:text-base hover:bg-black hover:text-white hover:scale-105 hover:-translate-y-1"
+                data-target="sme-registration-modal">
                 Register Now
             </button>
         </div>
@@ -123,8 +124,8 @@
         </div>
         <div>
             <button
-                class="px-6 py-2 mt-5 text-sm text-black uppercase transition-all duration-300 bg-white rounded-md 2xl:text-base hover:bg-black hover:text-white hover:scale-105 hover:-translate-y-1"
-                onclick="openModal('.organization-registration-modal')">
+                class="open-modal-btn px-6 py-2 mt-5 text-sm text-black uppercase transition-all duration-300 bg-white rounded-md 2xl:text-base hover:bg-black hover:text-white hover:scale-105 hover:-translate-y-1"
+                data-target="organization-registration-modal">
                 Partner with Us
             </button>
         </div>
@@ -134,3 +135,458 @@
 <app-footer>
 
 </app-footer>
+
+
+<!-- Modal Container -->
+<div id="training-request-modal"
+    class="fixed inset-0 z-50 flex items-center justify-center hidden py-20 overflow-y-auto bg-black/50 md:overflow-hidden backdrop-blur-sm">
+    <!-- Modal -->
+    <div class="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto bg-white rounded-lg shadow-lg">
+        <!-- Modal Close Button -->
+        <button class="absolute text-white top-4 right-4 hover:text-white/80 close-modal-btn"
+            data-target="training-request-modal">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                </path>
+            </svg>
+        </button>
+
+        <!-- Modal Content -->
+        <div class="p-4 text-center text-white bg-primary">
+            <h2 class="text-2xl font-semibold">Request for Training</h2>
+        </div>
+        <form action="#" method="POST" id="trainingForm1" class="grid p-6 mt-3 gap-x-4 md:grid-cols-3">
+            <!-- Full Name -->
+            <div class="col-span-3 mb-4 md:col-span-1">
+                <label for="fullName" class="block text-sm font-medium text-gray-700 2xl:text-base">Full
+                    Name <span class="text-rose-500">*</span></label>
+                <input type="text" id="fullName" name="fullName"
+                    class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    required>
+            </div>
+
+            <!-- Organization Name -->
+            <div class="col-span-3 mb-4 md:col-span-1">
+                <label for="orgName" class="block text-sm font-medium text-gray-700 2xl:text-base">Organization
+                    Name <span class="text-rose-500">*</span></label>
+                <input type="text" id="orgName" name="orgName"
+                    class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    required>
+            </div>
+
+            <!-- Designation -->
+            <div class="col-span-3 mb-4 md:col-span-1">
+                <label for="designation" class="block text-sm font-medium text-gray-700 2xl:text-base">Designation
+                    <span class="text-rose-500">*</span></label>
+                <input type="text" id="designation" name="designation"
+                    class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    required>
+            </div>
+
+            <!-- Email Address -->
+            <div class="col-span-3 mb-4 md:col-span-1">
+                <label for="email" class="block text-sm font-medium text-gray-700 2xl:text-base">Email
+                    Address <span class="text-rose-500">*</span></label>
+                <input type="email" id="email" name="email"
+                    class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    required>
+            </div>
+
+            <!-- Phone Number -->
+            <div class="col-span-3 mb-4 md:col-span-1">
+                <label for="phone" class="block text-sm font-medium text-gray-700 2xl:text-base">Phone
+                    Number <span class="text-rose-500">*</span></label>
+                <input type="tel" id="phone" name="phone"
+                    class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    required>
+            </div>
+
+            <!-- Region -->
+            <div class="col-span-3 mb-4 md:col-span-1">
+                <label for="region" class="block text-sm font-medium text-gray-700 2xl:text-base">Region <span
+                        class="text-rose-500">*</span></label>
+                <select id="region" name="region"
+                    class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" required>
+                    <option value="">Select a region</option>
+                    <option value="Asia">Asia</option>
+                    <option value="Africa">Africa</option>
+                    <option value="Europe">Europe</option>
+                    <option value="Oceania">Oceania</option>
+                    <option value="North America">North America</option>
+                    <option value="South America">South America</option>
+                </select>
+            </div>
+
+            <!-- Country -->
+            <div class="col-span-3 mb-4 md:col-span-1">
+                <label for="country" class="block text-sm font-medium text-gray-700 2xl:text-base">Country <span
+                        class="text-rose-500">*</span></label>
+                <input type="text" id="country" name="country"
+                    class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    required>
+            </div>
+
+            <!-- Training Topic of Interest -->
+            <div class="col-span-3 mb-4 md:col-span-1">
+                <label for="trainingTopic" class="block text-sm font-medium text-gray-700 2xl:text-base">Training
+                    Topic of
+                    Interest <span class="text-rose-500">*</span></label>
+                <input type="text" id="trainingTopic" name="trainingTopic"
+                    class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    required>
+            </div>
+
+            <!-- Number of Participants -->
+            <div class="col-span-3 mb-4 md:col-span-1">
+                <label for="participants" class="block text-sm font-medium text-gray-700 2xl:text-base">Number of
+                    Participants</label>
+                <input type="number" id="participants" name="participants"
+                    class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    required>
+            </div>
+
+            <!-- Preferred Training Format -->
+            <div class="col-span-3 mb-4 md:col-span-1">
+                <label class="block text-sm font-medium text-gray-700 2xl:text-base">Preferred Training
+                    Format <span class="text-rose-500">*</span></label>
+                <div class="flex items-center space-x-4">
+                    <label for="online" class="flex items-center">
+                        <input type="radio" id="online" name="trainingFormat" value="Online" class="mr-2" required>
+                        Online
+                    </label>
+                    <label for="onSite" class="flex items-center">
+                        <input type="radio" id="onSite" name="trainingFormat" value="On Site" class="mr-2">
+                        On-Site
+                    </label>
+                </div>
+            </div>
+
+            <!-- Additional or Requirements -->
+            <div class="col-span-2 mb-4">
+                <label for="comments" class="block text-sm font-medium text-gray-700 2xl:text-base">Additional
+                    Comments or
+                    Requirements</label>
+                <textarea id="comments" name="comments"
+                    class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="col-span-3 pt-3 mt-6 text-right border-t border-t-gray-300">
+                <button type="submit"
+                    class="px-6 py-2 text-white rounded-md bg-primary hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div id="sme-registration-modal"
+    class="fixed inset-0 z-50 flex items-center justify-center hidden py-20 overflow-y-auto bg-black/50 md:overflow-hidden backdrop-blur-sm">
+    <!-- Modal -->
+    <div class="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto bg-white rounded-lg shadow-lg">
+        <!-- Modal Close Button -->
+        <button class="absolute text-white top-4 right-4 hover:text-white/80 close-modal-btn"
+            data-target="sme-registration-modal">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                </path>
+            </svg>
+        </button>
+
+        <!-- Modal Content -->
+        <div class="p-4 text-center text-white bg-primary">
+            <h2 class="text-2xl font-semibold">Subject Matter Expert Registration</h2>
+        </div>
+        <form action="#" method="POST" id="trainingForm2" class="grid p-6 mt-3 gap-x-4 md:grid-cols-3">
+            <!-- Full Name -->
+            <div class="col-span-3 mb-4 md:col-span-1">
+                <label for="fullName" class="block text-sm font-medium text-gray-700 2xl:text-base">Full
+                    Name <span class="text-rose-500">*</span></label>
+                <input type="text" id="fullName" name="fullName"
+                    class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    required>
+            </div>
+
+            <!-- Email Address -->
+            <div class="col-span-3 mb-4 md:col-span-1">
+                <label for="email" class="block text-sm font-medium text-gray-700 2xl:text-base">Email
+                    Address <span class="text-rose-500">*</span></label>
+                <input type="email" id="email" name="email"
+                    class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    required>
+            </div>
+
+            <!-- Phone Number -->
+            <div class="col-span-3 mb-4 md:col-span-1">
+                <label for="phoneNumber" class="block text-sm font-medium text-gray-700 2xl:text-base">Phone
+                    Number <span class="text-rose-500">*</span></label>
+                <input type="tel" id="phoneNumber" name="phoneNumber"
+                    class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    required>
+            </div>
+
+            <!-- LinkedIn Profile -->
+            <div class="col-span-3 mb-4 md:col-span-1">
+                <label for="linkedIn" class="block text-sm font-medium text-gray-700 2xl:text-base">LinkedIn Profile
+                    (optional) </label>
+                <input type="url" id="linkedIn" name="linkedIn"
+                    class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+            </div>
+
+            <!-- Year of Industry Experience -->
+            <div class="col-span-3 mb-4 md:col-span-1">
+                <label for="experience" class="block text-sm font-medium text-gray-700 2xl:text-base">Year of
+                    Industry
+                    Experience</label>
+                <input type="number" id="experience" name="experience" min="0"
+                    class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md 
+                    focus:outline-none focus:ring-2 focus:ring-primary 
+                    focus:border-transparent" required>
+            </div>
+
+            <!-- Region -->
+            <div class="col-span-3 mb-4 md:col-span-1">
+                <label for="regionName" class="block text-sm font-medium text-gray-700 2xl:text-base">Region <span
+                        class="text-rose-500">*</span></label>
+                <select id="regionName" name="regionName"
+                    class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    required>
+                    <option value="">Select a region</option>
+                    <option value="Asia">Asia</option>
+                    <option value="Africa">Africa</option>
+                    <option value="Europe">Europe</option>
+                    <option value="Oceania">Oceania</option>
+                    <option value="North America">North America</option>
+                    <option value="South America">South America</option>
+                </select>
+            </div>
+
+            <!-- Country -->
+            <div class="col-span-3 mb-4 md:col-span-1">
+                <label for="countryName" class="block text-sm font-medium text-gray-700 2xl:text-base">Country <span
+                        class="text-rose-500">*</span></label>
+                <input type="text" id="countryName" name="countryName"
+                    class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    required>
+            </div>
+
+            <!-- Expertise Area -->
+            <div class="col-span-3 mb-4 md:col-span-1">
+                <label for="expertise" class="block text-sm font-medium text-gray-700 2xl:text-base">Expertise
+                    Area</label>
+                <input type="text" id="expertise" name="expertise"
+                    class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 
+                    focus:ring-primary focus:border-transparent" required>
+            </div>
+
+            <!-- Upload Resume / Portfolio -->
+            <div class="col-span-3 mb-4 md:col-span-1">
+                <label for="resume" class="block text-sm font-medium text-gray-700 2xl:text-base">Upload Resume /
+                    Portfolio</label>
+                <input type="file" id="resume" name="resume"
+                    class="w-full px-4 py-1.5 mt-1 border border-gray-300 rounded-md
+                    focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" required>
+            </div>
+
+            <!-- Availability for Training Programs -->
+            <div class="col-span-3 mb-4">
+                <label class="block text-sm font-medium text-gray-700 2xl:text-base">Availability for Training
+                    Programs</label>
+                <div class="flex flex-wrap items-center text-sm gap-x-4">
+                    <label for="weekdays" class="flex items-center">
+                        <input type="radio" id="weekdays" name="availability" value="Weekdays" class="mr-2"
+                            required>
+                        Weekdays
+                    </label>
+                    <label for="weekends" class="flex items-center">
+                        <input type="radio" id="weekends" name="availability" value="Weekends" class="mr-2">
+                        Weekends
+                    </label>
+                    <label for="flexible" class="flex items-center">
+                        <input type="radio" id="flexible" name="availability" value="Flexible" class="mr-2">
+                        Flexible
+                    </label>
+                </div>
+            </div>
+
+            <!-- How You Can Make an Impact -->
+            <div class="col-span-3 mb-4">
+                <label for="comments" class="block text-sm font-medium text-gray-700 2xl:text-base">How you can make
+                    an
+                    impact <span class="text-rose-500">*</span></label>
+                <textarea id="comments" name="comments"
+                    class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    required></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="col-span-3 pt-3 mt-6 text-right border-t border-t-gray-300">
+                <button type="submit"
+                    class="px-6 py-2 text-white rounded-md bg-primary hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">Submit</button>
+            </div>
+        </form>
+
+    </div>
+</div>
+ 
+<div id="organization-registration-modal"
+    class="fixed inset-0 z-50 flex items-center justify-center hidden py-20 overflow-y-auto bg-black/50 md:overflow-hidden backdrop-blur-sm">
+    <!-- Modal -->
+    <div class="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto bg-white rounded-lg shadow-lg">
+        <!-- Modal Close Button -->
+        <button class="absolute text-white top-4 right-4 hover:text-white/80 close-modal-btn"
+            data-target="organization-registration-modal">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                </path>
+            </svg>
+        </button>
+
+        <!-- Modal Content -->
+        <div class="p-4 text-center text-white bg-primary">
+            <h2 class="text-2xl font-semibold">Be a Knowledge Transfer Partner</h2>
+        </div>
+        <form action="#" method="POST" id="partnershipForm" enctype="multipart/form-data" class="grid p-6 mt-3 gap-x-4 md:grid-cols-3">
+            <!-- Organization Name -->
+            <div class="col-span-3 mb-4 md:col-span-1">
+                <label for="companyName"
+                    class="block text-sm font-medium text-gray-700 2xl:text-base">Organization Name <span
+                        class="text-rose-500">*</span></label>
+                <input type="text" id="companyName" name="companyName"
+                    class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    required>
+            </div>
+
+            <!-- Contact Person Name -->
+            <div class="col-span-3 mb-4 md:col-span-1">
+                <label for="fullName" class="block text-sm font-medium text-gray-700 2xl:text-base">Contact
+                    Person Name <span class="text-rose-500">*</span></label>
+                <input type="text" id="fullName" name="fullName"
+                    class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    required>
+            </div>
+
+            <!-- Designation -->
+            <div class="col-span-3 mb-4 md:col-span-1">
+                <label for="jobRole"
+                    class="block text-sm font-medium text-gray-700 2xl:text-base">Designation:</label>
+                <input type="text" id="jobRole" name="jobRole"
+                    class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" required>
+            </div>
+
+            <!-- Email Address -->
+            <div class="col-span-3 mb-4 md:col-span-1">
+                <label for="email" class="block text-sm font-medium text-gray-700 2xl:text-base">Email
+                    Address <span class="text-rose-500">*</span></label>
+                <input type="email" id="email" name="email"
+                    class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    required>
+            </div>
+
+            <!-- Phone Number -->
+            <div class="col-span-3 mb-4 md:col-span-1">
+                <label for="phoneNumber" class="block text-sm font-medium text-gray-700 2xl:text-base">Phone
+                    Number <span class="text-rose-500">*</span></label>
+                <input type="tel" id="phoneNumber" name="phoneNumber"
+                    class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    required>
+            </div>
+
+            <!-- Region -->
+            <div class="col-span-3 mb-4 md:col-span-1">
+                <label for="regionName" class="block text-sm font-medium text-gray-700 2xl:text-base">Region <span
+                        class="text-rose-500">*</span></label>
+                <select id="regionName" name="regionName"
+                    class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    required>
+                    <option value="">Select a region</option>
+                    <option value="Asia">Asia</option>
+                    <option value="Africa">Africa</option>
+                    <option value="Europe">Europe</option>
+                    <option value="Oceania">Oceania</option>
+                    <option value="North America">North America</option>
+                    <option value="South America">South America</option>
+                </select>
+            </div>
+
+            <!-- Country -->
+            <div class="col-span-3 mb-4 md:col-span-1">
+                <label for="countryName" class="block text-sm font-medium text-gray-700 2xl:text-base">Country <span
+                        class="text-rose-500">*</span></label>
+                <input type="text" id="countryName" name="countryName"
+                    class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    required>
+            </div>
+
+            <!-- Area of Interest -->
+            <div class="col-span-3 mb-4 md:col-span-3">
+                <label class="block text-sm font-medium text-gray-700 2xl:text-base">Area of Interest in
+                    Partnership</label>
+                <div class="flex flex-col gap-2 mt-1">
+                    <label for="collaborative" class="flex items-center">
+                        <input type="checkbox" id="collaborative" name="interestedIn"
+                            value="Collaborative training programs" class="mr-2"> Collaborative training programs
+                    </label>
+                    <label for="knowledge" class="flex items-center">
+                        <input type="checkbox" id="knowledge" name="interestedIn"
+                            value="Knowledge sharing initiatives" class="mr-2"> Knowledge sharing initiatives
+                    </label>
+                    <label for="workingProfessionals" class="flex items-center">
+                        <input type="checkbox" id="workingProfessionals" name="interestedIn"
+                            value="Regular trainings for working professionals" class="mr-2"> Regular trainings for
+                    working professionals
+                    </label>
+                    <label for="students" class="flex items-center">
+                        <input type="checkbox" id="students" name="interestedIn"
+                            value="Regular trainings for students" class="mr-2"> Regular trainings for students
+                    </label>
+                    <label for="technology" class="flex items-center">
+                        <input type="checkbox" id="technology" name="interestedIn" value="Technology Integration"
+                            class="mr-2"> Technology Integration
+                    </label>
+                    <label for="other" class="flex items-center">
+                        <input type="checkbox" id="other" name="interestedIn" value="Other" class="mr-2"> Other
+                        (Specify)
+                    </label>
+                </div>
+            </div>
+
+            <!-- Value Addition -->
+            <div class="col-span-3 mb-4 md:col-span-3">
+                <label for="message" class="block text-sm font-medium text-gray-700 2xl:text-base">How your
+                    collaboration will add value?</label>
+                <textarea id="message" name="message"
+                    class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    rows="2" required></textarea>
+            </div>
+
+            <!-- Upload Support Documents -->
+            <div class="col-span-3 mb-4 md:col-span-3">
+                <label for="support_doc" class="block text-sm font-medium text-gray-700 2xl:text-base">Upload
+                    Support Documents</label>
+                <input type="file" id="support_doc" name="support_doc"
+                    class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    required>
+            </div>
+
+            <!-- Additional Comments or Suggestions -->
+            <div class="col-span-3 mb-4 md:col-span-3">
+                <label for="comments"
+                    class="block text-sm font-medium text-gray-700 2xl:text-base">Additional Comments or
+                    Suggestions</label>
+                <textarea id="comments" name="comments"
+                    class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    rows="3" required></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="col-span-3 pt-3 mt-6 text-right border-t border-t-gray-300">
+                <button type="submit"
+                    class="px-6 py-2 text-white rounded-md bg-primary hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+

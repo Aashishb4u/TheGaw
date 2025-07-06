@@ -265,7 +265,28 @@
     </h2>
 
     <!-- Dynamic Contact Loading -->
-    <div id="contact-grid" class="grid gap-8 mt-10 md:grid-cols-2"></div>
+    <div class="grid gap-8 mt-10 md:grid-cols-2">
+        <div *ngFor="let contact of contactData" 
+             class="relative flex gap-4 pb-4 transition-all duration-300 border-b border-b-gray-400 group">
+            
+            <!-- Default icon with Angular property binding -->
+            <img [src]="contact.defaultIcon" 
+                 alt="icon" 
+                 class="absolute transition-all duration-300 transform opacity-100 md:size-14 size-10 group-hover:opacity-0 group-hover:scale-95">
+            
+            <!-- Hover icon with Angular property binding -->
+            <img [src]="contact.hoverIcon" 
+                 alt="icon" 
+                 class="absolute opacity-0 md:size-14 size-10 transition-all duration-300 transform group-hover:opacity-100 group-hover:scale-105 group-hover:translate-y-[-2px]">
+            
+            <!-- Content with Angular interpolation -->
+            <div class="pl-[5rem]">
+                <h3 class="font-medium text-primary 2xl:text-lg">{{ contact.title }}</h3>
+                <div class="my-2 border-t-[2px] group-hover:w-20 w-10 transition-all duration-300 border-primary"></div>
+                <a [href]="'mailto:' + contact.email" class="text-sm 2xl:text-lg">{{ contact.email }}</a>
+            </div>
+        </div>
+    </div>
 
 
 </section>

@@ -1,11 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { ModalService } from '../../services/modal.service';
 
 @Component({
   selector: 'app-procurement-project-management',
-  standalone: false,
   templateUrl: './procurement-project-management.component.html',
-  styleUrl: './procurement-project-management.component.scss'
+  standalone: false,
+  styleUrls: ['./procurement-project-management.component.scss']
 })
-export class ProcurementProjectManagementComponent {
+export class ProcurementProjectManagementComponent implements OnInit, AfterViewInit {
 
+  constructor(private modalService: ModalService) { }
+
+  ngOnInit(): void {
+  }
+
+  ngAfterViewInit(): void {
+    // Initialize modal functionality using the service
+    this.modalService.initializeModals();
+  }
 }
