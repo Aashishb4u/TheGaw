@@ -14,7 +14,7 @@ export class ModalService {
     setTimeout(() => {
       // Get all modal open buttons
       const openModalBtns = document.querySelectorAll(".open-modal-btn");
-      debugger;
+      
       // Add click event listeners to each button
       openModalBtns.forEach((btn) => {
         btn.addEventListener("click", () => {

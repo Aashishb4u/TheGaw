@@ -13,7 +13,7 @@ interface Product {
 export class ApiService {
   private baseURL = 'https://thegawindustries.com/api/v1/contact';
   private productsJsonPath = 'assets/json/products.json';
-  
+
   constructor(private http: HttpClient) { }
 
   onSubmitContact(data: any): Observable<any> {
@@ -40,6 +40,18 @@ export class ApiService {
     return this.http.post(`${this.baseURL}/demo_form`, data);
   }
 
+  requestTraining(body: any): Observable<any> {
+    return this.http.post(`${this.baseURL}/request_for_training`, body);
+  }
+
+  registerSme(body: FormData): Observable<any> {
+    return this.http.post(`${this.baseURL}/sme_form`, body);
+  }
+
+  partner(body: FormData): Observable<any> {
+    return this.http.post(`${this.baseURL}/transfer_partner`, body);
+  }
+
   /**
    * Fetches products from the JSON file and filters them based on a query
    * @param query The search query to filter products by
@@ -48,15 +60,15 @@ export class ApiService {
   getFilteredProducts(query?: string): Observable<Product[]> {
     // Add cache-busting query parameter with current timestamp
     const cacheBuster = `?t=${new Date().getTime()}`;
-    
+
     return this.http.get<Product[]>(`${this.productsJsonPath}${cacheBuster}`).pipe(
       map(products => {
         if (!query || query.trim() === '') {
           return products;
         }
-        
+
         // Filter products based on the query (case-insensitive)
-        return products.filter(product => 
+        return products.filter(product =>
           product.name.toLowerCase().includes(query.toLowerCase()) ||
           product.category.toLowerCase().includes(query.toLowerCase())
         );

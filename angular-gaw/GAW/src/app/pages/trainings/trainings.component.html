@@ -77,7 +77,7 @@
             </p>
         </div>
         <div>
-            <button 
+            <button
                 class="open-modal-btn px-6 py-2 mt-5 text-sm text-black uppercase transition-all duration-300 bg-white rounded-md 2xl:text-base hover:bg-black hover:text-white hover:scale-105 hover:-translate-y-1"
                 data-target="training-request-modal">
                 Apply Now
@@ -156,58 +156,67 @@
         <div class="p-4 text-center text-white bg-primary">
             <h2 class="text-2xl font-semibold">Request for Training</h2>
         </div>
-        <form action="#" method="POST" id="trainingForm1" class="grid p-6 mt-3 gap-x-4 md:grid-cols-3">
+        <form id="trainingForm1" class="grid p-6 mt-3 gap-x-4 md:grid-cols-3"
+            [formGroup]="trainingRequestForm" (ngSubmit)="submitTrainingRequest()">
+
             <!-- Full Name -->
             <div class="col-span-3 mb-4 md:col-span-1">
-                <label for="fullName" class="block text-sm font-medium text-gray-700 2xl:text-base">Full
-                    Name <span class="text-rose-500">*</span></label>
-                <input type="text" id="fullName" name="fullName"
-                    class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                <label for="fullName" class="block text-sm font-medium text-gray-700 2xl:text-base">
+                    Full Name <span class="text-rose-500">*</span>
+                </label>
+                <input id="fullName" name="fullName" type="text" formControlName="fullName"
+                    class="{{trainingRequestForm.get('fullName')?.invalid && trainingRequestForm.get('fullName')?.touched ? 'border-red-500 border-2' : ''}} w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                     required>
             </div>
 
             <!-- Organization Name -->
             <div class="col-span-3 mb-4 md:col-span-1">
-                <label for="orgName" class="block text-sm font-medium text-gray-700 2xl:text-base">Organization
-                    Name <span class="text-rose-500">*</span></label>
-                <input type="text" id="orgName" name="orgName"
-                    class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                <label for="orgName" class="block text-sm font-medium text-gray-700 2xl:text-base">
+                    Organization Name <span class="text-rose-500">*</span>
+                </label>
+                <input id="orgName" name="orgName" type="text" formControlName="companyName"
+                    class="{{trainingRequestForm.get('companyName')?.invalid && trainingRequestForm.get('companyName')?.touched ? 'border-red-500 border-2' : ''}} w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                     required>
             </div>
 
             <!-- Designation -->
             <div class="col-span-3 mb-4 md:col-span-1">
-                <label for="designation" class="block text-sm font-medium text-gray-700 2xl:text-base">Designation
-                    <span class="text-rose-500">*</span></label>
-                <input type="text" id="designation" name="designation"
-                    class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                <label for="designation" class="block text-sm font-medium text-gray-700 2xl:text-base">
+                    Designation <span class="text-rose-500">*</span>
+                </label>
+                <input id="designation" name="designation" type="text" formControlName="jobRole"
+                    class="{{trainingRequestForm.get('jobRole')?.invalid && trainingRequestForm.get('jobRole')?.touched ? 'border-red-500 border-2' : ''}} w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                     required>
             </div>
 
             <!-- Email Address -->
             <div class="col-span-3 mb-4 md:col-span-1">
-                <label for="email" class="block text-sm font-medium text-gray-700 2xl:text-base">Email
-                    Address <span class="text-rose-500">*</span></label>
-                <input type="email" id="email" name="email"
-                    class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                <label for="email" class="block text-sm font-medium text-gray-700 2xl:text-base">
+                    Email Address <span class="text-rose-500">*</span>
+                </label>
+                <input id="email" name="email" type="email" formControlName="email"
+                    class="{{trainingRequestForm.get('email')?.invalid && trainingRequestForm.get('email')?.touched ? 'border-red-500 border-2' : ''}} w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                     required>
             </div>
 
             <!-- Phone Number -->
             <div class="col-span-3 mb-4 md:col-span-1">
-                <label for="phone" class="block text-sm font-medium text-gray-700 2xl:text-base">Phone
-                    Number <span class="text-rose-500">*</span></label>
-                <input type="tel" id="phone" name="phone"
-                    class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                <label for="phone" class="block text-sm font-medium text-gray-700 2xl:text-base">
+                    Phone Number <span class="text-rose-500">*</span>
+                </label>
+                <input id="phone" name="phone" type="tel" formControlName="phoneNumber"
+                    class="{{trainingRequestForm.get('phoneNumber')?.invalid && trainingRequestForm.get('phoneNumber')?.touched ? 'border-red-500 border-2' : ''}} w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                     required>
             </div>
 
             <!-- Region -->
             <div class="col-span-3 mb-4 md:col-span-1">
-                <label for="region" class="block text-sm font-medium text-gray-700 2xl:text-base">Region <span
-                        class="text-rose-500">*</span></label>
-                <select id="region" name="region"
-                    class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" required>
+                <label for="region" class="block text-sm font-medium text-gray-700 2xl:text-base">
+                    Region <span class="text-rose-500">*</span>
+                </label>
+                <select id="region" name="region" formControlName="regionName"
+                    class="{{trainingRequestForm.get('regionName')?.invalid && trainingRequestForm.get('regionName')?.touched ? 'border-red-500 border-2' : ''}} w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    required>
                     <option value="">Select a region</option>
                     <option value="Asia">Asia</option>
                     <option value="Africa">Africa</option>
@@ -220,63 +229,71 @@
 
             <!-- Country -->
             <div class="col-span-3 mb-4 md:col-span-1">
-                <label for="country" class="block text-sm font-medium text-gray-700 2xl:text-base">Country <span
-                        class="text-rose-500">*</span></label>
-                <input type="text" id="country" name="country"
-                    class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                <label for="country" class="block text-sm font-medium text-gray-700 2xl:text-base">
+                    Country <span class="text-rose-500">*</span>
+                </label>
+                <input id="country" name="country" type="text" formControlName="countryName"
+                    class="{{trainingRequestForm.get('countryName')?.invalid && trainingRequestForm.get('countryName')?.touched ? 'border-red-500 border-2' : ''}} w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                     required>
             </div>
 
             <!-- Training Topic of Interest -->
             <div class="col-span-3 mb-4 md:col-span-1">
-                <label for="trainingTopic" class="block text-sm font-medium text-gray-700 2xl:text-base">Training
-                    Topic of
-                    Interest <span class="text-rose-500">*</span></label>
-                <input type="text" id="trainingTopic" name="trainingTopic"
-                    class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                <label for="trainingTopic" class="block text-sm font-medium text-gray-700 2xl:text-base">
+                    Training Topic of Interest <span class="text-rose-500">*</span>
+                </label>
+                <input id="trainingTopic" name="trainingTopic" type="text" formControlName="interestedIn"
+                    class="{{trainingRequestForm.get('interestedIn')?.invalid && trainingRequestForm.get('interestedIn')?.touched ? 'border-red-500 border-2' : ''}} w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                     required>
             </div>
 
             <!-- Number of Participants -->
             <div class="col-span-3 mb-4 md:col-span-1">
-                <label for="participants" class="block text-sm font-medium text-gray-700 2xl:text-base">Number of
-                    Participants</label>
-                <input type="number" id="participants" name="participants"
-                    class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                <label for="participants" class="block text-sm font-medium text-gray-700 2xl:text-base">
+                    Number of Participants
+                </label>
+                <input id="participants" name="participants" type="number" formControlName="participants"
+                    class="{{trainingRequestForm.get('participants')?.invalid && trainingRequestForm.get('participants')?.touched ? 'border-red-500 border-2' : ''}} w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                     required>
             </div>
 
             <!-- Preferred Training Format -->
             <div class="col-span-3 mb-4 md:col-span-1">
-                <label class="block text-sm font-medium text-gray-700 2xl:text-base">Preferred Training
-                    Format <span class="text-rose-500">*</span></label>
+                <label class="block text-sm font-medium text-gray-700 2xl:text-base">
+                    Preferred Training Format <span class="text-rose-500">*</span>
+                </label>
                 <div class="flex items-center space-x-4">
                     <label for="online" class="flex items-center">
-                        <input type="radio" id="online" name="trainingFormat" value="Online" class="mr-2" required>
+                        <input id="online" name="trainingFormat" type="radio" value="Online"
+                            formControlName="trainingFormat" class="mr-2" required>
                         Online
                     </label>
                     <label for="onSite" class="flex items-center">
-                        <input type="radio" id="onSite" name="trainingFormat" value="On Site" class="mr-2">
+                        <input id="onSite" name="trainingFormat" type="radio" value="On Site"
+                            formControlName="trainingFormat" class="mr-2">
                         On-Site
                     </label>
                 </div>
             </div>
 
-            <!-- Additional or Requirements -->
+            <!-- Additional Comments -->
             <div class="col-span-2 mb-4">
-                <label for="comments" class="block text-sm font-medium text-gray-700 2xl:text-base">Additional
-                    Comments or
-                    Requirements</label>
-                <textarea id="comments" name="comments"
+                <label for="comments" class="block text-sm font-medium text-gray-700 2xl:text-base">
+                    Additional Comments or Requirements
+                </label>
+                <textarea id="comments" name="comments" formControlName="comments"
                     class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"></textarea>
             </div>
 
             <!-- Submit Button -->
             <div class="col-span-3 pt-3 mt-6 text-right border-t border-t-gray-300">
-                <button type="submit"
-                    class="px-6 py-2 text-white rounded-md bg-primary hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">Submit</button>
+                <button type="submit" [disabled]="trainingRequestForm.invalid || trainingRequestForm.pending"
+                    class="px-6 py-2 text-white rounded-md bg-primary hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    Submit
+                </button>
             </div>
         </form>
+
     </div>
 </div>
 
@@ -298,59 +315,65 @@
         <div class="p-4 text-center text-white bg-primary">
             <h2 class="text-2xl font-semibold">Subject Matter Expert Registration</h2>
         </div>
-        <form action="#" method="POST" id="trainingForm2" class="grid p-6 mt-3 gap-x-4 md:grid-cols-3">
+        <form id="trainingForm2" class="grid p-6 mt-3 gap-x-4 md:grid-cols-3" [formGroup]="smeForm"
+            (ngSubmit)="submitSme()" enctype="multipart/form-data">
+
             <!-- Full Name -->
             <div class="col-span-3 mb-4 md:col-span-1">
-                <label for="fullName" class="block text-sm font-medium text-gray-700 2xl:text-base">Full
-                    Name <span class="text-rose-500">*</span></label>
-                <input type="text" id="fullName" name="fullName"
-                    class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                <label for="fullName" class="block text-sm font-medium text-gray-700 2xl:text-base">
+                    Full Name <span class="text-rose-500">*</span>
+                </label>
+                <input formControlName="fullName" type="text" id="fullName" name="fullName"
+                    class="{{smeForm.get('fullName')?.invalid && smeForm.get('fullName')?.touched ? 'border-red-500 border-2' : ''}} w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                     required>
             </div>
 
             <!-- Email Address -->
             <div class="col-span-3 mb-4 md:col-span-1">
-                <label for="email" class="block text-sm font-medium text-gray-700 2xl:text-base">Email
-                    Address <span class="text-rose-500">*</span></label>
-                <input type="email" id="email" name="email"
-                    class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                <label for="email" class="block text-sm font-medium text-gray-700 2xl:text-base">
+                    Email Address <span class="text-rose-500">*</span>
+                </label>
+                <input formControlName="email" type="email" id="email" name="email"
+                    class="{{smeForm.get('email')?.invalid && smeForm.get('email')?.touched ? 'border-red-500 border-2' : ''}} w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                     required>
             </div>
 
             <!-- Phone Number -->
             <div class="col-span-3 mb-4 md:col-span-1">
-                <label for="phoneNumber" class="block text-sm font-medium text-gray-700 2xl:text-base">Phone
-                    Number <span class="text-rose-500">*</span></label>
-                <input type="tel" id="phoneNumber" name="phoneNumber"
-                    class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                <label for="phoneNumber" class="block text-sm font-medium text-gray-700 2xl:text-base">
+                    Phone Number <span class="text-rose-500">*</span>
+                </label>
+                <input formControlName="phoneNumber" type="tel" id="phoneNumber" name="phoneNumber"
+                    class="{{smeForm.get('phoneNumber')?.invalid && smeForm.get('phoneNumber')?.touched ? 'border-red-500 border-2' : ''}} w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                     required>
             </div>
 
             <!-- LinkedIn Profile -->
             <div class="col-span-3 mb-4 md:col-span-1">
-                <label for="linkedIn" class="block text-sm font-medium text-gray-700 2xl:text-base">LinkedIn Profile
-                    (optional) </label>
-                <input type="url" id="linkedIn" name="linkedIn"
+                <label for="linkedIn" class="block text-sm font-medium text-gray-700 2xl:text-base">
+                    LinkedIn Profile (optional)
+                </label>
+                <input formControlName="linkedIn" type="url" id="linkedIn" name="linkedIn"
                     class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
             </div>
 
-            <!-- Year of Industry Experience -->
+            <!-- Industry Experience -->
             <div class="col-span-3 mb-4 md:col-span-1">
-                <label for="experience" class="block text-sm font-medium text-gray-700 2xl:text-base">Year of
-                    Industry
-                    Experience</label>
-                <input type="number" id="experience" name="experience" min="0"
-                    class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md 
-                    focus:outline-none focus:ring-2 focus:ring-primary 
-                    focus:border-transparent" required>
+                <label for="experience" class="block text-sm font-medium text-gray-700 2xl:text-base">
+                    Year of Industry Experience
+                </label>
+                <input formControlName="experience" type="number" id="experience" name="experience" min="0"
+                    class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    required>
             </div>
 
             <!-- Region -->
             <div class="col-span-3 mb-4 md:col-span-1">
-                <label for="regionName" class="block text-sm font-medium text-gray-700 2xl:text-base">Region <span
-                        class="text-rose-500">*</span></label>
-                <select id="regionName" name="regionName"
-                    class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                <label for="regionName" class="block text-sm font-medium text-gray-700 2xl:text-base">
+                    Region <span class="text-rose-500">*</span>
+                </label>
+                <select formControlName="regionName" id="regionName" name="regionName"
+                    class="{{smeForm.get('regionName')?.invalid && smeForm.get('regionName')?.touched ? 'border-red-500 border-2' : ''}}  w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                     required>
                     <option value="">Select a region</option>
                     <option value="Asia">Asia</option>
@@ -364,72 +387,82 @@
 
             <!-- Country -->
             <div class="col-span-3 mb-4 md:col-span-1">
-                <label for="countryName" class="block text-sm font-medium text-gray-700 2xl:text-base">Country <span
-                        class="text-rose-500">*</span></label>
-                <input type="text" id="countryName" name="countryName"
-                    class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                <label for="countryName" class="block text-sm font-medium text-gray-700 2xl:text-base">
+                    Country <span class="text-rose-500">*</span>
+                </label>
+                <input formControlName="countryName" type="text" id="countryName" name="countryName"
+                    class="{{smeForm.get('countryName')?.invalid && smeForm.get('countryName')?.touched ? 'border-red-500 border-2' : ''}} w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                     required>
             </div>
 
             <!-- Expertise Area -->
             <div class="col-span-3 mb-4 md:col-span-1">
-                <label for="expertise" class="block text-sm font-medium text-gray-700 2xl:text-base">Expertise
-                    Area</label>
-                <input type="text" id="expertise" name="expertise"
-                    class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 
-                    focus:ring-primary focus:border-transparent" required>
+                <label for="expertise" class="block text-sm font-medium text-gray-700 2xl:text-base">
+                    Expertise Area
+                </label>
+                <input formControlName="expertise" type="text" id="expertise" name="expertise"
+                    class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    required>
             </div>
 
-            <!-- Upload Resume / Portfolio -->
+            <!-- Resume Upload -->
             <div class="col-span-3 mb-4 md:col-span-1">
-                <label for="resume" class="block text-sm font-medium text-gray-700 2xl:text-base">Upload Resume /
-                    Portfolio</label>
-                <input type="file" id="resume" name="resume"
-                    class="w-full px-4 py-1.5 mt-1 border border-gray-300 rounded-md
-                    focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" required>
+                <label for="resume" class="block text-sm font-medium text-gray-700 2xl:text-base">
+                    Upload Resume / Portfolio
+                </label>
+                <input formControlName="resume" type="file" id="resume" name="resume"
+                    (change)="onFileChange($event,'resume',smeForm)"
+                    class="w-full px-4 py-1.5 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    required>
             </div>
 
-            <!-- Availability for Training Programs -->
+            <!-- Availability -->
+            <!-- Availability (inside trainingForm2 / smeForm) -->
             <div class="col-span-3 mb-4">
-                <label class="block text-sm font-medium text-gray-700 2xl:text-base">Availability for Training
-                    Programs</label>
+                <label class="block text-sm font-medium text-gray-700 2xl:text-base">
+                    Availability for Training Programs
+                </label>
+
                 <div class="flex flex-wrap items-center text-sm gap-x-4">
-                    <label for="weekdays" class="flex items-center">
-                        <input type="radio" id="weekdays" name="availability" value="Weekdays" class="mr-2"
-                            required>
+                    <label class="flex items-center">
+                        <input type="radio" value="Weekdays" formControlName="availability" class="mr-2">
                         Weekdays
                     </label>
-                    <label for="weekends" class="flex items-center">
-                        <input type="radio" id="weekends" name="availability" value="Weekends" class="mr-2">
+
+                    <label class="flex items-center">
+                        <input type="radio" value="Weekends" formControlName="availability" class="mr-2">
                         Weekends
                     </label>
-                    <label for="flexible" class="flex items-center">
-                        <input type="radio" id="flexible" name="availability" value="Flexible" class="mr-2">
+
+                    <label class="flex items-center">
+                        <input type="radio" value="Flexible" formControlName="availability" class="mr-2">
                         Flexible
                     </label>
                 </div>
             </div>
 
-            <!-- How You Can Make an Impact -->
+            <!-- Impact Comment -->
             <div class="col-span-3 mb-4">
-                <label for="comments" class="block text-sm font-medium text-gray-700 2xl:text-base">How you can make
-                    an
-                    impact <span class="text-rose-500">*</span></label>
-                <textarea id="comments" name="comments"
+                <label for="comments" class="block text-sm font-medium text-gray-700 2xl:text-base">
+                    How you can make an impact <span class="text-rose-500">*</span>
+                </label>
+                <textarea formControlName="comments" id="comments" name="comments"
                     class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                     required></textarea>
             </div>
 
-            <!-- Submit Button -->
+            <!-- Submit -->
             <div class="col-span-3 pt-3 mt-6 text-right border-t border-t-gray-300">
-                <button type="submit"
-                    class="px-6 py-2 text-white rounded-md bg-primary hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">Submit</button>
+                <button type="submit" [disabled]="smeForm.invalid"
+                    class="px-6 py-2 text-white rounded-md bg-primary hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    Submit
+                </button>
             </div>
         </form>
 
     </div>
 </div>
- 
+
 <div id="organization-registration-modal"
     class="fixed inset-0 z-50 flex items-center justify-center hidden py-20 overflow-y-auto bg-black/50 md:overflow-hidden backdrop-blur-sm">
     <!-- Modal -->
@@ -448,57 +481,63 @@
         <div class="p-4 text-center text-white bg-primary">
             <h2 class="text-2xl font-semibold">Be a Knowledge Transfer Partner</h2>
         </div>
-        <form action="#" method="POST" id="partnershipForm" enctype="multipart/form-data" class="grid p-6 mt-3 gap-x-4 md:grid-cols-3">
+        <form id="partnershipForm" enctype="multipart/form-data" class="grid p-6 mt-3 gap-x-4 md:grid-cols-3"
+            [formGroup]="partnershipForm" (ngSubmit)="submitPartnership()">
+
             <!-- Organization Name -->
             <div class="col-span-3 mb-4 md:col-span-1">
-                <label for="companyName"
-                    class="block text-sm font-medium text-gray-700 2xl:text-base">Organization Name <span
-                        class="text-rose-500">*</span></label>
-                <input type="text" id="companyName" name="companyName"
+                <label for="companyName" class="block text-sm font-medium text-gray-700 2xl:text-base">
+                    Organization Name <span class="text-rose-500">*</span>
+                </label>
+                <input type="text" id="companyName" name="companyName" formControlName="companyName"
                     class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                     required>
             </div>
 
             <!-- Contact Person Name -->
             <div class="col-span-3 mb-4 md:col-span-1">
-                <label for="fullName" class="block text-sm font-medium text-gray-700 2xl:text-base">Contact
-                    Person Name <span class="text-rose-500">*</span></label>
-                <input type="text" id="fullName" name="fullName"
+                <label for="fullName" class="block text-sm font-medium text-gray-700 2xl:text-base">
+                    Contact Person Name <span class="text-rose-500">*</span>
+                </label>
+                <input type="text" id="fullName" name="fullName" formControlName="fullName"
                     class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                     required>
             </div>
 
             <!-- Designation -->
             <div class="col-span-3 mb-4 md:col-span-1">
-                <label for="jobRole"
-                    class="block text-sm font-medium text-gray-700 2xl:text-base">Designation:</label>
-                <input type="text" id="jobRole" name="jobRole"
-                    class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" required>
+                <label for="jobRole" class="block text-sm font-medium text-gray-700 2xl:text-base">Designation</label>
+                <input type="text" id="jobRole" name="jobRole" formControlName="jobRole"
+                    class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    required>
             </div>
 
             <!-- Email Address -->
             <div class="col-span-3 mb-4 md:col-span-1">
-                <label for="email" class="block text-sm font-medium text-gray-700 2xl:text-base">Email
-                    Address <span class="text-rose-500">*</span></label>
-                <input type="email" id="email" name="email"
+                <label for="email" class="block text-sm font-medium text-gray-700 2xl:text-base">
+                    Email Address <span class="text-rose-500">*</span>
+                </label>
+                <input type="email" id="email" name="email" formControlName="email"
                     class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                     required>
             </div>
 
             <!-- Phone Number -->
             <div class="col-span-3 mb-4 md:col-span-1">
-                <label for="phoneNumber" class="block text-sm font-medium text-gray-700 2xl:text-base">Phone
-                    Number <span class="text-rose-500">*</span></label>
-                <input type="tel" id="phoneNumber" name="phoneNumber"
+                <label for="phoneNumber" class="block text-sm font-medium text-gray-700 2xl:text-base">
+                    Phone Number <span class="text-rose-500">*</span>
+                </label>
+                <input type="tel" id="phoneNumber" name="phoneNumber" formControlName="phoneNumber"
                     class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                     required>
             </div>
 
             <!-- Region -->
             <div class="col-span-3 mb-4 md:col-span-1">
-                <label for="regionName" class="block text-sm font-medium text-gray-700 2xl:text-base">Region <span
-                        class="text-rose-500">*</span></label>
-                <select id="regionName" name="regionName"
+                <label for="regionName" class="block text-sm font-medium text-gray-700 2xl:text-base">
+                    Region <span class="text-rose-500">*</span>
+                </label>
+                <select id="regionName" name="regionName" formControlName="regionName"
                     class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                     required>
                     <option value="">Select a region</option>
@@ -513,80 +552,66 @@
 
             <!-- Country -->
             <div class="col-span-3 mb-4 md:col-span-1">
-                <label for="countryName" class="block text-sm font-medium text-gray-700 2xl:text-base">Country <span
-                        class="text-rose-500">*</span></label>
-                <input type="text" id="countryName" name="countryName"
+                <label for="countryName" class="block text-sm font-medium text-gray-700 2xl:text-base">
+                    Country <span class="text-rose-500">*</span>
+                </label>
+                <input type="text" id="countryName" name="countryName" formControlName="countryName"
                     class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                     required>
             </div>
 
-            <!-- Area of Interest -->
-            <div class="col-span-3 mb-4 md:col-span-3">
+            <!-- Area of Interest checkboxes -->
+            <div formArrayName="interestedIn" class="col-span-3 mb-4 md:col-span-3">
                 <label class="block text-sm font-medium text-gray-700 2xl:text-base">Area of Interest in
                     Partnership</label>
                 <div class="flex flex-col gap-2 mt-1">
-                    <label for="collaborative" class="flex items-center">
-                        <input type="checkbox" id="collaborative" name="interestedIn"
-                            value="Collaborative training programs" class="mr-2"> Collaborative training programs
-                    </label>
-                    <label for="knowledge" class="flex items-center">
-                        <input type="checkbox" id="knowledge" name="interestedIn"
-                            value="Knowledge sharing initiatives" class="mr-2"> Knowledge sharing initiatives
-                    </label>
-                    <label for="workingProfessionals" class="flex items-center">
-                        <input type="checkbox" id="workingProfessionals" name="interestedIn"
-                            value="Regular trainings for working professionals" class="mr-2"> Regular trainings for
-                    working professionals
-                    </label>
-                    <label for="students" class="flex items-center">
-                        <input type="checkbox" id="students" name="interestedIn"
-                            value="Regular trainings for students" class="mr-2"> Regular trainings for students
-                    </label>
-                    <label for="technology" class="flex items-center">
-                        <input type="checkbox" id="technology" name="interestedIn" value="Technology Integration"
-                            class="mr-2"> Technology Integration
-                    </label>
-                    <label for="other" class="flex items-center">
-                        <input type="checkbox" id="other" name="interestedIn" value="Other" class="mr-2"> Other
-                        (Specify)
+                    <label class="flex items-center" *ngFor="let option of areaOfInterestOptions">
+                        <input type="checkbox" [checked]="false" (change)="onInterestChange($event, option)"
+                            class="form-checkbox mr-2">
+                        {{ option }}
                     </label>
                 </div>
             </div>
 
             <!-- Value Addition -->
             <div class="col-span-3 mb-4 md:col-span-3">
-                <label for="message" class="block text-sm font-medium text-gray-700 2xl:text-base">How your
-                    collaboration will add value?</label>
-                <textarea id="message" name="message"
+                <label for="message" class="block text-sm font-medium text-gray-700 2xl:text-base">
+                    How your collaboration will add value?
+                </label>
+                <textarea id="message" name="message" rows="2" formControlName="message"
                     class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
-                    rows="2" required></textarea>
+                    required></textarea>
             </div>
 
             <!-- Upload Support Documents -->
             <div class="col-span-3 mb-4 md:col-span-3">
-                <label for="support_doc" class="block text-sm font-medium text-gray-700 2xl:text-base">Upload
-                    Support Documents</label>
-                <input type="file" id="support_doc" name="support_doc"
+                <label for="support_doc" class="block text-sm font-medium text-gray-700 2xl:text-base">
+                    Upload Support Documents
+                </label>
+                <input type="file" id="support_doc" formControlName="support_doc"
+                    (change)="onFileChange($event, 'support_doc', partnershipForm)"
                     class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                     required>
             </div>
 
-            <!-- Additional Comments or Suggestions -->
+            <!-- Additional Comments -->
             <div class="col-span-3 mb-4 md:col-span-3">
-                <label for="comments"
-                    class="block text-sm font-medium text-gray-700 2xl:text-base">Additional Comments or
-                    Suggestions</label>
-                <textarea id="comments" name="comments"
+                <label for="comments" class="block text-sm font-medium text-gray-700 2xl:text-base">
+                    Additional Comments or Suggestions
+                </label>
+                <textarea id="comments" name="comments" rows="3" formControlName="comments"
                     class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
-                    rows="3" required></textarea>
+                    required></textarea>
             </div>
 
-            <!-- Submit Button -->
+            <!-- Submit -->
             <div class="col-span-3 pt-3 mt-6 text-right border-t border-t-gray-300">
-                <button type="submit"
-                    class="px-6 py-2 text-white rounded-md bg-primary hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">Submit</button>
+                <button type="submit" [disabled]="partnershipForm.invalid"
+                    class="px-6 py-2 text-white rounded-md bg-primary hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    Submit
+                </button>
             </div>
         </form>
+
     </div>
 </div>
-
