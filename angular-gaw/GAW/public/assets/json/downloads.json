@@ -1,0 +1,58 @@
+[
+  {
+    "id": "health-safety-policy",
+    "name": "TheGAW_Health_Safety_Policy.pdf",
+    "url": "assets/documents/TheGAW_Health_Safety_Policy.pdf",
+    "category": "policy",
+    "fileType": "pdf"
+  },
+  {
+    "id": "quality-policy",
+    "name": "TheGAW_Quality_Policy.pdf",
+    "url": "assets/documents/TheGAW_Quality_Policy.pdf",
+    "category": "policy",
+    "fileType": "pdf"
+  },
+  {
+    "id": "environmental-policy",
+    "name": "TheGAW_Environmental_Policy.pdf",
+    "url": "assets/documents/TheGAW_Environmental_Policy.pdf",
+    "category": "policy",
+    "fileType": "pdf"
+  },
+  {
+    "id": "code-of-conduct",
+    "name": "TheGAW_Code_of_Conduct.pdf",
+    "url": "assets/documents/TheGAW_Code_of_Conduct.pdf",
+    "category": "policy",
+    "fileType": "pdf"
+  },
+  {
+    "id": "it-data-security-policy",
+    "name": "TheGAW_IT_Data_Security_Policy.pdf",
+    "url": "assets/documents/TheGAW_IT_Data_Security_Policy.pdf",
+    "category": "policy",
+    "fileType": "pdf"
+  },
+  {
+    "id": "sustainability-policy",
+    "name": "TheGAW_Sustainability_Policy.pdf",
+    "url": "assets/documents/TheGAW_Sustainability_Policy.pdf",
+    "category": "policy",
+    "fileType": "pdf"
+  },
+  {
+    "id": "iso-9001-certificate",
+    "name": "TheGAW_ISO_9001_Certificate.pdf",
+    "url": "assets/documents/TheGAW_ISO_9001_Certificate.pdf",
+    "category": "certificate",
+    "fileType": "pdf"
+  },
+  {
+    "id": "iso-14001-certificate",
+    "name": "TheGAW_ISO_14001_Certificate.pdf",
+    "url": "assets/documents/TheGAW_ISO_14001_Certificate.pdf",
+    "category": "certificate",
+    "fileType": "pdf"
+  }
+]

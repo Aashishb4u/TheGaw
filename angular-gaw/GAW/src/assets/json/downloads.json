@@ -1,0 +1,100 @@
+[
+  {
+    "id": "health-safety-policy",
+    "name": "TheGAW_Health_Safety_Policy.pdf",
+    "url": "assets/documents/TheGAW_Health_Safety_Policy.pdf",
+    "category": "policy",
+    "fileType": "pdf"
+  },
+  {
+    "id": "quality-policy",
+    "name": "TheGAW_Quality_Policy.pdf",
+    "url": "assets/documents/TheGAW_Quality_Policy.pdf",
+    "category": "policy",
+    "fileType": "pdf"
+  },
+  {
+    "id": "environmental-policy",
+    "name": "TheGAW_Environmental_Policy.pdf",
+    "url": "assets/documents/TheGAW_Environmental_Policy.pdf",
+    "category": "policy",
+    "fileType": "pdf"
+  },
+  {
+    "id": "code-of-conduct",
+    "name": "TheGAW_Code_of_Conduct.pdf",
+    "url": "assets/documents/TheGAW_Code_of_Conduct.pdf",
+    "category": "policy",
+    "fileType": "pdf"
+  },
+  {
+    "id": "it-data-security-policy",
+    "name": "TheGAW_IT_Data_Security_Policy.pdf",
+    "url": "assets/documents/TheGAW_IT_Data_Security_Policy.pdf",
+    "category": "policy",
+    "fileType": "pdf"
+  },
+  {
+    "id": "sustainability-policy",
+    "name": "TheGAW_Sustainability_Policy.pdf",
+    "url": "assets/documents/TheGAW_Sustainability_Policy.pdf",
+    "category": "policy",
+    "fileType": "pdf"
+  },
+  {
+    "id": "iso-9001-certificate",
+    "name": "TheGAW_ISO_9001_Certificate.pdf",
+    "url": "assets/documents/TheGAW_ISO_9001_Certificate.pdf",
+    "category": "certificate",
+    "fileType": "pdf"
+  },
+  {
+    "id": "iso-14001-certificate",
+    "name": "TheGAW_ISO_14001_Certificate.pdf",
+    "url": "assets/documents/TheGAW_ISO_14001_Certificate.pdf",
+    "category": "certificate",
+    "fileType": "pdf"
+  },
+  
+  // Product catalogs
+  {
+    "id": "loading-arms-catalog",
+    "name": "TheGAW Industries Loading Arms 2025.pdf",
+    "url": "assets/catalog/TheGAW Industries Loading Arms 2025.pdf",
+    "category": "product-catalog",
+    "productId": "loading-arms",
+    "fileType": "pdf"
+  },
+  {
+    "id": "top-loading-arms-catalog",
+    "name": "TheGAW Top Loading Arms Catalog.pdf",
+    "url": "assets/catalog/TheGAW Top Loading Arms Catalog.pdf",
+    "category": "product-catalog",
+    "productId": "top-loading-arms",
+    "fileType": "pdf"
+  },
+  {
+    "id": "bottom-loading-arms-catalog",
+    "name": "TheGAW Bottom Loading Arms Catalog.pdf",
+    "url": "assets/catalog/TheGAW Industries Loading Arms 2025.pdf",
+    "category": "product-catalog",
+    "productId": "bottom-loading-arms",
+    "fileType": "pdf"
+  },
+  {
+    "id": "marine-loading-arms-catalog",
+    "name": "TheGAW Marine Loading Arms Catalog.pdf",
+    "url": "assets/catalog/TheGAW Industries Loading Arms 2025.pdf",
+    "category": "product-catalog",
+    "productId": "marine-loading-arms",
+    "fileType": "pdf"
+  },
+  {
+    "id": "bottom-loading-arms-questionnaire",
+    "name": "Bottom LA Design Questionnaire.pdf",
+    "url": "assets/catalog/AmallGam Bottom LA Design questionnaire.pdf",
+    "category": "product-questionnaire",
+    "productId": "bottom-loading-arms",
+    "fileType": "pdf"
+  }
+]

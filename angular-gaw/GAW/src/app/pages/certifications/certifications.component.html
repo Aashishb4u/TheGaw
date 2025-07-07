@@ -52,110 +52,40 @@
 
 </section>
 
+<!-- Policy Cards Section -->
 <section class="container grid gap-6 p-8 mx-auto lg:p-20 md:grid-cols-3">
-    <div
-        class="flex flex-col items-center justify-center gap-2 p-5 text-center text-white transition-all duration-300 rounded-md 2xl:gap-4 bg-primary min-h-56 2xl:min-h-64 hover:shadow-md hover:-translate-y-2">
-        <h2 class="text-xl font-medium md:text-2xl 2xl:text-3xl">
-            Health & Safety Policy
-        </h2>
-        <button
+  <div *ngFor="let policy of policyFiles"
+       class="flex flex-col items-center justify-center gap-2 p-5 text-center text-white transition-all duration-300 rounded-md 2xl:gap-4 bg-primary min-h-56 2xl:min-h-64 hover:shadow-md hover:-translate-y-2">
+    <h2 class="text-xl font-medium md:text-2xl 2xl:text-3xl">
+      {{ policy.name.replace('TheGAW_', '').replace('_', ' ').replace('.pdf', '') }}
+    </h2>
+    <button (click)="downloadFile(policy.id)"
             class="bg-white xl:text-xl 2xl:py-3 2xl:px-6 border border-primary rounded-md py-1.5 px-3 text-black hover:text-white hover:bg-[#000C25] hover:-translate-y-1 transition-all duration-300 text-sm md:mt-4 mt-2">
-            Download
-        </button>
-    </div>
-
-
-    <div
-        class="flex flex-col items-center justify-center gap-2 p-5 text-center text-white transition-all duration-300 rounded-md 2xl:gap-4 bg-primary min-h-56 2xl:min-h-64 hover:shadow-md hover:-translate-y-2">
-        <h2 class="text-xl font-medium md:text-2xl 2xl:text-3xl">
-            Quality Policy
-        </h2>
-        <button
-            class="bg-white xl:text-xl 2xl:py-3 2xl:px-6 border border-primary rounded-md py-1.5 px-3 text-black hover:text-white hover:bg-[#000C25] hover:-translate-y-1 transition-all duration-300 text-sm md:mt-4 mt-2">
-            Download
-        </button>
-    </div>
-    <div
-        class="flex flex-col items-center justify-center gap-2 p-5 text-center text-white transition-all duration-300 rounded-md 2xl:gap-4 bg-primary min-h-56 2xl:min-h-64 hover:shadow-md hover:-translate-y-2">
-        <h2 class="text-xl font-medium md:text-2xl 2xl:text-3xl">
-            Environmental Policy
-        </h2>
-        <button
-            class="bg-white xl:text-xl 2xl:py-3 2xl:px-6 border border-primary rounded-md py-1.5 px-3 text-black hover:text-white hover:bg-[#000C25] hover:-translate-y-1 transition-all duration-300 text-sm md:mt-4 mt-2">
-            Download
-        </button>
-    </div>
-    <div
-        class="flex flex-col items-center justify-center gap-2 p-5 text-center text-white transition-all duration-300 rounded-md 2xl:gap-4 bg-primary min-h-56 2xl:min-h-64 hover:shadow-md hover:-translate-y-2">
-        <h2 class="text-xl font-medium md:text-2xl 2xl:text-3xl">
-            Code of Conduct
-        </h2>
-        <button
-            class="bg-white xl:text-xl 2xl:py-3 2xl:px-6 border border-primary rounded-md py-1.5 px-3 text-black hover:text-white hover:bg-[#000C25] hover:-translate-y-1 transition-all duration-300 text-sm md:mt-4 mt-2">
-            Download
-        </button>
-    </div>
-    <div
-        class="flex flex-col items-center justify-center gap-2 p-5 text-center text-white transition-all duration-300 rounded-md 2xl:gap-4 bg-primary min-h-56 2xl:min-h-64 hover:shadow-md hover:-translate-y-2">
-        <h2 class="text-xl font-medium md:text-2xl 2xl:text-3xl">
-            IT & Data Security Policy
-        </h2>
-        <button
-            class="bg-white xl:text-xl 2xl:py-3 2xl:px-6 border border-primary rounded-md py-1.5 px-3 text-black hover:text-white hover:bg-[#000C25] hover:-translate-y-1 transition-all duration-300 text-sm md:mt-4 mt-2">
-            Download
-        </button>
-    </div>
-
-
-    <div
-        class="flex flex-col items-center justify-center gap-2 p-5 text-center text-white transition-all duration-300 rounded-md 2xl:gap-4 bg-primary min-h-56 2xl:min-h-64 hover:shadow-md hover:-translate-y-2">
-        <h2 class="text-xl font-medium md:text-2xl 2xl:text-3xl">
-            Sustainability Policy
-        </h2>
-        <button
-            class="bg-white xl:text-xl 2xl:py-3 2xl:px-6 border border-primary rounded-md py-1.5 px-3 text-black hover:text-white hover:bg-[#000C25] hover:-translate-y-1 transition-all duration-300 text-sm md:mt-4 mt-2">
-            Download
-        </button>
-    </div>
+      Download
+    </button>
+  </div>
 </section>
 
+<!-- Certificates Section -->
 <section class="container grid gap-6 p-8 mx-auto lg:p-20 lg:pt-0 md:grid-cols-3">
-    <!-- <div class="md:p-8 p-5 rounded-md bg-[#000C25] relative min-h-96 xl:min-h-[34rem]">
-            <img class="absolute bottom-0 left-0 right-0 w-full mx-auto"
-                src="assets/images/icons/oil-pump-svgrepo-com 2.png" alt="oil pump">
+  <div *ngFor="let certificate of certificateFiles" 
+       class="md:p-8 p-5 rounded-md bg-[#000C25] relative min-h-96 xl:min-h-[34rem]">
+    <img class="absolute bottom-0 left-0 right-0 w-full mx-auto"
+         src="assets/images/icons/oil-pump-svgrepo-com 2.png" alt="oil pump">
 
-            <div class="flex flex-col items-end text-white">
-                <img class="h-20 w-fit xl:h-28" src="assets/images/logo-primary.png" alt="logo">
+    <div class="flex flex-col items-end text-white">
+      <img class="h-20 w-fit xl:h-28" src="assets/images/logo-primary.png" alt="logo">
 
-                <p class="mt-3 text-lg font-medium text-white text-end xl:text-2xl">
-                    API Q1
-                </p>
-            </div>
-        </div> -->
-    <div class="md:p-8 p-5 rounded-md bg-[#000C25] relative min-h-96 xl:min-h-[34rem]">
-        <img class="absolute bottom-0 left-0 right-0 w-full mx-auto"
-            src="assets/images/icons/oil-pump-svgrepo-com 2.png" alt="oil pump">
-
-        <div class="flex flex-col items-end text-white">
-            <img class="h-20 w-fit xl:h-28" src="assets/images/logo-primary.png" alt="logo">
-
-            <p class="mt-3 text-lg font-medium text-white text-end xl:text-2xl">
-                ISO 9001
-            </p>
-        </div>
+      <p class="mt-3 text-lg font-medium text-white text-end xl:text-2xl">
+        {{ certificate.name.replace('TheGAW_', '').replace('_Certificate.pdf', '') }}
+      </p>
+      
+      <button (click)="downloadFile(certificate.id)"
+              class="mt-4 bg-white xl:text-xl 2xl:py-3 2xl:px-6 border border-primary rounded-md py-1.5 px-3 text-black hover:text-white hover:bg-[#000C25] hover:-translate-y-1 transition-all duration-300 text-sm">
+        Download Certificate
+      </button>
     </div>
-    <div class="md:p-8 p-5 rounded-md bg-[#000C25] relative min-h-96 xl:min-h-[34rem]">
-        <img class="absolute bottom-0 left-0 right-0 w-full mx-auto"
-            src="assets/images/icons/oil-pump-svgrepo-com 2.png" alt="oil pump">
-
-        <div class="flex flex-col items-end text-white">
-            <img class="h-20 w-fit xl:h-28" src="assets/images/logo-primary.png" alt="logo">
-
-            <p class="mt-3 text-lg font-medium text-white text-end xl:text-2xl">
-                ISO 14001
-            </p>
-        </div>
-    </div>
+  </div>
 </section>
 
 

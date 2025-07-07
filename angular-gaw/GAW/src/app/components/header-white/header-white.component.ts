@@ -34,7 +34,7 @@ export class HeaderWhiteComponent implements AfterViewInit {
   }
 
   updateGSTTime(): void {
-    const gstTimeConst = moment()?.tz('Asia/Dubai').format('hh:mm A');
+    const gstTimeConst = moment().tz('Asia/Dubai').format('hh:mm A');
     this.gstTime = `GST: ${gstTimeConst}`;
   }
 
