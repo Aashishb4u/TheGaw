@@ -1,6 +1,13 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
+import {
+  FormBuilder,
+  FormGroup,
+  Validators
+} from '@angular/forms';
+
+import { ApiService } from '../../services/api.service';
+
 import { ModalService } from '../../services/modal.service';
-declare var particlesJS: any;
 
 @Component({
   selector: 'app-careers',
@@ -10,24 +17,86 @@ declare var particlesJS: any;
 })
 export class CareersComponent implements OnInit, AfterViewInit {
   jobName: string = '';
+  newsletterForm!: FormGroup;
+  applyForm!: FormGroup;
+  private readonly phoneRx = /^[0-9+\-() ]{8,20}$/;
 
-  constructor(private modalService: ModalService) { }
+  constructor(private fb: FormBuilder, private api: ApiService, private modalService: ModalService) { }
 
   ngOnInit(): void {
+    this.newsletterForm = this.fb.group({
+      email: ['', [Validators.required, Validators.email]],
+      mailType: ['news_letter']
+    });
+
+    this.applyForm = this.fb.group({
+      firstName: ['', Validators.required],
+      lastName: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      phoneNumber: ['', [Validators.required, Validators.pattern(this.phoneRx)]],
+      nationality: ['', Validators.required],
+      countryName: ['', Validators.required],
+      resume: [null, Validators.required],
+      coverLetter: [null, Validators.required],
+      mailType: ['career'],
+      jobRole: [''],
+    });
   }
+
 
   ngAfterViewInit(): void {
     // Initialize modal functionality
     this.modalService.initializeModals();
-    
+
     // Set up any additional functionality
-    this.setupJobApplicationForm();
-    particlesJS("particles-js", { "particles": { "number": { "value": 70, "density": { "enable": true, "value_area": 481.0236182596568 } }, "color": { "value": "#43bdd7" }, "shape": { "type": "circle", "stroke": { "width": 0, "color": "#000000" }, "polygon": { "nb_sides": 5 }, "image": { "src": "img/github.svg", "width": 100, "height": 100 } }, "opacity": { "value": 0.3928359549120531, "random": false, "anim": { "enable": false, "speed": 1, "opacity_min": 0.1, "sync": false } }, "size": { "value": 6, "random": true, "anim": { "enable": false, "speed": 40, "size_min": 0.1, "sync": false } }, "line_linked": { "enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.4, "width": 1 }, "move": { "enable": true, "speed": 4, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false, "attract": { "enable": false, "rotateX": 600, "rotateY": 1200 } } }, "interactivity": { "detect_on": "canvas", "events": { "onhover": { "enable": true, "mode": "repulse" }, "onclick": { "enable": true, "mode": "repulse" }, "resize": true }, "modes": { "grab": { "distance": 400, "line_linked": { "opacity": 1 } }, "bubble": { "distance": 400, "size": 40, "duration": 2, "opacity": 8, "speed": 3 }, "repulse": { "distance": 200, "duration": 0.4 }, "push": { "particles_nb": 4 }, "remove": { "particles_nb": 2 } } }, "retina_detect": true });
+
   }
+
+
+  submitNewsletter(): void {
+    if (this.newsletterForm.invalid) return;
+
+    this.api.subscribeNewsletter(this.newsletterForm.value).subscribe({
+      next: () => {
+        alert('Thanks for joining our talent community!');
+        this.newsletterForm.reset();
+        this.closeModal();
+      },
+      error: err => alert(err)
+    });
+  }
+
+  submitApplication(): void {
+    if (this.applyForm.invalid) return;
+
+    const fd = new FormData();
+    Object.entries(this.applyForm.value).forEach(([k, v]) => fd.append(k, v as any));
+
+    this.api.applyForJob(fd).subscribe({
+      next: () => {
+        alert('Application sent – best of luck!');
+        this.applyForm.reset();
+        this.closeModal();
+
+      },
+      error: err => alert(err)
+    });
+  }
+
+  /* Handle <input type="file"> changes */
+  onFileChange(e: Event, ctrl: 'resume' | 'coverLetter'): void {
+    const file = (e.target as HTMLInputElement).files?.[0] ?? null;
+    this.applyForm.patchValue({ [ctrl]: file });
+    this.applyForm.get(ctrl)?.markAsTouched();
+  }
+
 
   // Method to open a modal with job name
   openModal(jobName): void {
-   this.jobName = jobName;
+    this.jobName = jobName;
+    this.applyForm.patchValue({ jobRole: jobName });
+    this.modalService.openModal('modal-container');
+
     const modal = document.querySelector('#modal-container');
     if (modal) {
       // Set job name in a data attribute
@@ -44,7 +113,6 @@ export class CareersComponent implements OnInit, AfterViewInit {
   }
 
   // Setup job application form
-  setupJobApplicationForm(): void {
-    // Implementation for job application form handling
-  }
+
 }
+

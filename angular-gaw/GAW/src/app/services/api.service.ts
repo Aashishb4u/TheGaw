@@ -52,6 +52,18 @@ export class ApiService {
     return this.http.post(`${this.baseURL}/transfer_partner`, body);
   }
 
+  subscribeNewsletter(body: { email: string }): Observable<any> {
+    return this.http.post(`${this.baseURL}/news-letter`, body);
+
+  }
+
+  /** Job‑application form (multipart/form‑data) */
+  applyForJob(body: FormData): Observable<any> {
+    return this.http.post(`${this.baseURL}/careers`, body);
+
+  }
+
+
   /**
    * Fetches products from the JSON file and filters them based on a query
    * @param query The search query to filter products by

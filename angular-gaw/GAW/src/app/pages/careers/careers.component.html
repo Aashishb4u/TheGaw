@@ -185,7 +185,8 @@
 
     <div class="container p-8 mx-auto lg:p-20 py-14 lg:py-20">
 
-        <form id="news-letter-form" class="md:w-[40%] bg-white md:p-8 p-5 rounded-sm z-10 relative">
+        <form id="news-letter-form" class="md:w-[40%] bg-white md:p-8 p-5 rounded-sm z-10 relative"
+            [formGroup]="newsletterForm" (ngSubmit)="submitNewsletter()">
             <h2 class="text-lg font-medium 2xl:text-xl">
                 Join Our Talent Community
             </h2>
@@ -198,8 +199,9 @@
             </p>
 
             <input
-                class="outline-none mt-4 block max-w-60 w-full text-sm py-1.5 px-2.5 border border-black rounded-md placeholder:text-black transition-all duration-300 focus:ring 2xl:text-base"
-                type="email" id="emailInput" name="email" placeholder="Enter Email Address" required>
+                class="{{applyForm.get('email')?.invalid && applyForm.get('email')?.touched ? 'border-red-500 border-2' : ''}} outline-none mt-4 block max-w-60 w-full text-sm py-1.5 px-2.5 border border-black rounded-md placeholder:text-black transition-all duration-300 focus:ring 2xl:text-base"
+                formControlName="email" type="email" id="emailInput" name="email" placeholder="Enter Email Address"
+                required>
 
             <button type="submit" id="join_us_submit"
                 class="flex items-center justify-between mt-3 overflow-hidden text-sm font-medium text-white rounded-md bg-primary ps-3">
@@ -220,97 +222,100 @@
 </app-footer>
 
 
-    <!-- Modal Container -->
-    <div id="modal-container"
-        class="fixed inset-0 z-50 flex items-center justify-center hidden py-20 overflow-y-auto bg-black/50 md:overflow-hidden modal backdrop-blur-sm">
-        <!-- Modal -->
-        <div class="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto bg-white rounded-lg shadow-lg">
-            <!-- Modal Close Button -->
-            <button class="absolute text-white top-4 right-4 hover:text-white/80" (click)="closeModal()">
-                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
-                    </path>
+<!-- Modal Container -->
+<div id="modal-container"
+    class="fixed inset-0 z-50 flex items-center justify-center hidden py-20 overflow-y-auto bg-black/50 md:overflow-hidden modal backdrop-blur-sm">
+    <!-- Modal -->
+    <div class="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto bg-white rounded-lg shadow-lg">
+        <!-- Modal Close Button -->
+        <button class="absolute text-white top-4 right-4 hover:text-white/80" (click)="closeModal()">
+            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                </path>
 
-                </svg>
-            </button>
+            </svg>
+        </button>
 
-            <!-- Modal Content -->
-            <div class="p-4 text-center text-white bg-primary">
-                <h2 class="text-2xl font-semibold">{{jobName}}</h2>
-            </div>
-            <form id="apply-form" class="grid p-6 mt-3 gap-x-4 md:grid-cols-2">
-                <!-- First Name -->
-                <div class="col-span-1 mb-4">
-                    <label class="block text-sm font-medium text-gray-700" for="firstName">First Name:</label>
-                    <input
-                        class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
-                        id="firstName" name="firstName" type="text" required>
-                </div>
-
-                <!-- Last Name -->
-                <div class="col-span-1 mb-4">
-                    <label class="block text-sm font-medium text-gray-700" for="lastName">Last Name:</label>
-                    <input
-                        class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
-                        id="lastName" name="lastName" type="text" required>
-                </div>
-
-                <!-- Email -->
-                <div class="col-span-1 mb-4">
-                    <label class="block text-sm font-medium text-gray-700" for="email">Email:</label>
-                    <input
-                        class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
-                        id="email" name="email" type="email" required>
-                </div>
-
-                <!-- Phone Number -->
-                <div class="col-span-1 mb-4">
-                    <label class="block text-sm font-medium text-gray-700" for="phone">Phone Number:</label>
-                    <input
-                        class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
-                        id="phone" name="phoneNumber" type="tel" required>
-                </div>
-
-                <!-- Nationality -->
-                <div class="col-span-1 mb-4">
-                    <label class="block text-sm font-medium text-gray-700" for="nationality">Nationality:</label>
-                    <input
-                        class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
-                        id="nationality" name="nationality" type="text" required>
-                </div>
-
-                <!-- Country of Residence -->
-                <div class="col-span-1 mb-4">
-                    <label class="block text-sm font-medium text-gray-700" for="countryOfResidence">Country of
-                        Residence:</label>
-                    <input
-                        class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
-                        id="countryOfResidence" name="countryName" type="text" required>
-                </div>
-
-                <!-- Resume -->
-                <div class="col-span-1 mb-4">
-                    <label class="block text-sm font-medium text-gray-700" for="resume">Resume:</label>
-                    <input
-                        class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
-                        id="resume" name="resume" type="file" accept=".pdf,.doc,.docx" required>
-                </div>
-
-                <!-- Cover Letter -->
-                <div class="col-span-1 mb-4">
-                    <label class="block text-sm font-medium text-gray-700" for="coverLetter">Cover Letter:</label>
-                    <input
-                        class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
-                        id="coverLetter" name="coverLetter" type="file" accept=".pdf,.doc,.docx" required>
-                </div>
-
-                <!-- Submit Button -->
-                <div class="col-span-2 pt-3 mt-6 text-right border-t border-t-gray-300">
-                    <button
-                        class="px-6 py-2 text-white rounded-md bg-primary hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        type="submit">Submit</button>
-                </div>
-            </form>
+        <!-- Modal Content -->
+        <div class="p-4 text-center text-white bg-primary">
+            <h2 class="text-2xl font-semibold">{{jobName}}</h2>
         </div>
+        <form id="apply-form" class="grid p-6 mt-3 gap-x-4 md:grid-cols-2" [formGroup]="applyForm"
+            (ngSubmit)="submitApplication()">
+            <!-- First Name -->
+            <div class="col-span-1 mb-4">
+                <label class="block text-sm font-medium text-gray-700" for="firstName">First Name:</label>
+                <input
+                    class="{{applyForm.get('firstName')?.invalid && applyForm.get('firstName')?.touched ? 'border-red-500 border-2' : ''}} w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    formControlName="firstName" id="firstName" name="firstName" type="text" required>
+            </div>
+
+            <!-- Last Name -->
+            <div class="col-span-1 mb-4">
+                <label class="block text-sm font-medium text-gray-700" for="lastName">Last Name:</label>
+                <input
+                    class="{{applyForm.get('lastName')?.invalid && applyForm.get('lastName')?.touched ? 'border-red-500 border-2' : ''}} w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    formControlName="lastName" id="lastName" name="lastName" type="text" required>
+            </div>
+
+            <!-- Email -->
+            <div class="col-span-1 mb-4">
+                <label class="block text-sm font-medium text-gray-700" for="email">Email:</label>
+                <input
+                    class="{{applyForm.get('email')?.invalid && applyForm.get('email')?.touched ? 'border-red-500 border-2' : ''}} w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    formControlName="email" id="email" name="email" type="email" required>
+            </div>
+
+            <!-- Phone Number -->
+            <div class="col-span-1 mb-4">
+                <label class="block text-sm font-medium text-gray-700" for="phoneNumber">Phone Number:</label>
+                <input
+                    class="{{applyForm.get('phoneNumber')?.invalid && applyForm.get('phoneNumber')?.touched ? 'border-red-500 border-2' : ''}} w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    formControlName="phoneNumber" id="phone" name="phoneNumber" type="tel" required>
+            </div>
+
+            <!-- Nationality -->
+            <div class="col-span-1 mb-4">
+                <label class="block text-sm font-medium text-gray-700" for="nationality">Nationality:</label>
+                <input
+                    class="{{applyForm.get('nationality')?.invalid && applyForm.get('nationality')?.touched ? 'border-red-500 border-2' : ''}} w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    formControlName="nationality" id="nationality" name="nationality" type="text" required>
+            </div>
+
+            <!-- Country of Residence -->
+            <div class="col-span-1 mb-4">
+                <label class="block text-sm font-medium text-gray-700" for="countryOfResidence">Country of
+                    Residence:</label>
+                <input
+                    class="{{applyForm.get('countryName')?.invalid && applyForm.get('countryName')?.touched ? 'border-red-500 border-2' : ''}} w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    formControlName="countryName" id="countryOfResidence" name="countryName" type="text" required>
+            </div>
+
+            <!-- Resume -->
+            <div class="col-span-1 mb-4">
+                <label class="block text-sm font-medium text-gray-700" for="resume">Resume:</label>
+                <input
+                    class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    id="resume" name="resume" type="file" accept=".pdf,.doc,.docx"
+                    (change)="onFileChange($event, 'resume')" required>
+            </div>
+
+            <!-- Cover Letter -->
+            <div class="col-span-1 mb-4">
+                <label class="block text-sm font-medium text-gray-700" for="coverLetter">Cover Letter:</label>
+                <input
+                    class="w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    id="coverLetter" name="coverLetter" type="file" accept=".pdf,.doc,.docx"
+                    (change)="onFileChange($event, 'coverLetter')" required>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="col-span-2 pt-3 mt-6 text-right border-t border-t-gray-300">
+                <button
+                    class="px-6 py-2 text-white rounded-md bg-primary hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    [disabled]="applyForm.invalid" type="submit">Submit</button>
+            </div>
+        </form>
     </div>
+</div>
