@@ -2,12 +2,12 @@
 <header class="relative w-full h-[85vh] lg:h-screen overflow-hidden">
     <!-- Video Background -->
     <video autoplay muted loop class="absolute inset-0 object-cover w-full h-full hidden md:block">
-        <source src="assets/videos/Products_CBHE.mp4" type="video/mp4">
+        <source src="/assets/videos/Products_CBHE.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
 
     <video autoplay muted loop class="absolute inset-0 object-cover w-full h-full md:hidden">
-        <source src="assets/videos/CBHE_mob.mp4" type="video/mp4">
+        <source src="/assets/videos/CBHE_mob.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
     <!-- <div class="h-full w-full bg-[#000C25] absolute"> -->
@@ -62,7 +62,7 @@
     <div id="product-grid" class="grid gap-10 mt-10 md:grid-cols-3">
         <a *ngFor="let product of products" [href]="product.link"
             class="flex flex-col items-center justify-center gap-3 p-5 transition-all duration-300 border border-gray-700 rounded shadow-sm hover:-translate-y-1 hover:scale-105 hover:shadow-md">
-            <img class="mx-auto h-36" [src]="'assets/images/' + product.imageIds[0] + '.png'" [alt]="product.name" />
+            <img class="mx-auto h-36" [src]="'/assets/images/' + product.imageIds[0] + '.png'" [alt]="product.name" />
             <h2 class="text-md font-semibold 2xl:text-xl">
                 {{ product.name }}
             </h2>
@@ -76,7 +76,7 @@
 <div id="footer"></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.40/moment-timezone-with-data.min.js"></script>
-<script src="assets/js/header-footer.js"></script>
+<script src="/assets/js/header-footer.js"></script>
 
 <script>
     // Function to update GST time
