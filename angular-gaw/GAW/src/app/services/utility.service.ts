@@ -114,16 +114,18 @@ export class UtilityService {
     // Check if the page name exists in the products data
     const selectedProduct = this.products[pageName];
   
-    if (selectedProduct) {
+    if (selectedProduct && isPlatformBrowser(this.platformId)) {
+      // if (!) return;
+  
       // Prepare gallery with thumbnails and main image
       const thumbnailsHTML = selectedProduct
         .flatMap((product) =>
           product.imageIds.map(
             (id) => `
-              <img 
+              <img
                   class="border-2 border-black rounded-md p-1 transition-all duration-200 cursor-pointer size-16 nav-image hover:scale-105"
-                  src="assets/images/${id}.png" 
-                  data-main="assets/images/${id}.png" 
+                  src="/assets/images/${id}.png" 
+                  data-main="/assets/images/${id}.png" 
                   alt="Product ${product.name}" 
               />
             `
@@ -137,7 +139,7 @@ export class UtilityService {
         </div>
         <img 
             class="w-[75%] p-2 border-2 border-black rounded-md ms-5 h-auto transition-all duration-300 main-image" 
-            src="assets/images/${selectedProduct[0].imageIds[0]}.png" 
+            src="/assets/images/${selectedProduct[0].imageIds[0]}.png" 
             alt="Main Product" 
         />
       `;

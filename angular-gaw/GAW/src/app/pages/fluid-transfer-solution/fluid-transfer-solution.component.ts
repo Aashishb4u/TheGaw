@@ -11,32 +11,32 @@ export class FluidTransferSolutionComponent {
             {
                 name: "Top Loading Arms",
                 imageIds: [48, 49],
-                link: "top-loading-arms",
+                link: "/top-loading-arms",
             },
             {
                 name: "Bottom Loading Arms",
                 imageIds: [50, 51],
-                link: "bottom-loading-arms",
+                link: "/bottom-loading-arms",
             },
             {
                 name: "Marine Loading Arms",
                 imageIds: [52, 53],
-                link: "marine-loading-arms",
+                link: "/marine-loading-arms",
             },
             {
                 name: "Floating Suction Unit",
                 imageIds: [54, 55],
-                link: "floating-suction-unit",
+                link: "/floating-suction-unit",
             },
             {
                 name: "Positive Displacement Flow Meter",
                 imageIds: [56, 57],
-                link: "positive-displacement-flow-meter",
+                link: "/positive-displacement-flow-meter",
             },
             {
                 name: "Gravity Unloading Flow Meter",
                 imageIds: [58, 59],
-                link: "gravity-unloading-flow-meter",
+                link: "/gravity-unloading-flow-meter",
             },
         ];
 
