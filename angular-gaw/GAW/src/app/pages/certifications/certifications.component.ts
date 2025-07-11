@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { DownloadService, DownloadFile } from '../../services/download.service';
 
 @Component({
   selector: 'app-certifications',
-  standalone: false, 
+  standalone: false,
   templateUrl: './certifications.component.html',
   styleUrls: ['./certifications.component.scss']
 })
@@ -12,10 +13,13 @@ export class CertificationsComponent implements OnInit {
   certificateFiles: DownloadFile[] = [];
   isLoading = true;
 
-  constructor(private downloadService: DownloadService) { }
+  constructor(@Inject(PLATFORM_ID) private platformId: Object, private downloadService: DownloadService) { }
 
   ngOnInit(): void {
-    this.loadFiles();
+    if (isPlatformBrowser(this.platformId)) {
+
+      this.loadFiles();
+    }
   }
 
   loadFiles(): void {

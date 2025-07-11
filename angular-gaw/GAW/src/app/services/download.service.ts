@@ -24,9 +24,9 @@ export class DownloadService {
    * Get all available download files
    */
   getAllFiles(): Observable<DownloadFile[]> {
-    if (this.cachedFiles) {
-      return of(this.cachedFiles);
-    }
+    // if (this.cachedFiles) {
+    //   return of(this.cachedFiles);
+    // }
 
     return this.http.get<DownloadFile[]>(this.filesJsonPath).pipe(
       map(files => {
