@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { UtilityService } from '../../../services/utility.service';
+import { SeoService } from '../../../services/seo.service';
 import { BaseProductComponent } from '../base-product.component';
 
 @Component({
@@ -9,7 +10,10 @@ import { BaseProductComponent } from '../base-product.component';
   styleUrl: './chemical-injection-skids.component.scss'
 })
 export class ChemicalInjectionSkidsComponent extends BaseProductComponent {
-  constructor(utilityService: UtilityService) {
-    super(utilityService);
+  constructor(
+    utilityService: UtilityService,
+    seoService: SeoService
+  ) {
+    super(utilityService, seoService);
   }
 }

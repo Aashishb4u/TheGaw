@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { isPlatformBrowser } from '@angular/common';
 import { PLATFORM_ID, Inject } from '@angular/core';
 
-interface Product {
+export interface Product {
   name: string;
   imageIds: number[];
   link: string;
@@ -17,7 +17,6 @@ interface ProductsData {
   providedIn: 'root'
 })
 export class UtilityService {
-  // Define products data
   private products: ProductsData = {
     "top-loading-arms": [
       { name: "Top Loading Arms", imageIds: [48, 49], link: "top-loading-arms.html" },
@@ -97,6 +96,15 @@ export class UtilityService {
     private router: Router,
     @Inject(PLATFORM_ID) private platformId: Object
   ) { }
+
+  getProductGalleryData(pageName?: string): Product[] | null {
+    const url = pageName ?? this.router.url;
+    const pathWithoutQuery = url.split('?')[0].split('#')[0];
+    const segments = pathWithoutQuery.split('/').filter(segment => segment.length > 0);
+    const key = segments.length ? segments[segments.length - 1] : 'top-loading-arms';
+    const data = this.products[key];
+    return data ?? null;
+  }
 
   /**
    * Sets up a product gallery based on the current route

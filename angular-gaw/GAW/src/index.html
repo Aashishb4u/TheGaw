@@ -37,10 +37,10 @@
 
   <!-- meta tags -->
   <meta name="description"
-    content="At TheGAW Industries, we power the world's most vital industries with precision-engineered solutions and a steadfast commitment to sustainability. Headquartered in Abu Dhabi, UAE, we specialize in hydraulic tools, pressure testing equipment, and fluid transfer systems across the oil, energy, and heavy industries." />
+    content="TheGAW Industries is a UAE based manufacturer of truck & marine loading arms and fluid transfer solutions such as floating suction units and skid solutions." />
 
   <meta name="keywords"
-    content="the GAW, TheGAW Industries, oil and energy industry, hydraulic tools, pressure testing equipment, fluid transfer systems, energy lifecycle, upstream exploration, downstream operations, sustainability, industrial components, specialized materials, energy innovation, UAE engineering, heavy industries, energy solutions provider" />
+    content="Terminal Solutions, Terminal Loading Systems, Marine Loading Systems, Fluid Transfer Solutions, Loading Arms Manufacturing, Top Loading Arms, Bottom Loading Arms, Marine Loading Arms, Truck Loading Arms, Bulk Fluid Handling, Floating Suction Units, Flowmeters and Flow Measurement, Positive Displacement Flow Meters, Gravity Unloading Flow Meters, Metering Skids, Fuel Injection Skids, Chemical Injection Skids, Skid Mounted Packages, Terminal and Tank Farm Solutions, Chemical and Petrochemical Transfer, Aviation Fuel Handling, Floating Roofs for Storage Tanks, Test Manifolds, Digital Twin for Terminals, Real Time Monitoring and Asset Visibility, Shutdown and Turnaround Project Management, Subject Matter Expertise Consulting, Integrated Crew Management, Energy Generation Systems, Energy Storage Solutions, Controlled Bolting Systems, On Site ATEX Machining, LV Installation and Maintenance Abu Dhabi, Testing and Commissioning LV." />
 
   <meta name="robots" content="index, follow" />
   <meta name="author" content="TheGAW Industries" />
@@ -52,7 +52,7 @@
   <!-- open graph tags -->
   <meta property="og:description"
     content="At TheGAW Industries, we provide precision-engineered solutions to the oil, energy, and heavy industries with a focus on sustainability. We design and manufacture hydraulic tools, pressure testing equipment, and fluid transfer systems for the energy lifecycle." />
-  <meta property="og:title" content="TheGAW Industries" />
+  <meta property="og:title" content="Loading Arms & Fluid Transfer Solutions | TheGAW Industries" />
   <meta property="og:url" content="https://thegawindustries.com" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_US" />
@@ -160,6 +160,23 @@
 
 <body>
   <app-root></app-root>
+
+  <script>
+    document.addEventListener('click', function (event) {
+      var target = event.target;
+      if (!(target instanceof HTMLImageElement)) {
+        return;
+      }
+      if (!target.classList.contains('nav-image')) {
+        return;
+      }
+      var main = document.querySelector('.main-image');
+      if (main && main instanceof HTMLImageElement) {
+        var src = target.getAttribute('data-main') || target.src;
+        main.src = src;
+      }
+    });
+  </script>
 </body>
 
 </html>

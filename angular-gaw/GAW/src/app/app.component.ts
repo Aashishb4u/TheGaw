@@ -1,5 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { UtilityService } from './services/utility.service';
+import { SeoService } from './services/seo.service';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +11,10 @@ import { UtilityService } from './services/utility.service';
 export class AppComponent implements OnInit, OnDestroy {
   title = 'GAW';
   
-  constructor(private utilityService: UtilityService) {}
+  constructor(
+    private utilityService: UtilityService,
+    private seoService: SeoService
+  ) {}
   
   ngOnInit(): void {
     // Set up scroll actions for the navbar

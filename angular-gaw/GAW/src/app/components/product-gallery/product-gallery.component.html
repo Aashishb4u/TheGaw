@@ -1,0 +1,21 @@
+<div class="flex w-full" *ngIf="hasProducts; else noProducts">
+  <div class="flex flex-col gap-5 shrink-0">
+    <img
+      *ngFor="let img of images; let i = index"
+      class="border-2 border-black rounded-md p-1 transition-all duration-200 cursor-pointer size-16 nav-image hover:scale-105"
+      [src]="img"
+      [attr.data-main]="img"
+      [attr.alt]="productName"
+      (click)="selectImage(i)"
+    />
+  </div>
+  <img
+    class="w-[75%] p-2 border-2 border-black rounded-md ms-5 h-auto transition-all duration-300 main-image"
+    [src]="mainImage"
+    [attr.alt]="productName"
+  />
+</div>
+
+<ng-template #noProducts>
+  <p>No products found for this page.</p>
+</ng-template>
