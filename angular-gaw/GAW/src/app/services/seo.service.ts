@@ -4,6 +4,7 @@ import { Title, Meta } from '@angular/platform-browser';
 import { filter } from 'rxjs/operators';
 import { Observable, of } from 'rxjs';
 import seoConfigJson from '../../../public/assets/json/seo.json';
+import { UtilityService, Product } from './utility.service';
 
 interface SeoConfigEntry {
   path: string;
@@ -22,7 +23,8 @@ export class SeoService {
   constructor(
     private router: Router,
     private title: Title,
-    private meta: Meta
+    private meta: Meta,
+    private utilityService: UtilityService
   ) {
     this.listenToRouteChanges();
 
@@ -98,6 +100,38 @@ export class SeoService {
       name: 'twitter:description',
       content: entry.description
     });
+
+    const productData = this.utilityService.getProductGalleryData(entry.path);
+    if (productData && productData.length > 0) {
+      const primaryProduct: Product = productData[0];
+      const primaryImageId = primaryProduct.imageIds[0];
+      const origin =
+        typeof window !== 'undefined' && window.location && window.location.origin
+          ? window.location.origin
+          : 'https://thegawindustries.com';
+      const imageUrl = `${origin}/assets/images/${primaryImageId}.png`;
+      const imageAlt = primaryProduct.name;
+
+      this.meta.updateTag({
+        property: 'og:image',
+        content: imageUrl
+      } as any);
+
+      this.meta.updateTag({
+        property: 'og:image:alt',
+        content: imageAlt
+      } as any);
+
+      this.meta.updateTag({
+        name: 'twitter:image',
+        content: imageUrl
+      });
+
+      this.meta.updateTag({
+        name: 'twitter:image:alt',
+        content: imageAlt
+      });
+    }
   }
 
   setSeoForPath(path: string): void {
