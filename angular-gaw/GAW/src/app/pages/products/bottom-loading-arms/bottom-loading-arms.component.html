@@ -30,44 +30,76 @@
 
     <section>
         <div class="container p-8 mx-auto rounded-lg shadow-md lg:p-20">
-            <!-- Tabs Header -->
             <div class="flex flex-wrap gap-2 md:flex-nowrap">
                 <button
-                    class="relative flex-1 uppercase py-3 px-2 font-semibold text-center text-blue-600 rounded-t-md tab-btn shadow-[0px_-6px_10px_-3px_rgba(0,_0,_0,_0.1)]"
-                    data-tab="Specifications">
+                    class="relative flex-1 uppercase py-3 px-2 font-semibold text-center rounded-t-md"
+                    [ngClass]="{
+                      'text-blue-600 shadow-[0px_-6px_10px_-3px_rgba(0,_0,_0,_0.1)]': activeTab === 'Specifications',
+                      'text-gray-600 hover:bg-gray-100 bg-blue-600/10': activeTab !== 'Specifications'
+                    }"
+                    (click)="setTab('Specifications')">
                     Specifications
-                    <div class="absolute left-0 w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+                    <div
+                        class="absolute left-0 w-1 h-8 bg-blue-600 rounded-sm top-2"
+                        [ngClass]="{ 'hidden': activeTab !== 'Specifications' }">
+                    </div>
                 </button>
                 <button
-                    class="relative flex-1 uppercase px-3 py-3 font-medium text-center text-gray-600 tab-btn hover:bg-gray-100 bg-blue-600/10 rounded-t-md"
-                    data-tab="features">
+                    class="relative flex-1 uppercase px-3 py-3 font-medium text-center rounded-t-md"
+                    [ngClass]="{
+                      'text-blue-600 shadow-[0px_-6px_10px_-3px_rgba(0,_0,_0,_0.1)]': activeTab === 'features',
+                      'text-gray-600 hover:bg-gray-100 bg-blue-600/10': activeTab !== 'features'
+                    }"
+                    (click)="setTab('features')">
                     Features
-                    <div class="absolute left-0 hidden w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+                    <div
+                        class="absolute left-0 w-1 h-8 bg-blue-600 rounded-sm top-2"
+                        [ngClass]="{ 'hidden': activeTab !== 'features' }">
+                    </div>
                 </button>
                 <button
-                    class="relative flex-1 uppercase px-3 py-3 font-medium text-center text-gray-600 tab-btn hover:bg-gray-100 bg-blue-600/10 rounded-t-md"
-                    data-tab="benefits">
+                    class="relative flex-1 uppercase px-3 py-3 font-medium text-center rounded-t-md"
+                    [ngClass]="{
+                      'text-blue-600 shadow-[0px_-6px_10px_-3px_rgba(0,_0,_0,_0.1)]': activeTab === 'benefits',
+                      'text-gray-600 hover:bg-gray-100 bg-blue-600/10': activeTab !== 'benefits'
+                    }"
+                    (click)="setTab('benefits')">
                     Benefits
-                    <div class="absolute left-0 hidden w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+                    <div
+                        class="absolute left-0 w-1 h-8 bg-blue-600 rounded-sm top-2"
+                        [ngClass]="{ 'hidden': activeTab !== 'benefits' }">
+                    </div>
                 </button>
                 <button
-                    class="relative flex-1 uppercase px-3 py-3 font-medium text-center text-gray-600 tab-btn hover:bg-gray-100 bg-blue-600/10 rounded-t-md"
-                    data-tab="catalog">
+                    class="relative flex-1 uppercase px-3 py-3 font-medium text-center rounded-t-md"
+                    [ngClass]="{
+                      'text-blue-600 shadow-[0px_-6px_10px_-3px_rgba(0,_0,_0,_0.1)]': activeTab === 'catalog',
+                      'text-gray-600 hover:bg-gray-100 bg-blue-600/10': activeTab !== 'catalog'
+                    }"
+                    (click)="setTab('catalog')">
                     Catalog
-                    <div class="absolute left-0 hidden w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+                    <div
+                        class="absolute left-0 w-1 h-8 bg-blue-600 rounded-sm top-2"
+                        [ngClass]="{ 'hidden': activeTab !== 'catalog' }">
+                    </div>
                 </button>
                 <button
-                    class="relative flex-1 uppercase py-3 font-medium text-center text-gray-600 tab-btn hover:bg-gray-100 bg-blue-600/10 rounded-t-md"
-                    data-tab="order-form">
+                    class="relative flex-1 uppercase py-3 font-medium text-center rounded-t-md"
+                    [ngClass]="{
+                      'text-blue-600 shadow-[0px_-6px_10px_-3px_rgba(0,_0,_0,_0.1)]': activeTab === 'order-form',
+                      'text-gray-600 hover:bg-gray-100 bg-blue-600/10': activeTab !== 'order-form'
+                    }"
+                    (click)="setTab('order-form')">
                     Order Form
-                    <div class="absolute left-0 hidden w-1 h-8 bg-blue-600 rounded-sm top-2"></div>
+                    <div
+                        class="absolute left-0 w-1 h-8 bg-blue-600 rounded-sm top-2"
+                        [ngClass]="{ 'hidden': activeTab !== 'order-form' }">
+                    </div>
                 </button>
             </div>
 
-            <!-- Tabs Content -->
             <div class="p-6 rounded-b-lg bg-gray-50">
-                <!-- Specifications Tab -->
-                <div class="tab-content" id="Specifications">
+                <div class="tab-content" id="Specifications" *ngIf="activeTab === 'Specifications'">
                     <div class="p-4 bg-primary/10">
                         <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Specifications</h3>
                     </div>
@@ -117,8 +149,7 @@
                     </div>
                 </div>
 
-                <!-- Features Tab -->
-                <div class="hidden tab-content" id="features">
+                <div class="tab-content" id="features" *ngIf="activeTab === 'features'">
                     <div class="p-4 bg-primary/10">
                         <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Features</h3>
                     </div>
@@ -135,8 +166,7 @@
                     </ul>
                 </div>
 
-                <!-- Benefits Tab -->
-                <div class="hidden tab-content" id="benefits">
+                <div class="tab-content" id="benefits" *ngIf="activeTab === 'benefits'">
                     <div class="p-4 bg-primary/10">
                         <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Benefits</h3>
                     </div>
@@ -156,16 +186,14 @@
                     </ul>
                 </div>
 
-                <!-- Catalog Tab -->
-                <div class="hidden tab-content" id="catalog">
+                <div class="tab-content" id="catalog" *ngIf="activeTab === 'catalog'">
                     <div class="p-4 bg-primary/10">
                         <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Catalog</h3>
                     </div>
                     <p class="mt-4"><a target="_blank"  href=".//assets/catalog/TheGAW Industries Loading Arms 2025.pdf" class="text-blue-600 underline">Download</a> </p>
                 </div>
 
-                <!-- Order Form Tab -->
-                <div class="hidden tab-content" id="order-form">
+                <div class="tab-content" id="order-form" *ngIf="activeTab === 'order-form'">
                     <div class="p-4 bg-primary/10">
                         <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Order Form</h3>
                     </div>

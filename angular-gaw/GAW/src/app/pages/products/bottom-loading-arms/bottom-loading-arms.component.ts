@@ -10,10 +10,16 @@ import { BaseProductComponent } from '../base-product.component';
   styleUrl: './bottom-loading-arms.component.scss'
 })
 export class BottomLoadingArmsComponent extends BaseProductComponent {
+  activeTab: string = 'Specifications';
+
   constructor(
     utilityService: UtilityService,
     seoService: SeoService
   ) {
     super(utilityService, seoService);
+  }
+
+  setTab(tab: string): void {
+    this.activeTab = tab;
   }
 }

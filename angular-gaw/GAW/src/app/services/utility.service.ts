@@ -112,6 +112,8 @@ export class UtilityService {
    * @returns void
    */
   setupProductGallery(galleryContainerId: string = "product-gallery"): void {
+    if (!isPlatformBrowser(this.platformId)) return;
+
     const galleryContainer = document.querySelector(`#${galleryContainerId}`);
     if (!galleryContainer) return;
 
@@ -122,7 +124,7 @@ export class UtilityService {
     // Check if the page name exists in the products data
     const selectedProduct = this.products[pageName];
   
-    if (selectedProduct && isPlatformBrowser(this.platformId)) {
+    if (selectedProduct) {
       // if (!) return;
   
       // Prepare gallery with thumbnails and main image
