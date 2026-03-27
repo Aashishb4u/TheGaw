@@ -47,6 +47,7 @@ import { SplitFrameColdCuttingMachineComponent } from './pages/products/split-fr
 import { IdMountedFlangeFacingMachineComponent } from './pages/products/id-mounted-flange-facing-machine/id-mounted-flange-facing-machine.component';
 import { ManuelFlangeFacingMachineComponent } from './pages/products/manuel-flange-facing-machine/manuel-flange-facing-machine.component';
 import { SearchPageComponent } from './pages/search-page/search-page.component';
+import { DigitalSolutionComponent } from './pages/digital-solution/digital-solution.component';
 import { DownloadLinkDirective } from './directives/download-link.directive';
 import { ProductGalleryComponent } from './components/product-gallery/product-gallery.component';
 @NgModule({
@@ -94,6 +95,7 @@ import { ProductGalleryComponent } from './components/product-gallery/product-ga
     IdMountedFlangeFacingMachineComponent,
     ManuelFlangeFacingMachineComponent,
     SearchPageComponent,
+    DigitalSolutionComponent,
     ProductGalleryComponent
   ],
   imports: [

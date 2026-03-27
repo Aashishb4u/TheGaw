@@ -38,6 +38,7 @@ import { SplitFrameColdCuttingMachineComponent } from './pages/products/split-fr
 import { IdMountedFlangeFacingMachineComponent } from './pages/products/id-mounted-flange-facing-machine/id-mounted-flange-facing-machine.component';
 import { ManuelFlangeFacingMachineComponent } from './pages/products/manuel-flange-facing-machine/manuel-flange-facing-machine.component';
 import { SearchPageComponent } from './pages/search-page/search-page.component';
+import { DigitalSolutionComponent } from './pages/digital-solution/digital-solution.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -51,6 +52,9 @@ const routes: Routes = [
   { path: 'procurement-project-management', component: ProcurementProjectManagementComponent },
   { path: 'lv-installation', component: LvInstallationComponent },
   { path: 'trainings', component: TrainingsComponent },
+  { path: 'foundation-twin', component: DigitalSolutionComponent, data: { title: 'Foundation Twin' } },
+  { path: 'insight-twin', component: DigitalSolutionComponent, data: { title: 'Insight Twin' } },
+  { path: 'immersive-twin', component: DigitalSolutionComponent, data: { title: 'Immersive Twin' } },
   { path: 'controlled-bolting-hydraulic-equipments', component: ControlledBoltingHydraulicEquipmentsComponent },
   { path: 'hydrotesting-chemical-injection-skids', component: HydrotestingChemicalInjectionSkidsComponent },
   { path: 'on-site-atex-machining', component: OnSiteAtexMachiningComponent },

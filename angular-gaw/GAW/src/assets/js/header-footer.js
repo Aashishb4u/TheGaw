@@ -76,6 +76,12 @@ document.addEventListener("DOMContentLoaded", () => {
       "trainings",
     ];
 
+    const digitalSolutions = [
+      "foundation-twin",
+      "insight-twin",
+      "immersive-twin",
+    ];
+
     const explore = ["about-us", "certifications", "careers", "contact"];
 
     // Get the current URL
@@ -93,6 +99,8 @@ document.addEventListener("DOMContentLoaded", () => {
       activeLink = document.getElementById("products");
     } else if (services.some((keyword) => currentUrl.includes(keyword))) {
       activeLink = document.getElementById("services");
+    } else if (digitalSolutions.some((keyword) => currentUrl.includes(keyword))) {
+      activeLink = document.getElementById("digital-solutions");
     } else if (explore.some((keyword) => currentUrl.includes(keyword))) {
       activeLink = document.getElementById("explore-active");
     }
