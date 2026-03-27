@@ -1,20 +1,23 @@
 <header class="relative overflow-hidden h-screen">
-    <div class="absolute inset-0 w-full h-full bg-black/40"></div>
-    <video autoplay muted loop playsinline preload="metadata" class="absolute inset-0 object-cover w-full h-full">
+    <div class="absolute inset-0 z-0 w-full h-full bg-black/40"></div>
+    <video autoplay muted loop playsinline preload="metadata" class="absolute inset-0 z-0 object-cover w-full h-full">
         <source src="/assets/videos/Digital%20Solution.mp4" type="video/mp4">
     </video>
-    <div id="header-white"></div>
-    <app-header-white></app-header-white>
+    <div class="absolute inset-0 z-10 flex items-center">
+        <div class="container px-8 max-w-3xl lg:px-20">
+            <h1 class="text-xl font-medium text-left text-white uppercase md:text-2xl lg:text-4xl">{{ subtitle }}</h1>
+        </div>
+    </div>
+    <div id="header-white" class="relative z-20"></div>
+    <div class="relative z-20">
+        <app-header-white></app-header-white>
+    </div>
 </header>
 
-<section class="container p-8 mx-auto lg:px-20 lg:py-8">
-    <h1 class="mt-5 text-xl font-medium uppercase md:text-2xl text-primary">{{ subtitle }}</h1>
-</section>
-
-<section class="container p-8 mx-auto lg:px-20">
-    <div class="">
-        <h3 class="text-lg font-semibold text-[#001E59] md:text-xl">What you get</h3>
-        <p class="mt-3 " *ngIf="title === 'Foundation Twin'">
+<section class="container px-8 py-10 mx-auto lg:px-20">
+    <div>
+        <h3 class="text-lg font-semibold uppercase md:text-xl mt-5">What you get</h3>
+        <p class="mt-2 " *ngIf="title === 'Foundation Twin'">
             Foundation Twin provides a complete starter Digital Twin for terminals looking to begin digital monitoring. We develop a full 3D model of the terminal asset using AutoCAD or similar CAD tools and configure live dashboards based on the available site instrumentation and data points. This package gives your teams a clear terminal overview, performance KPIs, and loading area visibility for day to day operations.
         </p>
         <p class="mt-3 " *ngIf="title === 'Insight Twin'">
@@ -26,8 +29,8 @@
     </div>
 </section>
 
-<section class="container mx-auto lg:px-20 lg:py-20" *ngIf="hasTabs">
-    <div class="container mx-auto rounded-lg shadow-md">
+<section class="container px-8 py-10 mx-auto lg:px-20" *ngIf="hasTabs">
+    <div class="mx-auto rounded-lg shadow-md">
         <div class="flex flex-wrap gap-2 md:flex-nowrap">
             <button
                 class="relative flex-1 uppercase py-3 px-3 font-semibold text-center rounded-t-md"
@@ -77,7 +80,7 @@
         <div class="p-6 rounded-b-lg bg-gray-50">
             <div class="tab-content" id="features" *ngIf="activeTab === 'features'">
                 <div class="p-4 bg-primary/10">
-                    <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Key features</h3>
+                    <h3 class="text-lg font-semibold text-center uppercase text-[#001E59] md:text-xl">Key features</h3>
                 </div>
                 <ul class="list-disc list-image-[url(/assets/css/new_arrow.png)] pl-6 mt-4 space-y-2 list-disc">
                     <li class="" *ngFor="let f of features">{{ f }}</li>
@@ -86,7 +89,7 @@
 
             <div class="tab-content" id="monitoring" *ngIf="title === 'Foundation Twin' && activeTab === 'monitoring'">
                 <div class="p-4 bg-primary/10">
-                    <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Monitoring points</h3>
+                    <h3 class="text-lg font-semibold text-center uppercase text-[#001E59] md:text-xl">Monitoring points</h3>
                 </div>
                 <ul class="list-disc list-image-[url(/assets/css/new_arrow.png)] pl-6 mt-4 space-y-2 list-disc">
                     <li class="" *ngFor="let m of monitoringPoints">{{ m }}</li>
@@ -95,7 +98,7 @@
 
             <div class="tab-content" id="kpis" *ngIf="title === 'Foundation Twin' && activeTab === 'kpis'">
                 <div class="p-4 bg-primary/10">
-                    <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">KPIs</h3>
+                    <h3 class="text-lg font-semibold text-center uppercase text-[#001E59] md:text-xl">KPIs</h3>
                 </div>
                 <ul class="list-disc list-image-[url(/assets/css/new_arrow.png)] pl-6 mt-4 space-y-2 list-disc">
                     <li class="" *ngFor="let k of kpis">{{ k }}</li>
@@ -104,7 +107,7 @@
 
             <div class="tab-content" id="maintenance" *ngIf="title === 'Insight Twin' && activeTab === 'maintenance'">
                 <div class="p-4 bg-primary/10">
-                    <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl">Maintenance intelligence</h3>
+                    <h3 class="text-lg font-semibold text-center uppercase text-[#001E59] md:text-xl">Maintenance intelligence</h3>
                 </div>
                 <ul class="list-disc list-image-[url(/assets/css/new_arrow.png)] pl-6 mt-4 space-y-2 list-disc">
                     <li class="" *ngFor="let mi of maintenanceIntelligence">{{ mi }}</li>
@@ -114,27 +117,19 @@
     </div>
 </section>
 
-<section class="container p-8 mx-auto lg:px-20">
-    <div class="">
-        <h3 class="text-lg font-semibold text-[#001E59] md:text-xl">Best for</h3>
-        <p class="mt-3 ">{{ bestFor }}</p>
-    </div>
-</section>
-
-<section class="container p-8 mx-auto lg:px-20">
-    <div class="p-4 border rounded bg-[#e8f0ff] border-blue-200 text-primary">
-        <p>
-            Note: Dashboards, KPIs, and monitoring visibility depend on available site instrumentation and integration scope.
-        </p>
-    </div>
-</section>
-
-<section class="container p-8 mx-auto lg:px-20">
-    <div class="flex justify-start">
-        <a routerLink="/contact"
-           class="bg-primary py-2.5 px-6 rounded-lg font-medium hover:bg-black text-white translate-all duration-300">
-            Contact us
-        </a>
+<section class="container px-8 py-10 mx-auto lg:px-20">
+    <div class="p-5 border rounded bg-[#e8f0ff] border-blue-200">
+        <div class="flex items-start gap-3">
+            <svg class="mt-5 size-5 text-primary" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2Z" stroke="currentColor" stroke-width="2"/>
+                <path d="M12 10v7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M12 7h.01" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+            <div>
+                <h3 class="text-lg font-semibold uppercase text-[#001E59]">Best for</h3>
+                <p class=" text-black/80">{{ bestFor }}</p>
+            </div>
+        </div>
     </div>
 </section>
 

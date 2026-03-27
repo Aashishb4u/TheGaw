@@ -90,7 +90,7 @@ export class DigitalSolutionComponent implements OnInit {
         'Web and application based access for dashboards, 3D views, VR modules, and reporting',
       ];
       this.bestFor = 'Clients who require an immersive platform for training, remote collaboration, process understanding, and advanced terminal management.';
-      this.hasTabs = false;
+      this.hasTabs = true;
     }
   }
 
