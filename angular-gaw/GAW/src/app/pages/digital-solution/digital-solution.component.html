@@ -5,7 +5,11 @@
     </video>
     <div class="absolute inset-0 z-10 flex items-center">
         <div class="container px-8 max-w-3xl lg:px-20">
-            <h1 class="text-xl font-medium text-left text-white uppercase md:text-2xl lg:text-4xl">{{ subtitle }}</h1>
+            <div class="inline-flex flex-wrap items-center gap-2 py-2">
+                <span class="text-2xl font-bold tracking-wide uppercase md:text-2xl lg:text-4xl text-[#0556f7]">{{ titleFirst }}</span>
+                <span class="text-2xl font-bold tracking-wide uppercase md:text-2xl lg:text-4xl text-black">{{ titleSecond }}</span>
+            </div>
+            <h2 class="mt-3 text-xl font-medium text-left text-white uppercase md:text-2xl lg:text-4xl">{{ subtitle }}</h2>
         </div>
     </div>
     <div id="header-white" class="relative z-20"></div>
@@ -61,7 +65,7 @@
                   'text-gray-600 hover:bg-gray-100 bg-blue-600/10': activeTab !== 'kpis'
                 }"
                 (click)="setTab('kpis')">
-                KPIs
+                <span class="normal-case">KPIs</span>
                 <div class="absolute left-0 w-1 h-8 bg-blue-600 rounded-sm top-2" [ngClass]="{ 'hidden': activeTab !== 'kpis' }"></div>
             </button>
             <button
@@ -79,9 +83,13 @@
 
         <div class="p-6 rounded-b-lg bg-gray-50">
             <div class="tab-content" id="features" *ngIf="activeTab === 'features'">
-                <div class="p-4 bg-primary/10">
+                <div class="p-4 bg-primary/10" *ngIf="title !== 'Immersive Twin'">
                     <h3 class="text-lg font-semibold text-center uppercase text-[#001E59] md:text-xl">Key features</h3>
                 </div>
+                <h3
+                    *ngIf="title === 'Immersive Twin'"
+                    class="text-lg font-semibold text-center uppercase text-[#001E59] md:text-xl">
+                </h3>
                 <ul class="list-disc list-image-[url(/assets/css/new_arrow.png)] pl-6 mt-4 space-y-2 list-disc">
                     <li class="" *ngFor="let f of features">{{ f }}</li>
                 </ul>
@@ -98,7 +106,7 @@
 
             <div class="tab-content" id="kpis" *ngIf="title === 'Foundation Twin' && activeTab === 'kpis'">
                 <div class="p-4 bg-primary/10">
-                    <h3 class="text-lg font-semibold text-center uppercase text-[#001E59] md:text-xl">KPIs</h3>
+                    <h3 class="text-lg font-semibold text-center text-[#001E59] md:text-xl normal-case">KPIs</h3>
                 </div>
                 <ul class="list-disc list-image-[url(/assets/css/new_arrow.png)] pl-6 mt-4 space-y-2 list-disc">
                     <li class="" *ngFor="let k of kpis">{{ k }}</li>
@@ -118,17 +126,29 @@
 </section>
 
 <section class="container px-8 py-10 mx-auto lg:px-20">
-    <div class="p-5 border rounded bg-[#e8f0ff] border-blue-200">
-        <div class="flex items-start gap-3">
-            <svg class="mt-5 size-5 text-primary" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2Z" stroke="currentColor" stroke-width="2"/>
-                <path d="M12 10v7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                <path d="M12 7h.01" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-            </svg>
-            <div>
-                <h3 class="text-lg font-semibold uppercase text-[#001E59]">Best for</h3>
-                <p class=" text-black/80">{{ bestFor }}</p>
+    <div class="flex flex-col gap-6 md:flex-row">
+        <div class="p-5 border rounded bg-[#e8f0ff] border-blue-200 md:w-1/2">
+            <div class="flex items-start gap-3">
+                <svg class="mt-5 size-5 text-primary" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2Z" stroke="currentColor" stroke-width="2"/>
+                    <path d="M12 10v7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M12 7h.01" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+                <div>
+                    <h3 class="text-lg font-semibold uppercase text-[#001E59]">Best for</h3>
+                    <p class=" text-black/80">{{ bestFor }}</p>
+                </div>
             </div>
+        </div>
+
+        <div class="p-5 border rounded bg-[#e8f0ff] border-blue-200 md:w-1/2">
+            <h3 class="text-lg font-semibold uppercase text-[#001E59]">For more details</h3>
+            <a
+                class="inline-flex mt-4 bg-primary py-2.5 px-6 rounded-lg font-medium hover:bg-black text-white translate-all duration-300"
+                [href]="downloadHref"
+                [attr.download]="downloadFilename">
+                Download
+            </a>
         </div>
     </div>
 </section>

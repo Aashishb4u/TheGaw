@@ -9,6 +9,8 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class DigitalSolutionComponent implements OnInit {
   title = '';
+  titleFirst = '';
+  titleSecond = '';
   subtitle = '';
   hasTabs = true;
   features: string[] = [];
@@ -16,12 +18,15 @@ export class DigitalSolutionComponent implements OnInit {
   kpis: string[] = [];
   maintenanceIntelligence: string[] = [];
   bestFor = '';
+  downloadHref = '/assets/catalog/TheGAW%20Digital%20solutions%20-%20Brouchure%20V%201.1.pdf';
+  downloadFilename = 'TheGAW Digital solutions - Brouchure V 1.1.pdf';
   activeTab: string = 'features';
 
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {
     this.title = this.route.snapshot.data['title'] || '';
+    this.setTitleParts();
     if (this.title === 'Foundation Twin') {
       this.subtitle = 'Essential Digital Visibility for Terminal Operations';
       this.features = [
@@ -92,6 +97,12 @@ export class DigitalSolutionComponent implements OnInit {
       this.bestFor = 'Clients who require an immersive platform for training, remote collaboration, process understanding, and advanced terminal management.';
       this.hasTabs = true;
     }
+  }
+
+  private setTitleParts(): void {
+    const parts = this.title.trim().split(/\s+/).filter(Boolean);
+    this.titleFirst = parts[0] ?? '';
+    this.titleSecond = parts.slice(1).join(' ');
   }
 
   setTab(tab: string): void {
